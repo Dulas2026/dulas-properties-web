@@ -1,0 +1,7 @@
+DATOS_HIPOGES/
+ocupados/
+.wrangler/
+deploy.bat
+wrangler.jsonc
+.assetsignore
+ESTADO-proyecto-comunidades.md

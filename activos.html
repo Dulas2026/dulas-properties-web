@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) - carga sujeta a consentimiento de cookies -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  (function(){
+    try {
+      if (localStorage.getItem('dp_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-NBB3L9N4PW');
+      }
+    } catch(e) {}
+  })();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activos por Comunidad Autónoma — Dulas Properties</title>
+<meta name="description" content="Activos inmobiliarios y cesiones de remate en toda España. Dulas Properties, partner Hipoges.">
+
+<style type="text/css">@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:400;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:400;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:400;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:400;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:400;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:500;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:500;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:500;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:500;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:500;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:600;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:600;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:600;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:600;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Cormorant Garamond;font-style:normal;font-weight:600;src:url(/cf-fonts/v/cormorant-garamond/5.2.11/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:DM Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/dm-sans/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:DM Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/dm-sans/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:DM Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/dm-sans/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:DM Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/dm-sans/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:DM Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/dm-sans/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:DM Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/dm-sans/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}.badge-offer{background:#F1C40F!important;color:#000!important;font-weight:700!important;border:1px solid #D4AC0D!important}
+
+  .badge-sold {
+    background: #E74C3C !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    padding: 15px 0 !important;
+    font-size: 16px !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 1001 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    letter-spacing: 2px !important;
+  }
+</style>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ── MAPA ── */
+#map-section{background:var(--cream);padding:40px 0 0}
+#map-inner{max-width:1200px;margin:0 auto;padding:0 32px}
+#map-svg-wrap{background:#EAF3FA;border-radius:14px;overflow:hidden;
+  box-shadow:0 6px 32px rgba(26,45,79,.15);position:relative;cursor:pointer}
+#map-svg-wrap svg{display:block;width:100%;height:auto}
+.ccaa-path{transition:opacity .18s,filter .18s;stroke:#fff;stroke-width:0.8}
+.ccaa-path:hover{opacity:.82;filter:brightness(1.12);stroke-width:1.5;cursor:pointer}
+#map-tip{position:absolute;background:rgba(26,45,79,.92);color:#fff;font-family:'DM Sans',sans-serif;
+  font-size:12px;padding:6px 12px;border-radius:5px;pointer-events:none;display:none;
+  white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:10}
+.map-legend{display:flex;gap:16px;margin-top:14px;flex-wrap:wrap;align-items:center;padding:0 4px}
+.ml{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--gray-700);font-family:var(--font-sans)}
+.ld{width:14px;height:14px;border-radius:3px;flex-shrink:0}
+.map-hint{font-family:var(--font-sans);font-size:11px;color:var(--gray-500);margin-top:8px;padding:0 4px}
+@media(max-width:768px){
+  #map-inner{padding:0 16px}
+/* ── CLUB INVERSOR ── */
+.investor-club{background:var(--navy);color:#fff;padding:80px 24px;text-align:center}
+.club-inner{max-width:800px;margin:0 auto}
+.club-title{font-family:var(--font-serif);font-size:36px;margin-bottom:16px;color:var(--gold)}
+.club-desc{font-size:15px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:40px}
+.club-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:rgba(255,255,255,0.05);padding:32px;border-radius:12px;border:1px solid rgba(201,168,76,0.3);text-align:left}
+.club-form input,.club-form select{background:rgba(255,255,255,0.9);border:0;padding:14px;border-radius:4px;font-size:14px}
+.club-form button{grid-column: span 2;background:var(--gold);color:var(--navy);border:0;padding:16px;border-radius:4px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.club-form button:hover{background:#b18a4a;transform:scale(1.01)}
+@media(max-width:600px){.club-form{grid-template-columns:1fr}.club-form button{grid-column:1}}
+</style>
+<link rel="canonical" href="https://dulasproperties.com/activos">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+    <div class="logo-text"><span class="logo-name">Dulas Properties</span><span class="logo-sub">Real Estate</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="activos.html" class="active">Activos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html">Quiénes somos</a></li>
+    <li><a href="vender.html">Vende con nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="club-inversor.html" class="club-link">Club Inversor</a></li>
+  </ul>
+  <a href="tel:679916424" class="nav-cta">679 916 424</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">Cartera nacional · España 2025–2026</div>
+  <h1 class="hero-title">Activos inmobiliarios<br><em>en toda España.</em></h1>
+  <div class="hero-line"></div>
+  <p class="hero-desc">Selecciona una comunidad autónoma para explorar su cartera completa de activos.</p>
+</div>
+
+<!-- MAPA SVG DE ESPAÑA -->
+<div id="map-section">
+  <div id="map-inner">
+    <div id="map-svg-wrap">
+      <div id="map-tip"></div>
+      <svg id="spain-svg" viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg">
+        <rect width="900" height="620" fill="#EAF3FA"/>
+        <text x="450" y="300" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#aaa">Cargando mapa…</text>
+      </svg>
+    </div>
+    <div class="map-legend">
+      <div class="ml"><div class="ld" style="background:#1A7A5E"></div>REO / NPL</div>
+      <div class="ml"><div class="ld" style="background:#B8460B"></div>CDR</div>
+      <div class="ml"><div class="ld" style="background:#6B3FA0"></div>Ocupados</div>
+      <div class="ml"><div class="ld" style="background:#1055A8"></div>Locales</div>
+      <div class="ml"><div class="ld" style="background:#B0ACA4"></div>Próximamente</div>
+    </div>
+    <div class="map-hint">👆 Haz clic sobre una comunidad autónoma para ver su cartera de activos</div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="contact-section" style="margin-top:0">
+  <div style="max-width:600px;margin:0 auto;text-align:center">
+    <div class="hero-eyebrow" style="text-align:center;margin-bottom:16px">¿Interesado en algún activo?</div>
+    <h2 class="contact-title" style="text-align:center">Hablemos de<br><em>tu próxima operación.</em></h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:13px;line-height:1.7;margin:16px auto 32px;max-width:480px">Te respondemos en menos de 24 horas con información real y condiciones claras.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+      <a href="contacto.html" class="form-submit" style="text-decoration:none;display:inline-block;width:auto;padding:14px 32px">Solicitar información</a>
+      <a href="https://wa.me/34679916424" target="_blank" class="form-submit" style="background:#25D366;color:#fff;text-decoration:none;display:inline-block;width:auto;padding:14px 32px">WhatsApp directo</a>
+    </div>
+  </div>
+</div>
+
+<!-- CLUB INVERSOR -->
+<section class="investor-club">
+  <div class="club-inner">
+    <div class="hero-eyebrow" style="color:var(--gold);text-align:center;margin-bottom:12px">Acceso Exclusivo</div>
+    <h2 class="club-title">Club del Inversor Dulas</h2>
+    <p class="club-desc">¿Buscas rentabilidad sin perder tiempo? Únete a nuestro club privado y recibe alertas de <strong>activos suspendidos y oportunidades de Hipoges</strong> en tu WhatsApp antes de que se publiquen oficialmente.</p>
+    
+    <form class="club-form" action="https://formspree.io/f/tu-id" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="tel" name="telefono" placeholder="WhatsApp (Ej: 600000000)" required>
+      <select name="zona" style="grid-column: span 2" required>
+        <option value="">¿En qué zona buscas invertir?</option>
+        <option value="Valencia">Comunidad Valenciana</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Cataluna">Cataluña</option>
+        <option value="Andalucia">Andalucía</option>
+        <option value="Galicia">Galicia</option>
+        <option value="PaisVasco">País Vasco</option>
+        <option value="TodaEspana">Toda España</option>
+      </select>
+      <button type="submit">Unirme al Club del Inversor</button>
+    </form>
+    <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:20px">Al unirte, aceptas recibir notificaciones comerciales de Dulas Properties. Puedes darte de baja en cualquier momento.</p>
+  </div>
+</section>
+
+<footer>
+  <div><div class="footer-logo">Dulas Properties</div><div class="footer-tagline">Partner Hipoges · Toda España</div></div>
+  <div class="footer-links">
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="cookies.html">Cookies</a>
+    <a href="/cdn-cgi/l/email-protection#11787f777e5175647d706261637e617463657874623f727e7c"><span class="__cf_email__" data-cfemail="026b6c646d4266776e637172706d726770766b67712c616d6f">[email&#160;protected]</span></a>
+  </div>
+</footer>
+
+<a href="https://wa.me/34679916424?text=Hola" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://d3js.org/d3.v7.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+// ══ COLORES POR CCAA ══
+const CCAA_COLORS = {
+  'andalucia':            '#E07B3A',
+  'aragon':               '#5B9BD5',
+  'asturias':             '#70A860',
+  'baleares':             '#D4A843',
+  'canarias':             '#C46E8A',
+  'cantabria':            '#6BBEAA',
+  'castilla-lamancha':    '#85BB6A',
+  'castilla-leon':        '#D4956A',
+  'cataluna':             '#E8C84A',
+  'comunitat-valenciana': '#7BAED4',
+  'extremadura':          '#A07CC0',
+  'galicia':              '#5BAD8A',
+  'la-rioja':             '#DD7A7A',
+  'madrid':               '#C8A854',
+  'murcia':               '#77B87A',
+  'navarra':              '#D47A5A',
+  'pais-vasco':           '#8AB8D8',
+  'ceuta':                '#C8C090',
+  'melilla':              '#C8C090',
+};
+
+// ══ PÁGINAS POR CCAA — al hacer clic navega directamente ══
+const CCAA_INFO = {
+  "andalucia": {
+    "label": "Andalucía",
+    "page": "activos-sevilla.html"
+  },
+  "aragon": {
+    "label": "Aragón",
+    "page": "activos-aragon.html"
+  },
+  "asturias": {
+    "label": "Asturias",
+    "page": "activos-asturias.html"
+  },
+  "baleares": {
+    "label": "Illes Balears",
+    "page": "activos-baleares.html"
+  },
+  "canarias": {
+    "label": "Canarias",
+    "page": "activos-canarias.html"
+  },
+  "cantabria": {
+    "label": "Cantabria",
+    "page": "activos-cantabria.html"
+  },
+  "castilla-lamancha": {
+    "label": "Castilla-La Mancha",
+    "page": "activos-castilla-lamancha.html"
+  },
+  "castilla-leon": {
+    "label": "Castilla y León",
+    "page": "activos-castilla-leon.html"
+  },
+  "cataluna": {
+    "label": "Cataluña",
+    "page": "activos-cataluna.html"
+  },
+  "comunitat-valenciana": {
+    "label": "Comunitat Valenciana",
+    "page": "activos-comunitat-valenciana.html"
+  },
+  "extremadura": {
+    "label": "Extremadura",
+    "page": "activos-extremadura.html"
+  },
+  "galicia": {
+    "label": "Galicia",
+    "page": "activos-galicia.html"
+  },
+  "la-rioja": {
+    "label": "La Rioja",
+    "page": "activos-la-rioja.html"
+  },
+  "madrid": {
+    "label": "Comunidad de Madrid",
+    "page": "activos-madrid.html"
+  },
+  "murcia": {
+    "label": "Región de Murcia",
+    "page": "activos-murcia.html"
+  },
+  "pais-vasco": {
+    "label": "País Vasco",
+    "page": "activos-pais-vasco.html"
+  },
+  "navarra": {
+    "label": "Navarra",
+    "page": "activos-navarra.html"
+  }
+};
+
+function slugify(name) {
+  const m = {
+    'Andalucia': 'andalucia',
+    'Castilla-La Mancha': 'castilla-lamancha',
+    'Castilla-Leon': 'castilla-leon',
+    'Castilla y León': 'castilla-leon',
+    'Cataluña': 'cataluna',
+    'Valencia': 'comunitat-valenciana',
+    'Comunitat Valenciana': 'comunitat-valenciana',
+    'País Vasco': 'pais-vasco',
+    'Aragon': 'aragon',
+    'Madrid': 'madrid',
+    'Galicia': 'galicia',
+    'Murcia': 'murcia',
+    'Baleares': 'baleares',
+    'Canarias': 'canarias',
+    'Extremadura': 'extremadura',
+    'Navarra': 'navarra',
+    'Comunidad Foral de Navarra': 'navarra'
+  };
+  if (m[name]) return m[name];
+  return name.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+function onClickCCAA(event, d) {
+  const key  = slugify(d.properties.name);
+  console.log('Región seleccionada:', d.properties.name, 'Key:', key);
+  const info = CCAA_INFO[key];
+  tip.style.display = 'none';
+  if (info && info.page) {
+    window.location.href = info.page;
+  } else {
+    // Región sin página aún — parpadeo visual
+    const el   = d3.select(this);
+    const orig = el.attr('fill');
+    el.attr('fill','#B0ACA4');
+    setTimeout(() => el.attr('fill', orig), 500);
+    tip.textContent = (info ? info.label : d.properties.name) + ' · Próximamente';
+    tip.style.display = 'block';
+    const rect = wrap.getBoundingClientRect();
+    tip.style.left = (event.clientX - rect.left + 12) + 'px';
+    tip.style.top  = (event.clientY - rect.top  - 36) + 'px';
+    setTimeout(() => { tip.style.display = 'none'; }, 2000);
+  }
+}
+
+function onMouseMove(event, d) {
+  const key  = slugify(d.properties.name);
+  const info = CCAA_INFO[key];
+  tip.textContent = info
+    ? info.label + '  ·  Ver activos →'
+    : d.properties.name + '  ·  Próximamente';
+  tip.style.display = 'block';
+  const rect = wrap.getBoundingClientRect();
+  tip.style.left = (event.clientX - rect.left + 12) + 'px';
+  tip.style.top  = (event.clientY - rect.top  - 36) + 'px';
+}
+
+// ══ MAPA D3 ══
+const GEOJSON_URL = 'https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/spain-communities.geojson';
+
+const svg  = d3.select('#spain-svg');
+const tip  = document.getElementById('map-tip');
+const wrap = document.getElementById('map-svg-wrap');
+const W = 900, H = 620;
+
+const projection = d3.geoConicConformal()
+  .center([-3.5, 40.4]).parallels([36, 44])
+  .scale(3300).translate([W/2, H/2 - 20]);
+
+const pathGen = d3.geoPath().projection(projection);
+
+const projCanarias = d3.geoConicConformal()
+  .center([-15.5, 28.1]).parallels([27, 29])
+  .scale(1800).translate([130, 530]);
+
+d3.json(GEOJSON_URL).then(data => {
+  const peninsula = data.features.filter(f => f.properties.name !== 'Canarias');
+  const canarias  = data.features.filter(f => f.properties.name === 'Canarias');
+
+  // Península + Baleares
+  svg.selectAll('.ccaa-path-main')
+    .data(peninsula).join('path')
+    .attr('class','ccaa-path')
+    .attr('d', pathGen)
+    .attr('fill', d => CCAA_COLORS[slugify(d.properties.name)] || '#C0BCB4')
+    .attr('stroke','#fff').attr('stroke-width',1.2)
+    .on('mousemove', onMouseMove)
+    .on('mouseleave', () => { tip.style.display = 'none'; })
+    .on('click', onClickCCAA);
+
+  // Recuadro Canarias
+  svg.append('rect').attr('x',20).attr('y',470).attr('width',220).attr('height',130)
+    .attr('fill','none').attr('stroke','#ccc').attr('stroke-width',1).attr('rx',4);
+  svg.append('text').attr('x',28).attr('y',488)
+    .attr('font-family','DM Sans,sans-serif').attr('font-size','9').attr('fill','#888')
+    .text('CANARIAS');
+
+  svg.selectAll('.ccaa-path-canarias')
+    .data(canarias).join('path')
+    .attr('class','ccaa-path')
+    .attr('d', d3.geoPath().projection(projCanarias))
+    .attr('fill', CCAA_COLORS['canarias'] || '#C8A0C0')
+    .attr('stroke','#fff').attr('stroke-width',1.2)
+    .on('mousemove', onMouseMove)
+    .on('mouseleave', () => { tip.style.display = 'none'; })
+    .on('click', onClickCCAA);
+
+  // Etiquetas
+  svg.selectAll('.ccaa-label')
+    .data(peninsula).join('text')
+    .attr('class','ccaa-label')
+    .attr('transform', d => `translate(${pathGen.centroid(d)})`)
+    .attr('text-anchor','middle').attr('dy','0.35em')
+    .attr('font-family','DM Sans,sans-serif').attr('font-size','9.5')
+    .attr('fill','rgba(20,30,55,0.75)').attr('font-weight','500')
+    .attr('pointer-events','none')
+    .text(d => ({
+      'Andalucía':'ANDALUCÍA','Aragón':'ARAGÓN','Asturias':'ASTURIAS',
+      'Illes Balears':'BALEARES','Cantabria':'CANTABRIA',
+      'Castilla-La Mancha':'C.-LA MANCHA','Castilla y León':'CASTILLA Y LEÓN',
+      'Cataluña':'CATALUÑA','Comunitat Valenciana':'C. VALENCIANA',
+      'Extremadura':'EXTREMADURA','Galicia':'GALICIA','La Rioja':'LA RIOJA',
+      'Comunidad de Madrid':'MADRID','Región de Murcia':'MURCIA',
+      'Comunidad Foral de Navarra':'NAVARRA','País Vasco':'PAÍS VASCO',
+      'Ceuta':'CE','Melilla':'ME'
+    })[d.properties.name] || d.properties.name.toUpperCase());
+
+}).catch(() => {
+  svg.select('text').text('Error cargando el mapa. Verifica tu conexión.');
+});
+</script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5e875e5f38c4408985b325e5-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a176c0a6de339aa8',t:'MTc4MzQyNjI5NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<div id="dp-cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1A2D4F;color:#fff;padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.15);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.85);flex:1;min-width:240px;">
+      Usamos cookies tecnicas necesarias y, si lo aceptas, cookies analiticas (Google Analytics) para mejorar la web. Puedes leer mas en nuestra <a href="cookies.html" style="color:#C9A84C;text-decoration:underline;">politica de cookies</a>.
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="dpCookieConsent('rejected')" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:9px 18px;font-size:12px;border-radius:4px;cursor:pointer;">Rechazar</button>
+      <button onclick="dpCookieConsent('accepted')" style="background:#C9A84C;border:none;color:#1A2D4F;padding:9px 18px;font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function dpShowBanner(){
+    try {
+      if (!localStorage.getItem('dp_cookie_consent')) {
+        var b = document.getElementById('dp-cookie-banner');
+        if (b) b.style.display = 'block';
+      }
+    } catch(e) {}
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', dpShowBanner);
+  } else {
+    dpShowBanner();
+  }
+})();
+window.dpCookieConsent = function(choice){
+  try { localStorage.setItem('dp_cookie_consent', choice); } catch(e) {}
+  var b = document.getElementById('dp-cookie-banner');
+  if (b) b.style.display = 'none';
+  if (choice === 'accepted' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-NBB3L9N4PW');
+  }
+};
+</script>
+</body>
+</html>
+
+<!-- Version: 1783613356627 -->

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) - carga sujeta a consentimiento de cookies -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  (function(){
+    try {
+      if (localStorage.getItem('dp_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-NBB3L9N4PW');
+      }
+    } catch(e) {}
+  })();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activos en País Vasco — Dulas Properties</title>
+<meta name="description" content="Cartera de activos suspendidos en el País Vasco: Bilbao, Vitoria-Gasteiz, Donostia-San Sebastián y más. Dulas Properties, partner Hipoges.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.badge-susp{background:var(--gold-light);color:#5C4A17}
+.cv-filters{background:var(--cream);padding:24px 48px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.cv-filters input[type="text"]{flex:2;min-width:220px;padding:10px 14px;border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-family:inherit;background:var(--white)}
+.cv-filters select{flex:1;min-width:150px;padding:10px 14px;border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-family:inherit;background:var(--white);cursor:pointer}
+.cv-filters .cv-count{font-size:12px;color:var(--gray-500);white-space:nowrap;margin-left:auto}
+.card-img-placeholder{width:100%;height:200px;display:flex;align-items:center;justify-content:center;background:var(--gray-100);color:var(--gray-500);font-size:11px;text-align:center;padding:12px}
+.cv-empty{text-align:center;padding:64px 24px;color:var(--gray-500);font-size:14px}
+.card-img iframe{width:100%;height:100%;border:0}
+
+  .yield-calc {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border);
+    background: #fcfaf5;
+    padding: 12px;
+    border-radius: 4px;
+  }
+  .yield-calc-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .yield-input-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .yield-input-group input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 13px;
+    width: 60px;
+  }
+  .yield-result {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A7A5E;
+    display: none;
+  }
+
+.badge-offer{background:#F1C40F!important;color:#000!important;font-weight:700!important;box-shadow:0 2px 10px rgba(241,196,15,0.4);border:1px solid #D4AC0D!important}
+.badge-offer-banner{background:#F1C40F!important;color:#000!important;font-weight:900!important;text-transform:uppercase!important;padding:15px 0!important;font-size:16px!important;display:block!important;width:100%!important;text-align:center!important;z-index:1001!important;position:absolute!important;top:0!important;left:0!important;box-shadow:0 4px 10px rgba(0,0,0,0.3)!important;letter-spacing:2px!important}
+
+  .badge-sold {
+    background: #E74C3C !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    padding: 15px 0 !important;
+    font-size: 16px !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 1001 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    letter-spacing: 2px !important;
+  }
+</style>
+<link rel="canonical" href="https://dulasproperties.com/activos-pais-vasco">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+    <div class="logo-text"><span class="logo-name">Dulas Properties</span><span class="logo-sub">Real Estate</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="activos.html" class="active">Activos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html">Quiénes somos</a></li>
+    <li><a href="vender.html">Vende con nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="club-inversor.html" class="club-link">Club Inversor</a></li>
+  </ul>
+  <a href="tel:679916424" class="nav-cta">679 916 424</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-eyebrow">Partner Hipoges · España 2025–2026</div>
+  <h1 class="page-hero-title">Activos en <em>País Vasco</em></h1>
+  <div class="hero-line"></div>
+  <p class="page-hero-desc">Cartera de activos suspendidos en Bilbao, Vitoria-Gasteiz, Donostia-San Sebastián y el resto de la comunidad. Inmuebles gestionados por Dulas Properties, partner Hipoges.</p>
+</div>
+
+<div class="cv-filters">
+  <input type="text" id="cv-search" placeholder="Buscar por calle o municipio...">
+  <select id="cv-provincia">
+    <option value="">Provincia...</option>
+    <option value="Guipúzcoa">Guipúzcoa</option>
+    <option value="Vizcaya">Vizcaya</option>
+    <option value="Álava">Álava</option>
+  </select>
+  <select id="cv-tipo">
+    <option value="">Tipo de inmueble...</option>
+  </select>
+  <div class="cv-count" id="cv-count"></div>
+</div>
+
+<main class="main">
+  <div class="assets-grid" id="cv-grid"></div>
+  <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
+</main>
+
+<div class="contact-section" style="margin-top:0">
+  <div style="max-width:600px;margin:0 auto;text-align:center">
+    <div class="hero-eyebrow" style="text-align:center;margin-bottom:16px">¿Interesado en algún activo?</div>
+    <h2 class="contact-title" style="text-align:center">Hablemos de<br><em>tu próxima operación.</em></h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:13px;line-height:1.7;margin:16px auto 32px;max-width:480px">Te respondemos en menos de 24 horas con información real y condiciones claras.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+      <a href="contacto.html" class="form-submit" style="text-decoration:none;display:inline-block;width:auto;padding:14px 32px">Solicitar información</a>
+      <a href="https://wa.me/34679916424" target="_blank" class="form-submit" style="background:#25D366;color:#fff;text-decoration:none;display:inline-block;width:auto;padding:14px 32px">WhatsApp directo</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div><div class="footer-logo">Dulas Properties</div><div class="footer-tagline">Partner Hipoges · España</div></div>
+  <div class="footer-links">
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="cookies.html">Cookies</a>
+    <a href="mailto:info@dulasproperties.com">info@dulasproperties.com</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/34679916424?text=Hola" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>
+</a>
+
+<script>
+const CV_DATA = [{"ref":"BORE-0471","tipo":"Casa Independiente","calle":"Calle Mendipe Etxe Taldea","municipio":"Valle de Trápaga-Trapagaran","provincia":"Vizcaya","price":"280.000","m2":"204","hab":"3","planta":null,"panoid":null},{"ref":"SIRE-1581","tipo":"Piso","calle":"Calle Oiz Monte","municipio":"Bilbao","provincia":"Vizcaya","price":"123.000","m2":"48","hab":"3","planta":null,"panoid":null},{"ref":"MURE-007011","tipo":"Garaje","calle":"Calle Mezo","municipio":"Erandio","provincia":"Vizcaya","price":"15.000","m2":"12","hab":null,"planta":null,"panoid":null},{"ref":"MURE-006002","tipo":"Local","calle":"Calle Atxe","municipio":"Erandio","provincia":"Vizcaya","price":"60.000","m2":"68","hab":"1","planta":null,"panoid":null},{"ref":"MURE-008001","tipo":"Garaje","calle":"Calle Txakurzulo","municipio":"Erandio","provincia":"Vizcaya","price":"16.000","m2":"12","hab":null,"planta":null,"panoid":null},{"ref":"MURE-008009","tipo":"Garaje","calle":"Calle Txakurzulo","municipio":"Erandio","provincia":"Vizcaya","price":"18.000","m2":"14","hab":null,"planta":null,"panoid":null},{"ref":"MURE-008018","tipo":"Garaje","calle":"Calle Txakurzulo","municipio":"Erandio","provincia":"Vizcaya","price":"19.000","m2":"13","hab":null,"planta":null,"panoid":null},{"ref":"MURE-010001","tipo":"Garaje","calle":"Avenida Zuberoa","municipio":"Bilbao","provincia":"Vizcaya","price":"25.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-010009","tipo":"Piso","calle":"Calle Zuberoa","municipio":"Bilbao","provincia":"Vizcaya","price":"400.000","m2":"168","hab":"2","planta":null,"panoid":null},{"ref":"MURE-008046","tipo":"Piso","calle":"Calle Txakurzulo","municipio":"Erandio","provincia":"Vizcaya","price":"190.000","m2":"83","hab":null,"planta":null,"panoid":null},{"ref":"MURE-019005","tipo":"Trastero","calle":"Calle Iturriza","municipio":"Berriz","provincia":"Vizcaya","price":"35.000","m2":"58","hab":"1","planta":null,"panoid":null},{"ref":"MURE-019012","tipo":"Trastero","calle":"Calle Gabiola","municipio":"Berriz","provincia":"Vizcaya","price":"40.000","m2":"62","hab":"1","planta":null,"panoid":null},{"ref":"MURE-019013","tipo":"Trastero","calle":"Calle Gabiola","municipio":"Berriz","provincia":"Vizcaya","price":"40.000","m2":"66","hab":"1","planta":null,"panoid":null},{"ref":"MURE-019014","tipo":"Trastero","calle":"Calle Gabiola","municipio":"Berriz","provincia":"Vizcaya","price":"35.000","m2":"58","hab":"1","planta":null,"panoid":null},{"ref":"MURE-019015","tipo":"Trastero","calle":"Calle Gabiola","municipio":"Berriz","provincia":"Vizcaya","price":"35.000","m2":"54","hab":"1","planta":null,"panoid":null},{"ref":"MURE-022009","tipo":"Trastero","calle":"Camino Beteluri","municipio":"Barakaldo","provincia":"Vizcaya","price":"6.500","m2":"6","hab":null,"planta":null,"panoid":null},{"ref":"MURE-021004","tipo":"Oficina","calle":"Calle General Concha","municipio":"Bilbao","provincia":"Vizcaya","price":"49.896","m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"MURE-021010","tipo":"Oficina","calle":"Calle General Concha","municipio":"Bilbao","provincia":"Vizcaya","price":"140.957","m2":"109","hab":"1","planta":null,"panoid":null},{"ref":"MURE-021011","tipo":"Oficina","calle":"Calle General Concha","municipio":"Bilbao","provincia":"Vizcaya","price":"140.957","m2":"109","hab":"1","planta":null,"panoid":null},{"ref":"MURE-021013","tipo":"Oficina","calle":"Calle General Concha","municipio":"Bilbao","provincia":"Vizcaya","price":"140.957","m2":"109","hab":"1","planta":null,"panoid":null},{"ref":"MURE-009005","tipo":"Piso","calle":"Calle Zaldundegui","municipio":"Barakaldo","provincia":"Vizcaya","price":"155.000","m2":"70","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011002","tipo":"Piso","calle":"Calle Doctor Waksman","municipio":"Barakaldo","provincia":"Vizcaya","price":"235.000","m2":"90","hab":"3","planta":null,"panoid":null},{"ref":"MURE-011006","tipo":"Piso","calle":"Calle Alameda Serralta","municipio":"Barakaldo","provincia":"Vizcaya","price":"195.000","m2":"64","hab":"2","planta":null,"panoid":null},{"ref":"MURE-011012","tipo":"Garaje","calle":"Calle Garaje Libre","municipio":"Barakaldo","provincia":"Vizcaya","price":"19.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011018","tipo":"Garaje","calle":"Calle Zopimpa","municipio":"Barakaldo","provincia":"Vizcaya","price":"23.000","m2":"17","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011034","tipo":"Garaje","calle":"Calle Zopimpa","municipio":"Barakaldo","provincia":"Vizcaya","price":"18.500","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011052","tipo":"Trastero","calle":"Calle Zopimpa","municipio":"Barakaldo","provincia":"Vizcaya","price":"7.000","m2":"6","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011057","tipo":"Trastero","calle":"Calle Zopimpa","municipio":"Barakaldo","provincia":"Vizcaya","price":"7.000","m2":"6","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011058","tipo":"Piso","calle":"Calle Zopimpa","municipio":"Barakaldo","provincia":"Vizcaya","price":"160.000","m2":"62","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011066","tipo":"Garaje","calle":"Calle Zopimpa","municipio":"Barakaldo","provincia":"Vizcaya","price":"22.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011068","tipo":"Garaje","calle":"Calle Zopimpa","municipio":"Barakaldo","provincia":"Vizcaya","price":"18.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-011076","tipo":"Trastero","calle":"Calle Doctor Wkasman","municipio":"Barakaldo","provincia":"Vizcaya","price":"4.000","m2":"5","hab":null,"planta":null,"panoid":null},{"ref":"MURE-012006","tipo":"Piso","calle":"Calle Lutxana Mining","municipio":"Barakaldo","provincia":"Vizcaya","price":"170.000","m2":"65","hab":null,"planta":null,"panoid":null},{"ref":"MURE-012096","tipo":"Trastero","calle":"Calle Lube","municipio":"Barakaldo","provincia":"Vizcaya","price":"4.000","m2":"5","hab":null,"planta":null,"panoid":null},{"ref":"MURE-012151","tipo":"Garaje","calle":"Calle Lube","municipio":"Barakaldo","provincia":"Vizcaya","price":"17.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-012152","tipo":"Garaje","calle":"Calle Lube","municipio":"Barakaldo","provincia":"Vizcaya","price":"17.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-012165","tipo":"Garaje","calle":"Calle Lube","municipio":"Barakaldo","provincia":"Vizcaya","price":"17.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-012167","tipo":"Garaje","calle":"Calle Lube","municipio":"Barakaldo","provincia":"Vizcaya","price":"17.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-012168","tipo":"Garaje","calle":"Calle Lube","municipio":"Barakaldo","provincia":"Vizcaya","price":"17.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-012169","tipo":"Garaje","calle":"Calle Edif. Lube con Luchana Mining","municipio":"Barakaldo","provincia":"Vizcaya","price":"17.000","m2":"11","hab":null,"planta":null,"panoid":null},{"ref":"MURE-013001","tipo":"Garaje","calle":"Calle Ramon Rubial","municipio":"Erandio","provincia":"Vizcaya","price":"18.500","m2":"12","hab":null,"planta":null,"panoid":null},{"ref":"MURE-006110","tipo":"Piso","calle":"Calle Atxutegi Sotano","municipio":"Erandio","provincia":"Vizcaya","price":"180.000","m2":"75","hab":null,"planta":null,"panoid":null},{"ref":"MURE-006120","tipo":"Piso","calle":"Calle San Lorenzo","municipio":"Erandio","provincia":"Vizcaya","price":"180.000","m2":"75","hab":null,"planta":null,"panoid":null},{"ref":"MURE-017001","tipo":"Piso","calle":"Calle Atxe","municipio":"Barakaldo","provincia":"Vizcaya","price":"148.561","m2":"90","hab":null,"planta":null,"panoid":null},{"ref":"MURE-017003","tipo":"Piso","calle":"Calle Zaldundegui","municipio":"Barakaldo","provincia":"Vizcaya","price":"146.511","m2":"86","hab":null,"planta":null,"panoid":null},{"ref":"MURE-015010","tipo":"Local","calle":"Calle Anton Fernandez","municipio":"Erandio","provincia":"Vizcaya","price":"105.000","m2":"80","hab":null,"planta":null,"panoid":null},{"ref":"MURE-015011","tipo":"Local","calle":"Calle Anton Fernandez","municipio":"Erandio","provincia":"Vizcaya","price":"105.000","m2":"78","hab":null,"planta":null,"panoid":null},{"ref":"MURE-013019","tipo":"Local","calle":"Calle Tartanga","municipio":"Erandio","provincia":"Vizcaya","price":"75.000","m2":"48","hab":null,"planta":null,"panoid":null},{"ref":"MURE-008053","tipo":"Trastero","calle":"Calle Manuel Iradier Bulffy","municipio":"Erandio","provincia":"Vizcaya","price":"2.500","m2":"3","hab":"1","planta":null,"panoid":null},{"ref":"MURE-008060","tipo":"Trastero","calle":"Calle Etxegorri","municipio":"Erandio","provincia":"Vizcaya","price":"11.000","m2":"18","hab":null,"planta":null,"panoid":null},{"ref":"MURE-013053","tipo":"Garaje","calle":"Calle Ramon Rubial","municipio":"Erandio","provincia":"Vizcaya","price":"15.000","m2":"10","hab":null,"planta":null,"panoid":null},{"ref":"MURE-008075","tipo":"Trastero","calle":"Calle Etxegorri","municipio":"Erandio","provincia":"Vizcaya","price":"11.000","m2":"18","hab":null,"planta":null,"panoid":null},{"ref":"MURE-008076","tipo":"Trastero","calle":"Calle Etxegorri","municipio":"Erandio","provincia":"Vizcaya","price":"11.000","m2":"18","hab":"1","planta":null,"panoid":null},{"ref":"MURE-007070","tipo":"Trastero","calle":"Calle Mezo","municipio":"Erandio","provincia":"Vizcaya","price":"4.750","m2":"0","hab":null,"planta":null,"panoid":null},{"ref":"MURE-009015","tipo":"Garaje","calle":"Calle Cantarrana","municipio":"Barakaldo","provincia":"Vizcaya","price":"24.000","m2":"30","hab":null,"planta":null,"panoid":null},{"ref":"MURE-017005","tipo":"Garaje","calle":"Calle Zaldundegi","municipio":"Barakaldo","provincia":"Vizcaya","price":"21.000","m2":"58","hab":null,"planta":null,"panoid":null},{"ref":"MURE-031002","tipo":"Garaje","calle":"Calle Errementeri","municipio":"Sondika","provincia":"Vizcaya","price":"15.000","m2":"11","hab":"1","planta":null,"panoid":null},{"ref":"GIRE-1352002","tipo":"Piso","calle":"Calle Barrenkale","municipio":"Mutriku","provincia":"Guipúzcoa","price":"76.500","m2":"69","hab":"3","planta":null,"panoid":null},{"ref":"KIRE-0232","tipo":"Local","calle":"Calle Iturribide","municipio":"Bilbao","provincia":"Vizcaya","price":"20.500","m2":"90","hab":"0","planta":null,"panoid":null},{"ref":"KIRE-0318","tipo":"Local","calle":"Calle Roteta Beheko","municipio":"Donostia-San Sebastián","provincia":"Guipúzcoa","price":"20.000","m2":"53","hab":"2","planta":null,"panoid":null},{"ref":"ALRE-05846","tipo":"Apartamento","calle":"Calle Sebastián Errazu","municipio":"Irun","provincia":"Guipúzcoa","price":"190.000","m2":"86","hab":"4","planta":null,"panoid":null},{"ref":"LORE-0165","tipo":"2 Pisos + Garaje","calle":"Calle Juan De Zumarraga","municipio":"Bilbao","provincia":"Vizcaya","price":"417.100","m2":"117","hab":"4","planta":null,"panoid":null},{"ref":"LORE-0166","tipo":"2 Pisos + Garaje","calle":"Calle Juan De Zumarraga","municipio":"Bilbao","provincia":"Vizcaya","price":"417.100","m2":"117","hab":"4","planta":null,"panoid":null},{"ref":"LORE-0167","tipo":"2 Pisos + Garaje","calle":"Calle Juan De Zumarraga","municipio":"Bilbao","provincia":"Vizcaya","price":"417.100","m2":"117","hab":"4","planta":null,"panoid":null},{"ref":"LORE-0168","tipo":"Local","calle":"Calle Ribera","municipio":"Bilbao","provincia":"Vizcaya","price":"163.000","m2":"80","hab":null,"planta":null,"panoid":null},{"ref":"SIRE-0798","tipo":"Piso","calle":"Carretera Zorrotza A Castrejana","municipio":"Bilbao","provincia":"Vizcaya","price":"160.000","m2":"56","hab":"2","planta":null,"panoid":null},{"ref":"SIRE-0796","tipo":"Piso","calle":"Calle Musico Usandizaga","municipio":"Bilbao","provincia":"Vizcaya","price":"87.000","m2":"77","hab":"4","planta":null,"panoid":null},{"ref":"REMO-02187","tipo":"Piso","calle":"Calle Larrazabal","municipio":"Basauri","provincia":"Vizcaya","price":"100.825","m2":"52","hab":"2","planta":null,"panoid":null},{"ref":"REMO-01324","tipo":"Piso","calle":"Calle Santa Cruz","municipio":"Aretxabaleta","provincia":"Guipúzcoa","price":"135.285","m2":"83","hab":"3","planta":null,"panoid":null},{"ref":"REMO-04435","tipo":"Trastero","calle":"Calle Santakurtz Kalea","municipio":"Aretxabaleta","provincia":"Guipúzcoa","price":"3.480","m2":"6","hab":"0","planta":null,"panoid":null},{"ref":"LIRE-01989","tipo":"Piso","calle":"Travesía Llano","municipio":"Valle de Trápaga-Trapagaran","provincia":"Vizcaya","price":null,"m2":"51","hab":"3","planta":null,"panoid":null},{"ref":"LIRE-03785","tipo":"Piso","calle":"Calle Pais Valencia","municipio":"Barakaldo","provincia":"Vizcaya","price":null,"m2":"65","hab":"2","planta":null,"panoid":null},{"ref":"LIRE-03605","tipo":"Piso","calle":"Calle Martin Etxeberria","municipio":"Errenteria","provincia":"Guipúzcoa","price":null,"m2":"73","hab":"4","planta":null,"panoid":null},{"ref":"LIRE-10048","tipo":"Garaje","calle":"Calle Mayor","municipio":"Getxo","provincia":"Vizcaya","price":"30.000","m2":"32","hab":null,"planta":null,"panoid":null},{"ref":"RETI-01185","tipo":"Piso + Garaje","calle":"Avenida Sabino Arana","municipio":"Leioa","provincia":"Vizcaya","price":null,"m2":"60","hab":"3","planta":null,"panoid":null},{"ref":"RETI-00784","tipo":"Nave industrial","calle":"Calle Barrio De Irauregui Zona Industrial Kadagua","municipio":"Alonsotegi","provincia":"Vizcaya","price":null,"m2":"157","hab":"4","planta":null,"panoid":null},{"ref":"RETI-03447","tipo":"Piso","calle":"Calle Zapatari","municipio":"Salvatierra/Agurain","provincia":"Álava","price":null,"m2":"73","hab":"3","planta":null,"panoid":null},{"ref":"RETI-00309","tipo":"Piso","calle":"Calle Ibaizabal","municipio":"Barakaldo","provincia":"Vizcaya","price":"180.000","m2":"91","hab":"4","planta":null,"panoid":null},{"ref":"RETI-00623","tipo":"Nave industrial","calle":"Polígono Parque Empresarial Inbisa-Lauaxeta","municipio":"Amorebieta-Etxano","provincia":"Vizcaya","price":null,"m2":"174","hab":null,"planta":null,"panoid":null},{"ref":"SBRE-0140569","tipo":"Trastero","calle":"Calle Egia","municipio":"Donostia-San Sebastián","provincia":"Guipúzcoa","price":"7.900","m2":"0","hab":null,"planta":null,"panoid":null},{"ref":"SBRE-0140614","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140657","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140695","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140719","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140644","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140647","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140658","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140721","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140576","tipo":"Trastero","calle":"Calle Egia","municipio":"Donostia-San Sebastián","provincia":"Guipúzcoa","price":"11.700","m2":"0","hab":"0","planta":null,"panoid":null},{"ref":"SBRE-0140636","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140714","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140652","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140677","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140575","tipo":"Piso","calle":"Calle Egia","municipio":"Donostia-San Sebastián","provincia":"Guipúzcoa","price":null,"m2":"69","hab":"2","planta":null,"panoid":null},{"ref":"SBRE-0140617","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140623","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140638","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140653","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140656","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140663","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140669","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140672","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140678","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140684","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140690","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140696","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140702","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140720","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140726","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140629","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140635","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140641","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140650","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140659","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140666","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140681","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140687","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140693","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140699","tipo":"36 Pisos + 5 Locales + 33 Garajes","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null},{"ref":"SBRE-0140705","tipo":"17 Pisos + 5 Locales","calle":"Calle Hondarribia","municipio":"Vitoria-Gasteiz","provincia":"Álava","price":null,"m2":"0","hab":"1","planta":null,"panoid":null}];
+
+function fmtPrice(p) {
+  if (!p || p === 'Consultar') return 'Precio a consultar';
+  return p + ' €';
+}
+function svUrl(panoid) {
+  return `https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&w=600&h=400&pitch=0&panoid=${panoid}&yaw=0`;
+}
+function waMsg(item) {
+  return encodeURIComponent(`Hola, me interesa el activo ${item.ref} en ${item.municipio}`);
+}
+
+
+
+
+function renderCard(item) {
+  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-00458","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550"];
+  const soldRefs = ["asima","SBRE-0105307"];
+  let badge = '<span class="card-badge badge-susp">Suspendido</span>';
+  if (soldRefs.includes(item.ref)) badge = '<span class="card-badge badge-sold">VENDIDO</span>';
+  else if (offerRefs.includes(item.ref)) badge = '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
+  
+  const specs = [];
+  if (item.m2 && item.m2 !== '0' && item.m2 !== 'N/D') specs.push(`<span class="spec">📐 ${item.m2} m²</span>`);
+  if (item.hab && item.hab !== 'N/D') specs.push(`<span class="spec">🛏️ ${item.hab} hab.</span>`);
+  let cleanTitle = item.calle || item.titulo || item.title || '';
+  const q = encodeURIComponent(cleanTitle + ' ' + (item.municipio || '') + ' ' + (item.provincia || ''));
+  const mapHtml = `<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=${q}&output=embed" allowfullscreen loading="lazy"></iframe>`;
+  const resId = `res-${item.ref}`;
+
+  const fichaHref = `activo-${item.ref.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}.html`;
+  return `
+    <div class="asset-card" data-provincia="${item.provincia}" data-tipo="${item.tipo}" data-search="${(cleanTitle+' '+(item.municipio||'')).toLowerCase()}">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        ${mapHtml}
+        ${badge}
+      </div>
+      <div class="card-body">
+        <div class="card-price">${fmtPrice(item.price)}</div>
+        <div class="card-title"><a href="${fichaHref}" style="color:inherit;text-decoration:none">${cleanTitle}</a></div>
+        <div class="card-specs">${specs.join('')}</div>
+        <div class="card-location">${item.municipio ? item.municipio+' · ' : ''}${item.provincia} · REF: ${item.ref}</div>
+        <div class="card-actions">
+          <a href="${fichaHref}" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=${waMsg(item)}" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="${resId}">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+
+function toggleMortgage(btn) {
+  const calc = btn.nextElementSibling;
+  calc.classList.toggle('active');
+  btn.textContent = calc.classList.contains('active') ? 'Cerrar calculadora' : 'Simular Hipoteca';
+  if (calc.classList.contains('active')) {
+    const input = calc.querySelector('input');
+    input.dispatchEvent(new Event('input'));
+  }
+}
+
+function calculateMortgage(input, priceStr, resultId) {
+  const card = input.closest('.asset-card');
+  const price = parseFloat(priceStr.replace(/\./g, '').replace('€', '').trim()) || 0;
+  const interest = parseFloat(card.querySelector('.m-int').value) / 100 / 12;
+  const term = parseFloat(card.querySelector('.m-term').value) * 12;
+  const downPaymentPercent = parseFloat(card.querySelector('.m-down').value) / 100;
+
+  const loanAmount = price * (1 - downPaymentPercent);
+  const resultDiv = document.getElementById(resultId);
+
+  if (loanAmount > 0 && interest > 0 && term > 0) {
+    const quota = (loanAmount * interest) / (1 - Math.pow(1 + interest, -term));
+    resultDiv.innerHTML = quota.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  } else {
+    resultDiv.innerHTML = '-- €';
+  }
+}
+
+function populateTipoOptions() {
+  const tipos = [...new Set(CV_DATA.map(d => d.tipo))].sort();
+  const sel = document.getElementById('cv-tipo');
+  tipos.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    sel.appendChild(opt);
+  });
+}
+
+function renderAll() {
+  const grid = document.getElementById('cv-grid');
+  grid.innerHTML = CV_DATA.map(renderCard).join('');
+  document.getElementById('cv-count').textContent = CV_DATA.length + ' activos encontrados';
+  applyFilters();
+}
+
+function applyFilters() {
+  const q = document.getElementById('cv-search').value.trim().toLowerCase();
+  const prov = document.getElementById('cv-provincia').value;
+  const tipo = document.getElementById('cv-tipo').value;
+  const cards = document.querySelectorAll('#cv-grid .asset-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const matchesQ = !q || card.dataset.search.includes(q);
+    const matchesProv = !prov || card.dataset.provincia === prov;
+    const matchesTipo = !tipo || card.dataset.tipo.toLowerCase().includes(tipo.toLowerCase());
+    const show = matchesQ && matchesProv && matchesTipo;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('cv-count').textContent = visible + ' de ' + cards.length + ' activos';
+  document.getElementById('cv-empty').style.display = visible === 0 ? 'block' : 'none';
+}
+
+populateTipoOptions();
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var tipoParam = params.get('tipo');
+  if (tipoParam) {
+    var sel = document.getElementById('cv-tipo');
+    if (sel) {
+      var opt = document.createElement('option');
+      opt.value = tipoParam;
+      opt.textContent = tipoParam;
+      opt.selected = true;
+      sel.insertBefore(opt, sel.options[1] || null);
+    }
+  }
+})();
+renderAll();
+document.getElementById('cv-search').addEventListener('input', applyFilters);
+document.getElementById('cv-provincia').addEventListener('change', applyFilters);
+document.getElementById('cv-tipo').addEventListener('change', applyFilters);
+
+function calculateYield(input, priceStr, resultId) {
+  const rent = parseFloat(input.value);
+  const resultDiv = document.getElementById(resultId);
+  
+  // Limpiar precio: quitar puntos y €
+  const cleanPrice = parseFloat(priceStr.replace(/\./g, '').replace('€', '').trim());
+  
+  if (rent > 0 && cleanPrice > 0) {
+    const yield = ((rent * 12) / cleanPrice) * 100;
+    resultDiv.innerHTML = `Rentabilidad estimada: <strong>${yield.toFixed(2)}%</strong> anual`;
+    resultDiv.style.display = 'block';
+  } else {
+    resultDiv.style.display = 'none';
+  }
+}
+
+</script>
+
+
+<div id="dp-cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1A2D4F;color:#fff;padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.15);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.85);flex:1;min-width:240px;">
+      Usamos cookies tecnicas necesarias y, si lo aceptas, cookies analiticas (Google Analytics) para mejorar la web. Puedes leer mas en nuestra <a href="cookies.html" style="color:#C9A84C;text-decoration:underline;">politica de cookies</a>.
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="dpCookieConsent('rejected')" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:9px 18px;font-size:12px;border-radius:4px;cursor:pointer;">Rechazar</button>
+      <button onclick="dpCookieConsent('accepted')" style="background:#C9A84C;border:none;color:#1A2D4F;padding:9px 18px;font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function dpShowBanner(){
+    try {
+      if (!localStorage.getItem('dp_cookie_consent')) {
+        var b = document.getElementById('dp-cookie-banner');
+        if (b) b.style.display = 'block';
+      }
+    } catch(e) {}
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', dpShowBanner);
+  } else {
+    dpShowBanner();
+  }
+})();
+window.dpCookieConsent = function(choice){
+  try { localStorage.setItem('dp_cookie_consent', choice); } catch(e) {}
+  var b = document.getElementById('dp-cookie-banner');
+  if (b) b.style.display = 'none';
+  if (choice === 'accepted' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-NBB3L9N4PW');
+  }
+};
+</script>
+</body>
+</html>
+
+<!-- Version: 1783613356624 -->

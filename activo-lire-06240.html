@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) - carga sujeta a consentimiento de cookies -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  (function(){
+    try {
+      if (localStorage.getItem('dp_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-NBB3L9N4PW');
+      }
+    } catch(e) {}
+  })();
+
+function toggleMortgage(btn) {
+  const calc = btn.nextElementSibling;
+  calc.classList.toggle('active');
+  btn.textContent = calc.classList.contains('active') ? 'Cerrar calculadora' : 'Simular Hipoteca';
+  if (calc.classList.contains('active')) {
+    calc.querySelector('input').dispatchEvent(new Event('input'));
+  }
+}
+function calculateMortgage(price) {
+  const calc = document.querySelector('.mortgage-calc');
+  const interest = parseFloat(calc.querySelector('.m-int').value) / 100 / 12;
+  const term = parseFloat(calc.querySelector('.m-term').value) * 12;
+  const downPct = parseFloat(calc.querySelector('.m-down').value) / 100;
+  const loanAmount = price * (1 - downPct);
+  const resultEl = calc.querySelector('.mortgage-val');
+  if (loanAmount > 0 && interest > 0 && term > 0) {
+    const quota = (loanAmount * interest) / (1 - Math.pow(1 + interest, -term));
+    resultEl.textContent = quota.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  } else {
+    resultEl.textContent = '-- €';
+  }
+}
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piso en Calle Calle Pizarro, Molina de Segura — Dulas Properties</title>
+<meta name="description" content="Piso en Calle Calle Pizarro (Molina de Segura, Murcia). 90 m². 2 hab. 65.000 €.">
+<link rel="stylesheet" href="styles.css">
+<link rel="canonical" href="https://dulasproperties.com/activo-lire-06240">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateListing",
+  "name": "Piso en Calle Calle Pizarro, Molina de Segura",
+  "description": "Piso en Calle Calle Pizarro (Molina de Segura, Murcia). 90 m². 2 hab. 65.000 €.",
+  "url": "https://dulasproperties.com/activo-lire-06240",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ES",
+    "addressLocality": "Molina de Segura",
+    "addressRegion": "Murcia"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": 65000,
+    "availability": "https://schema.org/InStock"
+  },
+  "floorSize": {
+    "@type": "QuantitativeValue",
+    "value": 90,
+    "unitCode": "MTK"
+  },
+  "numberOfRooms": 2,
+  "additionalType": "Piso",
+  "sku": "LIRE-06240"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+    <div class="logo-text"><span class="logo-name">Dulas Properties</span><span class="logo-sub">Real Estate</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="activos.html" class="active">Activos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html">Quiénes somos</a></li>
+    <li><a href="vender.html">Vende con nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="club-inversor.html" class="club-link">Club Inversor</a></li>
+  </ul>
+  <a href="tel:679916424" class="nav-cta">679 916 424</a>
+</nav>
+
+<div class="prop-breadcrumb">
+  <a href="index.html">Inicio</a> ›
+  <a href="activos.html">Activos</a> ›
+  <a href="activos-murcia.html">Región de Murcia</a> ›
+  <span>Piso en Calle Calle Pizarro</span>
+</div>
+
+<div class="prop-layout">
+  <div>
+    <div class="prop-eyebrow">Murcia · Molina de Segura</div>
+    <h1 class="prop-title">Piso en Calle Calle Pizarro</h1>
+    <p class="prop-location">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2"/></svg>
+      Calle Calle Pizarro, Molina de Segura, Murcia
+    </p>
+
+    <div class="prop-specs">
+      <div class="prop-spec"><span class="prop-spec-val">90</span><span class="prop-spec-label">m² construidos</span></div>
+      <div class="prop-spec"><span class="prop-spec-val">2</span><span class="prop-spec-label">Dormitorios</span></div>
+      <div class="prop-spec"><span class="prop-spec-val">2</span><span class="prop-spec-label">Planta</span></div>
+    </div>
+
+    <iframe class="prop-map" src="https://www.google.com/maps?q=Calle%20Calle%20Pizarro%20Molina%20de%20Segura%20Murcia&output=embed" allowfullscreen loading="lazy"></iframe>
+
+    <p class="prop-desc" style="margin-top:24px">
+      Activo gestionado por Dulas Properties, partner Hipoges en España. Piso situado en Molina de Segura, Murcia. Consulta disponibilidad, documentación y condiciones sin compromiso — te respondemos en menos de 24 horas.
+    </p>
+  </div>
+
+  <div class="prop-sidebar">
+    <div class="prop-price-card">
+      <div class="prop-price-label">Precio de venta</div>
+      <div class="prop-price">65.000 €</div>
+      <div class="prop-price-sub">REF: LIRE-06240</div>
+      <div class="prop-actions">
+        <a href="contacto.html" class="prop-btn-primary">Solicitar información →</a>
+        <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-06240%20en%20Molina%20de%20Segura" target="_blank" class="prop-btn-wa">WhatsApp directo</a>
+      </div>
+
+      <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+      <div class="mortgage-calc">
+        <div class="mortgage-title">Calculadora de Hipoteca</div>
+        <div class="mortgage-grid">
+          <div class="mortgage-field">
+            <label>Entrada (%)</label>
+            <input type="number" class="m-down" value="20" oninput="calculateMortgage(65000.0)">
+          </div>
+          <div class="mortgage-field">
+            <label>Plazo (Años)</label>
+            <input type="number" class="m-term" value="30" oninput="calculateMortgage(65000.0)">
+          </div>
+          <div class="mortgage-field" style="grid-column: span 2">
+            <label>Interés Anual (%)</label>
+            <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(65000.0)">
+          </div>
+        </div>
+        <div class="mortgage-result">
+          <span class="mortgage-label">Cuota mensual estimada</span>
+          <span class="mortgage-val">-- €</span>
+        </div>
+      </div>
+    </div>
+    <div class="prop-info-card">
+      <div class="prop-info-row"><span class="prop-info-key">Tipo</span><span class="prop-info-val">Piso</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Municipio</span><span class="prop-info-val">Molina de Segura</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Provincia</span><span class="prop-info-val">Murcia</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Superficie</span><span class="prop-info-val">90 m²</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Habitaciones</span><span class="prop-info-val">2</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Planta</span><span class="prop-info-val">2</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Referencia</span><span class="prop-info-val">LIRE-06240</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Gestión</span><span class="prop-info-val">Dulas Properties</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section" style="margin-top:0">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <div class="hero-eyebrow" style="text-align:center;margin-bottom:16px;">¿Te interesa este activo?</div>
+    <h2 class="contact-title" style="text-align:center;">Solicita más información<br><em>sin compromiso.</em></h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:13px;line-height:1.7;margin:16px auto 32px;max-width:480px;">Te respondemos en menos de 24 horas con información real.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+      <a href="contacto.html" class="form-submit" style="text-decoration:none;display:inline-block;width:auto;padding:14px 32px;">Contactar →</a>
+      <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-06240%20en%20Molina%20de%20Segura" target="_blank" class="form-submit" style="background:#25D366;color:#fff;text-decoration:none;display:inline-block;width:auto;padding:14px 32px;">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div><div class="footer-logo">Dulas Properties</div><div class="footer-tagline">Partner Hipoges · España</div></div>
+  <div class="footer-links">
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="cookies.html">Cookies</a>
+    <a href="mailto:info@dulasproperties.com">info@dulasproperties.com</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/34679916424?text=Hola" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>
+</a>
+
+<div id="dp-cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1A2D4F;color:#fff;padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.15);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.85);flex:1;min-width:240px;">
+      Usamos cookies tecnicas necesarias y, si lo aceptas, cookies analiticas (Google Analytics) para mejorar la web. Puedes leer mas en nuestra <a href="cookies.html" style="color:#C9A84C;text-decoration:underline;">politica de cookies</a>.
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="dpCookieConsent('rejected')" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:9px 18px;font-size:12px;border-radius:4px;cursor:pointer;">Rechazar</button>
+      <button onclick="dpCookieConsent('accepted')" style="background:#C9A84C;border:none;color:#1A2D4F;padding:9px 18px;font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function dpShowBanner(){
+    try {
+      if (!localStorage.getItem('dp_cookie_consent')) {
+        var b = document.getElementById('dp-cookie-banner');
+        if (b) b.style.display = 'block';
+      }
+    } catch(e) {}
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', dpShowBanner);
+  } else {
+    dpShowBanner();
+  }
+})();
+window.dpCookieConsent = function(choice){
+  try { localStorage.setItem('dp_cookie_consent', choice); } catch(e) {}
+  var b = document.getElementById('dp-cookie-banner');
+  if (b) b.style.display = 'none';
+  if (choice === 'accepted' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-NBB3L9N4PW');
+  }
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Cloudflare Wrangler cache/config (no aporta nada al repo)
+.wrangler/
+
+# Datos internos en bruto del feed de Hipoges (no son parte del sitio publico)
+DATOS_HIPOGES/
+
+# Imagenes marcadas explicitamente como privadas / no publicar
+imagenes/_privado_no_publicar/

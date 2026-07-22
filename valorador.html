@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorador Nacional Premium - Dulas Properties</title>
+    <style>
+        body { font-family: -apple-system, system-ui, sans-serif; background: #fff; color: #000; padding: 20px; line-height: 1.5; }
+        .wrapper { max-width: 550px; margin: 40px auto; }
+        
+        .section { margin-bottom: 45px; }
+        .section-header { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 25px; }
+        
+        .field { margin-bottom: 20px; }
+        label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+        .input { width: 100%; padding: 14px; border: 1px solid #e0e0e0; border-radius: 4px; font-size: 16px; box-sizing: border-box; background: #fff; }
+        .input:focus { border-color: #000; outline: none; }
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        
+        .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+        .check-item { display: flex; align-items: center; font-size: 14px; cursor: pointer; padding: 10px; border: 1px solid #f0f0f0; border-radius: 4px; }
+        .check-item input { margin-right: 10px; width: 18px; height: 18px; }
+
+        .btn-main { background: #000; color: #fff; border: none; padding: 20px; width: 100%; border-radius: 4px; font-size: 16px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px; }
+        
+        #result-box { display: none; margin-top: 40px; text-align: center; padding: 40px 20px; background: #f9f9f9; border-radius: 8px; }
+        .price-tag { font-size: 48px; font-weight: 800; margin: 20px 0; }
+        .lead-capture { margin-top: 30px; padding: 25px; background: #fff; border: 1px solid #eee; border-radius: 8px; }
+    </style>
+    <!-- Carga de API de Google Maps para Autocomplete de calles -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY_AQUI&libraries=places&language=es"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div style="text-align: center; margin-bottom: 60px;">
+        <h1 style="font-size: 32px; font-weight: 900; margin: 0; letter-spacing: -1px;">DULAS PROPERTIES</h1>
+        <p style="font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 3px;">Servicio de Valoración Nacional</p>
+    </div>
+
+    <!-- SECCIÓN 1: DIRECCIÓN INTELIGENTE -->
+    <div class="section">
+        <div class="section-header">1. Localización Exacta</div>
+        <div class="field">
+            <label>Escribe tu dirección (Calle y Número)</label>
+            <input type="text" id="direccion-search" class="input" placeholder="Ej: Calle Serrano 42, Madrid">
+            <p style="font-size: 11px; color: #999; margin-top: 5px;">* Empleamos tecnología de Google para localizar tu finca de forma precisa.</p>
+        </div>
+        
+        <div class="grid-2">
+            <div class="field">
+                <label>Población</label>
+                <input type="text" id="poblacion" class="input" readonly placeholder="Auto-completado">
+            </div>
+            <div class="field">
+                <label>Provincia</label>
+                <input type="text" id="provincia" class="input" readonly placeholder="Auto-completado">
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 2: DATOS TÉCNICOS -->
+    <div class="section">
+        <div class="section-header">2. Detalles del Inmueble</div>
+        <div class="field">
+            <label>Superficie (m² construidos)</label>
+            <input type="number" id="metros" class="input" placeholder="Ej: 95">
+        </div>
+        
+        <div class="grid-2">
+            <div class="field">
+                <label>Habitaciones</label>
+                <select id="habs" class="input">
+                    <option value="0.9">1 Hab</option>
+                    <option value="1" selected>2-3 Habs</option>
+                    <option value="1.15">4+ Habs</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Baños</label>
+                <select id="banos" class="input">
+                    <option value="1">1 Baño</option>
+                    <option value="1.08" selected>2 Baños</option>
+                    <option value="1.15">3+ Baños</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="field">
+                <label>Planta</label>
+                <select id="planta" class="input">
+                    <option value="1">Bajos / 1º</option>
+                    <option value="0.95">Intermedia</option>
+                    <option value="1.20">Ático / Última</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Ascensor</label>
+                <select id="ascensor" class="input">
+                    <option value="1.15">Sí tiene</option>
+                    <option value="0.80">No tiene</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Estado de conservación</label>
+            <select id="estado" class="input">
+                <option value="1">Bien conservado</option>
+                <option value="1.20">Reformado a estrenar</option>
+                <option value="0.75">Necesita reforma</option>
+                <option value="0.50">Ocupado legalmente</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 3: EXTRAS -->
+    <div class="section">
+        <div class="section-header">3. Comodidades y Valor Añadido</div>
+        <div class="check-grid">
+            <label class="check-item"><input type="checkbox" id="e_terraza"> Terraza / Balcón</label>
+            <label class="check-item"><input type="checkbox" id="e_piscina"> Piscina propia/com.</label>
+            <label class="check-item"><input type="checkbox" id="e_aacc"> Aire Acondicionado</label>
+            <label class="check-item"><input type="checkbox" id="e_jardin"> Jardín / Patio</label>
+            <label class="check-item"><input type="checkbox" id="e_parking"> Plaza de Parking</label>
+            <label class="check-item"><input type="checkbox" id="e_licencia"> Licencia ETV (Turística)</label>
+            <label class="check-item"><input type="checkbox" id="e_vistas"> Vistas al Mar</label>
+        </div>
+    </div>
+
+    <button class="btn-main" onclick="calcular()">Calcular Valoración de Mercado</button>
+
+    <!-- RESULTADO -->
+    <div id="result-box">
+        <span style="font-size: 11px; text-transform: uppercase; color: #999; font-weight: 700;">Estimación Dulas Properties</span>
+        <div class="price-tag" id="price-final">0 €</div>
+        
+        <div class="lead-capture">
+            <h4 style="margin: 0 0 10px 0;">¿Quieres el informe pericial completo?</h4>
+            <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Incluye análisis de demanda real y precio de cierre en tu calle.</p>
+            <input type="text" id="l-nombre" class="input" placeholder="Tu Nombre" style="margin-bottom: 12px;">
+            <input type="email" id="l-email" class="input" placeholder="Tu Email" style="margin-bottom: 12px;">
+            <input type="tel" id="l-tel" class="input" placeholder="Tu Teléfono">
+            <button class="btn-main" onclick="alert('Solicitud enviada. Jaime contactará contigo en menos de 24h.')">Solicitar PDF Completo</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Base de datos de precios simplificada para el cálculo de cobertura nacional
+    const preciosBase = {
+        "Baleares": 4100, "Madrid": 4600, "Barcelona": 4300, "Guipuzcoa": 5100, "Malaga": 3200, "Vizcaya": 2800, "Valencia": 2300, "Sevilla": 2100, "Alicante": 2100
+    };
+
+    let provinciaDetectada = "Baleares"; // Default
+
+    // Configuración de Google Places Autocomplete
+    function initAutocomplete() {
+        const input = document.getElementById('direccion-search');
+        const autocomplete = new google.maps.places.Autocomplete(input, {
+            componentRestrictions: { country: "es" },
+            fields: ["address_components", "geometry"],
+            types: ["address"]
+        });
+
+        autocomplete.addListener('place_changed', function() {
+            const place = autocomplete.getPlace();
+            if (!place.geometry) return;
+
+            let ciudad = "", provincia = "";
+
+            place.address_components.forEach(comp => {
+                if (comp.types.includes("locality")) ciudad = comp.long_name;
+                if (comp.types.includes("administrative_area_level_2")) provincia = comp.long_name;
+            });
+
+            document.getElementById('poblacion').value = ciudad;
+            document.getElementById('provincia').value = provincia;
+            provinciaDetectada = provincia;
+        });
+    }
+
+    // Ejecutar inicio de autocomplete
+    window.onload = initAutocomplete;
+
+    function calcular() {
+        const base = preciosBase[provinciaDetectada] || 1600;
+        const metros = parseFloat(document.getElementById('metros').value) || 0;
+        const habs = parseFloat(document.getElementById('habs').value);
+        const banos = parseFloat(document.getElementById('banos').value);
+        const estado = parseFloat(document.getElementById('estado').value);
+        const planta = parseFloat(document.getElementById('planta').value);
+        const ascensor = parseFloat(document.getElementById('ascensor').value);
+
+        if (metros <= 0) { alert("Introduce los metros cuadrados."); return; }
+
+        let extras = 1.0;
+        if(document.getElementById('e_terraza').checked) extras *= 1.1;
+        if(document.getElementById('e_piscina').checked) extras *= 1.15;
+        if(document.getElementById('e_aacc').checked) extras *= 1.05;
+        if(document.getElementById('e_jardin').checked) extras *= 1.12;
+        if(document.getElementById('e_parking').checked) extras *= 1.1;
+        if(document.getElementById('e_licencia').checked) extras *= 1.25;
+        if(document.getElementById('e_vistas').checked) extras *= 1.15;
+
+        let multAsc = ascensor;
+        if(planta > 1 && ascensor < 1.1) multAsc = 0.75;
+
+        const total = base * metros * habs * banos * estado * planta * multAsc * extras;
+        
+        document.getElementById('price-final').innerText = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(total);
+        document.getElementById('result-box').style.display = "block";
+        document.getElementById('result-box').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

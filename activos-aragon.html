@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) - carga sujeta a consentimiento de cookies -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  (function(){
+    try {
+      if (localStorage.getItem('dp_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-NBB3L9N4PW');
+      }
+    } catch(e) {}
+  })();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activos en Aragón — Dulas Properties</title>
+<meta name="description" content="Cartera de activos suspendidos en Aragón: Zaragoza, Huesca y Teruel. Dulas Properties, partner Hipoges.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.badge-susp{background:var(--gold-light);color:#5C4A17}
+.cv-filters{background:var(--cream);padding:24px 48px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.cv-filters input[type="text"]{flex:2;min-width:220px;padding:10px 14px;border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-family:inherit;background:var(--white)}
+.cv-filters select{flex:1;min-width:150px;padding:10px 14px;border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-family:inherit;background:var(--white);cursor:pointer}
+.cv-filters .cv-count{font-size:12px;color:var(--gray-500);white-space:nowrap;margin-left:auto}
+.card-img-placeholder{width:100%;height:200px;display:flex;align-items:center;justify-content:center;background:var(--gray-100);color:var(--gray-500);font-size:11px;text-align:center;padding:12px}
+.cv-empty{text-align:center;padding:64px 24px;color:var(--gray-500);font-size:14px}
+.card-img iframe{width:100%;height:100%;border:0}
+
+  .yield-calc {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border);
+    background: #fcfaf5;
+    padding: 12px;
+    border-radius: 4px;
+  }
+  .yield-calc-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .yield-input-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .yield-input-group input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 13px;
+    width: 60px;
+  }
+  .yield-result {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A7A5E;
+    display: none;
+  }
+
+.badge-offer{background:#F1C40F!important;color:#000!important;font-weight:700!important;box-shadow:0 2px 10px rgba(241,196,15,0.4);border:1px solid #D4AC0D!important}
+.badge-offer-banner{background:#F1C40F!important;color:#000!important;font-weight:900!important;text-transform:uppercase!important;padding:15px 0!important;font-size:16px!important;display:block!important;width:100%!important;text-align:center!important;z-index:1001!important;position:absolute!important;top:0!important;left:0!important;box-shadow:0 4px 10px rgba(0,0,0,0.3)!important;letter-spacing:2px!important}
+
+  .badge-sold {
+    background: #E74C3C !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    padding: 15px 0 !important;
+    font-size: 16px !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 1001 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    letter-spacing: 2px !important;
+  }
+</style>
+<link rel="canonical" href="https://dulasproperties.com/activos-aragon">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+    <div class="logo-text"><span class="logo-name">Dulas Properties</span><span class="logo-sub">Real Estate</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="activos.html" class="active">Activos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html">Quiénes somos</a></li>
+
+    <li><a href="vender.html">Vende con nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="club-inversor.html" class="club-link">Club Inversor</a></li>
+  </ul>
+  <a href="tel:679916424" class="nav-cta">679 916 424</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-eyebrow">Partner Hipoges · España 2025–2026</div>
+  <h1 class="page-hero-title">Activos en <em>Aragón</em></h1>
+  <div class="hero-line"></div>
+  <p class="page-hero-desc">Cartera de activos suspendidos en Zaragoza, Huesca y Teruel y el resto de la comunidad. Inmuebles gestionados por Dulas Properties, partner Hipoges.</p>
+</div>
+
+<div class="cv-filters">
+  <input type="text" id="cv-search" placeholder="Buscar por calle o municipio...">
+  <select id="cv-provincia">
+    <option value="">Provincia...</option>
+    <option value="Huesca">Huesca</option>
+    <option value="Teruel">Teruel</option>
+    <option value="Zaragoza">Zaragoza</option>
+  </select>
+  <select id="cv-tipo">
+    <option value="">Tipo de inmueble...</option>
+  </select>
+  <div class="cv-count" id="cv-count"></div>
+</div>
+
+<main class="main">
+  <div class="assets-grid" id="cv-grid"></div>
+  <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
+</main>
+
+<div class="contact-section" style="margin-top:0">
+  <div style="max-width:600px;margin:0 auto;text-align:center">
+    <div class="hero-eyebrow" style="text-align:center;margin-bottom:16px">¿Interesado en algún activo?</div>
+    <h2 class="contact-title" style="text-align:center">Hablemos de<br><em>tu próxima operación.</em></h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:13px;line-height:1.7;margin:16px auto 32px;max-width:480px">Te respondemos en menos de 24 horas con información real y condiciones claras.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+      <a href="contacto.html" class="form-submit" style="text-decoration:none;display:inline-block;width:auto;padding:14px 32px">Solicitar información</a>
+      <a href="https://wa.me/34679916424" target="_blank" class="form-submit" style="background:#25D366;color:#fff;text-decoration:none;display:inline-block;width:auto;padding:14px 32px">WhatsApp directo</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div><div class="footer-logo">Dulas Properties</div><div class="footer-tagline">Partner Hipoges · España</div></div>
+  <div class="footer-links">
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="cookies.html">Cookies</a>
+    <a href="mailto:info@dulasproperties.com">info@dulasproperties.com</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/34679916424?text=Hola" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>
+</a>
+
+<script>
+const CV_DATA = [{"ref":"LORE-0715","tipo":"Piso","calle":"Calle Goya Francisco","municipio":"Cadrete","provincia":"Zaragoza","m2":"78","hab":"2","planta":"1"},{"ref":"JARE-2748","tipo":"Finca Rústica","calle":"Paraje Heredad En Termino De Rabal","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"NERE-348015","tipo":"Garaje","calle":"Calle Costa Rica","municipio":"Fraga","provincia":"Huesca","m2":"17","hab":null,"planta":"-2"},{"ref":"NERE-348016","tipo":"Garaje","calle":"Calle Costa Rica","municipio":"Fraga","provincia":"Huesca","m2":"14","hab":null,"planta":"-2"},{"ref":"NERE-348018","tipo":"Garaje","calle":"Calle Costa Rica","municipio":"Fraga","provincia":"Huesca","m2":"11","hab":null,"planta":"-2"},{"ref":"NERE-348019","tipo":"Garaje","calle":"Calle Costa Rica","municipio":"Fraga","provincia":"Huesca","m2":"18","hab":null,"planta":"-2"},{"ref":"NERE-012001","tipo":"Piso","calle":"Calle Doctor Ibañez","municipio":"Ejea de los Caballeros","provincia":"Zaragoza","m2":"63","hab":"2","planta":"1"},{"ref":"ALRE-04642","tipo":"Piso","calle":"Calle Juan Ramon Jimenez","municipio":"Barbastro","provincia":"Huesca","m2":"75","hab":"3","planta":"2"},{"ref":"ALRE-04002","tipo":"Piso","calle":"Calle CL JUAN GUALBERTO BERMUDEZ","municipio":"Calatayud","provincia":"Zaragoza","m2":"120","hab":"3","planta":"6"},{"ref":"REMO-01987","tipo":"Piso","calle":"Calle Miguel Servet","municipio":"Zaragoza","provincia":"Zaragoza","m2":"111","hab":"4","planta":"5"},{"ref":"REMO-02087","tipo":"Casa","calle":"Calle Barrionuevo Ag Asin Broto","municipio":"Broto","provincia":"Huesca","m2":"277","hab":"4","planta":null},{"ref":"REMO-00638","tipo":"Casa Adosada","calle":"Calle Gudel Marti G.","municipio":"Zaragoza","provincia":"Zaragoza","m2":"247","hab":"4","planta":null},{"ref":"REMO-02127","tipo":"Piso","calle":"Calle Almozara Soto Almozara","municipio":"Zaragoza","provincia":"Zaragoza","m2":"126","hab":"4","planta":null},{"ref":"LIRE-06043","tipo":"Piso","calle":"Calle Pontevedra","municipio":"Zaragoza","provincia":"Zaragoza","m2":"60","hab":"2","planta":"2"},{"ref":"LIRE-03175","tipo":"Piso","calle":"Calle Binefar","municipio":"Zaragoza","provincia":"Zaragoza","m2":"54","hab":"2","planta":"1"},{"ref":"RETI-01499","tipo":"Piso","calle":"Avenida Maestrazgo","municipio":"Alcañiz","provincia":"Teruel","m2":"90","hab":"2","planta":"3"},{"ref":"RETI-01927","tipo":"Casa","calle":"Calle Mayor","municipio":"Biota","provincia":"Zaragoza","m2":"131","hab":null,"planta":null},{"ref":"RETI-03465","tipo":"Local","calle":"Avenida Madrid","municipio":"Daroca","provincia":"Zaragoza","m2":"201","hab":"4","planta":"bajo"},{"ref":"RETI-00700","tipo":"Piso","calle":"Calle Capuchinos","municipio":"Tarazona","provincia":"Zaragoza","m2":"50","hab":"2","planta":null},{"ref":"RETI-03464","tipo":"Casa","calle":"Calle Mayor","municipio":"Daroca","provincia":"Zaragoza","m2":"940","hab":"4","planta":null},{"ref":"RETI-03473","tipo":"Piso","calle":"Calle Atlantico","municipio":"Utebo","provincia":"Zaragoza","m2":"91","hab":"3","planta":"1"},{"ref":"SBRE-0094794","tipo":"Piso","calle":"Calle OBISPO LAPLANA","municipio":"Zaragoza","provincia":"Zaragoza","m2":"64","hab":"3","planta":"ENT"},{"ref":"SBRE-0094795","tipo":"Piso","calle":"Calle OBISPO LAPLANA","municipio":"Zaragoza","provincia":"Zaragoza","m2":"58","hab":"3","planta":"ENTREPLANTA"},{"ref":"SBRE-0094792","tipo":"Piso","calle":"Calle OBISPO LA PLANA","municipio":"Zaragoza","provincia":"Zaragoza","m2":"0","hab":"3","planta":"3"},{"ref":"SBRE-0118654","tipo":"Pisos","calle":"Calle DE LAS BANQUERAS","municipio":"Muela (La)","provincia":"Zaragoza","m2":"50","hab":"1","planta":"3"},{"ref":"SBRE-0120541","tipo":"Suelo Urbano Residencial","calle":"Sector PUENTE SARDAS","municipio":"Sabiñánigo","provincia":"Huesca","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0120502","tipo":"Suelo Urbano Residencial","calle":"Avenida BUENOS AIRES","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0120515","tipo":"Suelo Urbano Residencial","calle":"Sector 89/3 ARCOSUR","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0123109","tipo":"Suelo Urbano Residencial","calle":"Calle CASTA ALVAREZ","municipio":"Calatayud","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0123732","tipo":"Suelos Urbanizables Residenciales","calle":"Lugar SUZ LC-3","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0123729","tipo":"Suelos Urbanizables Residenciales","calle":"Lugar SECTOR SUZ LC-2 CARTUJA BAJA","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0124693","tipo":"Suelos Urbanos Residenciales","calle":"Carretera HUESCA-ALIAGAR","municipio":"Zuera","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0125367","tipo":"Suelo Urbano Residencial","calle":"Lugar Parcela RESIDENCIAL V.L.1.2","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0033410","tipo":"Suelo Urbano Residencial","calle":"Calle JESUS VALDES GUZMAN","municipio":"Zaragoza","provincia":"Zaragoza","m2":"45113","hab":null,"planta":null},{"ref":"SBRE-0125583","tipo":"Suelo Urbano Residencial","calle":"Partida DE LA BOMBARDA","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0138884","tipo":"Piso","calle":"Paseo RUISEÑORES","municipio":"Zaragoza","provincia":"Zaragoza","m2":"0","hab":"4","planta":null},{"ref":"SBRE-0139126","tipo":"Trastero","calle":"Calle ESCARRILO","municipio":"Sallent de Gállego","provincia":"Huesca","m2":"0","hab":null,"planta":"-1"},{"ref":"SBRE-0139130","tipo":"Trastero","calle":"Calle ESCARRILLA","municipio":"Sallent de Gállego","provincia":"Huesca","m2":"0","hab":null,"planta":"-3"},{"ref":"SBRE-0139127","tipo":"Trastero","calle":"Calle FRANCIA ESCARRILLA","municipio":"Sallent de Gállego","provincia":"Huesca","m2":"0","hab":null,"planta":"-1"}];
+
+function fmtPrice(p) {
+  if (!p || p === 'Consultar') return 'Precio a consultar';
+  return p + ' €';
+}
+function svUrl(panoid) {
+  return `https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&w=600&h=400&pitch=0&panoid=${panoid}&yaw=0`;
+}
+function waMsg(item) {
+  return encodeURIComponent(`Hola, me interesa el activo ${item.ref} en ${item.municipio}`);
+}
+
+
+
+
+function renderCard(item) {
+  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-00458","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550"];
+  const soldRefs = ["asima","SBRE-0105307"];
+  let badge = '<span class="card-badge badge-susp">Suspendido</span>';
+  if (soldRefs.includes(item.ref)) badge = '<span class="card-badge badge-sold">VENDIDO</span>';
+  else if (offerRefs.includes(item.ref)) badge = '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
+  
+  const specs = [];
+  if (item.m2 && item.m2 !== '0' && item.m2 !== 'N/D') specs.push(`<span class="spec">📐 ${item.m2} m²</span>`);
+  if (item.hab && item.hab !== 'N/D') specs.push(`<span class="spec">🛏️ ${item.hab} hab.</span>`);
+  let cleanTitle = item.calle || item.titulo || item.title || '';
+  const q = encodeURIComponent(cleanTitle + ' ' + (item.municipio || '') + ' ' + (item.provincia || ''));
+  const mapHtml = `<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=${q}&output=embed" allowfullscreen loading="lazy"></iframe>`;
+  const resId = `res-${item.ref}`;
+
+  const fichaHref = `activo-${item.ref.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}.html`;
+  return `
+    <div class="asset-card" data-provincia="${item.provincia}" data-tipo="${item.tipo}" data-search="${(cleanTitle+' '+(item.municipio||'')).toLowerCase()}">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        ${mapHtml}
+        ${badge}
+      </div>
+      <div class="card-body">
+        <div class="card-price">${fmtPrice(item.price)}</div>
+        <div class="card-title"><a href="${fichaHref}" style="color:inherit;text-decoration:none">${cleanTitle}</a></div>
+        <div class="card-specs">${specs.join('')}</div>
+        <div class="card-location">${item.municipio ? item.municipio+' · ' : ''}${item.provincia} · REF: ${item.ref}</div>
+        <div class="card-actions">
+          <a href="${fichaHref}" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=${waMsg(item)}" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="${resId}">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+
+function toggleMortgage(btn) {
+  const calc = btn.nextElementSibling;
+  calc.classList.toggle('active');
+  btn.textContent = calc.classList.contains('active') ? 'Cerrar calculadora' : 'Simular Hipoteca';
+  if (calc.classList.contains('active')) {
+    const input = calc.querySelector('input');
+    input.dispatchEvent(new Event('input'));
+  }
+}
+
+function calculateMortgage(input, priceStr, resultId) {
+  const card = input.closest('.asset-card');
+  const price = parseFloat(priceStr.replace(/\./g, '').replace('€', '').trim()) || 0;
+  const interest = parseFloat(card.querySelector('.m-int').value) / 100 / 12;
+  const term = parseFloat(card.querySelector('.m-term').value) * 12;
+  const downPaymentPercent = parseFloat(card.querySelector('.m-down').value) / 100;
+
+  const loanAmount = price * (1 - downPaymentPercent);
+  const resultDiv = document.getElementById(resultId);
+
+  if (loanAmount > 0 && interest > 0 && term > 0) {
+    const quota = (loanAmount * interest) / (1 - Math.pow(1 + interest, -term));
+    resultDiv.innerHTML = quota.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  } else {
+    resultDiv.innerHTML = '-- €';
+  }
+}
+
+function populateTipoOptions() {
+  const tipos = [...new Set(CV_DATA.map(d => d.tipo))].sort();
+  const sel = document.getElementById('cv-tipo');
+  tipos.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    sel.appendChild(opt);
+  });
+}
+
+function renderAll() {
+  const grid = document.getElementById('cv-grid');
+  grid.innerHTML = CV_DATA.map(renderCard).join('');
+  document.getElementById('cv-count').textContent = CV_DATA.length + ' activos encontrados';
+  applyFilters();
+}
+
+function applyFilters() {
+  const q = document.getElementById('cv-search').value.trim().toLowerCase();
+  const prov = document.getElementById('cv-provincia').value;
+  const tipo = document.getElementById('cv-tipo').value;
+  const cards = document.querySelectorAll('#cv-grid .asset-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const matchesQ = !q || card.dataset.search.includes(q);
+    const matchesProv = !prov || card.dataset.provincia === prov;
+    const matchesTipo = !tipo || card.dataset.tipo.toLowerCase().includes(tipo.toLowerCase());
+    const show = matchesQ && matchesProv && matchesTipo;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('cv-count').textContent = visible + ' de ' + cards.length + ' activos';
+  document.getElementById('cv-empty').style.display = visible === 0 ? 'block' : 'none';
+}
+
+populateTipoOptions();
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var tipoParam = params.get('tipo');
+  if (tipoParam) {
+    var sel = document.getElementById('cv-tipo');
+    if (sel) {
+      var opt = document.createElement('option');
+      opt.value = tipoParam;
+      opt.textContent = tipoParam;
+      opt.selected = true;
+      sel.insertBefore(opt, sel.options[1] || null);
+    }
+  }
+})();
+renderAll();
+document.getElementById('cv-search').addEventListener('input', applyFilters);
+document.getElementById('cv-provincia').addEventListener('change', applyFilters);
+document.getElementById('cv-tipo').addEventListener('change', applyFilters);
+
+function calculateYield(input, priceStr, resultId) {
+  const rent = parseFloat(input.value);
+  const resultDiv = document.getElementById(resultId);
+  
+  // Limpiar precio: quitar puntos y €
+  const cleanPrice = parseFloat(priceStr.replace(/\./g, '').replace('€', '').trim());
+  
+  if (rent > 0 && cleanPrice > 0) {
+    const yield = ((rent * 12) / cleanPrice) * 100;
+    resultDiv.innerHTML = `Rentabilidad estimada: <strong>${yield.toFixed(2)}%</strong> anual`;
+    resultDiv.style.display = 'block';
+  } else {
+    resultDiv.style.display = 'none';
+  }
+}
+
+</script>
+
+
+<div id="dp-cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1A2D4F;color:#fff;padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.15);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.85);flex:1;min-width:240px;">
+      Usamos cookies tecnicas necesarias y, si lo aceptas, cookies analiticas (Google Analytics) para mejorar la web. Puedes leer mas en nuestra <a href="cookies.html" style="color:#C9A84C;text-decoration:underline;">politica de cookies</a>.
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="dpCookieConsent('rejected')" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:9px 18px;font-size:12px;border-radius:4px;cursor:pointer;">Rechazar</button>
+      <button onclick="dpCookieConsent('accepted')" style="background:#C9A84C;border:none;color:#1A2D4F;padding:9px 18px;font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function dpShowBanner(){
+    try {
+      if (!localStorage.getItem('dp_cookie_consent')) {
+        var b = document.getElementById('dp-cookie-banner');
+        if (b) b.style.display = 'block';
+      }
+    } catch(e) {}
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', dpShowBanner);
+  } else {
+    dpShowBanner();
+  }
+})();
+window.dpCookieConsent = function(choice){
+  try { localStorage.setItem('dp_cookie_consent', choice); } catch(e) {}
+  var b = document.getElementById('dp-cookie-banner');
+  if (b) b.style.display = 'none';
+  if (choice === 'accepted' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-NBB3L9N4PW');
+  }
+};
+</script>
+</body>
+</html>
+
+<!-- Version: 1783613356600 -->

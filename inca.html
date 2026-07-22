@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) - carga sujeta a consentimiento de cookies -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  (function(){
+    try {
+      if (localStorage.getItem('dp_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-NBB3L9N4PW');
+      }
+    } catch(e) {}
+  })();
+
+function toggleMortgage(btn) {
+  const calc = btn.nextElementSibling;
+  calc.classList.toggle('active');
+  btn.textContent = calc.classList.contains('active') ? 'Cerrar calculadora' : 'Simular Hipoteca';
+  if (calc.classList.contains('active')) {
+    calc.querySelector('input').dispatchEvent(new Event('input'));
+  }
+}
+function calculateMortgage(price) {
+  const calc = document.querySelector('.mortgage-calc');
+  const interest = parseFloat(calc.querySelector('.m-int').value) / 100 / 12;
+  const term = parseFloat(calc.querySelector('.m-term').value) * 12;
+  const downPct = parseFloat(calc.querySelector('.m-down').value) / 100;
+  const loanAmount = price * (1 - downPct);
+  const resultEl = calc.querySelector('.mortgage-val');
+  if (loanAmount > 0 && interest > 0 && term > 0) {
+    const quota = (loanAmount * interest) / (1 - Math.pow(1 + interest, -term));
+    resultEl.textContent = quota.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  } else {
+    resultEl.textContent = '-- €';
+  }
+}
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa S'Ermita, Inca — Dulas Properties</title>
+<meta name="description" content="Casa independiente en venta en S'Ermita s/n, Inca. 150 m². Precio rebajado 461.800€. Solo inversores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.prop-gallery{position:relative;background:#000}
+.prop-gallery-main{width:100%;height:520px;object-fit:cover;display:block;opacity:0;transition:opacity .3s}
+.prop-gallery-main.loaded{opacity:1}
+.prop-gallery-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(26,45,79,.7);border:none;color:var(--gold);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.prop-gallery-nav:hover{background:var(--navy)}
+.prop-gallery-prev{left:16px}.prop-gallery-next{right:16px}
+.prop-gallery-counter{position:absolute;bottom:16px;right:16px;background:rgba(0,0,0,.5);color:#fff;font-size:11px;padding:4px 10px;border-radius:12px}
+.prop-thumbs{display:flex;gap:6px;padding:8px;background:#111;overflow-x:auto}
+.prop-thumb{width:80px;height:56px;object-fit:cover;border-radius:3px;cursor:pointer;opacity:.55;transition:opacity .2s;flex-shrink:0;border:2px solid transparent}
+.prop-thumb.active,.prop-thumb:hover{opacity:1;border-color:var(--gold)}
+.prop-layout{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:40px;padding:40px 48px}
+.prop-eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.prop-title{font-family:var(--font-serif);font-size:32px;font-weight:400;color:var(--navy);line-height:1.2;margin-bottom:8px}
+.prop-location{font-size:13px;color:var(--gray-500);display:flex;align-items:center;gap:5px;margin-bottom:24px}
+.prop-specs{display:flex;gap:24px;flex-wrap:wrap;padding:20px 0;border-top:1px solid var(--gray-100);border-bottom:1px solid var(--gray-100);margin-bottom:28px}
+.prop-spec{display:flex;flex-direction:column;gap:3px}
+.prop-spec-val{font-family:var(--font-serif);font-size:22px;color:var(--navy)}
+.prop-spec-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500)}
+.prop-desc{font-size:14px;color:var(--gray-700);line-height:1.85}
+.prop-sidebar{position:sticky;top:80px;height:fit-content}
+.prop-price-card{background:var(--navy);border-radius:var(--radius-lg);padding:28px;margin-bottom:16px}
+.prop-price-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:6px}
+.prop-price{font-family:var(--font-serif);font-size:36px;font-weight:400;color:var(--white);line-height:1}
+.prop-price-rebajado{font-size:13px;color:rgba(255,255,255,.4);text-decoration:line-through;margin-top:4px}
+.prop-price-ahorro{font-size:11px;color:#7DDB8A;margin-top:4px}
+.prop-price-sub{font-size:11px;color:rgba(255,255,255,.45);margin-top:6px}
+.prop-actions{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.prop-btn-primary{background:var(--gold);color:var(--navy);border:none;padding:14px;border-radius:var(--radius);font-family:var(--font-sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;text-align:center;transition:all .2s;font-weight:500}
+.prop-btn-primary:hover{background:#b8923e}
+.prop-btn-wa{background:#25D366;color:#fff;border:none;padding:14px;border-radius:var(--radius);font-family:var(--font-sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;text-align:center;transition:all .2s}
+.prop-btn-wa:hover{background:#1da856}
+.prop-info-card{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--radius-lg);padding:20px}
+.prop-info-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:12px}
+.prop-info-row:last-child{border-bottom:none;padding-bottom:0}
+.prop-info-key{color:var(--gray-500)}
+.prop-info-val{color:var(--navy);font-weight:500}
+.prop-breadcrumb{background:var(--gray-50);border-bottom:1px solid var(--gray-100);padding:10px 48px;font-size:11px;color:var(--gray-500);display:flex;gap:6px;align-items:center}
+.prop-breadcrumb a{color:var(--gray-500);text-decoration:none}
+.prop-breadcrumb a:hover{color:var(--gold)}
+.prop-highlight{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+.prop-highlight-item{display:flex;align-items:center;gap:8px;background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--radius);padding:10px 14px;font-size:12px;color:var(--navy)}
+.prop-highlight-item svg{color:var(--gold);flex-shrink:0}
+.okup-banner{background:#FDF3E7;border:1px solid #F0C070;border-radius:var(--radius-lg);padding:16px 20px;margin-bottom:20px;display:flex;gap:12px;align-items:flex-start}
+.okup-banner-title{font-size:13px;font-weight:500;color:#7A5000;margin-bottom:4px}
+.okup-banner-text{font-size:12px;color:#8B6010;line-height:1.6}
+.rebaja-badge{display:inline-flex;align-items:center;gap:6px;background:#FCF0E0;border:1px solid #F0C070;border-radius:20px;padding:5px 14px;font-size:11px;color:#7A5000;font-weight:500;margin-bottom:16px}
+@media(max-width:768px){.prop-layout{grid-template-columns:1fr;padding:24px 20px}.prop-sidebar{position:static}.prop-gallery-main{height:280px}.prop-breadcrumb{padding:10px 20px}}
+.badge-offer{background:#F1C40F!important;color:#000!important;font-weight:700!important;border:1px solid #D4AC0D!important}
+.offer-banner{background:#F1C40F;color:#000;font-weight:900;text-transform:uppercase;padding:14px 0;font-size:15px;text-align:center;letter-spacing:2px;box-shadow:0 2px 10px rgba(0,0,0,0.15)}
+
+  .badge-sold {
+    background: #E74C3C !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    padding: 15px 0 !important;
+    font-size: 16px !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 1001 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    letter-spacing: 2px !important;
+  }
+</style>
+<link rel="canonical" href="https://dulasproperties.com/inca">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateListing",
+  "name": "Casa S'Ermita, Inca",
+  "description": "Casa independiente en venta en S'Ermita s/n, Inca. 150 m². Precio rebajado 461.800€. Solo inversores.",
+  "url": "https://dulasproperties.com/inca",
+  "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&w=600&h=400&pitch=0&panoid=LVGx4Lv7o9USVOiP_Qi5Ig&yaw=0",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ES",
+    "addressRegion": "Mallorca"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": 461800,
+    "availability": "https://schema.org/InStock"
+  },
+  "floorSize": {
+    "@type": "QuantitativeValue",
+    "value": 150,
+    "unitCode": "MTK"
+  },
+  "additionalType": "Casa independiente",
+  "sku": "ACRE-000654"
+}
+</script>
+</head>
+<body>
+<div class="offer-banner">OFERTA EN NEGOCIACIÓN</div>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+    <div class="logo-text"><span class="logo-name">Dulas Properties</span><span class="logo-sub">Real Estate</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="activos.html" class="active">Activos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html">Quiénes somos</a></li>
+    <li><a href="vender.html">Vende con nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="club-inversor.html" class="club-link">Club Inversor</a></li>
+  </ul>
+  <a href="tel:622587788" class="nav-cta">622 587 788</a>
+</nav>
+
+<div class="prop-breadcrumb">
+  <a href="index.html">Inicio</a> ›
+  <a href="activos.html">Activos</a> ›
+  <span>Casa S'Ermita, Inca</span>
+</div>
+
+<div class="prop-gallery">
+  <img id="main-photo" class="prop-gallery-main" src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&w=600&h=400&pitch=0&panoid=LVGx4Lv7o9USVOiP_Qi5Ig&yaw=0" alt="Vista de la calle - Inca" onload="this.classList.add('loaded')">
+</div>
+
+<div class="prop-layout">
+  <div>
+    <div class="prop-eyebrow">Illes Balears · Inca · Mallorca · Inversión</div>
+    <div class="rebaja-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Precio rebajado — Ahorro de 20.100€
+    </div>
+    <h1 class="prop-title">Casa independiente<br><em>en S'Ermita, Inca</em></h1>
+    <p class="prop-location">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2"/></svg>
+      S'Ermita s/n, Son Amonda - Reis Catòlics, Inca, Mallorca
+    </p>
+
+    <div class="okup-banner">
+      <div>⚠️</div>
+      <div>
+        <div class="okup-banner-title">Activo con situación especial — Solo para inversores</div>
+        <div class="okup-banner-text">No es posible realizar visitas interiores. No apto para financiación hipotecaria. El nuevo propietario será responsable de los trámites de desocupación. La distribución indicada se basa en referencias de activos similares de la zona.</div>
+      </div>
+    </div>
+
+    <div class="prop-specs">
+      <div class="prop-spec"><span class="prop-spec-val">150</span><span class="prop-spec-label">m² construidos</span></div>
+      <div class="prop-spec"><span class="prop-spec-val">Casa</span><span class="prop-spec-label">Tipo</span></div>
+      <div class="prop-spec"><span class="prop-spec-val">A reformar</span><span class="prop-spec-label">Estado</span></div>
+      <div class="prop-spec"><span class="prop-spec-val">3.079 €/m²</span><span class="prop-spec-label">Precio m²</span></div>
+    </div>
+
+    <div class="prop-highlight">
+      <div class="prop-highlight-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Zona tranquila de Inca
+      </div>
+      <div class="prop-highlight-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l4-6 3 3 6-8"/></svg>
+        Gran potencial de revalorización
+      </div>
+      <div class="prop-highlight-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Precio rebajado 4%
+      </div>
+      <div class="prop-highlight-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Múltiples dependencias
+      </div>
+    </div>
+
+    <p class="prop-desc">
+      Oportunidad única en Inca, Illes Balears. Se presenta esta casa independiente de 150 m², ideal para quienes buscan un proyecto de renovación. Ubicada en una zona tranquila, esta propiedad cuenta con varias dependencias que ofrecen múltiples posibilidades de distribución.
+    </p>
+    <br>
+    <p class="prop-desc">
+      La ubicación privilegiada y el potencial de la vivienda la convierten en una opción atractiva para inversores o personas con visión. Si buscas un proyecto donde plasmar tus ideas y crear el hogar de tus sueños en Mallorca, esta es tu oportunidad.
+    </p>
+    <br>
+    <p class="prop-desc">
+      Actualmente con precio rebajado desde 481.900€ hasta 461.800€, lo que supone un ahorro de 20.100€. Activo orientado exclusivamente a inversores sin necesidad de financiación hipotecaria.
+    </p>
+  </div>
+
+  <div class="prop-sidebar">
+    <div class="prop-price-card">
+      <div class="prop-price-label">Precio de venta</div>
+      <div class="prop-price">461.800 €</div>
+      <div class="prop-price-rebajado">481.900 € precio original</div>
+      <div class="prop-price-ahorro">↓ Ahorro de 20.100 € (4%)</div>
+      <div class="prop-price-sub">3.079 €/m² · Solo inversores</div>
+      <div class="prop-actions">
+        <a href="contacto.html" class="prop-btn-primary">Solicitar información →</a>
+        <a href="https://wa.me/34622587788?text=Hola%2C%20me%20interesa%20la%20casa%20de%20Inca%20S'Ermita%20(461.800%E2%82%AC)" target="_blank" class="prop-btn-wa">WhatsApp directo</a>
+      </div>
+
+      <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+      <div class="mortgage-calc">
+        <div class="mortgage-title">Calculadora de Hipoteca</div>
+        <div class="mortgage-grid">
+          <div class="mortgage-field">
+            <label>Entrada (%)</label>
+            <input type="number" class="m-down" value="20" oninput="calculateMortgage(461800)">
+          </div>
+          <div class="mortgage-field">
+            <label>Plazo (Años)</label>
+            <input type="number" class="m-term" value="30" oninput="calculateMortgage(461800)">
+          </div>
+          <div class="mortgage-field" style="grid-column: span 2">
+            <label>Interés Anual (%)</label>
+            <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(461800)">
+          </div>
+        </div>
+        <div class="mortgage-result">
+          <span class="mortgage-label">Cuota mensual estimada</span>
+          <span class="mortgage-val">-- €</span>
+        </div>
+      </div>
+    </div>
+    <div class="prop-info-card">
+      <div class="prop-info-row"><span class="prop-info-key">Tipo</span><span class="prop-info-val">Casa independiente</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Superficie</span><span class="prop-info-val">150 m²</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Estado</span><span class="prop-info-val">A reformar</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Situación</span><span class="prop-info-val">Ocupada</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Financiación</span><span class="prop-info-val">No disponible</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Zona</span><span class="prop-info-val">Son Amonda, Inca</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Isla</span><span class="prop-info-val">Mallorca</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Referencia</span><span class="prop-info-val">ACRE-000654</span></div>
+      <div class="prop-info-row"><span class="prop-info-key">Gestión</span><span class="prop-info-val">Dulas Properties</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section" style="margin-top:0">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <div class="hero-eyebrow" style="text-align:center;margin-bottom:16px;">¿Te interesa esta inversión?</div>
+    <h2 class="contact-title" style="text-align:center;">Hablemos de<br><em>esta oportunidad.</em></h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:13px;line-height:1.7;margin:16px auto 32px;max-width:480px;">Te respondemos en menos de 24 horas con información completa.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+      <a href="contacto.html" class="form-submit" style="text-decoration:none;display:inline-block;width:auto;padding:14px 32px;">Contactar →</a>
+      <a href="https://wa.me/34622587788?text=Hola%2C%20me%20interesa%20la%20casa%20de%20Inca" target="_blank" class="form-submit" style="background:#25D366;color:#fff;text-decoration:none;display:inline-block;width:auto;padding:14px 32px;">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div><div class="footer-logo">Dulas Properties</div><div class="footer-tagline">Partner Hipoges Baleares</div></div>
+  <div class="footer-links">
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="cookies.html">Cookies</a>
+    <a href="mailto:info@dulasproperties.com">info@dulasproperties.com</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/34622587788?text=Hola" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>
+</a>
+
+
+<div id="dp-cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1A2D4F;color:#fff;padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.15);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.85);flex:1;min-width:240px;">
+      Usamos cookies tecnicas necesarias y, si lo aceptas, cookies analiticas (Google Analytics) para mejorar la web. Puedes leer mas en nuestra <a href="cookies.html" style="color:#C9A84C;text-decoration:underline;">politica de cookies</a>.
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="dpCookieConsent('rejected')" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:9px 18px;font-size:12px;border-radius:4px;cursor:pointer;">Rechazar</button>
+      <button onclick="dpCookieConsent('accepted')" style="background:#C9A84C;border:none;color:#1A2D4F;padding:9px 18px;font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function dpShowBanner(){
+    try {
+      if (!localStorage.getItem('dp_cookie_consent')) {
+        var b = document.getElementById('dp-cookie-banner');
+        if (b) b.style.display = 'block';
+      }
+    } catch(e) {}
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', dpShowBanner);
+  } else {
+    dpShowBanner();
+  }
+})();
+window.dpCookieConsent = function(choice){
+  try { localStorage.setItem('dp_cookie_consent', choice); } catch(e) {}
+  var b = document.getElementById('dp-cookie-banner');
+  if (b) b.style.display = 'none';
+  if (choice === 'accepted' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-NBB3L9N4PW');
+  }
+};
+</script>
+</body>
+</html>
+
+<!-- Version: 1783613356636 -->

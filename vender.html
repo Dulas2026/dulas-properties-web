@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) - carga sujeta a consentimiento de cookies -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  (function(){
+    try {
+      if (localStorage.getItem('dp_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-NBB3L9N4PW');
+      }
+    } catch(e) {}
+  })();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vende tu propiedad con expertos — Dulas Properties</title>
+<meta name="description" content="Vendemos tu casa con el rigor de un fondo de inversión. Partner estratégico de Hipoges. Especialistas en viviendas ocupadas, con cargas o en herencia. Valoración gratuita en 24h.">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root {
+    --gold-gradient: linear-gradient(135deg, #C5A059 0%, #8E6D3B 100%);
+  }
+  .sell-hero {
+    background: var(--navy);
+    color: white;
+    padding: 80px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .sell-hero h1 { font-size: 42px; margin-bottom: 20px; color: #fff; line-height: 1.1; }
+  .sell-hero h1 em { color: var(--gold); font-style: normal; }
+  .sell-hero p { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 40px; }
+
+  .trust-bar {
+    background: var(--cream);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    font-weight: 500;
+    color: var(--navy);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 24px;
+  }
+  .feature-card {
+    padding: 32px;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease;
+  }
+  .feature-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+  .feature-icon { font-size: 32px; margin-bottom: 20px; display: block; }
+  .feature-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--navy); }
+  .feature-card p { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
+
+  .valuation-box {
+    background: linear-gradient(rgba(10, 24, 45, 0.7), rgba(10, 24, 45, 0.7)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 24px;
+    text-align: center;
+    border-radius: 0;
+    margin: 40px 0;
+  }
+  .valuation-box h2 { font-size: 36px; color: #fff; margin-bottom: 16px; }
+  .valuation-box p { font-size: 16px; color: rgba(255,255,255,0.85) !important; margin-bottom: 40px; }
+  .btn-gold {
+    background: var(--gold);
+    color: white;
+    padding: 18px 48px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+  }
+  .btn-gold:hover { background: #b18a4a; transform: scale(1.02); }
+
+  .steps-section { padding: 80px 24px; max-width: 900px; margin: 0 auto; }
+  .step-item { display: flex; gap: 24px; margin-bottom: 48px; align-items: flex-start; }
+  .step-num {
+    background: var(--navy); color: white; width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; font-weight: bold; flex-shrink: 0;
+  }
+  .step-content h4 { font-size: 18px; margin-bottom: 8px; color: var(--navy); }
+.badge-offer{background:#F1C40F!important;color:#000!important;font-weight:700!important;border:1px solid #D4AC0D!important}
+
+  .badge-sold {
+    background: #E74C3C !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    padding: 15px 0 !important;
+    font-size: 16px !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 1001 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    letter-spacing: 2px !important;
+  }
+
+  .cases-section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+  .cases-eyebrow { text-align: center; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .cases-title { text-align: center; font-family: var(--font-serif); font-size: 30px; font-weight: 400; color: var(--navy); margin-bottom: 48px; }
+  .cases-title em { font-style: italic; color: var(--gold); }
+  .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .case-card { padding: 28px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); }
+  .case-tag { display: inline-block; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: rgba(197,160,89,0.1); padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
+  .case-card h4 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
+  .case-card p { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
+
+  .confianza-section { background: var(--navy); padding: 64px 24px; }
+  .confianza-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+  .confianza-inner h2 { font-family: var(--font-serif); font-size: 28px; font-weight: 400; color: #fff; margin-bottom: 8px; }
+  .confianza-inner .sub { color: rgba(255,255,255,0.65); font-size: 13px; margin-bottom: 40px; max-width: 560px; margin-left: auto; margin-right: auto; }
+  .cred-item { display: flex; gap: 14px; align-items: flex-start; text-align: left; }
+  .cred-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 14px; }
+  .cred-title { font-family: var(--font-serif); font-size: 15px; color: #fff; margin-bottom: 3px; }
+  .cred-desc { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+  .confianza-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; }
+
+  .faq-section { padding: 80px 24px; max-width: 800px; margin: 0 auto; }
+  .faq-eyebrow { text-align: center; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .faq-title { text-align: center; font-family: var(--font-serif); font-size: 30px; font-weight: 400; color: var(--navy); margin-bottom: 40px; }
+  .faq-title em { font-style: italic; color: var(--gold); }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 20px 4px; }
+  .faq-item summary { cursor: pointer; font-family: var(--font-serif); font-size: 16px; color: var(--navy); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 20px; color: var(--gold); flex-shrink: 0; }
+  .faq-item[open] summary::after { content: '\2212'; }
+  .faq-item p { font-size: 13px; color: var(--gray-500); line-height: 1.7; margin-top: 12px; }
+  .faq-disclaimer { font-size: 11px; color: var(--gray-400); margin-top: 24px; text-align: center; }
+
+  .packages-section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+  .packages-eyebrow { text-align: center; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .packages-title { text-align: center; font-family: var(--font-serif); font-size: 30px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
+  .packages-title em { font-style: italic; color: var(--gold); }
+  .packages-sub { text-align: center; font-size: 14px; color: var(--gray-500); max-width: 560px; margin: 0 auto 48px; line-height: 1.6; }
+  .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; align-items: stretch; }
+  .package-card { position: relative; padding: 32px 28px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--gray-100); display: flex; flex-direction: column; }
+  .package-featured { border: 2px solid var(--gold); box-shadow: 0 10px 30px rgba(197,160,89,0.15); }
+  .package-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #fff; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; white-space: nowrap; }
+  .package-name { font-family: var(--font-serif); font-size: 22px; color: var(--navy); margin-bottom: 18px; text-align: center; }
+  .package-list { list-style: none; padding: 0; margin: 0 0 28px; flex-grow: 1; }
+  .package-list li { font-size: 13px; color: var(--gray-500); line-height: 1.6; padding-left: 22px; position: relative; margin-bottom: 12px; }
+  .package-list li::before { content: '✔'; position: absolute; left: 0; color: var(--gold); font-size: 12px; }
+  .package-cta { display: block; text-align: center; padding: 13px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 600; border: 1px solid var(--navy); color: var(--navy); transition: all 0.2s ease; }
+  .package-cta:hover { background: var(--navy); color: #fff; }
+  .package-cta-gold { background: var(--gold); border-color: var(--gold); color: #fff; }
+  .package-cta-gold:hover { background: #b18a4a; }
+  .packages-note { text-align: center; font-size: 12px; color: var(--gray-500); max-width: 700px; margin: 40px auto 0; line-height: 1.7; }
+
+  .valform-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .valform-consent { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 20px; }
+  .valform-consent input { margin-top: 3px; flex-shrink: 0; }
+  .valform-consent label { font-size: 11px; color: #666; line-height: 1.5; text-align: left; }
+  .valform-consent a { color: var(--navy); }
+  @media(max-width:600px){ .valform-row { grid-template-columns: 1fr; } }
+</style>
+<link rel="canonical" href="https://dulasproperties.com/vender">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+    <div class="logo-text"><span class="logo-name">Dulas Properties</span><span class="logo-sub">Real Estate</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="activos.html">Activos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html">Quiénes somos</a></li>
+    <li><a href="vender.html" class="active">Vende con nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="club-inversor.html" class="club-link">Club Inversor</a></li>
+  </ul>
+  <a href="tel:679916424" class="nav-cta">679 916 424</a>
+</nav>
+
+<header class="sell-hero">
+  <div class="hero-eyebrow" style="color:var(--gold)">Servicio para propietarios</div>
+  <h1>Vendemos tu inmueble con la eficacia de un <em>Fondo de Inversión.</em></h1>
+  <p>Somos Partners de Hipoges. Aplicamos la misma tecnología, rigor legal y red de inversores que los grandes fondos para vender tu casa rápido y al mejor precio — incluida si está ocupada, tiene cargas o está en proceso de herencia.</p>
+  <a href="#valoracion" class="btn-gold">VALORAR MI CASA GRATIS</a>
+</header>
+
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Activos gestionados</div></div>
+  <div class="stat-item"><div class="stat-num">Éxito</div><div class="stat-label">Honorarios solo si vendemos</div></div>
+  <div class="stat-item"><div class="stat-num">24h</div><div class="stat-label">Primera respuesta</div></div>
+  <div class="stat-item"><div class="stat-num">Hipoges</div><div class="stat-label">Partner homologado</div></div>
+</div>
+
+<div class="trust-bar">
+  Partner Estratégico de Hipoges · Especialistas en Activos Adjudicados e Inversión
+</div>
+
+<section class="features-grid">
+  <div class="feature-card">
+    <span class="feature-icon">📊</span>
+    <h3>Valoración de Precisión</h3>
+    <p>No adivinamos el precio. Usamos big data y testigos reales de operaciones cerradas para darte el valor máximo de mercado.</p>
+  </div>
+  <div class="feature-card">
+    <span class="feature-icon">📸</span>
+    <h3>Marketing de Élite</h3>
+    <p>Reportaje fotográfico profesional y Home Staging Virtual. Tu propiedad destacará sobre la competencia desde el primer segundo.</p>
+  </div>
+  <div class="feature-card">
+    <span class="feature-icon">🤝</span>
+    <h3>Inversores Directos</h3>
+    <p>Tu inmueble no solo va a portales. Se presenta directamente a nuestra base de datos de inversores nacionales e internacionales.</p>
+  </div>
+</section>
+
+<section class="cases-section">
+  <div class="cases-eyebrow">Situaciones que sabemos resolver</div>
+  <h2 class="cases-title">No todas las ventas <em>son sencillas.</em><br>Nosotros trabajamos con las complicadas.</h2>
+  <div class="cases-grid">
+    <div class="case-card">
+      <span class="case-tag">Ocupación</span>
+      <h4>Vivienda ocupada</h4>
+      <p>Tiene un inquilino o una ocupación irregular. Evaluamos la situación legal y te explicamos las opciones antes de sacarla al mercado.</p>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Cargas y deuda</span>
+      <h4>Hipoteca o cargas pendientes</h4>
+      <p>Hipoteca, embargo u otras cargas registrales. Estructuramos la operación para que la deuda no frene la venta.</p>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Herencias</span>
+      <h4>Herencia o proindiviso</h4>
+      <p>Varios herederos, trámites pendientes o desacuerdo entre las partes. Te ayudamos a ordenar el proceso mientras buscamos comprador.</p>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Cesión de remate</span>
+      <h4>Activo de subasta o inversión</h4>
+      <p>Adjudicado o comprado en subasta y quieres traspasarlo. Lo conectamos directamente con nuestra red de inversores.</p>
+    </div>
+  </div>
+</section>
+
+<section class="packages-section" id="paquetes">
+  <div class="packages-eyebrow">Nuestros servicios de venta</div>
+  <h2 class="packages-title">Elige el <em>paquete</em> que mejor encaja con tu vivienda.</h2>
+  <p class="packages-sub">Todos los paquetes incluyen, además, asesoramiento gratuito y sin compromiso sobre reformas o mejoras que puedan facilitar la venta de tu vivienda.</p>
+  <div class="packages-grid">
+    <div class="package-card">
+      <div class="package-name">Básico</div>
+      <ul class="package-list">
+        <li>Tasación de mercado gratuita</li>
+        <li>Reportaje fotográfico profesional</li>
+        <li>Publicación en los principales portales inmobiliarios y en nuestra web</li>
+      </ul>
+      <a href="#valoracion" class="package-cta">Quiero este paquete</a>
+    </div>
+    <div class="package-card package-featured">
+      <div class="package-badge">Más elegido</div>
+      <div class="package-name">Estándar</div>
+      <ul class="package-list">
+        <li>Todo lo incluido en el paquete Básico</li>
+        <li>Puerta de seguridad / anti-ocupación (PAO) durante todo el proceso de venta</li>
+      </ul>
+      <a href="#valoracion" class="package-cta package-cta-gold">Quiero este paquete</a>
+    </div>
+    <div class="package-card">
+      <div class="package-name">Premium</div>
+      <ul class="package-list">
+        <li>Todo lo incluido en el paquete Estándar</li>
+        <li>Reportaje audiovisual con dron</li>
+        <li>Sistema de videovigilancia y alarma de seguridad, sin coste durante los primeros 6 meses</li>
+      </ul>
+      <a href="#valoracion" class="package-cta">Quiero este paquete</a>
+    </div>
+  </div>
+  <p class="packages-note">Para acceder a estos servicios, el inmueble debe salir al mercado al precio de venta que fijemos conjuntamente en base a nuestra valoración, y con un encargo de venta en exclusiva de 6 meses. Si prefieres otras condiciones, también estamos abiertos a escucharte.</p>
+</section>
+
+<section id="valoracion" style="background:var(--white); padding:80px 24px; border-top:1px solid var(--border);">
+  <div style="max-width:800px; margin:0 auto; text-align:center;">
+    <h2 style="font-family:var(--font-serif); font-size:36px; color:var(--navy); margin-bottom:16px;">Tasa tu vivienda gratis en 30 segundos</h2>
+    <p style="color:var(--gray-500); font-size:16px; margin-bottom:48px;">Utilizamos la tecnología de valoración de fondos de inversión para darte un precio real de mercado.</p>
+    
+    <iframe src="valorador-inmobiliario.html" style="width:100%; height:750px; border:none; border-radius:12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);"></iframe>
+    
+    <p style="font-size:12px; color:var(--gray-400); margin-top:24px;">*Tras la valoración, podrás descargar un informe completo de mercado sin compromiso.</p>
+  </div>
+</section>
+
+<section class="steps-section">
+  <div style="text-align:center; margin-bottom:60px">
+    <h2 style="font-size:32px; color:var(--navy)">Nuestro proceso de venta</h2>
+  </div>
+
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h4>Análisis y Estrategia</h4>
+      <p>Estudiamos la zona, la demanda y definimos el precio de salida óptimo para atraer compradores reales en tiempo récord.</p>
+    </div>
+  </div>
+
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h4>Puesta a punto visual</h4>
+      <p>Hacemos que tu casa entre por los ojos. El 90% de las ventas comienzan con un flechazo visual en internet.</p>
+    </div>
+  </div>
+
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h4>Filtrado de Compradores</h4>
+      <p>Solo llevamos a tu casa a clientes con solvencia verificada. Ahorramos tiempo y evitamos visitas innecesarias.</p>
+    </div>
+  </div>
+</section>
+
+<section class="confianza-section">
+  <div class="confianza-inner">
+    <h2>¿Por qué confiar en nosotros?</h2>
+    <p class="sub">No somos una inmobiliaria generalista. Somos partner homologado de Hipoges, uno de los servicers con mayor volumen de activos de fondos de inversión en España.</p>
+    <div class="confianza-grid">
+      <div class="cred-item">
+        <div class="cred-icon">🏛️</div>
+        <div>
+          <div class="cred-title">Partner homologado Hipoges</div>
+          <div class="cred-desc">Aplicamos a tu vivienda los mismos criterios de valoración y comercialización que usamos con carteras institucionales.</div>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">⚖️</div>
+        <div>
+          <div class="cred-title">Experiencia en activos complejos</div>
+          <div class="cred-desc">Gestionamos habitualmente inmuebles ocupados, con cargas registrales o en cesión de remate — lo que otras agencias evitan.</div>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">💶</div>
+        <div>
+          <div class="cred-title">Honorarios solo a éxito</div>
+          <div class="cred-desc">Si no vendemos tu propiedad, no cobramos. La valoración inicial es siempre gratuita y sin compromiso.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-eyebrow">Preguntas frecuentes</div>
+  <h2 class="faq-title">Dudas habituales <em>al vender.</em></h2>
+
+  <details class="faq-item">
+    <summary>¿Puedo vender mi vivienda si está ocupada?</summary>
+    <p>Sí. Es uno de los perfiles de activo en los que estamos especializados como partner de Hipoges. Evaluamos la situación legal concreta y te explicamos las opciones antes de sacarla al mercado.</p>
+  </details>
+  <details class="faq-item">
+    <summary>¿Qué pasa si mi casa tiene una hipoteca o cargas pendientes?</summary>
+    <p>Podemos venderla igualmente. Estructuramos la operación para cancelar la carga en el momento de la firma o coordinamos con el comprador según el caso.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Somos varios herederos y no nos ponemos de acuerdo, ¿podéis ayudar?</summary>
+    <p>Sí, es una situación habitual. Te orientamos sobre el proceso y buscamos comprador mientras se resuelven los trámites, según el estado de la herencia.</p>
+  </details>
+  <details class="faq-item">
+    <summary>¿Cuánto tarda en venderse una propiedad con vosotros?</summary>
+    <p>Depende del tipo de activo y de la zona, pero al trabajar con inversores directos y no solo con portales, los tiempos suelen ser más cortos que en una venta tradicional.</p>
+  </details>
+  <details class="faq-item">
+    <summary>¿Cuánto cobráis por la valoración y la venta?</summary>
+    <p>La valoración inicial es gratuita y sin compromiso. Nuestros honorarios de venta son solo a éxito: si no vendemos tu propiedad, no cobramos.</p>
+  </details>
+
+  <p class="faq-disclaimer">Esta información es orientativa y no sustituye el asesoramiento legal o fiscal personalizado.</p>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+      <div class="logo-text"><span class="logo-name" style="color:#fff">Dulas Properties</span></div>
+      <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,0.5)">Expertos en gestión de activos inmobiliarios y soluciones para propietarios exigentes.</p>
+    </div>
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h4>Vendedores</h4>
+        <a href="vender.html">Valoración gratuita</a>
+        <a href="contacto.html">Contactar asesor</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Dulas Properties. Partner Hipoges.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/34679916424?text=Hola, quiero vender mi propiedad con vosotros" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>
+</a>
+
+
+<div id="dp-cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1A2D4F;color:#fff;padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.15);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.85);flex:1;min-width:240px;">
+      Usamos cookies tecnicas necesarias y, si lo aceptas, cookies analiticas (Google Analytics) para mejorar la web. Puedes leer mas en nuestra <a href="cookies.html" style="color:#C9A84C;text-decoration:underline;">politica de cookies</a>.
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="dpCookieConsent('rejected')" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:9px 18px;font-size:12px;border-radius:4px;cursor:pointer;">Rechazar</button>
+      <button onclick="dpCookieConsent('accepted')" style="background:#C9A84C;border:none;color:#1A2D4F;padding:9px 18px;font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function dpShowBanner(){
+    try {
+      if (!localStorage.getItem('dp_cookie_consent')) {
+        var b = document.getElementById('dp-cookie-banner');
+        if (b) b.style.display = 'block';
+      }
+    } catch(e) {}
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', dpShowBanner);
+  } else {
+    dpShowBanner();
+  }
+})();
+window.dpCookieConsent = function(choice){
+  try { localStorage.setItem('dp_cookie_consent', choice); } catch(e) {}
+  var b = document.getElementById('dp-cookie-banner');
+  if (b) b.style.display = 'none';
+  if (choice === 'accepted' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-NBB3L9N4PW');
+  }
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) - carga sujeta a consentimiento de cookies -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  (function(){
+    try {
+      if (localStorage.getItem('dp_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-NBB3L9N4PW');
+      }
+    } catch(e) {}
+  })();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activos en Illes Balears — Dulas Properties</title>
+<meta name="description" content="Cartera de activos en Illes Balears: Mallorca, Menorca e Ibiza. Pisos, casas, locales, solares y créditos NPL/CDR gestionados por Dulas Properties, partner Hipoges.">
+<link rel="stylesheet" href="styles.css?v=1.1">
+<style>
+.badge-npl-label,.badge-cdr-label{font-weight:600}
+.cv-filters{background:var(--cream);padding:24px 48px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.cv-filters input[type="text"]{flex:2;min-width:220px;padding:10px 14px;border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-family:inherit;background:var(--white)}
+.cv-filters select{flex:1;min-width:150px;padding:10px 14px;border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-family:inherit;background:var(--white);cursor:pointer}
+.cv-filters .cv-count{font-size:12px;color:var(--gray-500);white-space:nowrap;margin-left:auto}
+.cv-empty{text-align:center;padding:64px 24px;color:var(--gray-500);font-size:14px}
+.card-img iframe{width:100%;height:100%;border:0}
+.badge-offer{background:#F1C40F!important;color:#000!important;font-weight:700!important;box-shadow:0 2px 10px rgba(241,196,15,0.4);border:1px solid #D4AC0D!important}
+.badge-offer-banner{background:#F1C40F!important;color:#000!important;font-weight:900!important;text-transform:uppercase!important;padding:15px 0!important;font-size:16px!important;display:block!important;width:100%!important;text-align:center!important;z-index:1001!important;position:absolute!important;top:0!important;left:0!important;box-shadow:0 4px 10px rgba(0,0,0,0.3)!important;letter-spacing:2px!important}
+.badge-reserved{background:#E67E22!important;color:#fff!important;font-weight:900!important;text-transform:uppercase!important;padding:15px 0!important;font-size:16px!important;display:block!important;width:100%!important;text-align:center!important;z-index:1001!important;position:absolute!important;top:0!important;left:0!important;box-shadow:0 4px 10px rgba(0,0,0,0.3)!important;letter-spacing:2px!important}
+
+  .badge-sold {
+    background: #E74C3C !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    padding: 15px 0 !important;
+    font-size: 16px !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 1001 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    letter-spacing: 2px !important;
+  }
+</style>
+<link rel="canonical" href="https://dulasproperties.com/activos-baleares">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+    <div class="logo-text"><span class="logo-name">Dulas Properties</span><span class="logo-sub">Real Estate</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="activos.html" class="active">Activos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html">Quiénes somos</a></li>
+    <li><a href="vender.html">Vende con nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="club-inversor.html" class="club-link">Club Inversor</a></li>
+  </ul>
+  <a href="tel:679916424" class="nav-cta">679 916 424</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-eyebrow">Partner Hipoges · España</div>
+  <h1 class="page-hero-title">Activos en <em>Illes Balears</em></h1>
+  <div class="hero-line"></div>
+  <p class="page-hero-desc">Cartera de propiedades en Mallorca, Menorca e Ibiza: pisos, casas, locales, solares y activos NPL/CDR de Hipoges. Imágenes de referencia de la calle, sin mostrar el número exacto de la vivienda. Inmuebles gestionados por Dulas Properties.</p>
+</div>
+
+<div class="cv-filters">
+  <input type="text" id="cv-search" placeholder="Buscar por calle o municipio...">
+  <select id="cv-isla">
+    <option value="">Isla...</option>
+    <option value="Mallorca">Mallorca</option>
+    <option value="Menorca">Menorca</option>
+    <option value="Ibiza">Ibiza</option>
+  </select>
+  <select id="cv-tipo">
+    <option value="">Tipo de inmueble...</option>
+  </select>
+  <select id="cv-estado">
+    <option value="">Estado...</option>
+    <option value="Disponible">Disponible</option>
+    <option value="Ocupado">Ocupado</option>
+          </select>
+  <div class="cv-count" id="cv-count"></div>
+</div>
+
+<main class="main">
+  <div class="assets-grid" id="cv-grid"></div>
+  <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
+</main>
+
+<div class="contact-section" style="margin-top:0">
+  <div style="max-width:600px;margin:0 auto;text-align:center">
+    <div class="hero-eyebrow" style="text-align:center;margin-bottom:16px">¿Interesado en algún activo?</div>
+    <h2 class="contact-title" style="text-align:center">Hablemos de<br><em>tu próxima operación.</em></h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:13px;line-height:1.7;margin:16px auto 32px;max-width:480px">Te respondemos en menos de 24 horas con información real y condiciones claras.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+      <a href="contacto.html" class="form-submit" style="text-decoration:none;display:inline-block;width:auto;padding:14px 32px">Solicitar información</a>
+      <a href="https://wa.me/34679916424" target="_blank" class="form-submit" style="background:#25D366;color:#fff;text-decoration:none;display:inline-block;width:auto;padding:14px 32px">WhatsApp directo</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div><div class="footer-logo">Dulas Properties</div><div class="footer-tagline">Partner Hipoges · España</div></div>
+  <div class="footer-links">
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="cookies.html">Cookies</a>
+    <a href="mailto:info@dulasproperties.com">info@dulasproperties.com</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/34679916424?text=Hola" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>
+</a>
+
+<script>
+const CV_DATA = [{"ref":"inca-bisbe","tipo":"Local comercial","isla":"Mallorca","municipio":"Inca","titulo":"Local Comercial 1.092m² (Bisbe Llompart)","price":487000,"m2":1092,"hab":null,"extra":"✨ Fachada a 2 calles","img":"https://sc04.alicdn.com/kf/Ac71ad39aeb834e48b22b4637f4f92de4Q.jpg","panoid":null,"badge":"Disponible","ficha":"bisbellompart.html","wa":"Hola,%20me%20interesa%20el%20local%20de%201.092m%20en%20Inca","clasif":null},{"ref":"alcudia","tipo":"Piso","isla":"Mallorca","municipio":"Port d'Alcúdia","titulo":"Piso a 3 min de la playa, Port d'Alcúdia","price":185000,"m2":55,"hab":2,"extra":null,"img":"imagenes/alcudia/alcudia-01.jpg","panoid":null,"badge":"Disponible","ficha":"alcudia.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Port%20d%27Alc%C3%BAdia","clasif":null},{"ref":"garajeembat","tipo":"Plaza de garaje","isla":"Mallorca","municipio":"Alcúdia","titulo":"Garaje Calle Embat, Alcúdia","price":500,"m2":2,"hab":null,"extra":null,"img":null,"panoid":null,"badge":"Disponible","ficha":"garajeembat.html","wa":"Hola,%20me%20interesa%20el%20garaje%20de%20Calle%20Embat%2C%20Alc%C3%BAdia","clasif":null},{"ref":"localmahon","tipo":"Local comercial","isla":"Menorca","municipio":"Mahón","titulo":"Local Comercial Calle Francesc Femenias, Mahón","price":227000,"m2":306,"hab":null,"extra":null,"img":null,"panoid":null,"badge":"Disponible","ficha":"localmahon.html","wa":"Hola,%20me%20interesa%20el%20local%20de%20Mah%C3%B3n","clasif":null},{"ref":"pisosantamargalida","tipo":"Piso","isla":"Mallorca","municipio":"Santa Margalida","titulo":"Piso Calle Pere Estelrich Fuster, Santa Margalida","price":120000,"m2":100,"hab":3,"extra":null,"img":null,"panoid":null,"badge":"Disponible","ficha":"pisosantamargalida.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Santa%20Margalida","clasif":null},{"ref":"pisotomasvillanueva","tipo":"Piso","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Piso Avenida Tomás de Villanueva Corte, Palma","price":319000,"m2":99,"hab":3,"extra":null,"img":null,"panoid":null,"badge":"Disponible","ficha":"pisotomasvillanueva.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Palma%20(Tomas%20de%20Villanueva)","clasif":null},{"ref":"pisosantaflorentina","tipo":"Piso","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Piso Calle Santa Florentina, Palma","price":115000,"m2":61,"hab":2,"extra":null,"img":null,"panoid":null,"badge":"Ocupado","ficha":"pisosantaflorentina.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Palma%20(Santa%20Florentina)","clasif":null},{"ref":"casadesbruc","tipo":"Casa Adosada","isla":"Mallorca","municipio":"Capdepera","titulo":"Casa Adosada Calle Des Bruc, Capdepera","price":null,"m2":124,"hab":3,"extra":null,"img":null,"panoid":null,"badge":"Ocupado","ficha":"casadesbruc.html","wa":"Hola,%20me%20interesa%20la%20casa%20de%20Capdepera%20(Des%20Bruc)","clasif":null},{"ref":"residencialjoanpons","tipo":"Residencial","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Residencial Calle Joan Pons i Marqués, Palma","price":null,"m2":null,"hab":null,"extra":null,"img":null,"panoid":null,"badge":"Ocupado","ficha":"residencialjoanpons.html","wa":"Hola,%20me%20interesa%20el%20residencial%20de%20Palma%20(Joan%20Pons)","clasif":null},{"ref":"pisorectorpetro","tipo":"Piso","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Piso Calle Rector Petro, Palma","price":null,"m2":96,"hab":3,"extra":null,"img":null,"panoid":null,"badge":"Ocupado","ficha":"pisorectorpetro.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Palma%20(Rector%20Petro)","clasif":null},{"ref":"pisollanafelanitx","tipo":"Piso","isla":"Mallorca","municipio":"Felanitx","titulo":"Piso Calle Llana, Felanitx","price":171600,"m2":null,"hab":2,"extra":null,"img":null,"panoid":null,"badge":"Disponible","ficha":"pisollanafelanitx.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Felanitx","clasif":null},{"ref":"pisosureda","tipo":"Piso","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Piso Calle Sureda, Palma","price":280000,"m2":null,"hab":null,"extra":null,"img":null,"panoid":null,"badge":"Ocupado","ficha":"pisosureda.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Palma%20(Sureda)","clasif":null},{"ref":"asima","tipo":"Local comercial","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Local Gran Via Asima, Palma","price":194275,"m2":128,"hab":null,"extra":null,"img":"imagenes/asima/asima-01.jpg","panoid":null,"badge":"Disponible","ficha":"asima.html","wa":"Hola,%20me%20interesa%20el%20local%20de%20Asima","clasif":null},{"ref":"calabosch","tipo":"Local comercial","isla":"Menorca","municipio":"Ciutadella de Menorca","titulo":"Local pie de calle, Cala'N Bosch","price":91000,"m2":76,"hab":null,"extra":null,"img":"imagenes/calabosch/calabosch-01.jpg","panoid":null,"badge":"Disponible","ficha":"calabosch.html","wa":"Hola,%20me%20interesa%20el%20local%20de%20Cala%27N%20Bosch","clasif":null},{"ref":"calaratjada","tipo":"Piso","isla":"Mallorca","municipio":"Cala Ratjada","titulo":"Piso Calle Pizarro, Cala Ratjada","price":245000,"m2":128,"hab":3,"extra":"☀️ Orientación sur","img":null,"panoid":"ojFkFN_s4bLUPhibn9JA_A","badge":"Ocupado","ficha":"calaratjada.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Cala%20Ratjada","clasif":null},{"ref":"calvia","tipo":"Local comercial","isla":"Mallorca","municipio":"Calvià","titulo":"Local pie de calle, Santa Ponça","price":102000,"m2":62,"hab":null,"extra":null,"img":"imagenes/calvia/calvia-01.jpg","panoid":null,"badge":"Disponible","ficha":"calvia.html","wa":"Hola,%20me%20interesa%20el%20local%20de%20Santa%20Pon%C3%A7a","clasif":null},{"ref":"conforama","tipo":"Local comercial","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Local Calle Aragó, Palma","price":559000,"m2":726,"hab":null,"extra":null,"img":"imagenes/conforama/conforama-01.jpg","panoid":null,"badge":"Disponible","ficha":"conforama.html","wa":"Hola,%20me%20interesa%20el%20local%20de%20Arag%C3%B3","clasif":null},{"ref":"garaje","tipo":"Plaza de garaje","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Garaje Camino dels Reis, Son Roca","price":19000,"m2":null,"hab":null,"extra":"🚗 Coche grande","img":"imagenes/garaje/garaje-01.jpg","panoid":null,"badge":"Disponible","ficha":"garaje.html","wa":"Hola,%20me%20interesa%20el%20garaje%20de%20Son%20Roca","clasif":null},{"ref":"inca","tipo":"Chalet","isla":"Mallorca","municipio":"Inca","titulo":"Casa independiente S'Ermita, Inca","price":461800,"m2":150,"hab":null,"extra":null,"img":null,"panoid":"LVGx4Lv7o9USVOiP_Qi5Ig","badge":"Ocupado","ficha":"inca.html","wa":"Hola,%20me%20interesa%20la%20casa%20de%20Inca","clasif":null},{"ref":"joanmiro","tipo":"Piso","isla":"Mallorca","municipio":"Sant Agustí, Palma","titulo":"Piso reformado, Avenida Joan Miró","price":301000,"m2":56,"hab":2,"extra":null,"img":"imagenes/joanmiro/joanmiro-01.jpg","panoid":null,"badge":"Disponible","ficha":"joanmiro.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Joan%20Mir%C3%B3","clasif":null},{"ref":"joanrosello","tipo":"Chalet","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Casa independiente, Calle Joan Rosselló","price":795000,"m2":200,"hab":3,"extra":null,"img":null,"panoid":"346ZhRUFY6O4fSV45E-9yw","badge":"Ocupado","ficha":"joanrosello.html","wa":"Hola,%20me%20interesa%20la%20casa%20de%20Joan%20Rossell%C3%B3","clasif":null},{"ref":"llucmajor","tipo":"Finca rústica","isla":"Mallorca","municipio":"Llucmajor","titulo":"Finca rústica con almendros, Llucmajor","price":43000,"m2":1492,"hab":null,"extra":null,"img":"imagenes/llucmajor/llucmajor-01.jpg","panoid":null,"badge":"Disponible","ficha":"llucmajor.html","wa":"Hola,%20me%20interesa%20la%20finca%20de%20Llucmajor","clasif":null},{"ref":"manacor","tipo":"Chalet","isla":"Mallorca","municipio":"Manacor","titulo":"Casa independiente, a 2 min del centro","price":185000,"m2":164,"hab":3,"extra":"🚿 1 baño","img":"imagenes/manacor/manacor-01.jpg","panoid":null,"badge":"Disponible","ficha":"manacor.html","wa":"Hola,%20me%20interesa%20la%20casa%20de%20Manacor","clasif":null},{"ref":"manacorlocal","tipo":"Local comercial","isla":"Mallorca","municipio":"Manacor","titulo":"Local almacén, Marqués de la Sínia","price":89000,"m2":105,"hab":null,"extra":null,"img":"imagenes/manacorlocal/manacorlocal-01.jpg","panoid":null,"badge":"Disponible","ficha":"manacorlocal.html","wa":"Hola,%20me%20interesa%20el%20local%20de%20Manacor","clasif":null},{"ref":"menorca","tipo":"Piso","isla":"Menorca","municipio":"Ciutadella de Menorca","titulo":"Piso Travesía de Sant Jordi","price":240000,"m2":48,"hab":2,"extra":"🚿 1 baño","img":"imagenes/menorca/menorca-01.jpg","panoid":null,"badge":"Disponible","ficha":"menorca.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Ciutadella","clasif":null},{"ref":"rafal","tipo":"Piso","isla":"Mallorca","municipio":"Rafal, Palma","titulo":"Piso Calle del Baladre, Rafal","price":224400,"m2":70,"hab":3,"extra":null,"img":null,"panoid":"8ql6S2EkFAaLJNmheybcxw","badge":"Ocupado","ficha":"rafal.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Rafal","clasif":null},{"ref":"santamaria","tipo":"Chalet","isla":"Mallorca","municipio":"Santa Maria del Camí","titulo":"Chalet independiente con jardín","price":980000,"m2":502,"hab":null,"extra":null,"img":"imagenes/santamaria/santamaria-01.jpg","panoid":null,"badge":"Disponible","ficha":"santamaria.html","wa":"Hola,%20me%20interesa%20el%20chalet%20de%20Santa%20Maria","clasif":null},{"ref":"sanvicente","tipo":"Piso","isla":"Mallorca","municipio":"Ciutat Antiga, Palma","titulo":"Piso San Vicente de Paul","price":219000,"m2":90,"hab":null,"extra":null,"img":null,"panoid":"GpTJKsudhRbcZCL5r7LArQ","badge":"Ocupado","ficha":"sanvicente.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20San%20Vicente%20de%20Paul","clasif":null},{"ref":"solarsantamaria","tipo":"Suelo","isla":"Mallorca","municipio":"Santa Maria del Camí","titulo":"Solar urbano, Calle Jaume Juan","price":264000,"m2":2571,"hab":null,"extra":null,"img":"imagenes/solarsantamaria/solarsantamaria-01.jpg","panoid":null,"badge":"Disponible","ficha":"solarsantamaria.html","wa":"Hola,%20me%20interesa%20el%20solar%20de%20Santa%20Maria","clasif":null},{"ref":"sonoliva","tipo":"Piso","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Piso con terraza, Calle Son Oliva","price":378000,"m2":105,"hab":4,"extra":"🚿 2 baños","img":"imagenes/sonoliva/sonoliva-01.jpg","panoid":null,"badge":"Disponible","ficha":"sonoliva.html","wa":"Hola,%20me%20interesa%20el%20piso%20de%20Son%20Oliva","clasif":null},{"ref":"MORE-2879","tipo":"Chalet","isla":"Mallorca","municipio":"Palma de Mallorca","titulo":"Calle Joan Rossello De Son Fort","price":795000,"m2":200,"hab":4,"extra":null,"img":null,"panoid":null,"ficha":null,"wa":"Hola%2C%20me%20interesa%20el%20activo%20MORE-2879%20en%20Palma%20de%20Mallorca"}];
+
+function fmtPrice(p) {
+  if (!p) return 'Consultar precio';
+  return Number(p).toLocaleString('es-ES') + ' €';
+}
+
+function badgeFor(item) {
+  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550","alcudia","joanrosello","calabosch","inca","inca-bisbe","santamaria","pisosureda"];
+  const soldRefs = ["asima","SBRE-0105307"];
+  const reservedRefs = ["manacor","menorca","CIRE-00458","GIRE-399101"];
+  if (soldRefs.includes(item.ref)) return '<span class="card-badge badge-sold">VENDIDO</span>';
+  if (reservedRefs.includes(item.ref)) return '<span class="card-badge badge-reserved">RESERVADO</span>';
+  if (offerRefs.includes(item.ref)) return '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
+  if (item.clasif === 'NPL') return '<span class="card-badge badge-npl">NPL · Crédito en mora</span>';
+  if (item.clasif === 'CDR') return '<span class="card-badge badge-cdr">CDR · Cesión de remate</span>';
+  if (item.badge === 'Ocupado') return '<span class="card-badge badge-okup">Ocupado</span>';
+  return '<span class="card-badge">Disponible</span>';
+}
+
+function imgFor(item, cleanTitle) {
+  if (item.img) {
+    return `<img src="${item.img}" alt="${cleanTitle}" loading="lazy">`;
+  }
+  if (item.panoid) {
+    return `<img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&w=600&h=400&pitch=0&panoid=${item.panoid}&yaw=0" alt="Vista de la calle - ${item.municipio}" loading="lazy">`;
+  }
+  const query = encodeURIComponent(cleanTitle + ' ' + (item.municipio||'') + ' Illes Balears');
+  return `<iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=${query}&output=embed" loading="lazy"></iframe>`;
+}
+
+function renderCard(item) {
+  const specs = [];
+  if (item.m2) specs.push(`<span class="spec">📐 ${item.m2} m²</span>`);
+  if (item.hab) specs.push(`<span class="spec">🛏️ ${item.hab} hab.</span>`);
+  if (item.extra) specs.push(`<span class="spec">${item.extra}</span>`);
+
+  const cleanTitle = item.titulo || item.tipo;
+  const actions = item.ficha
+    ? `<a href="${item.ficha}" class="card-btn-primary">Ver ficha</a><a href="https://wa.me/34679916424?text=${item.wa}" class="card-btn-secondary" target="_blank">WhatsApp</a>`
+    : `<a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=${item.wa}" class="card-btn-secondary" target="_blank">WhatsApp</a>`;
+
+  const resId = `res-${item.ref || Math.random().toString(36).substr(2, 9)}`;
+
+  return `
+    <div class="asset-card" data-isla="${item.isla}" data-tipo="${item.tipo}" data-estado="${item.clasif || item.badge}" data-search="${(cleanTitle+' '+(item.municipio||'')).toLowerCase()}">
+      <div class="card-img">
+        ${imgFor(item, cleanTitle)}
+        ${badgeFor(item)}
+      </div>
+      <div class="card-body">
+        <div class="card-price">${fmtPrice(item.price)}</div>
+        <div class="card-title">${cleanTitle}</div>
+        <div class="card-specs">${specs.join('')}</div>
+        <div class="card-location">${item.municipio ? item.municipio+' · ' : ''}${item.isla}${item.ref ? ' · REF: '+item.ref : ''}</div>
+        <div class="card-actions">${actions}</div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="${resId}">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function toggleMortgage(btn) {
+  const calc = btn.nextElementSibling;
+  calc.classList.toggle('active');
+  btn.textContent = calc.classList.contains('active') ? 'Cerrar calculadora' : 'Simular Hipoteca';
+  if (calc.classList.contains('active')) {
+    const input = calc.querySelector('input');
+    input.dispatchEvent(new Event('input'));
+  }
+}
+
+function calculateMortgage(input, priceStr) {
+  const card = input.closest('.asset-card');
+  const resultDiv = card.querySelector('.mortgage-val');
+  const price = parseFloat(String(priceStr).replace(/\./g, '').replace('€', '').trim()) || 0;
+  const interest = parseFloat(card.querySelector('.m-int').value) / 100 / 12;
+  const term = parseFloat(card.querySelector('.m-term').value) * 12;
+  const downPaymentPercent = parseFloat(card.querySelector('.m-down').value) / 100;
+  
+  const loanAmount = price * (1 - downPaymentPercent);
+  
+  if (loanAmount > 0 && interest > 0 && term > 0) {
+    const quota = (loanAmount * interest) / (1 - Math.pow(1 + interest, -term));
+    resultDiv.innerHTML = quota.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  } else {
+    resultDiv.innerHTML = '-- €';
+  }
+}
+
+function populateTipoOptions() {
+  const tipos = [...new Set(CV_DATA.map(i => i.tipo))].sort();
+  const sel = document.getElementById('cv-tipo');
+  tipos.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    sel.appendChild(opt);
+  });
+}
+
+function applyFilters() {
+  const q = document.getElementById('cv-search').value.trim().toLowerCase();
+  const isla = document.getElementById('cv-isla').value;
+  const tipo = document.getElementById('cv-tipo').value;
+  const estado = document.getElementById('cv-estado').value;
+  const filtered = CV_DATA.filter(item => {
+    const searchTarget = ((item.titulo||'') + ' ' + (item.municipio||'')).toLowerCase();
+    return (!q || searchTarget.includes(q)) &&
+           (!isla || item.isla === isla) &&
+           (!tipo || item.tipo.toLowerCase().includes(tipo.toLowerCase())) &&
+           (!estado || (item.clasif || item.badge) === estado);
+  });
+  const grid = document.getElementById('cv-grid');
+  const empty = document.getElementById('cv-empty');
+  grid.innerHTML = filtered.map(renderCard).join('');
+  document.getElementById('cv-count').textContent = filtered.length + ' activos encontrados';
+  empty.style.display = filtered.length ? 'none' : 'block';
+}
+
+function renderAll() { applyFilters(); }
+
+populateTipoOptions();
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var tipoParam = params.get('tipo');
+  if (tipoParam) {
+    var sel = document.getElementById('cv-tipo');
+    if (sel) {
+      var opt = document.createElement('option');
+      opt.value = tipoParam;
+      opt.textContent = tipoParam;
+      opt.selected = true;
+      sel.insertBefore(opt, sel.options[1] || null);
+    }
+  }
+})();
+renderAll();
+document.getElementById('cv-search').addEventListener('input', applyFilters);
+document.getElementById('cv-isla').addEventListener('change', applyFilters);
+document.getElementById('cv-tipo').addEventListener('change', applyFilters);
+document.getElementById('cv-estado').addEventListener('change', applyFilters);
+</script>
+
+
+<div id="dp-cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1A2D4F;color:#fff;padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.15);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.85);flex:1;min-width:240px;">
+      Usamos cookies tecnicas necesarias y, si lo aceptas, cookies analiticas (Google Analytics) para mejorar la web. Puedes leer mas en nuestra <a href="cookies.html" style="color:#C9A84C;text-decoration:underline;">politica de cookies</a>.
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="dpCookieConsent('rejected')" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:9px 18px;font-size:12px;border-radius:4px;cursor:pointer;">Rechazar</button>
+      <button onclick="dpCookieConsent('accepted')" style="background:#C9A84C;border:none;color:#1A2D4F;padding:9px 18px;font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function dpShowBanner(){
+    try {
+      if (!localStorage.getItem('dp_cookie_consent')) {
+        var b = document.getElementById('dp-cookie-banner');
+        if (b) b.style.display = 'block';
+      }
+    } catch(e) {}
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', dpShowBanner);
+  } else {
+    dpShowBanner();
+  }
+})();
+window.dpCookieConsent = function(choice){
+  try { localStorage.setItem('dp_cookie_consent', choice); } catch(e) {}
+  var b = document.getElementById('dp-cookie-banner');
+  if (b) b.style.display = 'none';
+  if (choice === 'accepted' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-NBB3L9N4PW');
+  }
+};
+</script>
+</body>
+</html>

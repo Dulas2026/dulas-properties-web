@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dulasproperties.com/sitemap.xml
