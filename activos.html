@@ -145,10 +145,10 @@
     <h2 class="club-title">Club del Inversor Dulas</h2>
     <p class="club-desc">¿Buscas rentabilidad sin perder tiempo? Únete a nuestro club privado y recibe alertas de <strong>activos suspendidos y oportunidades de Hipoges</strong> en tu WhatsApp antes de que se publiquen oficialmente.</p>
     
-    <form class="club-form" action="https://formspree.io/f/tu-id" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="tel" name="telefono" placeholder="WhatsApp (Ej: 600000000)" required>
-      <select name="zona" style="grid-column: span 2" required>
+    <form class="club-form" id="club-form" onsubmit="return clubFormSubmit(event)">
+      <input type="text" name="nombre" id="club-nombre" placeholder="Tu nombre" required>
+      <input type="tel" name="telefono" id="club-telefono" placeholder="WhatsApp (Ej: 600000000)" required>
+      <select name="zona" id="club-zona" style="grid-column: span 2" required>
         <option value="">¿En qué zona buscas invertir?</option>
         <option value="Valencia">Comunidad Valenciana</option>
         <option value="Madrid">Madrid</option>
@@ -158,9 +158,48 @@
         <option value="PaisVasco">País Vasco</option>
         <option value="TodaEspana">Toda España</option>
       </select>
-      <button type="submit">Unirme al Club del Inversor</button>
+      <button type="submit" id="club-form-btn">Unirme al Club del Inversor</button>
     </form>
+    <div id="club-form-success" style="display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(201,168,76,0.4);border-radius:8px;padding:24px;text-align:center;color:#fff;">
+      <strong style="color:var(--gold);">¡Ya estás dentro!</strong><br>Te avisaremos por WhatsApp en cuanto haya una oportunidad en tu zona.
+    </div>
     <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:20px">Al unirte, aceptas recibir notificaciones comerciales de Dulas Properties. Puedes darte de baja en cualquier momento.</p>
+    <script>
+    function clubFormSubmit(e) {
+      e.preventDefault();
+      var btn = document.getElementById('club-form-btn');
+      var nombre = document.getElementById('club-nombre').value;
+      var telefono = document.getElementById('club-telefono').value;
+      var zona = document.getElementById('club-zona').value;
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      fetch('https://formspree.io/f/xrejlvqa', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          nombre: nombre,
+          telefono: telefono,
+          zona: zona,
+          tipo: 'Club del Inversor',
+          mensaje: 'Alta en Club del Inversor. Zona de interés: ' + zona
+        })
+      }).then(function(r) {
+        if (r.ok) {
+          document.getElementById('club-form').style.display = 'none';
+          document.getElementById('club-form-success').style.display = 'block';
+        } else {
+          alert('No hemos podido enviar el formulario. Prueba a contactarnos por WhatsApp.');
+          btn.disabled = false;
+          btn.textContent = 'Unirme al Club del Inversor';
+        }
+      }).catch(function() {
+        alert('No hemos podido enviar el formulario. Prueba a contactarnos por WhatsApp.');
+        btn.disabled = false;
+        btn.textContent = 'Unirme al Club del Inversor';
+      });
+      return false;
+    }
+    </script>
   </div>
 </section>
 
