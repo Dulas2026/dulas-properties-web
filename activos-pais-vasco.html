@@ -191,6 +191,8 @@ function renderCard(item) {
   let badge = '<span class="card-badge badge-susp">Suspendido</span>';
   if (soldRefs.includes(item.ref)) badge = '<span class="card-badge badge-sold">VENDIDO</span>';
   else if (offerRefs.includes(item.ref)) badge = '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
+  else if (item.clasif === 'NPL') badge = '<span class="card-badge badge-npl">NPL · Crédito en mora</span>';
+  else if (item.clasif === 'CDR') badge = '<span class="card-badge badge-cdr">CDR · Cesión de remate</span>';
   
   const specs = [];
   if (item.m2 && item.m2 !== '0' && item.m2 !== 'N/D') specs.push(`<span class="spec">📐 ${item.m2} m²</span>`);
