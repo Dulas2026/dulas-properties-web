@@ -143,9 +143,9 @@ function fmtPrice(p) {
 }
 
 function badgeFor(item) {
-  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550","alcudia","joanrosello","calabosch","inca","inca-bisbe","santamaria","pisosureda"];
+  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550","alcudia","joanrosello","calabosch","manacor","inca-bisbe","santamaria","pisosureda"];
   const soldRefs = ["asima","SBRE-0105307"];
-  const reservedRefs = ["manacor","menorca","CIRE-00458","GIRE-399101"];
+  const reservedRefs = ["inca","menorca","GIRE-399101"];
   if (soldRefs.includes(item.ref)) return '<span class="card-badge badge-sold">VENDIDO</span>';
   if (reservedRefs.includes(item.ref)) return '<span class="card-badge badge-reserved">RESERVADO</span>';
   if (offerRefs.includes(item.ref)) return '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
