@@ -41,6 +41,18 @@
 .cv-filters select{flex:1;min-width:150px;padding:12px 14px;border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-family:inherit;background:var(--white);cursor:pointer}
 .cv-filters .cv-count{font-size:12px;color:var(--gray-300);white-space:nowrap;margin-left:auto}
 .club-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold);font-size:40px}
+.cv-region-section{background:var(--white);padding:48px 48px 40px;border-bottom:1px solid var(--gray-100)}
+.cv-region-heading{max-width:1100px;margin:0 auto 24px;font-family:var(--font-serif);font-size:24px;font-weight:400;color:var(--navy)}
+.cv-region-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.cv-region-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;text-decoration:none;color:inherit;border:1px solid var(--gray-100);transition:all .2s;display:flex;flex-direction:column;cursor:pointer}
+.cv-region-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,45,79,.1);border-color:var(--gold-light)}
+.cv-region-card.active{border-color:var(--gold);box-shadow:0 8px 24px rgba(201,168,76,.2)}
+.cv-region-card-top{background:var(--navy);padding:18px 18px 14px;position:relative;overflow:hidden}
+.cv-region-card-num{font-family:var(--font-serif);font-size:30px;color:var(--gold);line-height:1}
+.cv-region-card-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-300);margin-top:4px}
+.cv-region-card-body{padding:12px 18px 14px}
+.cv-region-card-name{font-family:var(--font-serif);font-size:16px;font-weight:400;color:var(--navy);margin-bottom:4px}
+.cv-region-card-split{font-size:11px;color:var(--gray-500)}
 </style>
 <link rel="canonical" href="https://dulasproperties.com/club-inversor">
 </head>
@@ -105,6 +117,11 @@
     <div class="cv-stat-num" id="cv-stat-regiones">—</div>
     <div class="cv-stat-label">Regiones</div>
   </div>
+</div>
+
+<div class="cv-region-section">
+  <div class="cv-region-heading">Explora por comunidad autónoma</div>
+  <div class="cv-region-grid" id="cv-region-grid"></div>
 </div>
 
 <div class="cv-filters">
@@ -307,11 +324,49 @@ function applyFilters() {
   if (countEl) {
     countEl.textContent = total + ' activos encontrados' + (total > 60 ? ' (mostrando 60 - afina la búsqueda)' : '');
   }
+  document.querySelectorAll('.cv-region-card').forEach(card => {
+    card.classList.toggle('active', card.dataset.region === region);
+  });
+}
+
+function buildRegionGrid() {
+  const counts = {};
+  CV_DATA.forEach(item => {
+    const r = item.region || 'Otras';
+    if (!counts[r]) counts[r] = { total: 0, npl: 0, cdr: 0 };
+    counts[r].total++;
+    if (item.clasif === 'NPL') counts[r].npl++;
+    if (item.clasif === 'CDR') counts[r].cdr++;
+  });
+  const regions = Object.keys(counts).sort((a, b) => counts[b].total - counts[a].total);
+  const gridEl = document.getElementById('cv-region-grid');
+  gridEl.innerHTML = regions.map(r => {
+    const c = counts[r];
+    return `
+      <div class="cv-region-card" data-region="${r}" onclick="filterByRegion('${r.replace(/'/g, "\\'")}')">
+        <div class="cv-region-card-top">
+          <div class="cv-region-card-num">${c.total}</div>
+          <div class="cv-region-card-label">activos</div>
+        </div>
+        <div class="cv-region-card-body">
+          <div class="cv-region-card-name">${r}</div>
+          <div class="cv-region-card-split">${c.npl} NPL · ${c.cdr} CDR</div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function filterByRegion(region) {
+  const sel = document.getElementById('cv-region');
+  sel.value = (sel.value === region) ? '' : region;
+  applyFilters();
+  document.querySelector('.cv-filters').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   CV_DATA.reverse(); // mostrar primero los activos anadidos mas recientemente
   populateSelectOptions();
+  buildRegionGrid();
   applyFilters();
   document.getElementById('cv-search').addEventListener('input', applyFilters);
   document.getElementById('cv-region').addEventListener('change', applyFilters);
