@@ -53,7 +53,7 @@ function calculateMortgage(price) {
 <link rel="stylesheet" href="styles.css">
 <style>
 /* ── Galería ── */
-.prop-gallery { position:relative; background:#000; }
+.prop-gallery { position:relative; background:#000; overflow:hidden; }
 .prop-gallery-main {
   width:100%; height:520px; object-fit:cover;
   display:block; cursor:pointer; opacity:0;
@@ -234,7 +234,6 @@ function calculateMortgage(price) {
 </script>
 </head>
 <body>
-<div class="offer-banner">OFERTA EN NEGOCIACIÓN</div>
 
 <nav>
   <a href="index.html" class="nav-logo">
@@ -262,6 +261,7 @@ function calculateMortgage(price) {
 
 <!-- Galería -->
 <div class="prop-gallery">
+  <div style="position:absolute;top:38px;left:-90px;width:320px;background:#F1C40F;color:#000;font-weight:900;text-transform:uppercase;text-align:center;padding:12px 0;font-size:17px;letter-spacing:3px;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.3);z-index:1001">OFERTA EN NEGOCIACIÓN</div>
   <img id="main-photo" class="prop-gallery-main" src="imagenes/santamaria/santamaria-01.jpg" alt="Chalet Santa Maria del Camí" onload="this.classList.add('loaded')">
   <button class="prop-gallery-nav prop-gallery-prev" onclick="changePhoto(-1)">‹</button>
   <button class="prop-gallery-nav prop-gallery-next" onclick="changePhoto(1)">›</button>
