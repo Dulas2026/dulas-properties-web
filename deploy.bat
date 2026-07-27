@@ -11,7 +11,7 @@ echo   Publicando Dulas Properties en Cloudflare
 echo ============================================
 echo.
 
-wrangler pages deploy . --project-name=dulas-properties --branch=production
+wrangler pages deploy . --project-name=dulas-properties --branch=master
 
 echo.
 echo ============================================
