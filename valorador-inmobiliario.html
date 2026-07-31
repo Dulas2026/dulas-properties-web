@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google tag (gtag.js) - carga sujeta a consentimiento de cookies (comparte consentimiento con el resto del sitio) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  (function(){
+    try {
+      if (localStorage.getItem('dp_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBB3L9N4PW';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-NBB3L9N4PW');
+      }
+    } catch(e) {}
+  })();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasador Nacional Premium - Dulas Properties</title>
@@ -143,7 +162,8 @@
             <input type="text" id="l-nombre" class="input" placeholder="Tu Nombre" style="margin-bottom: 12px;">
             <input type="email" id="l-email" class="input" placeholder="Tu Email" style="margin-bottom: 12px;">
             <input type="tel" id="l-tel" class="input" placeholder="Tu Teléfono">
-            <button class="btn-main" onclick="alert('Solicitud enviada. Jaime contactará contigo en menos de 24h.')">Solicitar PDF Completo</button>
+            <button class="btn-main" id="btn-solicitar-pdf" onclick="solicitarPDF()">Solicitar PDF Completo</button>
+            <p id="lead-status" style="font-size:13px;color:#666;margin-top:12px;display:none;"></p>
         </div>
     </div>
 </div>
@@ -158,6 +178,11 @@
 
     // Configuración de Google Places Autocomplete
     function initAutocomplete() {
+        if (typeof google === 'undefined' || !google.maps || !google.maps.places) {
+            // La API de Google Maps no está disponible (falta clave de API válida).
+            // El campo de dirección sigue funcionando como texto libre; solo se pierde el autocompletado.
+            return;
+        }
         const input = document.getElementById('direccion-search');
         const autocomplete = new google.maps.places.Autocomplete(input, {
             componentRestrictions: { country: "es" },
@@ -182,8 +207,34 @@
         });
     }
 
-    // Ejecutar inicio de autocomplete
-    window.onload = initAutocomplete;
+    // Ejecutar inicio de autocomplete (protegido: si la API de Maps falla, el resto de la página sigue funcionando)
+    window.onload = function() {
+        try { initAutocomplete(); } catch (e) { /* API de Maps no disponible, se ignora */ }
+    };
+
+    // Este widget se embebe vía <iframe> en vender.html. Como el formulario es más alto
+    // que el hueco fijo del iframe, avisamos al documento padre de nuestra altura real
+    // para que pueda ajustar el iframe y nada quede cortado/inaccesible.
+    (function () {
+        function reportHeight() {
+            try {
+                if (window.parent && window.parent !== window) {
+                    window.parent.postMessage({
+                        type: 'dp-valorador-resize',
+                        height: document.documentElement.scrollHeight
+                    }, '*');
+                }
+            } catch (e) { /* si falla, no rompemos nada */ }
+        }
+        window.addEventListener('load', reportHeight);
+        window.addEventListener('resize', reportHeight);
+        try {
+            new MutationObserver(reportHeight).observe(document.body, {
+                childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class']
+            });
+        } catch (e) {}
+        setInterval(reportHeight, 1000); // red de seguridad ante cambios no capturados
+    })();
 
     function calcular() {
         const base = preciosBase[provinciaDetectada] || 1600;
@@ -213,6 +264,76 @@
         document.getElementById('price-final').innerText = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(total);
         document.getElementById('result-box').style.display = "block";
         document.getElementById('result-box').scrollIntoView({ behavior: 'smooth' });
+
+        window.ultimaTasacion = { provincia: provinciaDetectada, metros: metros, total: total };
+        if (typeof gtag === 'function') {
+            gtag('event', 'view_valuation_result', {
+                'form_name': 'tasador_nacional_premium',
+                'provincia': provinciaDetectada,
+                'valor_estimado': Math.round(total)
+            });
+        }
+    }
+
+    function solicitarPDF() {
+        const nombre = document.getElementById('l-nombre').value;
+        const email = document.getElementById('l-email').value;
+        const telefono = document.getElementById('l-tel').value;
+        const statusEl = document.getElementById('lead-status');
+        const btn = document.getElementById('btn-solicitar-pdf');
+
+        if (!nombre || (!email && !telefono)) {
+            statusEl.style.display = 'block';
+            statusEl.style.color = '#c0392b';
+            statusEl.textContent = 'Indica tu nombre y al menos un email o teléfono para poder contactarte.';
+            return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+
+        const t = window.ultimaTasacion || {};
+        const payload = {
+            nombre: nombre,
+            email: email,
+            telefono: telefono,
+            tipo: 'Tasador Nacional Premium',
+            mensaje: 'Solicitud de informe pericial completo. Provincia: ' + (t.provincia || '') +
+                ', m2: ' + (t.metros || '') +
+                ', tasación estimada: ' + (t.total ? Math.round(t.total).toLocaleString('es-ES') + '€' : '')
+        };
+
+        fetch('https://formspree.io/f/xrejlvqa', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+        }).then(function(r) {
+            if (r.ok) {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        'form_name': 'tasador_nacional_premium',
+                        'value': t.total ? Math.round(t.total) : 0,
+                        'currency': 'EUR'
+                    });
+                }
+                statusEl.style.display = 'block';
+                statusEl.style.color = '#2e7d32';
+                statusEl.textContent = 'Solicitud enviada. Jaime contactará contigo en menos de 24h.';
+                btn.textContent = 'Solicitud enviada ✓';
+            } else {
+                statusEl.style.display = 'block';
+                statusEl.style.color = '#c0392b';
+                statusEl.textContent = 'No hemos podido enviar la solicitud. Escríbenos por WhatsApp al 622 587 788.';
+                btn.disabled = false;
+                btn.textContent = 'Solicitar PDF Completo';
+            }
+        }).catch(function() {
+            statusEl.style.display = 'block';
+            statusEl.style.color = '#c0392b';
+            statusEl.textContent = 'No hemos podido enviar la solicitud. Escríbenos por WhatsApp al 622 587 788.';
+            btn.disabled = false;
+            btn.textContent = 'Solicitar PDF Completo';
+        });
     }
 </script>
 

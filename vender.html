@@ -312,11 +312,28 @@
     <h2 style="font-family:var(--font-serif); font-size:36px; color:var(--navy); margin-bottom:16px;">Tasa tu vivienda gratis en 30 segundos</h2>
     <p style="color:var(--gray-500); font-size:16px; margin-bottom:48px;">Utilizamos la tecnología de valoración de fondos de inversión para darte un precio real de mercado.</p>
     
-    <iframe src="valorador-inmobiliario.html" style="width:100%; height:750px; border:none; border-radius:12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);"></iframe>
-    
+    <iframe id="valorador-iframe" src="valorador-inmobiliario.html" style="width:100%; height:1550px; border:none; border-radius:12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);"></iframe>
+
     <p style="font-size:12px; color:var(--gray-400); margin-top:24px;">*Tras la valoración, podrás descargar un informe completo de mercado sin compromiso.</p>
   </div>
 </section>
+<script>
+  // El formulario del valorador es más alto que cualquier valor fijo (crece al mostrar el
+  // resultado de la tasación). Escuchamos el aviso que envía el propio iframe para ajustar
+  // su altura real y evitar que el botón "Calcular" o el resultado queden cortados/inaccesibles.
+  window.addEventListener('message', function (e) {
+    if (e.origin !== window.location.origin) return;
+    if (e.data && e.data.type === 'dp-valorador-resize' && typeof e.data.height === 'number') {
+      var ifr = document.getElementById('valorador-iframe');
+      if (ifr) {
+        var nuevaAltura = Math.max(1550, e.data.height + 30);
+        if (parseInt(ifr.style.height, 10) !== nuevaAltura) {
+          ifr.style.height = nuevaAltura + 'px';
+        }
+      }
+    }
+  });
+</script>
 
 <section class="steps-section">
   <div style="text-align:center; margin-bottom:60px">
