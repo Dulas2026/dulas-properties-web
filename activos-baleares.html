@@ -147,8 +147,8 @@ function fmtPrice(p) {
 
 function badgeFor(item) {
   const offerRefs = ["GIRE-395102","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550","alcudia","calabosch","inca-bisbe","santamaria","garaje","manacorlocal"];
-  const soldRefs = ["asima","SBRE-0105307","menorca"];
-  const reservedRefs = ["inca","manacor","ACRE-000654","CIRE-00458"];
+  const soldRefs = ["asima","SBRE-0105307","menorca","manacor","CIRE-00458"];
+  const reservedRefs = ["inca","ACRE-000654"];
   if (soldRefs.includes(item.ref)) return '<span class="card-badge badge-sold">VENDIDO</span>';
   if (reservedRefs.includes(item.ref)) return '<span class="card-badge badge-reserved">RESERVADO</span>';
   if (offerRefs.includes(item.ref)) return '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
