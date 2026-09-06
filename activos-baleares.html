@@ -56,6 +56,11 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
     letter-spacing: 0.8px !important;
   }
+.cv-pagination{display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;padding:32px 24px}
+.cv-pagination button{border:1px solid var(--gray-100);background:var(--white);color:var(--navy);padding:8px 13px;font-size:13px;border-radius:4px;cursor:pointer;font-family:inherit;min-width:36px}
+.cv-pagination button:hover:not(:disabled){border-color:var(--gold)}
+.cv-pagination button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cv-pagination button:disabled{opacity:.35;cursor:default}
 </style>
 <link rel="canonical" href="https://dulasproperties.com/activos-baleares">
 <script src="menu.js" defer></script>
@@ -109,6 +114,7 @@
 <main class="main">
   <div class="assets-grid" id="cv-grid"></div>
   <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
+  <div class="cv-pagination" id="cv-pagination"></div>
 </main>
 
 <div class="contact-section" style="margin-top:0">
@@ -259,6 +265,9 @@ function populateTipoOptions() {
   });
 }
 
+let currentPage = 1;
+const PAGE_SIZE = 45;
+
 function applyFilters() {
   const q = document.getElementById('cv-search').value.trim().toLowerCase();
   const isla = document.getElementById('cv-isla').value;
@@ -273,9 +282,52 @@ function applyFilters() {
   });
   const grid = document.getElementById('cv-grid');
   const empty = document.getElementById('cv-empty');
-  grid.innerHTML = filtered.map(renderCard).join('');
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  if (currentPage > totalPages) currentPage = totalPages;
+  if (currentPage < 1) currentPage = 1;
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + PAGE_SIZE);
+  grid.innerHTML = pageItems.map(renderCard).join('');
   document.getElementById('cv-count').textContent = filtered.length + ' activos encontrados';
   empty.style.display = filtered.length ? 'none' : 'block';
+  renderPagination(totalPages);
+}
+
+function goToPage(n) {
+  currentPage = n;
+  applyFilters();
+  const grid = document.getElementById('cv-grid');
+  if (grid) grid.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function resetPageAndFilter() {
+  currentPage = 1;
+  applyFilters();
+}
+
+function renderPagination(totalPages) {
+  const el = document.getElementById('cv-pagination');
+  if (!el) return;
+  if (totalPages <= 1) { el.innerHTML = ''; return; }
+  let html = '';
+  html += `<button ${currentPage===1?'disabled':''} onclick="goToPage(${currentPage-1})">&laquo;</button>`;
+  const windowSize = 5;
+  let startPage = Math.max(1, currentPage - Math.floor(windowSize/2));
+  let endPage = Math.min(totalPages, startPage + windowSize - 1);
+  startPage = Math.max(1, endPage - windowSize + 1);
+  if (startPage > 1) {
+    html += `<button onclick="goToPage(1)">1</button>`;
+    if (startPage > 2) html += `<span style="padding:0 4px;color:var(--gray-500)">&hellip;</span>`;
+  }
+  for (let i = startPage; i <= endPage; i++) {
+    html += `<button class="${i===currentPage?'active':''}" onclick="goToPage(${i})">${i}</button>`;
+  }
+  if (endPage < totalPages) {
+    if (endPage < totalPages - 1) html += `<span style="padding:0 4px;color:var(--gray-500)">&hellip;</span>`;
+    html += `<button onclick="goToPage(${totalPages})">${totalPages}</button>`;
+  }
+  html += `<button ${currentPage===totalPages?'disabled':''} onclick="goToPage(${currentPage+1})">&raquo;</button>`;
+  el.innerHTML = html;
 }
 
 function renderAll() { applyFilters(); }
@@ -296,10 +348,10 @@ populateTipoOptions();
   }
 })();
 renderAll();
-document.getElementById('cv-search').addEventListener('input', applyFilters);
-document.getElementById('cv-isla').addEventListener('change', applyFilters);
-document.getElementById('cv-tipo').addEventListener('change', applyFilters);
-document.getElementById('cv-estado').addEventListener('change', applyFilters);
+document.getElementById('cv-search').addEventListener('input', resetPageAndFilter);
+document.getElementById('cv-isla').addEventListener('change', resetPageAndFilter);
+document.getElementById('cv-tipo').addEventListener('change', resetPageAndFilter);
+document.getElementById('cv-estado').addEventListener('change', resetPageAndFilter);
 </script>
 
 
