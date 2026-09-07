@@ -43,6 +43,12 @@
 .cv-filters input[type="text"]:focus{outline:none;border-color:#FFCC00;box-shadow:0 0 0 4px rgba(255,204,0,0.25),0 6px 20px rgba(0,0,0,0.25)}
 .cv-filters select{flex:1;min-width:150px;padding:12px 14px;border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-family:inherit;background:var(--white);cursor:pointer}
 .cv-filters .cv-count{font-size:12px;color:var(--gray-300);white-space:nowrap;margin-left:auto}
+.cv-pagination{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;padding:32px 20px;max-width:900px;margin:0 auto}
+.cv-page-btn{min-width:40px;height:40px;padding:0 12px;border:1px solid rgba(201,168,76,0.35);border-radius:8px;background:transparent;color:var(--gold-light);font-size:14px;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s}
+.cv-page-btn:hover:not(:disabled){background:rgba(201,168,76,0.14);border-color:var(--gold)}
+.cv-page-btn.active{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.cv-page-btn:disabled{opacity:0.35;cursor:default}
+.cv-page-dots{color:var(--gray-300);padding:0 4px}
 .club-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold);font-size:40px}
 .cv-region-section{background:var(--white);padding:48px 48px 40px;border-bottom:1px solid var(--gray-100)}
 .cv-region-heading{max-width:1100px;margin:0 auto 24px;font-family:var(--font-serif);font-size:24px;font-weight:400;color:var(--navy)}
@@ -146,6 +152,7 @@
 <main class="main">
   <div class="assets-grid" id="cv-grid"></div>
   <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
+  <div class="cv-pagination" id="cv-pagination"></div>
 </main>
 
 <section class="club-inversor-section">
@@ -306,7 +313,12 @@ function populateSelectOptions() {
   if (elReg) elReg.textContent = nRegiones;
 }
 
-function applyFilters() {
+const CV_PAGE_SIZE = 45;
+let cvCurrentPage = 1;
+let cvFilteredCache = [];
+
+function applyFilters(resetPage) {
+  if (resetPage !== false) cvCurrentPage = 1;
   const q = document.getElementById('cv-search').value.trim().toLowerCase();
   const region = document.getElementById('cv-region').value;
   const tipo = document.getElementById('cv-tipo').value;
@@ -317,19 +329,62 @@ function applyFilters() {
            (!tipo || item.tipo === tipo) &&
            (!clasif || item.clasif === clasif);
   });
-  const grid = document.getElementById('cv-grid');
-  const emptyEl = document.getElementById('cv-empty');
-  const countEl = document.getElementById('cv-count');
-  const total = filtered.length;
-  const shown = filtered.slice(0, 60);
-  grid.innerHTML = shown.map(renderCard).join('');
-  if (emptyEl) { emptyEl.style.display = total === 0 ? 'block' : 'none'; }
-  if (countEl) {
-    countEl.textContent = total + ' activos encontrados' + (total > 60 ? ' (mostrando 60 - afina la búsqueda)' : '');
-  }
+  cvFilteredCache = filtered;
+  renderPage();
   document.querySelectorAll('.cv-region-card').forEach(card => {
     card.classList.toggle('active', card.dataset.region === region);
   });
+}
+
+function renderPage() {
+  const filtered = cvFilteredCache;
+  const total = filtered.length;
+  const totalPages = Math.max(1, Math.ceil(total / CV_PAGE_SIZE));
+  if (cvCurrentPage > totalPages) cvCurrentPage = totalPages;
+  if (cvCurrentPage < 1) cvCurrentPage = 1;
+  const startIdx = (cvCurrentPage - 1) * CV_PAGE_SIZE;
+  const shown = filtered.slice(startIdx, startIdx + CV_PAGE_SIZE);
+
+  const grid = document.getElementById('cv-grid');
+  const emptyEl = document.getElementById('cv-empty');
+  const countEl = document.getElementById('cv-count');
+  grid.innerHTML = shown.map(renderCard).join('');
+  if (emptyEl) { emptyEl.style.display = total === 0 ? 'block' : 'none'; }
+  if (countEl) {
+    const from = total === 0 ? 0 : startIdx + 1;
+    const to = Math.min(startIdx + CV_PAGE_SIZE, total);
+    countEl.textContent = total + ' activos encontrados' + (total > 0 ? ' (' + from + '-' + to + ')' : '');
+  }
+  renderPagination(totalPages);
+  window.scrollTo({ top: document.getElementById('cv-grid').offsetTop - 100, behavior: 'smooth' });
+}
+
+function goToPage(p) {
+  cvCurrentPage = p;
+  renderPage();
+}
+
+function renderPagination(totalPages) {
+  const el = document.getElementById('cv-pagination');
+  if (!el) return;
+  if (totalPages <= 1) { el.innerHTML = ''; return; }
+  const cur = cvCurrentPage;
+  let pages = [];
+  pages.push(1);
+  for (let p = cur - 1; p <= cur + 1; p++) { if (p > 1 && p < totalPages) pages.push(p); }
+  if (totalPages > 1) pages.push(totalPages);
+  pages = [...new Set(pages)].sort((a,b)=>a-b);
+
+  let html = '';
+  html += `<button class="cv-page-btn" ${cur === 1 ? 'disabled' : ''} onclick="goToPage(${cur - 1})">‹ Anterior</button>`;
+  let prev = 0;
+  pages.forEach(p => {
+    if (p - prev > 1) html += `<span class="cv-page-dots">…</span>`;
+    html += `<button class="cv-page-btn${p === cur ? ' active' : ''}" onclick="goToPage(${p})">${p}</button>`;
+    prev = p;
+  });
+  html += `<button class="cv-page-btn" ${cur === totalPages ? 'disabled' : ''} onclick="goToPage(${cur + 1})">Siguiente ›</button>`;
+  el.innerHTML = html;
 }
 
 function buildRegionGrid() {
