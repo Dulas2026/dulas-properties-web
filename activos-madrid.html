@@ -172,12 +172,1261 @@
   </select>
   <select id="cv-tipo">
     <option value="">Tipo de inmueble...</option>
+  <option value="Casa">Casa</option><option value="Chalet">Chalet</option><option value="Comercial">Comercial</option><option value="Comercial + Garaje">Comercial + Garaje</option><option value="Dúplex">Dúplex</option><option value="Garaje">Garaje</option><option value="Local">Local</option><option value="Oficina">Oficina</option><option value="Piso">Piso</option><option value="Residencial">Residencial</option><option value="Suelo Urbano Residencial">Suelo Urbano Residencial</option><option value="Trastero">Trastero</option>
   </select>
   <div class="cv-count" id="cv-count"></div>
 </div>
 
 <main class="main">
-  <div class="assets-grid" id="cv-grid"></div>
+  <div class="assets-grid" id="cv-grid">
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Garaje" data-search="real parla">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Real%20Parla%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-more-3223.html" style="color:inherit;text-decoration:none">Real</a></div>
+        <div class="card-specs"><span class="spec">📐 14 m²</span></div>
+        <div class="card-location">Parla · Madrid · REF: MORE-3223</div>
+        <div class="card-actions">
+          <a href="activo-more-3223.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20MORE-3223%20en%20Parla" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-MORE-3223">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Trastero" data-search="calle cristino mallo parla">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Cristino%20Mallo%20Parla%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">2.000 €</div>
+        <div class="card-title"><a href="activo-more-3626.html" style="color:inherit;text-decoration:none">Calle Cristino Mallo</a></div>
+        <div class="card-specs"><span class="spec">📐 5 m²</span></div>
+        <div class="card-location">Parla · Madrid · REF: MORE-3626</div>
+        <div class="card-actions">
+          <a href="activo-more-3626.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20MORE-3626%20en%20Parla" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '2.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '2.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '2.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-MORE-3626">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Local" data-search="calle san valeriano leganés">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20San%20Valeriano%20Legan%C3%A9s%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">500 €</div>
+        <div class="card-title"><a href="activo-kire-0272.html" style="color:inherit;text-decoration:none">Calle San Valeriano</a></div>
+        <div class="card-specs"><span class="spec">📐 19 m²</span><span class="spec">🛏️ 1 hab.</span></div>
+        <div class="card-location">Leganés · Madrid · REF: KIRE-0272</div>
+        <div class="card-actions">
+          <a href="activo-kire-0272.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20KIRE-0272%20en%20Legan%C3%A9s" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '500')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '500')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '500')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-KIRE-0272">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Suelo Urbano Residencial" data-search="calle tomás garcía madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Tom%C3%A1s%20Garc%C3%ADa%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">57.500 €</div>
+        <div class="card-title"><a href="activo-jare-1264.html" style="color:inherit;text-decoration:none">Calle Tomás García</a></div>
+        <div class="card-specs"><span class="spec">📐 27 m²</span></div>
+        <div class="card-location">Madrid · Madrid · REF: JARE-1264</div>
+        <div class="card-actions">
+          <a href="activo-jare-1264.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20JARE-1264%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '57.500')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '57.500')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '57.500')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-JARE-1264">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Local" data-search="calle manuel becerra madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Manuel%20Becerra%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-jare-1325.html" style="color:inherit;text-decoration:none">Calle Manuel Becerra</a></div>
+        <div class="card-specs"><span class="spec">📐 11 m²</span><span class="spec">🛏️ 1 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: JARE-1325</div>
+        <div class="card-actions">
+          <a href="activo-jare-1325.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20JARE-1325%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-JARE-1325">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Comercial + Garaje" data-search="calle trole madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Trole%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">14.000 €</div>
+        <div class="card-title"><a href="activo-chire-0126.html" style="color:inherit;text-decoration:none">Calle Trole</a></div>
+        <div class="card-specs"><span class="spec">📐 81 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: CHIRE-0126</div>
+        <div class="card-actions">
+          <a href="activo-chire-0126.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CHIRE-0126%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '14.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '14.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '14.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CHIRE-0126">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Comercial + Garaje" data-search="calle trole madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Trole%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">14.000 €</div>
+        <div class="card-title"><a href="activo-chire-0127.html" style="color:inherit;text-decoration:none">Calle Trole</a></div>
+        <div class="card-specs"><span class="spec">📐 81 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: CHIRE-0127</div>
+        <div class="card-actions">
+          <a href="activo-chire-0127.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CHIRE-0127%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '14.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '14.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '14.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CHIRE-0127">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Dúplex" data-search="calle gallur madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Gallur%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">112.000 €</div>
+        <div class="card-title"><a href="activo-chire-0272.html" style="color:inherit;text-decoration:none">Calle Gallur</a></div>
+        <div class="card-specs"><span class="spec">📐 80 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: CHIRE-0272</div>
+        <div class="card-actions">
+          <a href="activo-chire-0272.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CHIRE-0272%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '112.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '112.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '112.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CHIRE-0272">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Oficina" data-search="calle santa rosa san lorenzo de el escorial">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Santa%20Rosa%20San%20Lorenzo%20de%20El%20Escorial%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">145.000 €</div>
+        <div class="card-title"><a href="activo-nere-057001.html" style="color:inherit;text-decoration:none">Calle Santa Rosa</a></div>
+        <div class="card-specs"><span class="spec">📐 215 m²</span><span class="spec">🛏️ 0 hab.</span></div>
+        <div class="card-location">San Lorenzo de El Escorial · Madrid · REF: NERE-057001</div>
+        <div class="card-actions">
+          <a href="activo-nere-057001.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20NERE-057001%20en%20San%20Lorenzo%20de%20El%20Escorial" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '145.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '145.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '145.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-NERE-057001">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Comercial" data-search="calle martinez izquierdo madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Martinez%20Izquierdo%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-jare-1061.html" style="color:inherit;text-decoration:none">Calle Martinez Izquierdo</a></div>
+        <div class="card-specs"><span class="spec">📐 38 m²</span><span class="spec">🛏️ 1 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: JARE-1061</div>
+        <div class="card-actions">
+          <a href="activo-jare-1061.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20JARE-1061%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-JARE-1061">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Casa" data-search="calle ciempozuelos getafe">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Ciempozuelos%20Getafe%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">255.000 €</div>
+        <div class="card-title"><a href="activo-pere-003699.html" style="color:inherit;text-decoration:none">Calle Ciempozuelos</a></div>
+        <div class="card-specs"><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Getafe · Madrid · REF: PERE-003699</div>
+        <div class="card-actions">
+          <a href="activo-pere-003699.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20PERE-003699%20en%20Getafe" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '255.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '255.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '255.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-PERE-003699">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle etna madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Etna%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">180.000 €</div>
+        <div class="card-title"><a href="activo-alre-00496.html" style="color:inherit;text-decoration:none">Calle Etna</a></div>
+        <div class="card-specs"><span class="spec">📐 41 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: ALRE-00496</div>
+        <div class="card-actions">
+          <a href="activo-alre-00496.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-00496%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '180.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '180.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '180.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-00496">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle colombia fuenlabrada">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20COLOMBIA%20Fuenlabrada%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">200.000 €</div>
+        <div class="card-title"><a href="activo-alre-00683.html" style="color:inherit;text-decoration:none">Calle COLOMBIA</a></div>
+        <div class="card-specs"><span class="spec">📐 77 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Fuenlabrada · Madrid · REF: ALRE-00683</div>
+        <div class="card-actions">
+          <a href="activo-alre-00683.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-00683%20en%20Fuenlabrada" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '200.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '200.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '200.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-00683">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Residencial" data-search="calle cl olivos los algete">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20CL%20OLIVOS%20LOS%20Algete%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-00853.html" style="color:inherit;text-decoration:none">Calle CL OLIVOS LOS</a></div>
+        <div class="card-specs"><span class="spec">📐 78 m²</span></div>
+        <div class="card-location">Algete · Madrid · REF: ALRE-00853</div>
+        <div class="card-actions">
+          <a href="activo-alre-00853.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-00853%20en%20Algete" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-00853">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle francisco del pino madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20FRANCISCO%20DEL%20PINO%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-01620.html" style="color:inherit;text-decoration:none">Calle FRANCISCO DEL PINO</a></div>
+        <div class="card-specs"><span class="spec">📐 57 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: ALRE-01620</div>
+        <div class="card-actions">
+          <a href="activo-alre-01620.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-01620%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-01620">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="rio manzanares valdemoro">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Rio%20Manzanares%20Valdemoro%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">163300 €</div>
+        <div class="card-title"><a href="activo-frre-00317.html" style="color:inherit;text-decoration:none">Rio Manzanares</a></div>
+        <div class="card-specs"><span class="spec">📐 89 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Valdemoro · Madrid · REF: FRRE-00317</div>
+        <div class="card-actions">
+          <a href="activo-frre-00317.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20FRRE-00317%20en%20Valdemoro" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '163300')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '163300')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '163300')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-FRRE-00317">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle villaamil móstoles">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Villaamil%20M%C3%B3stoles%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">100000 €</div>
+        <div class="card-title"><a href="activo-lire-05552.html" style="color:inherit;text-decoration:none">Calle Villaamil</a></div>
+        <div class="card-specs"><span class="spec">📐 56 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Móstoles · Madrid · REF: LIRE-05552</div>
+        <div class="card-actions">
+          <a href="activo-lire-05552.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-05552%20en%20M%C3%B3stoles" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '100000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '100000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '100000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-05552">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle de las panaderas fuenlabrada">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20De%20Las%20Panaderas%20Fuenlabrada%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">170000 €</div>
+        <div class="card-title"><a href="activo-lire-01316.html" style="color:inherit;text-decoration:none">Calle De Las Panaderas</a></div>
+        <div class="card-specs"><span class="spec">📐 78 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Fuenlabrada · Madrid · REF: LIRE-01316</div>
+        <div class="card-actions">
+          <a href="activo-lire-01316.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-01316%20en%20Fuenlabrada" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '170000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '170000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '170000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-01316">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle callao (de) fuenlabrada">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Callao%20(De)%20Fuenlabrada%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-02372.html" style="color:inherit;text-decoration:none">Calle Callao (De)</a></div>
+        <div class="card-specs"><span class="spec">📐 79 m²</span></div>
+        <div class="card-location">Fuenlabrada · Madrid · REF: RETI-02372</div>
+        <div class="card-actions">
+          <a href="activo-reti-02372.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-02372%20en%20Fuenlabrada" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-02372">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Chalet" data-search="calle del guadarrama alpedrete">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Del%20Guadarrama%20Alpedrete%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">125000 €</div>
+        <div class="card-title"><a href="activo-lire-03665.html" style="color:inherit;text-decoration:none">Calle Del Guadarrama</a></div>
+        <div class="card-specs"><span class="spec">📐 31 m²</span><span class="spec">🛏️ 5 hab.</span></div>
+        <div class="card-location">Alpedrete · Madrid · REF: LIRE-03665</div>
+        <div class="card-actions">
+          <a href="activo-lire-03665.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-03665%20en%20Alpedrete" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '125000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '125000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '125000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-03665">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle marineros madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Marineros%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">66220 €</div>
+        <div class="card-title"><a href="activo-lire-04921.html" style="color:inherit;text-decoration:none">Calle Marineros</a></div>
+        <div class="card-specs"><span class="spec">📐 58 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: LIRE-04921</div>
+        <div class="card-actions">
+          <a href="activo-lire-04921.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-04921%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '66220')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '66220')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '66220')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-04921">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="gonzalo herrero madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Gonzalo%20Herrero%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">225000 €</div>
+        <div class="card-title"><a href="activo-mure-521001.html" style="color:inherit;text-decoration:none">Gonzalo Herrero</a></div>
+        <div class="card-specs"><span class="spec">📐 57.79 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Madrid · Madrid · REF: MURE-521001</div>
+        <div class="card-actions">
+          <a href="activo-mure-521001.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20MURE-521001%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '225000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '225000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '225000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-MURE-521001">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle de la doctora navalcarnero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20De%20La%20Doctora%20Navalcarnero%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">361.700 €</div>
+        <div class="card-title"><a href="activo-lire-00729.html" style="color:inherit;text-decoration:none">Calle De La Doctora</a></div>
+        <div class="card-specs"><span class="spec">📐 312 m²</span></div>
+        <div class="card-location">Navalcarnero · Madrid · REF: LIRE-00729</div>
+        <div class="card-actions">
+          <a href="activo-lire-00729.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-00729%20en%20Navalcarnero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '361.700')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '361.700')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '361.700')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-00729">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="avenida de las vascongadas getafe">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Avenida%20De%20Las%20Vascongadas%20Getafe%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">213.011 €</div>
+        <div class="card-title"><a href="activo-lire-01480.html" style="color:inherit;text-decoration:none">Avenida De Las Vascongadas</a></div>
+        <div class="card-specs"><span class="spec">📐 96 m²</span></div>
+        <div class="card-location">Getafe · Madrid · REF: LIRE-01480</div>
+        <div class="card-actions">
+          <a href="activo-lire-01480.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-01480%20en%20Getafe" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '213.011')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '213.011')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '213.011')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-01480">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle castilla leon valdemoro">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Castilla%20Leon%20Valdemoro%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">215.284 €</div>
+        <div class="card-title"><a href="activo-lire-02246.html" style="color:inherit;text-decoration:none">Calle Castilla Leon</a></div>
+        <div class="card-specs"><span class="spec">📐 111 m²</span></div>
+        <div class="card-location">Valdemoro · Madrid · REF: LIRE-02246</div>
+        <div class="card-actions">
+          <a href="activo-lire-02246.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-02246%20en%20Valdemoro" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '215.284')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '215.284')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '215.284')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-02246">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Garaje" data-search="castilla leon valdemoro">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Castilla%20Leon%20Valdemoro%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">215.284 €</div>
+        <div class="card-title"><a href="activo-lire-02248.html" style="color:inherit;text-decoration:none">Castilla Leon</a></div>
+        <div class="card-specs"><span class="spec">📐 12 m²</span></div>
+        <div class="card-location">Valdemoro · Madrid · REF: LIRE-02248</div>
+        <div class="card-actions">
+          <a href="activo-lire-02248.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-02248%20en%20Valdemoro" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '215.284')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '215.284')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '215.284')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-02248">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle de la guardia civil valdemoro">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20De%20La%20Guardia%20Civil%20Valdemoro%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">274.823 €</div>
+        <div class="card-title"><a href="activo-lire-02927.html" style="color:inherit;text-decoration:none">Calle De La Guardia Civil</a></div>
+        <div class="card-specs"><span class="spec">📐 105 m²</span></div>
+        <div class="card-location">Valdemoro · Madrid · REF: LIRE-02927</div>
+        <div class="card-actions">
+          <a href="activo-lire-02927.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-02927%20en%20Valdemoro" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '274.823')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '274.823')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '274.823')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-02927">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle las suertes collado villalba">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Las%20Suertes%20Collado%20Villalba%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">192.812 €</div>
+        <div class="card-title"><a href="activo-lire-03635.html" style="color:inherit;text-decoration:none">Calle Las Suertes</a></div>
+        <div class="card-specs"><span class="spec">📐 86 m²</span></div>
+        <div class="card-location">Collado Villalba · Madrid · REF: LIRE-03635</div>
+        <div class="card-actions">
+          <a href="activo-lire-03635.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-03635%20en%20Collado%20Villalba" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '192.812')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '192.812')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '192.812')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-03635">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="avenida peña prieta madrid">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Avenida%20Pe%C3%B1a%20Prieta%20Madrid%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">234.000 €</div>
+        <div class="card-title"><a href="activo-lire-04112.html" style="color:inherit;text-decoration:none">Avenida Peña Prieta</a></div>
+        <div class="card-specs"><span class="spec">📐 47 m²</span></div>
+        <div class="card-location">Madrid · Madrid · REF: LIRE-04112</div>
+        <div class="card-actions">
+          <a href="activo-lire-04112.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-04112%20en%20Madrid" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '234.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '234.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '234.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-04112">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle nuñez de balboa alcalá de henares">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Nu%C3%B1ez%20De%20Balboa%20Alcal%C3%A1%20de%20Henares%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">221.030 €</div>
+        <div class="card-title"><a href="activo-lire-05431.html" style="color:inherit;text-decoration:none">Calle Nuñez De Balboa</a></div>
+        <div class="card-specs"><span class="spec">📐 66 m²</span></div>
+        <div class="card-location">Alcalá de Henares · Madrid · REF: LIRE-05431</div>
+        <div class="card-actions">
+          <a href="activo-lire-05431.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-05431%20en%20Alcal%C3%A1%20de%20Henares" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '221.030')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '221.030')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '221.030')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-05431">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle de la macarena parla">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20De%20La%20Macarena%20Parla%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">172.800 €</div>
+        <div class="card-title"><a href="activo-lire-06754.html" style="color:inherit;text-decoration:none">Calle De La Macarena</a></div>
+        <div class="card-specs"><span class="spec">📐 58 m²</span></div>
+        <div class="card-location">Parla · Madrid · REF: LIRE-06754</div>
+        <div class="card-actions">
+          <a href="activo-lire-06754.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-06754%20en%20Parla" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '172.800')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '172.800')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '172.800')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-06754">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Madrid" data-tipo="Piso" data-search="calle torrejón torrejón de ardoz">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Torrej%C3%B3n%20Torrej%C3%B3n%20de%20Ardoz%20Madrid&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">140.000 €</div>
+        <div class="card-title"><a href="activo-gtre-00482.html" style="color:inherit;text-decoration:none">Calle Torrejón</a></div>
+        <div class="card-specs"><span class="spec">📐 95 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Torrejón de Ardoz · Madrid · REF: GTRE-00482</div>
+        <div class="card-actions">
+          <a href="activo-gtre-00482.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20GTRE-00482%20en%20Torrej%C3%B3n%20de%20Ardoz" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '140.000')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '140.000')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '140.000')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-GTRE-00482">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div></div>
   <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
 </main>
 
@@ -208,82 +1457,6 @@
 </a>
 
 <script>
-const CV_DATA = [{"ref": "MORE-3223", "tipo": "Garaje", "calle": "Real", "municipio": "Parla", "provincia": "Madrid", "price": null, "m2": "14", "hab": null, "planta": null, "panoid": null}, {"ref": "MORE-3626", "tipo": "Trastero", "calle": "Calle Cristino Mallo", "municipio": "Parla", "provincia": "Madrid", "price": "2.000", "m2": "5", "hab": null, "planta": null, "panoid": null}, {"ref": "KIRE-0272", "tipo": "Local", "calle": "Calle San Valeriano", "municipio": "Leganés", "provincia": "Madrid", "price": "500", "m2": "19", "hab": "1", "planta": null, "panoid": null}, {"ref": "JARE-1264", "tipo": "Suelo Urbano Residencial", "calle": "Calle Tomás García", "municipio": "Madrid", "provincia": "Madrid", "price": "57.500", "m2": "27", "hab": null, "planta": null, "panoid": null}, {"ref": "JARE-1325", "tipo": "Local", "calle": "Calle Manuel Becerra", "municipio": "Madrid", "provincia": "Madrid", "price": null, "m2": "11", "hab": "1", "planta": null, "panoid": null}, {"ref": "CHIRE-0126", "tipo": "Comercial + Garaje", "calle": "Calle Trole", "municipio": "Madrid", "provincia": "Madrid", "price": "14.000", "m2": "81", "hab": "4", "planta": null, "panoid": null}, {"ref": "CHIRE-0127", "tipo": "Comercial + Garaje", "calle": "Calle Trole", "municipio": "Madrid", "provincia": "Madrid", "price": "14.000", "m2": "81", "hab": "4", "planta": null, "panoid": null}, {"ref": "CHIRE-0272", "tipo": "Dúplex", "calle": "Calle Gallur", "municipio": "Madrid", "provincia": "Madrid", "price": "112.000", "m2": "80", "hab": "3", "planta": null, "panoid": null}, {"ref": "NERE-057001", "tipo": "Oficina", "calle": "Calle Santa Rosa", "municipio": "San Lorenzo de El Escorial", "provincia": "Madrid", "price": "145.000", "m2": "215", "hab": "0", "planta": null, "panoid": null}, {"ref": "JARE-1061", "tipo": "Comercial", "calle": "Calle Martinez Izquierdo", "municipio": "Madrid", "provincia": "Madrid", "price": null, "m2": "38", "hab": "1", "planta": null, "panoid": null}, {"ref": "PERE-003699", "tipo": "Casa", "calle": "Calle Ciempozuelos", "municipio": "Getafe", "provincia": "Madrid", "price": "255.000", "m2": "0", "hab": "4", "planta": null, "panoid": null}, {"ref": "ALRE-00496", "tipo": "Piso", "calle": "Calle Etna", "municipio": "Madrid", "provincia": "Madrid", "price": "180.000", "m2": "41", "hab": "2", "planta": null, "panoid": null}, {"ref": "ALRE-00683", "tipo": "Piso", "calle": "Calle COLOMBIA", "municipio": "Fuenlabrada", "provincia": "Madrid", "price": "200.000", "m2": "77", "hab": "3", "planta": null, "panoid": null}, {"ref": "ALRE-00853", "tipo": "Residencial", "calle": "Calle CL OLIVOS LOS", "municipio": "Algete", "provincia": "Madrid", "price": null, "m2": "78", "hab": null, "planta": null, "panoid": null}, {"ref": "ALRE-01620", "tipo": "Piso", "calle": "Calle FRANCISCO DEL PINO", "municipio": "Madrid", "provincia": "Madrid", "price": null, "m2": "57", "hab": "3", "planta": null, "panoid": null}, {"ref": "FRRE-00317", "tipo": "Piso", "calle": "Rio Manzanares", "municipio": "Valdemoro", "provincia": "Madrid", "price": 163300, "m2": 89, "hab": 4, "planta": null, "panoid": null}, {"ref": "LIRE-05552", "tipo": "Piso", "calle": "Calle Villaamil", "municipio": "Móstoles", "provincia": "Madrid", "price": 100000, "m2": 56, "hab": 2, "planta": null, "panoid": null}, {"ref": "LIRE-01316", "tipo": "Piso", "calle": "Calle De Las Panaderas", "municipio": "Fuenlabrada", "provincia": "Madrid", "price": 170000, "m2": 78, "hab": 3, "planta": null, "panoid": null}, {"ref": "RETI-02372", "tipo": "Piso", "calle": "Calle Callao (De)", "municipio": "Fuenlabrada", "provincia": "Madrid", "price": null, "m2": 79, "hab": null, "planta": null, "panoid": null}, {"ref": "LIRE-03665", "tipo": "Chalet", "calle": "Calle Del Guadarrama", "municipio": "Alpedrete", "provincia": "Madrid", "price": 125000, "m2": 31, "hab": 5, "planta": null, "panoid": null}, {"ref": "LIRE-04921", "tipo": "Piso", "calle": "Calle Marineros", "municipio": "Madrid", "provincia": "Madrid", "price": 66220, "m2": 58, "hab": 2, "planta": null, "panoid": null}, {"ref": "MURE-521001", "tipo": "Piso", "calle": "Gonzalo Herrero", "municipio": "Madrid", "provincia": "Madrid", "price": 225000, "m2": 57.79, "hab": 2, "planta": null, "panoid": null}, {"ref": "LIRE-00729", "tipo": "Piso", "calle": "Calle De La Doctora", "municipio": "Navalcarnero", "provincia": "Madrid", "price": "361.700", "m2": 312, "hab": null, "planta": null, "panoid": null, "clasif": "CDR"}, {"ref": "LIRE-01480", "tipo": "Piso", "calle": "Avenida De Las Vascongadas", "municipio": "Getafe", "provincia": "Madrid", "price": "213.011", "m2": 96, "hab": null, "planta": "BJ", "panoid": null, "clasif": "CDR"}, {"ref": "LIRE-02246", "tipo": "Piso", "calle": "Calle Castilla Leon", "municipio": "Valdemoro", "provincia": "Madrid", "price": "215.284", "m2": 111, "hab": null, "planta": "2", "panoid": null, "clasif": "CDR"}, {"ref": "LIRE-02248", "tipo": "Garaje", "calle": "Castilla Leon", "municipio": "Valdemoro", "provincia": "Madrid", "price": "215.284", "m2": 12, "hab": null, "planta": "-1", "panoid": null, "clasif": "CDR"}, {"ref": "LIRE-02927", "tipo": "Piso", "calle": "Calle De La Guardia Civil", "municipio": "Valdemoro", "provincia": "Madrid", "price": "274.823", "m2": 105, "hab": null, "planta": "1", "panoid": null, "clasif": "CDR"}, {"ref": "LIRE-03635", "tipo": "Piso", "calle": "Calle Las Suertes", "municipio": "Collado Villalba", "provincia": "Madrid", "price": "192.812", "m2": 86, "hab": null, "planta": "4", "panoid": null, "clasif": "CDR"}, {"ref": "LIRE-04112", "tipo": "Piso", "calle": "Avenida Peña Prieta", "municipio": "Madrid", "provincia": "Madrid", "price": "234.000", "m2": 47, "hab": null, "planta": "2", "panoid": null, "clasif": "CDR"}, {"ref": "LIRE-05431", "tipo": "Piso", "calle": "Calle Nuñez De Balboa", "municipio": "Alcalá de Henares", "provincia": "Madrid", "price": "221.030", "m2": 66, "hab": null, "planta": "3", "panoid": null, "clasif": "CDR"}, {"ref": "LIRE-06754", "tipo": "Piso", "calle": "Calle De La Macarena", "municipio": "Parla", "provincia": "Madrid", "price": "172.800", "m2": 58, "hab": null, "planta": "1", "panoid": null, "clasif": "CDR"}, {"ref": "GTRE-00482", "tipo": "Piso", "calle": "Calle Torrejón", "municipio": "Torrejón de Ardoz", "provincia": "Madrid", "price": "140.000", "m2": 95, "hab": "4", "planta": null, "panoid": null}];
-
-function fmtPrice(p) {
-  if (!p || p === 'Consultar') return 'Precio a consultar';
-  return p + ' €';
-}
-function svUrl(panoid) {
-  return `https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&w=600&h=400&pitch=0&panoid=${panoid}&yaw=0`;
-}
-function waMsg(item) {
-  return encodeURIComponent(`Hola, me interesa el activo ${item.ref} en ${item.municipio}`);
-}
-
-
-
-
-function renderCard(item) {
-  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-00458","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550"];
-  const soldRefs = ["asima","SBRE-0105307"];
-  let badge = '<span class="card-badge badge-susp">Suspendido</span>';
-  if (soldRefs.includes(item.ref)) badge = '<span class="card-badge badge-sold">VENDIDO</span>';
-  else if (offerRefs.includes(item.ref)) badge = '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
-  else if (item.clasif === 'NPL') badge = '<span class="card-badge badge-npl">NPL · Crédito en mora</span>';
-  else if (item.clasif === 'CDR') badge = '<span class="card-badge badge-cdr">CDR · Cesión de remate</span>';
-
-  const specs = [];
-  if (item.m2 && item.m2 !== '0') specs.push(`<span class="spec">📐 ${item.m2} m²</span>`);
-  if (item.hab && item.hab !== 'N/D') specs.push(`<span class="spec">🛏️ ${item.hab} hab.</span>`);
-  const cleanTitle = item.calle || item.tipo;
-  const q = encodeURIComponent(cleanTitle + ' ' + (item.municipio || '') + ' ' + (item.provincia || ''));
-  const mapHtml = `<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=${q}&output=embed" allowfullscreen loading="lazy"></iframe>`;
-  
-  const resId = `res-${item.ref || Math.random().toString(36).substr(2, 9)}`;
-
-  const fichaHref = `activo-${item.ref.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}.html`;
-  return `
-    <div class="asset-card" data-provincia="${item.provincia}" data-tipo="${item.tipo}" data-search="${(cleanTitle+' '+(item.municipio||'')).toLowerCase()}">
-      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
-        ${mapHtml}
-        ${badge}
-      </div>
-      <div class="card-body">
-        <div class="card-price">${fmtPrice(item.price)}</div>
-        <div class="card-title"><a href="${fichaHref}" style="color:inherit;text-decoration:none">${cleanTitle}</a></div>
-        <div class="card-specs">${specs.join('')}</div>
-        <div class="card-location">${item.municipio ? item.municipio+' · ' : ''}${item.provincia} · REF: ${item.ref}</div>
-        <div class="card-actions">
-          <a href="${fichaHref}" class="card-btn-primary">Ver ficha completa</a>
-          <a href="https://wa.me/34679916424?text=${waMsg(item)}" class="card-btn-secondary" target="_blank">WhatsApp</a>
-        </div>
-        
-        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
-        <div class="mortgage-calc">
-          <div class="mortgage-title">Calculadora de Hipoteca</div>
-          <div class="mortgage-grid">
-            <div class="mortgage-field">
-              <label>Entrada (%)</label>
-              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '${item.price}')">
-            </div>
-            <div class="mortgage-field">
-              <label>Plazo (Años)</label>
-              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '${item.price}')">
-            </div>
-            <div class="mortgage-field" style="grid-column: span 2">
-              <label>Interés Anual (%)</label>
-              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '${item.price}')">
-            </div>
-          </div>
-          <div class="mortgage-result">
-            <span class="mortgage-label">Cuota mensual estimada</span>
-            <span class="mortgage-val" id="${resId}">-- €</span>
-          </div>
-        </div>
-      </div>
-    </div>`;
-}
 
 function toggleMortgage(btn) {
   const calc = btn.nextElementSibling;
@@ -314,23 +1487,6 @@ function calculateMortgage(input, priceStr) {
 }
 
 
-function populateTipoOptions() {
-  const tipos = [...new Set(CV_DATA.map(d => d.tipo))].sort();
-  const sel = document.getElementById('cv-tipo');
-  tipos.forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t; opt.textContent = t;
-    sel.appendChild(opt);
-  });
-}
-
-function renderAll() {
-  const grid = document.getElementById('cv-grid');
-  grid.innerHTML = CV_DATA.map(renderCard).join('');
-  document.getElementById('cv-count').textContent = CV_DATA.length + ' activos encontrados';
-  applyFilters();
-}
-
 function applyFilters() {
   const q = document.getElementById('cv-search').value.trim().toLowerCase();
   const prov = document.getElementById('cv-provincia').value;
@@ -349,7 +1505,6 @@ function applyFilters() {
   document.getElementById('cv-empty').style.display = visible === 0 ? 'block' : 'none';
 }
 
-populateTipoOptions();
 (function(){
   var params = new URLSearchParams(window.location.search);
   var tipoParam = params.get('tipo');
@@ -364,7 +1519,7 @@ populateTipoOptions();
     }
   }
 })();
-renderAll();
+applyFilters();
 document.getElementById('cv-search').addEventListener('input', applyFilters);
 document.getElementById('cv-provincia').addEventListener('change', applyFilters);
 document.getElementById('cv-tipo').addEventListener('change', applyFilters);
