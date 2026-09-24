@@ -135,6 +135,7 @@
   </select>
   <select id="cv-tipo">
     <option value="">Tipo de inmueble...</option>
+  <option value="Apartamento">Apartamento</option><option value="Casa">Casa</option><option value="Garaje">Garaje</option><option value="Piso">Piso</option><option value="Suelo Urbano Residencial">Suelo Urbano Residencial</option><option value="Trastero">Trastero</option>
   </select>
   <select id="cv-estado">
     <option value="">Estado...</option>
@@ -145,7 +146,2851 @@
 </div>
 
 <main class="main">
-  <div class="assets-grid" id="cv-grid"></div>
+  <div class="assets-grid" id="cv-grid">
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0002682</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0002682')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0002682')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0002682')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0002682">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje son servera">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Son%20Servera%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">9000 €</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"><span class="spec">📐 13 m²</span></div>
+                <div class="card-location">Avenida del Tren · Son Servera · Mallorca · REF: SBRE-0002877</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '9000', 'res-SBRE-0002877')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '9000', 'res-SBRE-0002877')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '9000', 'res-SBRE-0002877')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0002877">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje son servera">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Son%20Servera%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">8500 €</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"><span class="spec">📐 11 m²</span></div>
+                <div class="card-location">Avenida del Tren · Son Servera · Mallorca · REF: SBRE-0002366</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '8500', 'res-SBRE-0002366')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '8500', 'res-SBRE-0002366')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '8500', 'res-SBRE-0002366')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0002366">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje son servera">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Son%20Servera%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">9000 €</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"><span class="spec">📐 12 m²</span></div>
+                <div class="card-location">Avenida del Tren · Son Servera · Mallorca · REF: SBRE-0002912</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '9000', 'res-SBRE-0002912')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '9000', 'res-SBRE-0002912')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '9000', 'res-SBRE-0002912')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0002912">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0003148</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003148')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003148')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003148')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003148">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0003181</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003181')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003181')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003181')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003181">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0002667</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0002667')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0002667')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0002667')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0002667">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Trastero" data-estado="undefined" data-search="trastero alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Trastero%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Trastero</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0003158</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003158')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003158')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003158')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003158">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0003170</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003170')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003170')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003170')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003170">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0003175</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003175')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003175')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003175')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003175">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0003199</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003199')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003199')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003199')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003199">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0003656</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003656')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003656')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003656')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003656">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0003661</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003661')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003661')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003661')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003661">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0003666</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003666')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003666')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003666')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003666">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Casa" data-estado="undefined" data-search="casa son servera">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Casa%20Son%20Servera%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">184.000 €</div>
+        <div class="card-title">Casa</div>
+        <div class="card-specs"><span class="spec">📐 70 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+                <div class="card-location">Avenida del Tren · Son Servera · Mallorca · REF: SBRE-0003357</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '184000', 'res-SBRE-0003357')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '184000', 'res-SBRE-0003357')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '184000', 'res-SBRE-0003357')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003357">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0008257</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0008257')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0008257')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0008257')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0008257">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0003701</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003701')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003701')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0003701')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003701">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje son servera">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Son%20Servera%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">8500 €</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"><span class="spec">📐 12 m²</span></div>
+                <div class="card-location">Avenida del Tren · Son Servera · Mallorca · REF: SBRE-0003855</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '8500', 'res-SBRE-0003855')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '8500', 'res-SBRE-0003855')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '8500', 'res-SBRE-0003855')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003855">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje son servera">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Son%20Servera%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">8500 €</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"><span class="spec">📐 11 m²</span></div>
+                <div class="card-location">Avenida del Tren · Son Servera · Mallorca · REF: SBRE-0003915</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '8500', 'res-SBRE-0003915')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '8500', 'res-SBRE-0003915')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '8500', 'res-SBRE-0003915')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0003915">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0005556</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0005556')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0005556')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0005556')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0005556">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0006862</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0006862')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0006862')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0006862')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0006862">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0011375</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011375')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011375')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011375')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0011375">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0009003</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009003')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009003')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009003')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0009003">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0009016</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009016')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009016')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009016')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0009016">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0012158</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0012158')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0012158')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0012158')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0012158">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0009830</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009830')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009830')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009830')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0009830">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0008240</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0008240')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0008240')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0008240')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0008240">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0009234</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009234')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009234')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009234')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0009234">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0009246</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009246')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009246')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009246')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0009246">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0011384</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011384')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011384')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011384')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0011384">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0009198</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009198')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009198')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009198')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0009198">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0009934</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009934')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009934')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009934')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0009934">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0009833</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009833')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009833')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0009833')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0009833">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0011313</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011313')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011313')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011313')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0011313">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0011402</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011402')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011402')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0011402')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0011402">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje manacor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Manacor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Ebre · Manacor · Mallorca · REF: SBRE-0012085</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0012085')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0012085')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0012085')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0012085">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Casa" data-estado="undefined" data-search="casa marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Casa%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Casa</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Enegistes · Marratxi · Mallorca · REF: SBRE-0035925</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0035925')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0035925')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0035925')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0035925">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0038436</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0038436')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0038436')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0038436')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0038436">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0039886</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0039886')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0039886')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0039886')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0039886">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0045397</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0045397')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0045397')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0045397')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0045397">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Casa" data-estado="undefined" data-search="casa marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Casa%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Casa</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Enegistes · Marratxi · Mallorca · REF: SBRE-0043819</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0043819')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0043819')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0043819')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0043819">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0046325</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0046325')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0046325')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0046325')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0046325">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0049503</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0049503')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0049503')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0049503')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0049503">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0048855</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0048855')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0048855')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0048855')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0048855">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0049528</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0049528')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0049528')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0049528')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0049528">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Casa" data-estado="undefined" data-search="casa marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Casa%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Casa</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Enegistes · Marratxi · Mallorca · REF: SBRE-0050128</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050128')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050128')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050128')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0050128">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0050179</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050179')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050179')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050179')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0050179">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0050087</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050087')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050087')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0050087')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0050087">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0055685</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0055685')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0055685')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0055685')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0055685">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0053235</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0053235')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0053235')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0053235')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0053235">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Casa" data-estado="undefined" data-search="casa marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Casa%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Casa</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0058439</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0058439')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0058439')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0058439')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0058439">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Casa" data-estado="undefined" data-search="casa marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Casa%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Casa</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0054327</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0054327')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0054327')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0054327')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0054327">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje marratxi">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Marratxi%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Santedat · Marratxi · Mallorca · REF: SBRE-0059178</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0059178')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0059178')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0059178')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0059178">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0073807</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073807')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073807')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073807')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0073807">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0073814</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073814')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073814')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073814')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0073814">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0073823</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073823')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073823')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0073823')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0073823">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0075214</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0075214')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0075214')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0075214')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0075214">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0084731</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084731')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084731')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084731')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084731">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0084750</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084750')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084750')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084750')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084750">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0084745</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084745')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084745')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084745')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084745">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0084751</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084751')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084751')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084751')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084751">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0084777</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084777')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084777')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084777')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084777">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"><span class="spec">📐 23 m²</span></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0086161</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086161')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086161')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086161')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0086161">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0084782</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084782')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084782')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084782')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084782">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0084762</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084762')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084762')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084762')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084762">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">8400 €</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0084783</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '8400', 'res-SBRE-0084783')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '8400', 'res-SBRE-0084783')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '8400', 'res-SBRE-0084783')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084783">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0084772</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084772')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084772')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084772')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084772">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0084740</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084740')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084740')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084740')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084740">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Edificio Es Clot de Alcudia · Alcudia · Mallorca · REF: SBRE-0086181</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086181')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086181')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086181')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0086181">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Agustin Arguelles · Alcudia · Mallorca · REF: SBRE-0086191</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086191')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086191')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0086191')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0086191">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0084736</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084736')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084736')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0084736')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0084736">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0085637</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0085637')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0085637')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0085637')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0085637">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Garaje" data-estado="undefined" data-search="garaje alcudia">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Alcudia%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Principes de Espana · Alcudia · Mallorca · REF: SBRE-0085660</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0085660')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0085660')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0085660')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0085660">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Apartamento" data-estado="undefined" data-search="apartamento llucmajor">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Apartamento%20Llucmajor%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Apartamento</div>
+        <div class="card-specs"><span class="spec">📐 112 m²</span></div>
+                <div class="card-location">Poligono 42 Son Hereu · Llucmajor · Mallorca · REF: SBRE-0186921</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0186921')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0186921')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0186921')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0186921">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Apartamento" data-estado="undefined" data-search="apartamento palma de mallorca">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Apartamento%20Palma%20de%20Mallorca%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">396.000 €</div>
+        <div class="card-title">Apartamento</div>
+        <div class="card-specs"><span class="spec">📐 212 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+                <div class="card-location">Calle Cala Gentil · Palma de Mallorca · Mallorca · REF: SBRE-0186919</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '396000', 'res-SBRE-0186919')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '396000', 'res-SBRE-0186919')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '396000', 'res-SBRE-0186919')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0186919">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Suelo Urbano Residencial" data-estado="undefined" data-search="suelo urbano residencial capdepera">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Suelo%20Urbano%20Residencial%20Capdepera%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">2.373.000 €</div>
+        <div class="card-title">Suelo Urbano Residencial</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Avenida Juan Carlos I · Capdepera · Mallorca · REF: SBRE-192597</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '2373000', 'res-SBRE-192597')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '2373000', 'res-SBRE-192597')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '2373000', 'res-SBRE-192597')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-192597">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Piso" data-estado="undefined" data-search="piso palma de mallorca">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Piso%20Palma%20de%20Mallorca%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">340.000 €</div>
+        <div class="card-title">Piso</div>
+        <div class="card-specs"><span class="spec">📐 61 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+                <div class="card-location">Calle Joan Monserrat Parets · Palma de Mallorca · Mallorca · REF: SBRE-196360</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '340000', 'res-SBRE-196360')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '340000', 'res-SBRE-196360')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '340000', 'res-SBRE-196360')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-196360">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Mallorca" data-tipo="Casa" data-estado="undefined" data-search="casa palma de mallorca">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Casa%20Palma%20de%20Mallorca%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Consultar precio</div>
+        <div class="card-title">Casa</div>
+        <div class="card-specs"></div>
+                <div class="card-location">Calle Albacete · Palma de Mallorca · Mallorca · REF: SBRE-0024279</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'null', 'res-SBRE-0024279')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'null', 'res-SBRE-0024279')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'null', 'res-SBRE-0024279')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0024279">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-isla="Formentera" data-tipo="Garaje" data-estado="undefined" data-search="garaje formentera">
+      <div class="card-img">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0;background:#f0f0f0" src="https://www.google.com/maps?q=Garaje%20Formentera%20Illes%20Balears&amp;output=embed" loading="lazy"></iframe>
+        <span class="card-badge">Disponible</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">117.000 €</div>
+        <div class="card-title">Garaje</div>
+        <div class="card-specs"><span class="spec">📐 48 m²</span></div>
+                <div class="card-location">Avenida de la Mola · Formentera · Formentera · REF: RESQ-00371</div>
+        <div class="card-actions"><a href="contacto.html" class="card-btn-primary">Solicitar información</a><a href="https://wa.me/34679916424?text=undefined" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
+        
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '117000', 'res-RESQ-00371')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '117000', 'res-RESQ-00371')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '117000', 'res-RESQ-00371')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RESQ-00371">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div></div>
   <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
   <nav class="cv-pagination-real" aria-label="Paginacion de resultados" style="display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;padding:32px 24px 8px;"><a href="activos-baleares.html" style="display:inline-block;min-width:36px;text-align:center;padding:8px 10px;border-radius:4px;font-size:13px;text-decoration:none;color:var(--navy,#1A2D4F);border:1px solid rgba(26,45,79,0.15);">« Anterior</a><a href="activos-baleares.html" style="display:inline-block;min-width:36px;text-align:center;padding:8px 10px;border-radius:4px;font-size:13px;text-decoration:none;color:var(--navy,#1A2D4F);border:1px solid rgba(26,45,79,0.15);">1</a><span class="cv-page-current" style="display:inline-block;min-width:36px;text-align:center;padding:8px 10px;border-radius:4px;font-size:13px;text-decoration:none;background:var(--navy,#1A2D4F);color:#fff;font-weight:700;" aria-current="page">2</span><span style="display:inline-block;min-width:36px;text-align:center;padding:8px 10px;border-radius:4px;font-size:13px;text-decoration:none;color:var(--gray-300,#ccc);cursor:default;">Siguiente »</span></nav>
 </main>
