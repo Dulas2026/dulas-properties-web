@@ -169,12 +169,1534 @@
   </select>
   <select id="cv-tipo">
     <option value="">Tipo de inmueble...</option>
+  <option value="Casa">Casa</option><option value="Casa Adosada">Casa Adosada</option><option value="Finca Rústica">Finca Rústica</option><option value="Garaje">Garaje</option><option value="Local">Local</option><option value="Piso">Piso</option><option value="Pisos">Pisos</option><option value="Suelo Urbano Residencial">Suelo Urbano Residencial</option><option value="Suelos Urbanizables Residenciales">Suelos Urbanizables Residenciales</option><option value="Suelos Urbanos Residenciales">Suelos Urbanos Residenciales</option><option value="Trastero">Trastero</option>
   </select>
   <div class="cv-count" id="cv-count"></div>
 </div>
 
 <main class="main">
-  <div class="assets-grid" id="cv-grid"></div>
+  <div class="assets-grid" id="cv-grid">
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle goya francisco cadrete">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Goya%20Francisco%20Cadrete%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lore-0715.html" style="color:inherit;text-decoration:none">Calle Goya Francisco</a></div>
+        <div class="card-specs"><span class="spec">📐 78 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Cadrete · Zaragoza · REF: LORE-0715</div>
+        <div class="card-actions">
+          <a href="activo-lore-0715.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LORE-0715%20en%20Cadrete" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LORE-0715')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LORE-0715')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LORE-0715')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LORE-0715">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Finca Rústica" data-search="paraje heredad en termino de rabal zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Paraje%20Heredad%20En%20Termino%20De%20Rabal%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-jare-2748.html" style="color:inherit;text-decoration:none">Paraje Heredad En Termino De Rabal</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: JARE-2748</div>
+        <div class="card-actions">
+          <a href="activo-jare-2748.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20JARE-2748%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-JARE-2748')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-JARE-2748')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-JARE-2748')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-JARE-2748">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Garaje" data-search="calle costa rica fraga">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Costa%20Rica%20Fraga%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-nere-348015.html" style="color:inherit;text-decoration:none">Calle Costa Rica</a></div>
+        <div class="card-specs"><span class="spec">📐 17 m²</span></div>
+        <div class="card-location">Fraga · Huesca · REF: NERE-348015</div>
+        <div class="card-actions">
+          <a href="activo-nere-348015.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20NERE-348015%20en%20Fraga" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348015')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348015')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348015')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-NERE-348015">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Garaje" data-search="calle costa rica fraga">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Costa%20Rica%20Fraga%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-nere-348016.html" style="color:inherit;text-decoration:none">Calle Costa Rica</a></div>
+        <div class="card-specs"><span class="spec">📐 14 m²</span></div>
+        <div class="card-location">Fraga · Huesca · REF: NERE-348016</div>
+        <div class="card-actions">
+          <a href="activo-nere-348016.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20NERE-348016%20en%20Fraga" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348016')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348016')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348016')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-NERE-348016">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Garaje" data-search="calle costa rica fraga">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Costa%20Rica%20Fraga%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-nere-348018.html" style="color:inherit;text-decoration:none">Calle Costa Rica</a></div>
+        <div class="card-specs"><span class="spec">📐 11 m²</span></div>
+        <div class="card-location">Fraga · Huesca · REF: NERE-348018</div>
+        <div class="card-actions">
+          <a href="activo-nere-348018.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20NERE-348018%20en%20Fraga" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348018')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348018')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348018')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-NERE-348018">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Garaje" data-search="calle costa rica fraga">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Costa%20Rica%20Fraga%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-nere-348019.html" style="color:inherit;text-decoration:none">Calle Costa Rica</a></div>
+        <div class="card-specs"><span class="spec">📐 18 m²</span></div>
+        <div class="card-location">Fraga · Huesca · REF: NERE-348019</div>
+        <div class="card-actions">
+          <a href="activo-nere-348019.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20NERE-348019%20en%20Fraga" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348019')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348019')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-NERE-348019')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-NERE-348019">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle doctor ibañez ejea de los caballeros">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Doctor%20Iba%C3%B1ez%20Ejea%20de%20los%20Caballeros%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-nere-012001.html" style="color:inherit;text-decoration:none">Calle Doctor Ibañez</a></div>
+        <div class="card-specs"><span class="spec">📐 63 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Ejea de los Caballeros · Zaragoza · REF: NERE-012001</div>
+        <div class="card-actions">
+          <a href="activo-nere-012001.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20NERE-012001%20en%20Ejea%20de%20los%20Caballeros" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-NERE-012001')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-NERE-012001')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-NERE-012001')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-NERE-012001">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Piso" data-search="calle juan ramon jimenez barbastro">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Juan%20Ramon%20Jimenez%20Barbastro%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-04642.html" style="color:inherit;text-decoration:none">Calle Juan Ramon Jimenez</a></div>
+        <div class="card-specs"><span class="spec">📐 75 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Barbastro · Huesca · REF: ALRE-04642</div>
+        <div class="card-actions">
+          <a href="activo-alre-04642.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-04642%20en%20Barbastro" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04642')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04642')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04642')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-04642">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle cl juan gualberto bermudez calatayud">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20CL%20JUAN%20GUALBERTO%20BERMUDEZ%20Calatayud%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-04002.html" style="color:inherit;text-decoration:none">Calle CL JUAN GUALBERTO BERMUDEZ</a></div>
+        <div class="card-specs"><span class="spec">📐 120 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Calatayud · Zaragoza · REF: ALRE-04002</div>
+        <div class="card-actions">
+          <a href="activo-alre-04002.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-04002%20en%20Calatayud" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04002')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04002')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04002')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-04002">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle miguel servet zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Miguel%20Servet%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-remo-01987.html" style="color:inherit;text-decoration:none">Calle Miguel Servet</a></div>
+        <div class="card-specs"><span class="spec">📐 111 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: REMO-01987</div>
+        <div class="card-actions">
+          <a href="activo-remo-01987.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20REMO-01987%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-REMO-01987')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-REMO-01987')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-REMO-01987')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-REMO-01987">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Casa" data-search="calle barrionuevo ag asin broto broto">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Barrionuevo%20Ag%20Asin%20Broto%20Broto%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-remo-02087.html" style="color:inherit;text-decoration:none">Calle Barrionuevo Ag Asin Broto</a></div>
+        <div class="card-specs"><span class="spec">📐 277 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Broto · Huesca · REF: REMO-02087</div>
+        <div class="card-actions">
+          <a href="activo-remo-02087.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20REMO-02087%20en%20Broto" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02087')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02087')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02087')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-REMO-02087">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Casa Adosada" data-search="calle gudel marti g. zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Gudel%20Marti%20G.%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-remo-00638.html" style="color:inherit;text-decoration:none">Calle Gudel Marti G.</a></div>
+        <div class="card-specs"><span class="spec">📐 247 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: REMO-00638</div>
+        <div class="card-actions">
+          <a href="activo-remo-00638.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20REMO-00638%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-REMO-00638')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-REMO-00638')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-REMO-00638')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-REMO-00638">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle almozara soto almozara zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Almozara%20Soto%20Almozara%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-remo-02127.html" style="color:inherit;text-decoration:none">Calle Almozara Soto Almozara</a></div>
+        <div class="card-specs"><span class="spec">📐 126 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: REMO-02127</div>
+        <div class="card-actions">
+          <a href="activo-remo-02127.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20REMO-02127%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02127')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02127')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02127')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-REMO-02127">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle pontevedra zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Pontevedra%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-06043.html" style="color:inherit;text-decoration:none">Calle Pontevedra</a></div>
+        <div class="card-specs"><span class="spec">📐 60 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: LIRE-06043</div>
+        <div class="card-actions">
+          <a href="activo-lire-06043.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-06043%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-06043')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-06043')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-06043')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-06043">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle binefar zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Binefar%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-03175.html" style="color:inherit;text-decoration:none">Calle Binefar</a></div>
+        <div class="card-specs"><span class="spec">📐 54 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: LIRE-03175</div>
+        <div class="card-actions">
+          <a href="activo-lire-03175.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-03175%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-03175')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-03175')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-03175')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-03175">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Teruel" data-tipo="Piso" data-search="avenida maestrazgo alcañiz">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Avenida%20Maestrazgo%20Alca%C3%B1iz%20Teruel&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-01499.html" style="color:inherit;text-decoration:none">Avenida Maestrazgo</a></div>
+        <div class="card-specs"><span class="spec">📐 90 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Alcañiz · Teruel · REF: RETI-01499</div>
+        <div class="card-actions">
+          <a href="activo-reti-01499.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-01499%20en%20Alca%C3%B1iz" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01499')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01499')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01499')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-01499">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Casa" data-search="calle mayor biota">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Mayor%20Biota%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-01927.html" style="color:inherit;text-decoration:none">Calle Mayor</a></div>
+        <div class="card-specs"><span class="spec">📐 131 m²</span></div>
+        <div class="card-location">Biota · Zaragoza · REF: RETI-01927</div>
+        <div class="card-actions">
+          <a href="activo-reti-01927.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-01927%20en%20Biota" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01927')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01927')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01927')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-01927">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Local" data-search="avenida madrid daroca">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Avenida%20Madrid%20Daroca%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-03465.html" style="color:inherit;text-decoration:none">Avenida Madrid</a></div>
+        <div class="card-specs"><span class="spec">📐 201 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Daroca · Zaragoza · REF: RETI-03465</div>
+        <div class="card-actions">
+          <a href="activo-reti-03465.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-03465%20en%20Daroca" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03465')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03465')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03465')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-03465">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle capuchinos tarazona">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Capuchinos%20Tarazona%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-00700.html" style="color:inherit;text-decoration:none">Calle Capuchinos</a></div>
+        <div class="card-specs"><span class="spec">📐 50 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Tarazona · Zaragoza · REF: RETI-00700</div>
+        <div class="card-actions">
+          <a href="activo-reti-00700.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-00700%20en%20Tarazona" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00700')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00700')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00700')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-00700">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Casa" data-search="calle mayor daroca">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Mayor%20Daroca%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-03464.html" style="color:inherit;text-decoration:none">Calle Mayor</a></div>
+        <div class="card-specs"><span class="spec">📐 940 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Daroca · Zaragoza · REF: RETI-03464</div>
+        <div class="card-actions">
+          <a href="activo-reti-03464.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-03464%20en%20Daroca" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03464')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03464')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03464')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-03464">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle atlantico utebo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Atlantico%20Utebo%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-03473.html" style="color:inherit;text-decoration:none">Calle Atlantico</a></div>
+        <div class="card-specs"><span class="spec">📐 91 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Utebo · Zaragoza · REF: RETI-03473</div>
+        <div class="card-actions">
+          <a href="activo-reti-03473.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-03473%20en%20Utebo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03473')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03473')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03473')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-03473">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle obispo laplana zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20OBISPO%20LAPLANA%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0094794.html" style="color:inherit;text-decoration:none">Calle OBISPO LAPLANA</a></div>
+        <div class="card-specs"><span class="spec">📐 64 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0094794</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0094794.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0094794%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094794')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094794')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094794')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0094794">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle obispo laplana zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20OBISPO%20LAPLANA%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0094795.html" style="color:inherit;text-decoration:none">Calle OBISPO LAPLANA</a></div>
+        <div class="card-specs"><span class="spec">📐 58 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0094795</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0094795.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0094795%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094795')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094795')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094795')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0094795">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="calle obispo la plana zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20OBISPO%20LA%20PLANA%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0094792.html" style="color:inherit;text-decoration:none">Calle OBISPO LA PLANA</a></div>
+        <div class="card-specs"><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0094792</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0094792.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0094792%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094792')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094792')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0094792')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0094792">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Pisos" data-search="calle de las banqueras muela (la)">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20DE%20LAS%20BANQUERAS%20Muela%20(La)%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0118654.html" style="color:inherit;text-decoration:none">Calle DE LAS BANQUERAS</a></div>
+        <div class="card-specs"><span class="spec">📐 50 m²</span><span class="spec">🛏️ 1 hab.</span></div>
+        <div class="card-location">Muela (La) · Zaragoza · REF: SBRE-0118654</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0118654.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0118654%20en%20Muela%20(La)" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0118654')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0118654')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0118654')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0118654">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Suelo Urbano Residencial" data-search="sector puente sardas sabiñánigo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Sector%20PUENTE%20SARDAS%20Sabi%C3%B1%C3%A1nigo%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0120541.html" style="color:inherit;text-decoration:none">Sector PUENTE SARDAS</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Sabiñánigo · Huesca · REF: SBRE-0120541</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0120541.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0120541%20en%20Sabi%C3%B1%C3%A1nigo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120541')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120541')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120541')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0120541">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelo Urbano Residencial" data-search="avenida buenos aires zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Avenida%20BUENOS%20AIRES%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0120502.html" style="color:inherit;text-decoration:none">Avenida BUENOS AIRES</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0120502</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0120502.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0120502%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120502')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120502')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120502')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0120502">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelo Urbano Residencial" data-search="sector 89/3 arcosur zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Sector%2089%2F3%20ARCOSUR%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0120515.html" style="color:inherit;text-decoration:none">Sector 89/3 ARCOSUR</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0120515</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0120515.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0120515%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120515')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120515')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120515')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0120515">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelo Urbano Residencial" data-search="calle casta alvarez calatayud">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20CASTA%20ALVAREZ%20Calatayud%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0123109.html" style="color:inherit;text-decoration:none">Calle CASTA ALVAREZ</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Calatayud · Zaragoza · REF: SBRE-0123109</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0123109.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0123109%20en%20Calatayud" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123109')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123109')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123109')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0123109">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelos Urbanizables Residenciales" data-search="lugar suz lc-3 zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Lugar%20SUZ%20LC-3%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0123732.html" style="color:inherit;text-decoration:none">Lugar SUZ LC-3</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0123732</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0123732.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0123732%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123732')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123732')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123732')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0123732">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelos Urbanizables Residenciales" data-search="lugar sector suz lc-2 cartuja baja zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Lugar%20SECTOR%20SUZ%20LC-2%20CARTUJA%20BAJA%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0123729.html" style="color:inherit;text-decoration:none">Lugar SECTOR SUZ LC-2 CARTUJA BAJA</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0123729</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0123729.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0123729%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123729')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123729')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123729')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0123729">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelos Urbanos Residenciales" data-search="carretera huesca-aliagar zuera">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Carretera%20HUESCA-ALIAGAR%20Zuera%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0124693.html" style="color:inherit;text-decoration:none">Carretera HUESCA-ALIAGAR</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Zuera · Zaragoza · REF: SBRE-0124693</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0124693.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0124693%20en%20Zuera" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0124693')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0124693')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0124693')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0124693">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelo Urbano Residencial" data-search="lugar parcela residencial v.l.1.2 zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Lugar%20Parcela%20RESIDENCIAL%20V.L.1.2%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0125367.html" style="color:inherit;text-decoration:none">Lugar Parcela RESIDENCIAL V.L.1.2</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0125367</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0125367.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0125367%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125367')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125367')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125367')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0125367">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelo Urbano Residencial" data-search="calle jesus valdes guzman zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20JESUS%20VALDES%20GUZMAN%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0033410.html" style="color:inherit;text-decoration:none">Calle JESUS VALDES GUZMAN</a></div>
+        <div class="card-specs"><span class="spec">📐 45113 m²</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0033410</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0033410.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0033410%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0033410')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0033410')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0033410')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0033410">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Suelo Urbano Residencial" data-search="partida de la bombarda zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Partida%20DE%20LA%20BOMBARDA%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0125583.html" style="color:inherit;text-decoration:none">Partida DE LA BOMBARDA</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0125583</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0125583.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0125583%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125583')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125583')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125583')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0125583">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Zaragoza" data-tipo="Piso" data-search="paseo ruiseñores zaragoza">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Paseo%20RUISE%C3%91ORES%20Zaragoza%20Zaragoza&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0138884.html" style="color:inherit;text-decoration:none">Paseo RUISEÑORES</a></div>
+        <div class="card-specs"><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Zaragoza · Zaragoza · REF: SBRE-0138884</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0138884.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0138884%20en%20Zaragoza" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0138884')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0138884')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0138884')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0138884">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Trastero" data-search="calle escarrilo sallent de gállego">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ESCARRILO%20Sallent%20de%20G%C3%A1llego%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0139126.html" style="color:inherit;text-decoration:none">Calle ESCARRILO</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Sallent de Gállego · Huesca · REF: SBRE-0139126</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0139126.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0139126%20en%20Sallent%20de%20G%C3%A1llego" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139126')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139126')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139126')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0139126">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Trastero" data-search="calle escarrilla sallent de gállego">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ESCARRILLA%20Sallent%20de%20G%C3%A1llego%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0139130.html" style="color:inherit;text-decoration:none">Calle ESCARRILLA</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Sallent de Gállego · Huesca · REF: SBRE-0139130</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0139130.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0139130%20en%20Sallent%20de%20G%C3%A1llego" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139130')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139130')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139130')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0139130">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Huesca" data-tipo="Trastero" data-search="calle francia escarrilla sallent de gállego">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20FRANCIA%20ESCARRILLA%20Sallent%20de%20G%C3%A1llego%20Huesca&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0139127.html" style="color:inherit;text-decoration:none">Calle FRANCIA ESCARRILLA</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Sallent de Gállego · Huesca · REF: SBRE-0139127</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0139127.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0139127%20en%20Sallent%20de%20G%C3%A1llego" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139127')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139127')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0139127')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0139127">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div></div>
   <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
 </main>
 
@@ -205,80 +1727,6 @@
 </a>
 
 <script>
-const CV_DATA = [{"ref":"LORE-0715","tipo":"Piso","calle":"Calle Goya Francisco","municipio":"Cadrete","provincia":"Zaragoza","m2":"78","hab":"2","planta":"1"},{"ref":"JARE-2748","tipo":"Finca Rústica","calle":"Paraje Heredad En Termino De Rabal","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"NERE-348015","tipo":"Garaje","calle":"Calle Costa Rica","municipio":"Fraga","provincia":"Huesca","m2":"17","hab":null,"planta":"-2"},{"ref":"NERE-348016","tipo":"Garaje","calle":"Calle Costa Rica","municipio":"Fraga","provincia":"Huesca","m2":"14","hab":null,"planta":"-2"},{"ref":"NERE-348018","tipo":"Garaje","calle":"Calle Costa Rica","municipio":"Fraga","provincia":"Huesca","m2":"11","hab":null,"planta":"-2"},{"ref":"NERE-348019","tipo":"Garaje","calle":"Calle Costa Rica","municipio":"Fraga","provincia":"Huesca","m2":"18","hab":null,"planta":"-2"},{"ref":"NERE-012001","tipo":"Piso","calle":"Calle Doctor Ibañez","municipio":"Ejea de los Caballeros","provincia":"Zaragoza","m2":"63","hab":"2","planta":"1"},{"ref":"ALRE-04642","tipo":"Piso","calle":"Calle Juan Ramon Jimenez","municipio":"Barbastro","provincia":"Huesca","m2":"75","hab":"3","planta":"2"},{"ref":"ALRE-04002","tipo":"Piso","calle":"Calle CL JUAN GUALBERTO BERMUDEZ","municipio":"Calatayud","provincia":"Zaragoza","m2":"120","hab":"3","planta":"6"},{"ref":"REMO-01987","tipo":"Piso","calle":"Calle Miguel Servet","municipio":"Zaragoza","provincia":"Zaragoza","m2":"111","hab":"4","planta":"5"},{"ref":"REMO-02087","tipo":"Casa","calle":"Calle Barrionuevo Ag Asin Broto","municipio":"Broto","provincia":"Huesca","m2":"277","hab":"4","planta":null},{"ref":"REMO-00638","tipo":"Casa Adosada","calle":"Calle Gudel Marti G.","municipio":"Zaragoza","provincia":"Zaragoza","m2":"247","hab":"4","planta":null},{"ref":"REMO-02127","tipo":"Piso","calle":"Calle Almozara Soto Almozara","municipio":"Zaragoza","provincia":"Zaragoza","m2":"126","hab":"4","planta":null},{"ref":"LIRE-06043","tipo":"Piso","calle":"Calle Pontevedra","municipio":"Zaragoza","provincia":"Zaragoza","m2":"60","hab":"2","planta":"2"},{"ref":"LIRE-03175","tipo":"Piso","calle":"Calle Binefar","municipio":"Zaragoza","provincia":"Zaragoza","m2":"54","hab":"2","planta":"1"},{"ref":"RETI-01499","tipo":"Piso","calle":"Avenida Maestrazgo","municipio":"Alcañiz","provincia":"Teruel","m2":"90","hab":"2","planta":"3"},{"ref":"RETI-01927","tipo":"Casa","calle":"Calle Mayor","municipio":"Biota","provincia":"Zaragoza","m2":"131","hab":null,"planta":null},{"ref":"RETI-03465","tipo":"Local","calle":"Avenida Madrid","municipio":"Daroca","provincia":"Zaragoza","m2":"201","hab":"4","planta":"bajo"},{"ref":"RETI-00700","tipo":"Piso","calle":"Calle Capuchinos","municipio":"Tarazona","provincia":"Zaragoza","m2":"50","hab":"2","planta":null},{"ref":"RETI-03464","tipo":"Casa","calle":"Calle Mayor","municipio":"Daroca","provincia":"Zaragoza","m2":"940","hab":"4","planta":null},{"ref":"RETI-03473","tipo":"Piso","calle":"Calle Atlantico","municipio":"Utebo","provincia":"Zaragoza","m2":"91","hab":"3","planta":"1"},{"ref":"SBRE-0094794","tipo":"Piso","calle":"Calle OBISPO LAPLANA","municipio":"Zaragoza","provincia":"Zaragoza","m2":"64","hab":"3","planta":"ENT"},{"ref":"SBRE-0094795","tipo":"Piso","calle":"Calle OBISPO LAPLANA","municipio":"Zaragoza","provincia":"Zaragoza","m2":"58","hab":"3","planta":"ENTREPLANTA"},{"ref":"SBRE-0094792","tipo":"Piso","calle":"Calle OBISPO LA PLANA","municipio":"Zaragoza","provincia":"Zaragoza","m2":"0","hab":"3","planta":"3"},{"ref":"SBRE-0118654","tipo":"Pisos","calle":"Calle DE LAS BANQUERAS","municipio":"Muela (La)","provincia":"Zaragoza","m2":"50","hab":"1","planta":"3"},{"ref":"SBRE-0120541","tipo":"Suelo Urbano Residencial","calle":"Sector PUENTE SARDAS","municipio":"Sabiñánigo","provincia":"Huesca","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0120502","tipo":"Suelo Urbano Residencial","calle":"Avenida BUENOS AIRES","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0120515","tipo":"Suelo Urbano Residencial","calle":"Sector 89/3 ARCOSUR","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0123109","tipo":"Suelo Urbano Residencial","calle":"Calle CASTA ALVAREZ","municipio":"Calatayud","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0123732","tipo":"Suelos Urbanizables Residenciales","calle":"Lugar SUZ LC-3","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0123729","tipo":"Suelos Urbanizables Residenciales","calle":"Lugar SECTOR SUZ LC-2 CARTUJA BAJA","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0124693","tipo":"Suelos Urbanos Residenciales","calle":"Carretera HUESCA-ALIAGAR","municipio":"Zuera","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0125367","tipo":"Suelo Urbano Residencial","calle":"Lugar Parcela RESIDENCIAL V.L.1.2","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0033410","tipo":"Suelo Urbano Residencial","calle":"Calle JESUS VALDES GUZMAN","municipio":"Zaragoza","provincia":"Zaragoza","m2":"45113","hab":null,"planta":null},{"ref":"SBRE-0125583","tipo":"Suelo Urbano Residencial","calle":"Partida DE LA BOMBARDA","municipio":"Zaragoza","provincia":"Zaragoza","m2":null,"hab":null,"planta":null},{"ref":"SBRE-0138884","tipo":"Piso","calle":"Paseo RUISEÑORES","municipio":"Zaragoza","provincia":"Zaragoza","m2":"0","hab":"4","planta":null},{"ref":"SBRE-0139126","tipo":"Trastero","calle":"Calle ESCARRILO","municipio":"Sallent de Gállego","provincia":"Huesca","m2":"0","hab":null,"planta":"-1"},{"ref":"SBRE-0139130","tipo":"Trastero","calle":"Calle ESCARRILLA","municipio":"Sallent de Gállego","provincia":"Huesca","m2":"0","hab":null,"planta":"-3"},{"ref":"SBRE-0139127","tipo":"Trastero","calle":"Calle FRANCIA ESCARRILLA","municipio":"Sallent de Gállego","provincia":"Huesca","m2":"0","hab":null,"planta":"-1"}];
-
-function fmtPrice(p) {
-  if (!p || p === 'Consultar') return 'Precio a consultar';
-  return p + ' €';
-}
-function svUrl(panoid) {
-  return `https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&w=600&h=400&pitch=0&panoid=${panoid}&yaw=0`;
-}
-function waMsg(item) {
-  return encodeURIComponent(`Hola, me interesa el activo ${item.ref} en ${item.municipio}`);
-}
-
-
-
-
-function renderCard(item) {
-  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-00458","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550"];
-  const soldRefs = ["asima","SBRE-0105307"];
-  let badge = '<span class="card-badge badge-susp">Suspendido</span>';
-  if (soldRefs.includes(item.ref)) badge = '<span class="card-badge badge-sold">VENDIDO</span>';
-  else if (offerRefs.includes(item.ref)) badge = '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
-  
-  const specs = [];
-  if (item.m2 && item.m2 !== '0' && item.m2 !== 'N/D') specs.push(`<span class="spec">📐 ${item.m2} m²</span>`);
-  if (item.hab && item.hab !== 'N/D') specs.push(`<span class="spec">🛏️ ${item.hab} hab.</span>`);
-  let cleanTitle = item.calle || item.titulo || item.title || '';
-  const q = encodeURIComponent(cleanTitle + ' ' + (item.municipio || '') + ' ' + (item.provincia || ''));
-  const mapHtml = `<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=${q}&output=embed" allowfullscreen loading="lazy"></iframe>`;
-  const resId = `res-${item.ref}`;
-
-  const fichaHref = `activo-${item.ref.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}.html`;
-  return `
-    <div class="asset-card" data-provincia="${item.provincia}" data-tipo="${item.tipo}" data-search="${(cleanTitle+' '+(item.municipio||'')).toLowerCase()}">
-      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
-        ${mapHtml}
-        ${badge}
-      </div>
-      <div class="card-body">
-        <div class="card-price">${fmtPrice(item.price)}</div>
-        <div class="card-title"><a href="${fichaHref}" style="color:inherit;text-decoration:none">${cleanTitle}</a></div>
-        <div class="card-specs">${specs.join('')}</div>
-        <div class="card-location">${item.municipio ? item.municipio+' · ' : ''}${item.provincia} · REF: ${item.ref}</div>
-        <div class="card-actions">
-          <a href="${fichaHref}" class="card-btn-primary">Ver ficha completa</a>
-          <a href="https://wa.me/34679916424?text=${waMsg(item)}" class="card-btn-secondary" target="_blank">WhatsApp</a>
-        </div>
-
-        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
-        <div class="mortgage-calc">
-          <div class="mortgage-title">Calculadora de Hipoteca</div>
-          <div class="mortgage-grid">
-            <div class="mortgage-field">
-              <label>Entrada (%)</label>
-              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-            <div class="mortgage-field">
-              <label>Plazo (Años)</label>
-              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-            <div class="mortgage-field" style="grid-column: span 2">
-              <label>Interés Anual (%)</label>
-              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-          </div>
-          <div class="mortgage-result">
-            <span class="mortgage-label">Cuota mensual estimada</span>
-            <span class="mortgage-val" id="${resId}">-- €</span>
-          </div>
-        </div>
-      </div>
-    </div>`;
-}
-
 
 function toggleMortgage(btn) {
   const calc = btn.nextElementSibling;
@@ -308,23 +1756,6 @@ function calculateMortgage(input, priceStr, resultId) {
   }
 }
 
-function populateTipoOptions() {
-  const tipos = [...new Set(CV_DATA.map(d => d.tipo))].sort();
-  const sel = document.getElementById('cv-tipo');
-  tipos.forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t; opt.textContent = t;
-    sel.appendChild(opt);
-  });
-}
-
-function renderAll() {
-  const grid = document.getElementById('cv-grid');
-  grid.innerHTML = CV_DATA.map(renderCard).join('');
-  document.getElementById('cv-count').textContent = CV_DATA.length + ' activos encontrados';
-  applyFilters();
-}
-
 function applyFilters() {
   const q = document.getElementById('cv-search').value.trim().toLowerCase();
   const prov = document.getElementById('cv-provincia').value;
@@ -343,7 +1774,6 @@ function applyFilters() {
   document.getElementById('cv-empty').style.display = visible === 0 ? 'block' : 'none';
 }
 
-populateTipoOptions();
 (function(){
   var params = new URLSearchParams(window.location.search);
   var tipoParam = params.get('tipo');
@@ -358,7 +1788,7 @@ populateTipoOptions();
     }
   }
 })();
-renderAll();
+applyFilters();
 document.getElementById('cv-search').addEventListener('input', applyFilters);
 document.getElementById('cv-provincia').addEventListener('change', applyFilters);
 document.getElementById('cv-tipo').addEventListener('change', applyFilters);
