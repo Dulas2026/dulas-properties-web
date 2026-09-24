@@ -147,12 +147,1300 @@
   </select>
   <select id="cv-tipo">
     <option value="">Tipo de inmueble...</option>
+  <option value="Apartamento">Apartamento</option><option value="Casa">Casa</option><option value="Casa Adosada">Casa Adosada</option><option value="Casa Independiente">Casa Independiente</option><option value="Finca">Finca</option><option value="Garaje">Garaje</option><option value="Hotel">Hotel</option><option value="Local">Local</option><option value="Nave industrial">Nave industrial</option><option value="Piso">Piso</option><option value="Pisos">Pisos</option><option value="Residencial">Residencial</option><option value="Suelo Urbano Residencial">Suelo Urbano Residencial</option><option value="Trastero">Trastero</option>
   </select>
   <div class="cv-count" id="cv-count"></div>
 </div>
 
 <main class="main">
-  <div class="assets-grid" id="cv-grid"></div>
+  <div class="assets-grid" id="cv-grid">
+    <div class="asset-card" data-provincia="undefined" data-tipo="Casa Independiente" data-search="avenida lierganes-generalisimo liérganes">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Avenida%20Lierganes-Generalisimo%20Li%C3%A9rganes%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-bore-0220.html" style="color:inherit;text-decoration:none">Avenida Lierganes-Generalisimo</a></div>
+        <div class="card-specs"><span class="spec">📐 320 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Liérganes · undefined · REF: BORE-0220</div>
+        <div class="card-actions">
+          <a href="activo-bore-0220.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20BORE-0220%20en%20Li%C3%A9rganes" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-BORE-0220')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-BORE-0220')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-BORE-0220')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-BORE-0220">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Casa" data-search="calle ceceñas medio cudeyo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Cece%C3%B1as%20Medio%20Cudeyo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-bore-0987.html" style="color:inherit;text-decoration:none">Calle Ceceñas</a></div>
+        <div class="card-specs"><span class="spec">📐 228 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Medio Cudeyo · undefined · REF: BORE-0987</div>
+        <div class="card-actions">
+          <a href="activo-bore-0987.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20BORE-0987%20en%20Medio%20Cudeyo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-BORE-0987')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-BORE-0987')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-BORE-0987')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-BORE-0987">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle argomilla santa maría de cayón">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Argomilla%20Santa%20Mar%C3%ADa%20de%20Cay%C3%B3n%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-bore-1081.html" style="color:inherit;text-decoration:none">Calle Argomilla</a></div>
+        <div class="card-specs"><span class="spec">📐 271 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Santa María de Cayón · undefined · REF: BORE-1081</div>
+        <div class="card-actions">
+          <a href="activo-bore-1081.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20BORE-1081%20en%20Santa%20Mar%C3%ADa%20de%20Cay%C3%B3n" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-BORE-1081')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-BORE-1081')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-BORE-1081')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-BORE-1081">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Trastero" data-search="calle marques de villapuente camargo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Marques%20De%20Villapuente%20Camargo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-chire-0119.html" style="color:inherit;text-decoration:none">Calle Marques De Villapuente</a></div>
+        <div class="card-specs"><span class="spec">📐 116 m²</span></div>
+        <div class="card-location">Camargo · undefined · REF: CHIRE-0119</div>
+        <div class="card-actions">
+          <a href="activo-chire-0119.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CHIRE-0119%20en%20Camargo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0119')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0119')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0119')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CHIRE-0119">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Trastero" data-search="calle marques de villapuente camargo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Marques%20De%20Villapuente%20Camargo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-chire-0120.html" style="color:inherit;text-decoration:none">Calle Marques De Villapuente</a></div>
+        <div class="card-specs"><span class="spec">📐 87 m²</span></div>
+        <div class="card-location">Camargo · undefined · REF: CHIRE-0120</div>
+        <div class="card-actions">
+          <a href="activo-chire-0120.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CHIRE-0120%20en%20Camargo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0120')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0120')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0120')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CHIRE-0120">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="calle corralada reinosa">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Corralada%20Reinosa%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-chire-0792.html" style="color:inherit;text-decoration:none">Calle Corralada</a></div>
+        <div class="card-specs"><span class="spec">📐 47 m²</span><span class="spec">🛏️ 1 hab.</span></div>
+        <div class="card-location">Reinosa · undefined · REF: CHIRE-0792</div>
+        <div class="card-actions">
+          <a href="activo-chire-0792.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CHIRE-0792%20en%20Reinosa" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0792')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0792')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0792')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CHIRE-0792">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Apartamento" data-search="calle melchor torio ampuero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Melchor%20Torio%20Ampuero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-chire-0681.html" style="color:inherit;text-decoration:none">Calle Melchor Torio</a></div>
+        <div class="card-specs"><span class="spec">📐 80 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Ampuero · undefined · REF: CHIRE-0681</div>
+        <div class="card-actions">
+          <a href="activo-chire-0681.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CHIRE-0681%20en%20Ampuero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0681')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0681')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0681')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CHIRE-0681">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle maria blanchard santander">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Maria%20Blanchard%20Santander%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-chire-0077.html" style="color:inherit;text-decoration:none">Calle Maria Blanchard</a></div>
+        <div class="card-specs"><span class="spec">📐 76 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Santander · undefined · REF: CHIRE-0077</div>
+        <div class="card-actions">
+          <a href="activo-chire-0077.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CHIRE-0077%20en%20Santander" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0077')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0077')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-CHIRE-0077')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CHIRE-0077">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle jose gutierrez solana santander">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Jose%20Gutierrez%20Solana%20Santander%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-02009.html" style="color:inherit;text-decoration:none">Calle Jose Gutierrez Solana</a></div>
+        <div class="card-specs"><span class="spec">📐 65 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Santander · undefined · REF: ALRE-02009</div>
+        <div class="card-actions">
+          <a href="activo-alre-02009.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-02009%20en%20Santander" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-02009')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-02009')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-02009')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-02009">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="carretera santiago-del lugar cartes">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Carretera%20SANTIAGO-DEL%20LUGAR%20Cartes%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-03597.html" style="color:inherit;text-decoration:none">Carretera SANTIAGO-DEL LUGAR</a></div>
+        <div class="card-specs"><span class="spec">📐 50 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Cartes · undefined · REF: ALRE-03597</div>
+        <div class="card-actions">
+          <a href="activo-alre-03597.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-03597%20en%20Cartes" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-03597')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-03597')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-03597')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-03597">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Hotel" data-search="calle renedo cabuérniga">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Renedo%20Cabu%C3%A9rniga%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-04967.html" style="color:inherit;text-decoration:none">Calle Renedo</a></div>
+        <div class="card-specs"><span class="spec">📐 396 m²</span></div>
+        <div class="card-location">Cabuérniga · undefined · REF: ALRE-04967</div>
+        <div class="card-actions">
+          <a href="activo-alre-04967.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-04967%20en%20Cabu%C3%A9rniga" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04967')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04967')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-04967')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-04967">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="urbanización vioño-parayo piélagos">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Urbanizaci%C3%B3n%20Vio%C3%B1o-Parayo%20Pi%C3%A9lagos%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-00834.html" style="color:inherit;text-decoration:none">Urbanización Vioño-Parayo</a></div>
+        <div class="card-specs"><span class="spec">📐 594 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Piélagos · undefined · REF: EXRE-00834</div>
+        <div class="card-actions">
+          <a href="activo-exre-00834.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-00834%20en%20Pi%C3%A9lagos" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00834')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00834')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00834')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-00834">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="urbanización vioño-parayo piélagos">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Urbanizaci%C3%B3n%20Vio%C3%B1o-Parayo%20Pi%C3%A9lagos%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-00835.html" style="color:inherit;text-decoration:none">Urbanización Vioño-Parayo</a></div>
+        <div class="card-specs"><span class="spec">📐 324 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Piélagos · undefined · REF: EXRE-00835</div>
+        <div class="card-actions">
+          <a href="activo-exre-00835.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-00835%20en%20Pi%C3%A9lagos" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00835')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00835')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00835')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-00835">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Nave industrial" data-search="calle cl alfonso alvarez miranda corrales de buelna (los)">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20CL%20ALFONSO%20ALVAREZ%20MIRANDA%20Corrales%20de%20Buelna%20(Los)%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lvre-00697.html" style="color:inherit;text-decoration:none">Calle CL ALFONSO ALVAREZ MIRANDA</a></div>
+        <div class="card-specs"><span class="spec">📐 1480 m²</span></div>
+        <div class="card-location">Corrales de Buelna (Los) · undefined · REF: LVRE-00697</div>
+        <div class="card-actions">
+          <a href="activo-lvre-00697.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LVRE-00697%20en%20Corrales%20de%20Buelna%20(Los)" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LVRE-00697')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LVRE-00697')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LVRE-00697')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LVRE-00697">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="barrio ubiarco santillana del mar">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Barrio%20Ubiarco%20Santillana%20del%20Mar%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-remo-00557.html" style="color:inherit;text-decoration:none">Barrio Ubiarco</a></div>
+        <div class="card-specs"><span class="spec">📐 562 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Santillana del Mar · undefined · REF: REMO-00557</div>
+        <div class="card-actions">
+          <a href="activo-remo-00557.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20REMO-00557%20en%20Santillana%20del%20Mar" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-REMO-00557')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-REMO-00557')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-REMO-00557')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-REMO-00557">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="barrio torres el milagro torrelavega">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Barrio%20Torres%20El%20Milagro%20Torrelavega%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-02657.html" style="color:inherit;text-decoration:none">Barrio Torres El Milagro</a></div>
+        <div class="card-specs"><span class="spec">📐 174 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Torrelavega · undefined · REF: LIRE-02657</div>
+        <div class="card-actions">
+          <a href="activo-lire-02657.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-02657%20en%20Torrelavega" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-02657')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-02657')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-02657')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-02657">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle trefileria ramales de la victoria">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Trefileria%20Ramales%20de%20la%20Victoria%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-07746.html" style="color:inherit;text-decoration:none">Calle Trefileria</a></div>
+        <div class="card-specs"><span class="spec">📐 57 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Ramales de la Victoria · undefined · REF: LIRE-07746</div>
+        <div class="card-actions">
+          <a href="activo-lire-07746.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-07746%20en%20Ramales%20de%20la%20Victoria" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-07746')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-07746')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-07746')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-07746">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Casa" data-search="barrio pb ormas hermandad de campoo de suso">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Barrio%20PB%20ORMAS%20Hermandad%20de%20Campoo%20de%20Suso%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-05386.html" style="color:inherit;text-decoration:none">Barrio PB ORMAS</a></div>
+        <div class="card-specs"><span class="spec">📐 184 m²</span></div>
+        <div class="card-location">Hermandad de Campoo de Suso · undefined · REF: LIRE-05386</div>
+        <div class="card-actions">
+          <a href="activo-lire-05386.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-05386%20en%20Hermandad%20de%20Campoo%20de%20Suso" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-05386')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-05386')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-05386')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-05386">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="rcqta sevilla laredo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Rcqta%20Sevilla%20Laredo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-02686.html" style="color:inherit;text-decoration:none">Rcqta Sevilla</a></div>
+        <div class="card-specs"><span class="spec">📐 55 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Laredo · undefined · REF: RETI-02686</div>
+        <div class="card-actions">
+          <a href="activo-reti-02686.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-02686%20en%20Laredo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-02686')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-02686')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-02686')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-02686">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Residencial" data-search="urbanización loma la cabezón de la sal">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Urbanizaci%C3%B3n%20Loma%20La%20Cabez%C3%B3n%20de%20la%20Sal%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-03506.html" style="color:inherit;text-decoration:none">Urbanización Loma La</a></div>
+        <div class="card-specs"><span class="spec">📐 138 m²</span></div>
+        <div class="card-location">Cabezón de la Sal · undefined · REF: RETI-03506</div>
+        <div class="card-actions">
+          <a href="activo-reti-03506.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-03506%20en%20Cabez%C3%B3n%20de%20la%20Sal" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03506')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03506')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-03506')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-03506">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="calle santander torrelavega">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20SANTANDER%20Torrelavega%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0088746.html" style="color:inherit;text-decoration:none">Calle SANTANDER</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Torrelavega · undefined · REF: SBRE-0088746</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0088746.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0088746%20en%20Torrelavega" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0088746')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0088746')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0088746')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0088746">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Pisos" data-search="calle santander torrelavega">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20SANTANDER%20Torrelavega%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0104664.html" style="color:inherit;text-decoration:none">Calle SANTANDER</a></div>
+        <div class="card-specs"><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Torrelavega · undefined · REF: SBRE-0104664</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0104664.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0104664%20en%20Torrelavega" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0104664')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0104664')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0104664')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0104664">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Casa Adosada" data-search="barrio bo iruz santiurde de toranzo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Barrio%20BO%20IRUZ%20Santiurde%20de%20Toranzo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0109903.html" style="color:inherit;text-decoration:none">Barrio BO IRUZ</a></div>
+        <div class="card-specs"><span class="spec">📐 129 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Santiurde de Toranzo · undefined · REF: SBRE-0109903</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0109903.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0109903%20en%20Santiurde%20de%20Toranzo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0109903')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0109903')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0109903')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0109903">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="barrio villapresente reocín">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Barrio%20VILLAPRESENTE%20Reoc%C3%ADn%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0119337.html" style="color:inherit;text-decoration:none">Barrio VILLAPRESENTE</a></div>
+        <div class="card-specs"><span class="spec">📐 51 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Reocín · undefined · REF: SBRE-0119337</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0119337.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0119337%20en%20Reoc%C3%ADn" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119337')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119337')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119337')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0119337">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="barrio villapresente reocín">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Barrio%20VILLAPRESENTE%20Reoc%C3%ADn%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0119360.html" style="color:inherit;text-decoration:none">Barrio VILLAPRESENTE</a></div>
+        <div class="card-specs"><span class="spec">📐 51 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Reocín · undefined · REF: SBRE-0119360</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0119360.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0119360%20en%20Reoc%C3%ADn" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119360')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119360')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119360')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0119360">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="barrio villapresente reocín">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Barrio%20VILLAPRESENTE%20Reoc%C3%ADn%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0119319.html" style="color:inherit;text-decoration:none">Barrio VILLAPRESENTE</a></div>
+        <div class="card-specs"><span class="spec">📐 51 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Reocín · undefined · REF: SBRE-0119319</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0119319.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0119319%20en%20Reoc%C3%ADn" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119319')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119319')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0119319')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0119319">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Suelo Urbano Residencial" data-search="lugar el cruce limpias">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Lugar%20EL%20CRUCE%20Limpias%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0125392.html" style="color:inherit;text-decoration:none">Lugar EL CRUCE</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Limpias · undefined · REF: SBRE-0125392</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0125392.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0125392%20en%20Limpias" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125392')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125392')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125392')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0125392">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle mallorca reinosa">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20MALLORCA%20Reinosa%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0137680.html" style="color:inherit;text-decoration:none">Calle MALLORCA</a></div>
+        <div class="card-specs"><span class="spec">📐 42 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Reinosa · undefined · REF: SBRE-0137680</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0137680.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0137680%20en%20Reinosa" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137680')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137680')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137680')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0137680">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="urbanización santiago cartes cartes">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Urbanizaci%C3%B3n%20Santiago%20Cartes%20Cartes%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0137627.html" style="color:inherit;text-decoration:none">Urbanización Santiago Cartes</a></div>
+        <div class="card-specs"><span class="spec">📐 106 m²</span></div>
+        <div class="card-location">Cartes · undefined · REF: SBRE-0137627</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0137627.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0137627%20en%20Cartes" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137627')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137627')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137627')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0137627">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Suelo Urbano Residencial" data-search="calle doctor antonio ruiz ruiz ampuero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20DOCTOR%20ANTONIO%20RUIZ%20RUIZ%20Ampuero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0123781.html" style="color:inherit;text-decoration:none">Calle DOCTOR ANTONIO RUIZ RUIZ</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Ampuero · undefined · REF: SBRE-0123781</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0123781.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0123781%20en%20Ampuero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123781')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123781')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0123781')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0123781">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle pintor rosales colindres">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20PINTOR%20ROSALES%20Colindres%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0137738.html" style="color:inherit;text-decoration:none">Calle PINTOR ROSALES</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Colindres · undefined · REF: SBRE-0137738</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0137738.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0137738%20en%20Colindres" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137738')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137738')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137738')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0137738">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Finca" data-search="calle periedo cabezón de la sal">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20PERIEDO%20Cabez%C3%B3n%20de%20la%20Sal%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0137643.html" style="color:inherit;text-decoration:none">Calle PERIEDO</a></div>
+        <div class="card-specs"><span class="spec">📐 297 m²</span><span class="spec">🛏️ 5 hab.</span></div>
+        <div class="card-location">Cabezón de la Sal · undefined · REF: SBRE-0137643</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0137643.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0137643%20en%20Cabez%C3%B3n%20de%20la%20Sal" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137643')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137643')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0137643')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0137643">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Cantabria" data-tipo="Piso" data-search="barrio santa olalla valdeolea">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Barrio%20Santa%20Olalla%20Valdeolea%20Cantabria&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">240.472 €</div>
+        <div class="card-title"><a href="activo-lire-02949.html" style="color:inherit;text-decoration:none">Barrio Santa Olalla</a></div>
+        <div class="card-specs"><span class="spec">📐 185 m²</span></div>
+        <div class="card-location">Valdeolea · Cantabria · REF: LIRE-02949</div>
+        <div class="card-actions">
+          <a href="activo-lire-02949.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-02949%20en%20Valdeolea" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '240.472', 'res-LIRE-02949')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '240.472', 'res-LIRE-02949')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '240.472', 'res-LIRE-02949')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-02949">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div></div>
   <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
 </main>
 
@@ -183,79 +1471,6 @@
 </a>
 
 <script>
-const CV_DATA = [{"ref": "BORE-0220", "tipo": "Casa Independiente", "calle": "Avenida Lierganes-Generalisimo", "municipio": "Liérganes", "m2": "320", "hab": "4", "planta": null}, {"ref": "BORE-0987", "tipo": "Casa", "calle": "Calle Ceceñas", "municipio": "Medio Cudeyo", "m2": "228", "hab": "4", "planta": "0"}, {"ref": "BORE-1081", "tipo": "Piso", "calle": "Calle Argomilla", "municipio": "Santa María de Cayón", "m2": "271", "hab": "4", "planta": "0"}, {"ref": "CHIRE-0119", "tipo": "Trastero", "calle": "Calle Marques De Villapuente", "municipio": "Camargo", "m2": "116", "hab": null, "planta": "SM"}, {"ref": "CHIRE-0120", "tipo": "Trastero", "calle": "Calle Marques De Villapuente", "municipio": "Camargo", "m2": "87", "hab": null, "planta": "-1"}, {"ref": "CHIRE-0792", "tipo": "Local", "calle": "Calle Corralada", "municipio": "Reinosa", "m2": "47", "hab": "1", "planta": "PB"}, {"ref": "CHIRE-0681", "tipo": "Apartamento", "calle": "Calle Melchor Torio", "municipio": "Ampuero", "m2": "80", "hab": "2", "planta": "3"}, {"ref": "CHIRE-0077", "tipo": "Piso", "calle": "Calle Maria Blanchard", "municipio": "Santander", "m2": "76", "hab": "3", "planta": "2"}, {"ref": "ALRE-02009", "tipo": "Piso", "calle": "Calle Jose Gutierrez Solana", "municipio": "Santander", "m2": "65", "hab": "3", "planta": "3"}, {"ref": "ALRE-03597", "tipo": "Piso", "calle": "Carretera SANTIAGO-DEL LUGAR", "municipio": "Cartes", "m2": "50", "hab": "2", "planta": "1"}, {"ref": "ALRE-04967", "tipo": "Hotel", "calle": "Calle Renedo", "municipio": "Cabuérniga", "m2": "396", "hab": null, "planta": null}, {"ref": "EXRE-00834", "tipo": "Local", "calle": "Urbanización Vioño-Parayo", "municipio": "Piélagos", "m2": "594", "hab": "4", "planta": null}, {"ref": "EXRE-00835", "tipo": "Local", "calle": "Urbanización Vioño-Parayo", "municipio": "Piélagos", "m2": "324", "hab": "4", "planta": "-1"}, {"ref": "LVRE-00697", "tipo": "Nave industrial", "calle": "Calle CL ALFONSO ALVAREZ MIRANDA", "municipio": "Corrales de Buelna (Los)", "m2": "1480", "hab": null, "planta": "0"}, {"ref": "REMO-00557", "tipo": "Piso", "calle": "Barrio Ubiarco", "municipio": "Santillana del Mar", "m2": "562", "hab": "4", "planta": null}, {"ref": "LIRE-02657", "tipo": "Piso", "calle": "Barrio Torres El Milagro", "municipio": "Torrelavega", "m2": "174", "hab": "4", "planta": "BJ"}, {"ref": "LIRE-07746", "tipo": "Piso", "calle": "Calle Trefileria", "municipio": "Ramales de la Victoria", "m2": "57", "hab": "2", "planta": "1"}, {"ref": "LIRE-05386", "tipo": "Casa", "calle": "Barrio PB ORMAS", "municipio": "Hermandad de Campoo de Suso", "m2": "184", "hab": null, "planta": null}, {"ref": "RETI-02686", "tipo": "Local", "calle": "Rcqta Sevilla", "municipio": "Laredo", "m2": "55", "hab": "2", "planta": null}, {"ref": "RETI-03506", "tipo": "Residencial", "calle": "Urbanización Loma La", "municipio": "Cabezón de la Sal", "m2": "138", "hab": null, "planta": null}, {"ref": "SBRE-0088746", "tipo": "Local", "calle": "Calle SANTANDER", "municipio": "Torrelavega", "m2": "0", "hab": null, "planta": "0"}, {"ref": "SBRE-0104664", "tipo": "Pisos", "calle": "Calle SANTANDER", "municipio": "Torrelavega", "m2": "0", "hab": "3", "planta": "1"}, {"ref": "SBRE-0109903", "tipo": "Casa Adosada", "calle": "Barrio BO IRUZ", "municipio": "Santiurde de Toranzo", "m2": "129", "hab": "3", "planta": null}, {"ref": "SBRE-0119337", "tipo": "Piso", "calle": "Barrio VILLAPRESENTE", "municipio": "Reocín", "m2": "51", "hab": "2", "planta": "0"}, {"ref": "SBRE-0119360", "tipo": "Piso", "calle": "Barrio VILLAPRESENTE", "municipio": "Reocín", "m2": "51", "hab": "2", "planta": "0"}, {"ref": "SBRE-0119319", "tipo": "Piso", "calle": "Barrio VILLAPRESENTE", "municipio": "Reocín", "m2": "51", "hab": "2", "planta": "0"}, {"ref": "SBRE-0125392", "tipo": "Suelo Urbano Residencial", "calle": "Lugar EL CRUCE", "municipio": "Limpias", "m2": null, "hab": null, "planta": null}, {"ref": "SBRE-0137680", "tipo": "Piso", "calle": "Calle MALLORCA", "municipio": "Reinosa", "m2": "42", "hab": "2", "planta": null}, {"ref": "SBRE-0137627", "tipo": "Local", "calle": "Urbanización Santiago Cartes", "municipio": "Cartes", "m2": "106", "hab": null, "planta": "0"}, {"ref": "SBRE-0123781", "tipo": "Suelo Urbano Residencial", "calle": "Calle DOCTOR ANTONIO RUIZ RUIZ", "municipio": "Ampuero", "m2": null, "hab": null, "planta": null}, {"ref": "SBRE-0137738", "tipo": "Garaje", "calle": "Calle PINTOR ROSALES", "municipio": "Colindres", "m2": "0", "hab": null, "planta": "-1"}, {"ref": "SBRE-0137643", "tipo": "Finca", "calle": "Calle PERIEDO", "municipio": "Cabezón de la Sal", "m2": "297", "hab": "5", "planta": null}, {"ref": "LIRE-02949", "tipo": "Piso", "calle": "Barrio Santa Olalla", "municipio": "Valdeolea", "provincia": "Cantabria", "price": "240.472", "m2": 185, "hab": null, "planta": null, "panoid": null, "clasif": "CDR"}];
-
-function fmtPrice(p) {
-  if (!p || p === 'Consultar') return 'Precio a consultar';
-  return p + ' €';
-}
-function waMsg(item) {
-  return encodeURIComponent(`Hola, me interesa el activo ${item.ref} en ${item.municipio}`);
-}
-
-
-
-
-function renderCard(item) {
-  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-00458","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550"];
-  const soldRefs = ["asima","SBRE-0105307"];
-  let badge = '<span class="card-badge badge-susp">Suspendido</span>';
-  if (soldRefs.includes(item.ref)) badge = '<span class="card-badge badge-sold">VENDIDO</span>';
-  else if (offerRefs.includes(item.ref)) badge = '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
-  else if (item.clasif === 'NPL') badge = '<span class="card-badge badge-npl">NPL · Crédito en mora</span>';
-  else if (item.clasif === 'CDR') badge = '<span class="card-badge badge-cdr">CDR · Cesión de remate</span>';
-  
-  const specs = [];
-  if (item.m2 && item.m2 !== '0' && item.m2 !== 'N/D') specs.push(`<span class="spec">📐 ${item.m2} m²</span>`);
-  if (item.hab && item.hab !== 'N/D') specs.push(`<span class="spec">🛏️ ${item.hab} hab.</span>`);
-  let cleanTitle = item.calle || item.titulo || item.title || '';
-  const q = encodeURIComponent(cleanTitle + ' ' + (item.municipio || '') + ' ' + (item.provincia || ''));
-  const mapHtml = `<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=${q}&output=embed" allowfullscreen loading="lazy"></iframe>`;
-  const resId = `res-${item.ref}`;
-
-  const fichaHref = `activo-${item.ref.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}.html`;
-  return `
-    <div class="asset-card" data-provincia="${item.provincia}" data-tipo="${item.tipo}" data-search="${(cleanTitle+' '+(item.municipio||'')).toLowerCase()}">
-      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
-        ${mapHtml}
-        ${badge}
-      </div>
-      <div class="card-body">
-        <div class="card-price">${fmtPrice(item.price)}</div>
-        <div class="card-title"><a href="${fichaHref}" style="color:inherit;text-decoration:none">${cleanTitle}</a></div>
-        <div class="card-specs">${specs.join('')}</div>
-        <div class="card-location">${item.municipio ? item.municipio+' · ' : ''}${item.provincia} · REF: ${item.ref}</div>
-        <div class="card-actions">
-          <a href="${fichaHref}" class="card-btn-primary">Ver ficha completa</a>
-          <a href="https://wa.me/34679916424?text=${waMsg(item)}" class="card-btn-secondary" target="_blank">WhatsApp</a>
-        </div>
-
-        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
-        <div class="mortgage-calc">
-          <div class="mortgage-title">Calculadora de Hipoteca</div>
-          <div class="mortgage-grid">
-            <div class="mortgage-field">
-              <label>Entrada (%)</label>
-              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-            <div class="mortgage-field">
-              <label>Plazo (Años)</label>
-              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-            <div class="mortgage-field" style="grid-column: span 2">
-              <label>Interés Anual (%)</label>
-              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-          </div>
-          <div class="mortgage-result">
-            <span class="mortgage-label">Cuota mensual estimada</span>
-            <span class="mortgage-val" id="${resId}">-- €</span>
-          </div>
-        </div>
-      </div>
-    </div>`;
-}
-
 
 function toggleMortgage(btn) {
   const calc = btn.nextElementSibling;
@@ -285,23 +1500,6 @@ function calculateMortgage(input, priceStr, resultId) {
   }
 }
 
-function populateTipoOptions() {
-  const tipos = [...new Set(CV_DATA.map(d => d.tipo))].sort();
-  const sel = document.getElementById('cv-tipo');
-  tipos.forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t; opt.textContent = t;
-    sel.appendChild(opt);
-  });
-}
-
-function renderAll() {
-  const grid = document.getElementById('cv-grid');
-  grid.innerHTML = CV_DATA.map(renderCard).join('');
-  document.getElementById('cv-count').textContent = CV_DATA.length + ' activos encontrados';
-  applyFilters();
-}
-
 function applyFilters() {
   const q = document.getElementById('cv-search').value.trim().toLowerCase();
   const muni = document.getElementById('cv-municipio').value;
@@ -320,7 +1518,6 @@ function applyFilters() {
   document.getElementById('cv-empty').style.display = visible === 0 ? 'block' : 'none';
 }
 
-populateTipoOptions();
 (function(){
   var params = new URLSearchParams(window.location.search);
   var tipoParam = params.get('tipo');
@@ -335,7 +1532,7 @@ populateTipoOptions();
     }
   }
 })();
-renderAll();
+applyFilters();
 document.getElementById('cv-search').addEventListener('input', applyFilters);
 document.getElementById('cv-municipio').addEventListener('change', applyFilters);
 document.getElementById('cv-tipo').addEventListener('change', applyFilters);
