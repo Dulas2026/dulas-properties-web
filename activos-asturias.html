@@ -137,12 +137,1534 @@
   </select>
   <select id="cv-tipo">
     <option value="">Tipo de inmueble...</option>
+  <option value="Casa">Casa</option><option value="Finca Rústica">Finca Rústica</option><option value="Garaje">Garaje</option><option value="Local">Local</option><option value="Nave industrial">Nave industrial</option><option value="Piso">Piso</option><option value="Pisos">Pisos</option><option value="Suelo Urbano Residencial">Suelo Urbano Residencial</option><option value="Suelos Urbanos Residenciales">Suelos Urbanos Residenciales</option><option value="Suelos Urbanos Terciarios">Suelos Urbanos Terciarios</option>
   </select>
   <div class="cv-count" id="cv-count"></div>
 </div>
 
 <main class="main">
-  <div class="assets-grid" id="cv-grid"></div>
+  <div class="assets-grid" id="cv-grid">
+    <div class="asset-card" data-provincia="undefined" data-tipo="Casa" data-search="calle aldea ambas carreño">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Aldea%20Ambas%20Carre%C3%B1o%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-bore-1082.html" style="color:inherit;text-decoration:none">Calle Aldea Ambas</a></div>
+        <div class="card-specs"><span class="spec">📐 825 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Carreño · undefined · REF: BORE-1082</div>
+        <div class="card-actions">
+          <a href="activo-bore-1082.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20BORE-1082%20en%20Carre%C3%B1o" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-BORE-1082')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-BORE-1082')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-BORE-1082')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-BORE-1082">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="via codes las langreo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Via%20Codes%20Las%20Langreo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lare-002082.html" style="color:inherit;text-decoration:none">Via Codes Las</a></div>
+        <div class="card-specs"><span class="spec">📐 59 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Langreo · undefined · REF: LARE-002082</div>
+        <div class="card-actions">
+          <a href="activo-lare-002082.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LARE-002082%20en%20Langreo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LARE-002082')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LARE-002082')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LARE-002082')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LARE-002082">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="via codes las langreo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Via%20Codes%20Las%20Langreo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lare-002585.html" style="color:inherit;text-decoration:none">Via Codes Las</a></div>
+        <div class="card-specs"><span class="spec">📐 56 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Langreo · undefined · REF: LARE-002585</div>
+        <div class="card-actions">
+          <a href="activo-lare-002585.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LARE-002585%20en%20Langreo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LARE-002585')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LARE-002585')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LARE-002585')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LARE-002585">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="codes las langreo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Codes%20Las%20Langreo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lare-003025.html" style="color:inherit;text-decoration:none">Codes Las</a></div>
+        <div class="card-specs"><span class="spec">📐 56 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Langreo · undefined · REF: LARE-003025</div>
+        <div class="card-actions">
+          <a href="activo-lare-003025.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LARE-003025%20en%20Langreo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LARE-003025')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LARE-003025')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LARE-003025')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LARE-003025">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle paulino garcia oviedo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Paulino%20Garcia%20Oviedo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-gire-837001.html" style="color:inherit;text-decoration:none">Calle Paulino Garcia</a></div>
+        <div class="card-specs"><span class="spec">📐 20 m²</span></div>
+        <div class="card-location">Oviedo · undefined · REF: GIRE-837001</div>
+        <div class="card-actions">
+          <a href="activo-gire-837001.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20GIRE-837001%20en%20Oviedo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-GIRE-837001')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-GIRE-837001')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-GIRE-837001')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-GIRE-837001">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle cabo gata avilés">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Cabo%20Gata%20Avil%C3%A9s%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-01236.html" style="color:inherit;text-decoration:none">Calle Cabo Gata</a></div>
+        <div class="card-specs"><span class="spec">📐 61 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Avilés · undefined · REF: ALRE-01236</div>
+        <div class="card-actions">
+          <a href="activo-alre-01236.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-01236%20en%20Avil%C3%A9s" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-01236')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-01236')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-01236')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-01236">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Finca Rústica" data-search="lugar cs bedabo san martín del rey aurelio">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Lugar%20CS%20BEDABO%20San%20Mart%C3%ADn%20del%20Rey%20Aurelio%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-05781.html" style="color:inherit;text-decoration:none">Lugar CS BEDABO</a></div>
+        <div class="card-specs"><span class="spec">📐 120 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">San Martín del Rey Aurelio · undefined · REF: ALRE-05781</div>
+        <div class="card-actions">
+          <a href="activo-alre-05781.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-05781%20en%20San%20Mart%C3%ADn%20del%20Rey%20Aurelio" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-05781')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-05781')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-05781')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-05781">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle cl flores mieres">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20CL%20FLORES%20Mieres%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-alre-06081.html" style="color:inherit;text-decoration:none">Calle CL FLORES</a></div>
+        <div class="card-specs"><span class="spec">📐 51 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Mieres · undefined · REF: ALRE-06081</div>
+        <div class="card-actions">
+          <a href="activo-alre-06081.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20ALRE-06081%20en%20Mieres" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-06081')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-06081')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-ALRE-06081')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-ALRE-06081">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle antonio machado lugones siero siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ANTONIO%20MACHADO%20LUGONES%20SIERO%20Siero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-01341.html" style="color:inherit;text-decoration:none">Calle ANTONIO MACHADO LUGONES SIERO</a></div>
+        <div class="card-specs"><span class="spec">📐 22 m²</span></div>
+        <div class="card-location">Siero · undefined · REF: EXRE-01341</div>
+        <div class="card-actions">
+          <a href="activo-exre-01341.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-01341%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01341')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01341')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01341')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-01341">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle antonio machado lugones siero siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ANTONIO%20MACHADO%20LUGONES%20SIERO%20Siero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-01344.html" style="color:inherit;text-decoration:none">Calle ANTONIO MACHADO LUGONES SIERO</a></div>
+        <div class="card-specs"><span class="spec">📐 29 m²</span></div>
+        <div class="card-location">Siero · undefined · REF: EXRE-01344</div>
+        <div class="card-actions">
+          <a href="activo-exre-01344.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-01344%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01344')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01344')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01344')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-01344">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle antonio machado lugones siero siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ANTONIO%20MACHADO%20LUGONES%20SIERO%20Siero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-01350.html" style="color:inherit;text-decoration:none">Calle ANTONIO MACHADO LUGONES SIERO</a></div>
+        <div class="card-specs"><span class="spec">📐 12 m²</span></div>
+        <div class="card-location">Siero · undefined · REF: EXRE-01350</div>
+        <div class="card-actions">
+          <a href="activo-exre-01350.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-01350%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01350')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01350')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01350')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-01350">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="camino cl camino del rubin gijón">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Camino%20CL%20CAMINO%20DEL%20RUBIN%20Gij%C3%B3n%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-00965.html" style="color:inherit;text-decoration:none">Camino CL CAMINO DEL RUBIN</a></div>
+        <div class="card-specs"><span class="spec">📐 236 m²</span></div>
+        <div class="card-location">Gijón · undefined · REF: EXRE-00965</div>
+        <div class="card-actions">
+          <a href="activo-exre-00965.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-00965%20en%20Gij%C3%B3n" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00965')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00965')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00965')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-00965">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="carretera cr vizcaina gijón">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Carretera%20CR%20VIZCAINA%20Gij%C3%B3n%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-00966.html" style="color:inherit;text-decoration:none">Carretera CR VIZCAINA</a></div>
+        <div class="card-specs"><span class="spec">📐 65 m²</span></div>
+        <div class="card-location">Gijón · undefined · REF: EXRE-00966</div>
+        <div class="card-actions">
+          <a href="activo-exre-00966.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-00966%20en%20Gij%C3%B3n" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00966')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00966')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00966')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-00966">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Local" data-search="calle av schultz gijón">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20AV%20SCHULTZ%20Gij%C3%B3n%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-00967.html" style="color:inherit;text-decoration:none">Calle AV SCHULTZ</a></div>
+        <div class="card-specs"><span class="spec">📐 60 m²</span></div>
+        <div class="card-location">Gijón · undefined · REF: EXRE-00967</div>
+        <div class="card-actions">
+          <a href="activo-exre-00967.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-00967%20en%20Gij%C3%B3n" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00967')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00967')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-00967')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-00967">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle antonio machado siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ANTONIO%20MACHADO%20Siero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-01342.html" style="color:inherit;text-decoration:none">Calle ANTONIO MACHADO</a></div>
+        <div class="card-specs"><span class="spec">📐 27 m²</span></div>
+        <div class="card-location">Siero · undefined · REF: EXRE-01342</div>
+        <div class="card-actions">
+          <a href="activo-exre-01342.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-01342%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01342')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01342')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01342')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-01342">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle antonio machado lugones siero siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ANTONIO%20MACHADO%20LUGONES%20SIERO%20Siero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-01343.html" style="color:inherit;text-decoration:none">Calle ANTONIO MACHADO LUGONES SIERO</a></div>
+        <div class="card-specs"><span class="spec">📐 22 m²</span></div>
+        <div class="card-location">Siero · undefined · REF: EXRE-01343</div>
+        <div class="card-actions">
+          <a href="activo-exre-01343.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-01343%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01343')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01343')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01343')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-01343">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle antonio machado lugones siero siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ANTONIO%20MACHADO%20LUGONES%20SIERO%20Siero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-01345.html" style="color:inherit;text-decoration:none">Calle ANTONIO MACHADO LUGONES SIERO</a></div>
+        <div class="card-specs"><span class="spec">📐 22 m²</span></div>
+        <div class="card-location">Siero · undefined · REF: EXRE-01345</div>
+        <div class="card-actions">
+          <a href="activo-exre-01345.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-01345%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01345')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01345')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01345')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-01345">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle antonio machado lugones siero siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ANTONIO%20MACHADO%20LUGONES%20SIERO%20Siero%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-exre-01351.html" style="color:inherit;text-decoration:none">Calle ANTONIO MACHADO LUGONES SIERO</a></div>
+        <div class="card-specs"><span class="spec">📐 23 m²</span></div>
+        <div class="card-location">Siero · undefined · REF: EXRE-01351</div>
+        <div class="card-actions">
+          <a href="activo-exre-01351.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20EXRE-01351%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01351')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01351')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-EXRE-01351')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-EXRE-01351">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="avenida gijon avilés">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Avenida%20GIJON%20Avil%C3%A9s%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lore-0831.html" style="color:inherit;text-decoration:none">Avenida GIJON</a></div>
+        <div class="card-specs"><span class="spec">📐 62 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Avilés · undefined · REF: LORE-0831</div>
+        <div class="card-actions">
+          <a href="activo-lore-0831.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LORE-0831%20en%20Avil%C3%A9s" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LORE-0831')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LORE-0831')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LORE-0831')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LORE-0831">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Casa" data-search="cuesta monte oviedo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Cuesta%20Monte%20Oviedo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sire-1011.html" style="color:inherit;text-decoration:none">Cuesta Monte</a></div>
+        <div class="card-specs"><span class="spec">📐 69 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Oviedo · undefined · REF: SIRE-1011</div>
+        <div class="card-actions">
+          <a href="activo-sire-1011.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SIRE-1011%20en%20Oviedo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SIRE-1011')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SIRE-1011')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SIRE-1011')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SIRE-1011">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle doña iluminada oviedo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Do%C3%B1a%20Iluminada%20Oviedo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-remo-02535.html" style="color:inherit;text-decoration:none">Calle Doña Iluminada</a></div>
+        <div class="card-specs"><span class="spec">📐 104 m²</span><span class="spec">🛏️ 4 hab.</span></div>
+        <div class="card-location">Oviedo · undefined · REF: REMO-02535</div>
+        <div class="card-actions">
+          <a href="activo-remo-02535.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20REMO-02535%20en%20Oviedo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02535')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02535')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-REMO-02535')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-REMO-02535">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle camara de la avilés">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Camara%20De%20La%20Avil%C3%A9s%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-01670.html" style="color:inherit;text-decoration:none">Calle Camara De La</a></div>
+        <div class="card-specs"><span class="spec">📐 153 m²</span></div>
+        <div class="card-location">Avilés · undefined · REF: LIRE-01670</div>
+        <div class="card-actions">
+          <a href="activo-lire-01670.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-01670%20en%20Avil%C3%A9s" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-01670')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-01670')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-01670')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-01670">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle camara de la avilés">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Camara%20De%20La%20Avil%C3%A9s%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-01669.html" style="color:inherit;text-decoration:none">Calle Camara De La</a></div>
+        <div class="card-specs"><span class="spec">📐 153 m²</span></div>
+        <div class="card-location">Avilés · undefined · REF: LIRE-01669</div>
+        <div class="card-actions">
+          <a href="activo-lire-01669.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-01669%20en%20Avil%C3%A9s" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-01669')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-01669')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-01669')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-01669">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle ampurdan gijón">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Ampurdan%20Gij%C3%B3n%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-08180.html" style="color:inherit;text-decoration:none">Calle Ampurdan</a></div>
+        <div class="card-specs"><span class="spec">📐 77 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Gijón · undefined · REF: LIRE-08180</div>
+        <div class="card-actions">
+          <a href="activo-lire-08180.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-08180%20en%20Gij%C3%B3n" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-08180')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-08180')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-08180')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-08180">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle los pedregales gijón">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Los%20Pedregales%20Gij%C3%B3n%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-05830.html" style="color:inherit;text-decoration:none">Calle Los Pedregales</a></div>
+        <div class="card-specs"><span class="spec">📐 52 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Gijón · undefined · REF: LIRE-05830</div>
+        <div class="card-actions">
+          <a href="activo-lire-05830.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-05830%20en%20Gij%C3%B3n" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-05830')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-05830')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-05830')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-05830">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Casa" data-search="calle artosa langreo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ARTOSA%20Langreo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-lire-07642.html" style="color:inherit;text-decoration:none">Calle ARTOSA</a></div>
+        <div class="card-specs"><span class="spec">📐 86 m²</span><span class="spec">🛏️ 2 hab.</span></div>
+        <div class="card-location">Langreo · undefined · REF: LIRE-07642</div>
+        <div class="card-actions">
+          <a href="activo-lire-07642.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-07642%20en%20Langreo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-07642')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-07642')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-LIRE-07642')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-07642">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle b oviedo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20B%20Oviedo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-00943.html" style="color:inherit;text-decoration:none">Calle B</a></div>
+        <div class="card-specs"><span class="spec">📐 53 m²</span><span class="spec">🛏️ 3 hab.</span></div>
+        <div class="card-location">Oviedo · undefined · REF: RETI-00943</div>
+        <div class="card-actions">
+          <a href="activo-reti-00943.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-00943%20en%20Oviedo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00943')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00943')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00943')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-00943">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle bances candamo avilés">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Bances%20Candamo%20Avil%C3%A9s%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-01555.html" style="color:inherit;text-decoration:none">Calle Bances Candamo</a></div>
+        <div class="card-specs"><span class="spec">📐 80 m²</span></div>
+        <div class="card-location">Avilés · undefined · REF: RETI-01555</div>
+        <div class="card-actions">
+          <a href="activo-reti-01555.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-01555%20en%20Avil%C3%A9s" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01555')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01555')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-01555')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-01555">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Nave industrial" data-search="industrial riaño i langreo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Industrial%20Ria%C3%B1o%20I%20Langreo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-00434.html" style="color:inherit;text-decoration:none">Industrial Riaño I</a></div>
+        <div class="card-specs"><span class="spec">📐 2395 m²</span></div>
+        <div class="card-location">Langreo · undefined · REF: RETI-00434</div>
+        <div class="card-actions">
+          <a href="activo-reti-00434.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-00434%20en%20Langreo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00434')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00434')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00434')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-00434">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Piso" data-search="calle san matias gijón">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20San%20Matias%20Gij%C3%B3n%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-reti-00715.html" style="color:inherit;text-decoration:none">Calle San Matias</a></div>
+        <div class="card-specs"><span class="spec">📐 93 m²</span></div>
+        <div class="card-location">Gijón · undefined · REF: RETI-00715</div>
+        <div class="card-actions">
+          <a href="activo-reti-00715.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20RETI-00715%20en%20Gij%C3%B3n" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00715')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00715')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-RETI-00715')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-RETI-00715">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Pisos" data-search="calle bolado grado">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20BOLADO%20Grado%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0113783.html" style="color:inherit;text-decoration:none">Calle BOLADO</a></div>
+        <div class="card-specs"><span class="spec">📐 58 m²</span><span class="spec">🛏️ 1 hab.</span></div>
+        <div class="card-location">Grado · undefined · REF: SBRE-0113783</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0113783.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0113783%20en%20Grado" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0113783')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0113783')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0113783')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0113783">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Suelos Urbanos Residenciales" data-search="urbanización salamarca llanera">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Urbanizaci%C3%B3n%20SALAMARCA%20Llanera%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0120999.html" style="color:inherit;text-decoration:none">Urbanización SALAMARCA</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Llanera · undefined · REF: SBRE-0120999</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0120999.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0120999%20en%20Llanera" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120999')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120999')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0120999')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0120999">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Suelo Urbano Residencial" data-search="calle rio zalandron llanera">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20RIO%20ZALANDRON%20Llanera%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0124327.html" style="color:inherit;text-decoration:none">Calle RIO ZALANDRON</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Llanera · undefined · REF: SBRE-0124327</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0124327.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0124327%20en%20Llanera" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0124327')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0124327')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0124327')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0124327">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Suelos Urbanos Residenciales" data-search="calle la cruz paraje el valle san claudio oviedo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20LA%20CRUZ%20PARAJE%20EL%20VALLE%20SAN%20CLAUDIO%20Oviedo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0125383.html" style="color:inherit;text-decoration:none">Calle LA CRUZ PARAJE EL VALLE SAN CLAUDIO</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Oviedo · undefined · REF: SBRE-0125383</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0125383.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0125383%20en%20Oviedo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125383')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125383')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0125383')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0125383">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Suelos Urbanos Terciarios" data-search="lugar parroquia de colloto oviedo">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Lugar%20PARROQUIA%20DE%20COLLOTO%20Oviedo%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0121850.html" style="color:inherit;text-decoration:none">Lugar PARROQUIA DE COLLOTO</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Oviedo · undefined · REF: SBRE-0121850</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0121850.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0121850%20en%20Oviedo" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0121850')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0121850')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0121850')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0121850">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="undefined" data-tipo="Garaje" data-search="calle abedul el corvera de asturias">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20ABEDUL%20EL%20Corvera%20de%20Asturias%20&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-susp">Suspendido</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">Precio a consultar</div>
+        <div class="card-title"><a href="activo-sbre-0092406.html" style="color:inherit;text-decoration:none">Calle ABEDUL EL</a></div>
+        <div class="card-specs"><span class="spec">📐 14 m²</span></div>
+        <div class="card-location">Corvera de Asturias · undefined · REF: SBRE-0092406</div>
+        <div class="card-actions">
+          <a href="activo-sbre-0092406.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20SBRE-0092406%20en%20Corvera%20de%20Asturias" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0092406')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0092406')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, 'undefined', 'res-SBRE-0092406')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-SBRE-0092406">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Asturias" data-tipo="Piso" data-search="avenida jose tartiere siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Avenida%20Jose%20Tartiere%20Siero%20Asturias&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">120.000 €</div>
+        <div class="card-title"><a href="activo-lire-09966.html" style="color:inherit;text-decoration:none">Avenida Jose Tartiere</a></div>
+        <div class="card-specs"><span class="spec">📐 83 m²</span></div>
+        <div class="card-location">Siero · Asturias · REF: LIRE-09966</div>
+        <div class="card-actions">
+          <a href="activo-lire-09966.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20LIRE-09966%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '120.000', 'res-LIRE-09966')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '120.000', 'res-LIRE-09966')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '120.000', 'res-LIRE-09966')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-LIRE-09966">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Asturias" data-tipo="Casa" data-search="al folgueraxu cangas del narcea">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=AL%20Folgueraxu%20Cangas%20del%20Narcea%20Asturias&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">55.025 €</div>
+        <div class="card-title"><a href="activo-cdr-379136.html" style="color:inherit;text-decoration:none">AL Folgueraxu</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Cangas del Narcea · Asturias · REF: CDR-379136</div>
+        <div class="card-actions">
+          <a href="activo-cdr-379136.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CDR-379136%20en%20Cangas%20del%20Narcea" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '55.025', 'res-CDR-379136')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '55.025', 'res-CDR-379136')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '55.025', 'res-CDR-379136')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CDR-379136">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asset-card" data-provincia="Asturias" data-tipo="Casa" data-search="c/ gijun siero">
+      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=C%2F%20Gijun%20Siero%20Asturias&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <span class="card-badge badge-cdr">CDR · Cesión de remate</span>
+      </div>
+      <div class="card-body">
+        <div class="card-price">24.000 €</div>
+        <div class="card-title"><a href="activo-cdr-560238.html" style="color:inherit;text-decoration:none">C/ Gijun</a></div>
+        <div class="card-specs"></div>
+        <div class="card-location">Siero · Asturias · REF: CDR-560238</div>
+        <div class="card-actions">
+          <a href="activo-cdr-560238.html" class="card-btn-primary">Ver ficha completa</a>
+          <a href="https://wa.me/34679916424?text=Hola%2C%20me%20interesa%20el%20activo%20CDR-560238%20en%20Siero" class="card-btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
+        <div class="mortgage-calc">
+          <div class="mortgage-title">Calculadora de Hipoteca</div>
+          <div class="mortgage-grid">
+            <div class="mortgage-field">
+              <label>Entrada (%)</label>
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '24.000', 'res-CDR-560238')">
+            </div>
+            <div class="mortgage-field">
+              <label>Plazo (Años)</label>
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '24.000', 'res-CDR-560238')">
+            </div>
+            <div class="mortgage-field" style="grid-column: span 2">
+              <label>Interés Anual (%)</label>
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '24.000', 'res-CDR-560238')">
+            </div>
+          </div>
+          <div class="mortgage-result">
+            <span class="mortgage-label">Cuota mensual estimada</span>
+            <span class="mortgage-val" id="res-CDR-560238">-- €</span>
+          </div>
+        </div>
+      </div>
+    </div></div>
   <div class="cv-empty" id="cv-empty" style="display:none">No se han encontrado activos con esos filtros.</div>
 </main>
 
@@ -173,79 +1695,6 @@
 </a>
 
 <script>
-const CV_DATA = [{"ref": "BORE-1082", "tipo": "Casa", "calle": "Calle Aldea Ambas", "municipio": "Carreño", "m2": "825", "hab": "4", "planta": "0"}, {"ref": "LARE-002082", "tipo": "Piso", "calle": "Via Codes Las", "municipio": "Langreo", "m2": "59", "hab": "2", "planta": null}, {"ref": "LARE-002585", "tipo": "Piso", "calle": "Via Codes Las", "municipio": "Langreo", "m2": "56", "hab": "2", "planta": null}, {"ref": "LARE-003025", "tipo": "Piso", "calle": "Codes Las", "municipio": "Langreo", "m2": "56", "hab": "2", "planta": null}, {"ref": "GIRE-837001", "tipo": "Garaje", "calle": "Calle Paulino Garcia", "municipio": "Oviedo", "m2": "20", "hab": null, "planta": "-2"}, {"ref": "ALRE-01236", "tipo": "Piso", "calle": "Calle Cabo Gata", "municipio": "Avilés", "m2": "61", "hab": "2", "planta": "2"}, {"ref": "ALRE-05781", "tipo": "Finca Rústica", "calle": "Lugar CS BEDABO", "municipio": "San Martín del Rey Aurelio", "m2": "120", "hab": "4", "planta": null}, {"ref": "ALRE-06081", "tipo": "Piso", "calle": "Calle CL FLORES", "municipio": "Mieres", "m2": "51", "hab": "2", "planta": null}, {"ref": "EXRE-01341", "tipo": "Garaje", "calle": "Calle ANTONIO MACHADO LUGONES SIERO", "municipio": "Siero", "m2": "22", "hab": null, "planta": "SOTANO"}, {"ref": "EXRE-01344", "tipo": "Garaje", "calle": "Calle ANTONIO MACHADO LUGONES SIERO", "municipio": "Siero", "m2": "29", "hab": null, "planta": "SOTANO"}, {"ref": "EXRE-01350", "tipo": "Garaje", "calle": "Calle ANTONIO MACHADO LUGONES SIERO", "municipio": "Siero", "m2": "12", "hab": null, "planta": "SOTANO"}, {"ref": "EXRE-00965", "tipo": "Local", "calle": "Camino CL CAMINO DEL RUBIN", "municipio": "Gijón", "m2": "236", "hab": null, "planta": "BAJA"}, {"ref": "EXRE-00966", "tipo": "Local", "calle": "Carretera CR VIZCAINA", "municipio": "Gijón", "m2": "65", "hab": null, "planta": "BAJA"}, {"ref": "EXRE-00967", "tipo": "Local", "calle": "Calle AV SCHULTZ", "municipio": "Gijón", "m2": "60", "hab": null, "planta": "BAJO"}, {"ref": "EXRE-01342", "tipo": "Garaje", "calle": "Calle ANTONIO MACHADO", "municipio": "Siero", "m2": "27", "hab": null, "planta": "-2"}, {"ref": "EXRE-01343", "tipo": "Garaje", "calle": "Calle ANTONIO MACHADO LUGONES SIERO", "municipio": "Siero", "m2": "22", "hab": null, "planta": "SOTANO"}, {"ref": "EXRE-01345", "tipo": "Garaje", "calle": "Calle ANTONIO MACHADO LUGONES SIERO", "municipio": "Siero", "m2": "22", "hab": null, "planta": "SOTANO"}, {"ref": "EXRE-01351", "tipo": "Garaje", "calle": "Calle ANTONIO MACHADO LUGONES SIERO", "municipio": "Siero", "m2": "23", "hab": null, "planta": "SOTANO"}, {"ref": "LORE-0831", "tipo": "Piso", "calle": "Avenida GIJON", "municipio": "Avilés", "m2": "62", "hab": "3", "planta": null}, {"ref": "SIRE-1011", "tipo": "Casa", "calle": "Cuesta Monte", "municipio": "Oviedo", "m2": "69", "hab": "3", "planta": "0"}, {"ref": "REMO-02535", "tipo": "Piso", "calle": "Calle Doña Iluminada", "municipio": "Oviedo", "m2": "104", "hab": "4", "planta": "2"}, {"ref": "LIRE-01670", "tipo": "Piso", "calle": "Calle Camara De La", "municipio": "Avilés", "m2": "153", "hab": null, "planta": "3"}, {"ref": "LIRE-01669", "tipo": "Piso", "calle": "Calle Camara De La", "municipio": "Avilés", "m2": "153", "hab": null, "planta": "3"}, {"ref": "LIRE-08180", "tipo": "Piso", "calle": "Calle Ampurdan", "municipio": "Gijón", "m2": "77", "hab": "3", "planta": "5"}, {"ref": "LIRE-05830", "tipo": "Piso", "calle": "Calle Los Pedregales", "municipio": "Gijón", "m2": "52", "hab": "2", "planta": "1"}, {"ref": "LIRE-07642", "tipo": "Casa", "calle": "Calle ARTOSA", "municipio": "Langreo", "m2": "86", "hab": "2", "planta": null}, {"ref": "RETI-00943", "tipo": "Piso", "calle": "Calle B", "municipio": "Oviedo", "m2": "53", "hab": "3", "planta": null}, {"ref": "RETI-01555", "tipo": "Piso", "calle": "Calle Bances Candamo", "municipio": "Avilés", "m2": "80", "hab": null, "planta": null}, {"ref": "RETI-00434", "tipo": "Nave industrial", "calle": "Industrial Riaño I", "municipio": "Langreo", "m2": "2395", "hab": null, "planta": null}, {"ref": "RETI-00715", "tipo": "Piso", "calle": "Calle San Matias", "municipio": "Gijón", "m2": "93", "hab": null, "planta": null}, {"ref": "SBRE-0113783", "tipo": "Pisos", "calle": "Calle BOLADO", "municipio": "Grado", "m2": "58", "hab": "1", "planta": "3"}, {"ref": "SBRE-0120999", "tipo": "Suelos Urbanos Residenciales", "calle": "Urbanización SALAMARCA", "municipio": "Llanera", "m2": null, "hab": null, "planta": null}, {"ref": "SBRE-0124327", "tipo": "Suelo Urbano Residencial", "calle": "Calle RIO ZALANDRON", "municipio": "Llanera", "m2": null, "hab": null, "planta": null}, {"ref": "SBRE-0125383", "tipo": "Suelos Urbanos Residenciales", "calle": "Calle LA CRUZ PARAJE EL VALLE SAN CLAUDIO", "municipio": "Oviedo", "m2": null, "hab": null, "planta": null}, {"ref": "SBRE-0121850", "tipo": "Suelos Urbanos Terciarios", "calle": "Lugar PARROQUIA DE COLLOTO", "municipio": "Oviedo", "m2": null, "hab": null, "planta": null}, {"ref": "SBRE-0092406", "tipo": "Garaje", "calle": "Calle ABEDUL EL", "municipio": "Corvera de Asturias", "m2": "14", "hab": null, "planta": "-3"}, {"ref": "LIRE-09966", "tipo": "Piso", "calle": "Avenida Jose Tartiere", "municipio": "Siero", "provincia": "Asturias", "price": "120.000", "m2": 83, "hab": null, "planta": "3", "panoid": null, "clasif": "CDR"}, {"ref": "CDR-379136", "tipo": "Casa", "calle": "AL Folgueraxu", "municipio": "Cangas del Narcea", "provincia": "Asturias", "price": "55.025", "m2": null, "hab": null, "planta": null, "panoid": null, "clasif": "CDR"}, {"ref": "CDR-560238", "tipo": "Casa", "calle": "C/ Gijun", "municipio": "Siero", "provincia": "Asturias", "price": "24.000", "m2": null, "hab": null, "planta": null, "panoid": null, "clasif": "CDR"}];
-
-function fmtPrice(p) {
-  if (!p || p === 'Consultar') return 'Precio a consultar';
-  return p + ' €';
-}
-function waMsg(item) {
-  return encodeURIComponent(`Hola, me interesa el activo ${item.ref} en ${item.municipio}`);
-}
-
-
-
-
-function renderCard(item) {
-  const offerRefs = ["ACRE-000654","GIRE-395102","CIRE-01182","CIRE-00458","CIRE-0058","ACRE-004057","ALRE-06889","LIRE-08712","REAR-0250","MORE-2879","SIRE-1548","FRRE-00317","LIRE-05552","LIRE-01316","JARE-0099","LIRE-0677","RETI-02372","LIRE-03665","MORE-3175","LIRE-04921","MURE-521001","LIRE-05487","GIRE-00482","REAR-02550"];
-  const soldRefs = ["asima","SBRE-0105307"];
-  let badge = '<span class="card-badge badge-susp">Suspendido</span>';
-  if (soldRefs.includes(item.ref)) badge = '<span class="card-badge badge-sold">VENDIDO</span>';
-  else if (offerRefs.includes(item.ref)) badge = '<span class="card-badge badge-offer-banner">OFERTA EN NEGOCIACIÓN</span>';
-  else if (item.clasif === 'NPL') badge = '<span class="card-badge badge-npl">NPL · Crédito en mora</span>';
-  else if (item.clasif === 'CDR') badge = '<span class="card-badge badge-cdr">CDR · Cesión de remate</span>';
-  
-  const specs = [];
-  if (item.m2 && item.m2 !== '0' && item.m2 !== 'N/D') specs.push(`<span class="spec">📐 ${item.m2} m²</span>`);
-  if (item.hab && item.hab !== 'N/D') specs.push(`<span class="spec">🛏️ ${item.hab} hab.</span>`);
-  let cleanTitle = item.calle || item.titulo || item.title || '';
-  const q = encodeURIComponent(cleanTitle + ' ' + (item.municipio || '') + ' ' + (item.provincia || ''));
-  const mapHtml = `<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?q=${q}&output=embed" allowfullscreen loading="lazy"></iframe>`;
-  const resId = `res-${item.ref}`;
-
-  const fichaHref = `activo-${item.ref.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}.html`;
-  return `
-    <div class="asset-card" data-provincia="${item.provincia}" data-tipo="${item.tipo}" data-search="${(cleanTitle+' '+(item.municipio||'')).toLowerCase()}">
-      <div class="card-img" style="height:250px; position:relative; overflow:hidden">
-        ${mapHtml}
-        ${badge}
-      </div>
-      <div class="card-body">
-        <div class="card-price">${fmtPrice(item.price)}</div>
-        <div class="card-title"><a href="${fichaHref}" style="color:inherit;text-decoration:none">${cleanTitle}</a></div>
-        <div class="card-specs">${specs.join('')}</div>
-        <div class="card-location">${item.municipio ? item.municipio+' · ' : ''}${item.provincia} · REF: ${item.ref}</div>
-        <div class="card-actions">
-          <a href="${fichaHref}" class="card-btn-primary">Ver ficha completa</a>
-          <a href="https://wa.me/34679916424?text=${waMsg(item)}" class="card-btn-secondary" target="_blank">WhatsApp</a>
-        </div>
-
-        <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
-        <div class="mortgage-calc">
-          <div class="mortgage-title">Calculadora de Hipoteca</div>
-          <div class="mortgage-grid">
-            <div class="mortgage-field">
-              <label>Entrada (%)</label>
-              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-            <div class="mortgage-field">
-              <label>Plazo (Años)</label>
-              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-            <div class="mortgage-field" style="grid-column: span 2">
-              <label>Interés Anual (%)</label>
-              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '${item.price}', '${resId}')">
-            </div>
-          </div>
-          <div class="mortgage-result">
-            <span class="mortgage-label">Cuota mensual estimada</span>
-            <span class="mortgage-val" id="${resId}">-- €</span>
-          </div>
-        </div>
-      </div>
-    </div>`;
-}
-
 
 function toggleMortgage(btn) {
   const calc = btn.nextElementSibling;
@@ -275,23 +1724,6 @@ function calculateMortgage(input, priceStr, resultId) {
   }
 }
 
-function populateTipoOptions() {
-  const tipos = [...new Set(CV_DATA.map(d => d.tipo))].sort();
-  const sel = document.getElementById('cv-tipo');
-  tipos.forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t; opt.textContent = t;
-    sel.appendChild(opt);
-  });
-}
-
-function renderAll() {
-  const grid = document.getElementById('cv-grid');
-  grid.innerHTML = CV_DATA.map(renderCard).join('');
-  document.getElementById('cv-count').textContent = CV_DATA.length + ' activos encontrados';
-  applyFilters();
-}
-
 function applyFilters() {
   const q = document.getElementById('cv-search').value.trim().toLowerCase();
   const muni = document.getElementById('cv-municipio').value;
@@ -310,7 +1742,6 @@ function applyFilters() {
   document.getElementById('cv-empty').style.display = visible === 0 ? 'block' : 'none';
 }
 
-populateTipoOptions();
 (function(){
   var params = new URLSearchParams(window.location.search);
   var tipoParam = params.get('tipo');
@@ -325,7 +1756,7 @@ populateTipoOptions();
     }
   }
 })();
-renderAll();
+applyFilters();
 document.getElementById('cv-search').addEventListener('input', applyFilters);
 document.getElementById('cv-municipio').addEventListener('change', applyFilters);
 document.getElementById('cv-tipo').addEventListener('change', applyFilters);
