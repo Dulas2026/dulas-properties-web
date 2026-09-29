@@ -74,6 +74,7 @@
   .card-mid h3 { font-size: 16.5px; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 4px; cursor: pointer; }
   .card-mid h3:hover { text-decoration: underline; }
   .card-loc { font-size: 13px; color: var(--gray-500); margin-bottom: 10px; }
+  .card-dir { font-size: 13px; color: var(--gray-700); margin: -4px 0 10px; }
   .card-specs { display: inline-flex; flex-wrap: wrap; gap: 4px 14px; background: #EAF3F8; color: #1F4E6B; border-radius: var(--radius); padding: 6px 12px; font-size: 13px; }
   .card-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
   .tag { font-size: 11.5px; padding: 2px 9px; border-radius: 999px; background: var(--gray-100); color: var(--gray-700); }
@@ -85,7 +86,10 @@
   .price { font-size: 20px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
   .price.consultar { font-size: 15px; color: var(--gray-500); font-weight: 600; }
   .pcol { font-size: 12.5px; color: #2D6A31; font-weight: 600; }
-  .ref { font-size: 12px; color: #1F6F8B; font-weight: 600; font-family: ui-monospace, Menlo, monospace; margin-top: 2px; }
+  .ref { font-size: 13px; color: #1F6F8B; font-weight: 700; font-family: ui-monospace, Menlo, monospace; margin-top: 2px; background: #EAF3F8; border: 1px solid #CFE3EE; border-radius: 4px; padding: 3px 8px; cursor: pointer; }
+  .ref:hover { border-color: #1F6F8B; }
+  .ref.big { font-size: 15px; padding: 5px 10px; margin: 4px 0 2px; }
+  .ref.ok { background: #EEF6EE; border-color: #9CCB9E; color: #2D6A31; }
   .estado { font-size: 12px; padding: 4px 10px; border-radius: 4px; background: #3BB39A; color: var(--white); font-weight: 600; margin-top: 4px; }
   .estado.res { background: #E0A82E; } .estado.ven { background: #C0392B; } .estado.sus { background: var(--gray-500); }
   .card-acts { margin-top: auto; display: flex; gap: 6px; padding-top: 10px; }
@@ -389,6 +393,7 @@
       '<div class="card-img" data-i="' + i + '">' + img + sit + '</div>' +
       '<div class="card-mid"><h3 data-i="' + i + '">' + esc(d.titulo) + '</h3>' +
         '<div class="card-loc">' + esc([d.municipio, d.provincia, d.comunidad].filter(function (x, j, a) { return x && a.indexOf(x) === j; }).join(' · ')) + '</div>' +
+        (d.direccion ? '<div class="card-dir">📍 ' + esc(d.direccion) + (d.detalle_direccion ? ' · ' + esc(d.detalle_direccion) : '') + '</div>' : '') +
         '<div class="card-specs">' + specs + '</div>' +
         '<div class="card-tags">' + (d.precio_anterior && d.precio && d.precio_anterior > d.precio ? '<span class="tag reb">Rebajado</span>' : '') + (d.etiquetas || []).map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('') + (d.lote ? '<span class="tag lote">Lote / cartera</span>' : '') + (d.situacion_legal ? '<span class="tag">' + esc(d.situacion_legal) + '</span>' : '') + '</div></div>' +
       '<div class="card-right">' +
@@ -396,7 +401,7 @@
         (d.precio_anterior && d.precio && d.precio_anterior > d.precio ? '<div class="pant">↓ ' + Math.round(100 - 100 * d.precio / d.precio_anterior) + '% <s>' + eur.format(d.precio_anterior) + '</s></div>' : '') +
         (d.precio_colaborador ? '<div class="pcol">Precio colaborador: ' + eur.format(d.precio_colaborador) + '</div>' : '') +
         (d.comision ? '<div class="pcol">Comisión: ' + esc(d.comision) + '</div>' : '') +
-        '<div class="ref">REF: ' + esc(d.ref) + '</div><span class="estado' + ec + '">' + esc(e) + '</span>' +
+        '<button type="button" class="ref" data-copiar="' + esc(d.ref) + '" title="Copiar referencia">REF: ' + esc(d.ref) + ' ⧉</button><span class="estado' + ec + '">' + esc(e) + '</span>' +
         '<div class="card-acts"><button type="button" data-i="' + i + '">Ficha y mapa</button>' + (d.ficha ? '<a href="/' + esc(d.ficha) + '" target="_blank" rel="noopener">Web ↗</a>' : '') + '</div>' +
       '</div></article>';
   }
@@ -426,10 +431,10 @@
     var d = F[i]; if (!d) return;
     var q = encodeURIComponent(d.mapa || [d.titulo, d.municipio, d.provincia].join(' '));
     $('md-map').innerHTML = (d.img ? '<img src="' + esc(imgUrl(d.img)) + '" alt="" referrerpolicy="no-referrer" onerror="this.remove()">' : '') + '<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=' + q + '&output=embed" title="Mapa"></iframe>';
-    var filas = [['Referencia', d.ref], ['Tipo', d.tipo], ['Categoría', d.categoria], ['Situación', d.situacion || 'Sin clasificar'], ['Estado', d.estado], ['Superficie', d.m2 ? num.format(d.m2) + ' m²' : null], ['Habitaciones', d.hab], ['Población', d.municipio], ['Provincia', d.provincia], ['Comunidad', d.comunidad], ['Precio', d.precio ? eur.format(d.precio) : 'Consultar'], ['Precio anterior', d.precio_anterior ? eur.format(d.precio_anterior) : null], ['Fiscalidad', d.fiscalidad], ['Etiquetas', (d.etiquetas || []).join(', ')]];
+    var filas = [['Referencia', d.ref], ['Dirección', d.direccion ? d.direccion + (d.detalle_direccion ? ' · ' + d.detalle_direccion : '') : null], ['Tipo', d.tipo], ['Categoría', d.categoria], ['Situación', d.situacion || 'Sin clasificar'], ['Estado', d.estado], ['Superficie', d.m2 ? num.format(d.m2) + ' m²' : null], ['Habitaciones', d.hab], ['Población', d.municipio], ['Provincia', d.provincia], ['Comunidad', d.comunidad], ['Precio', d.precio ? eur.format(d.precio) : 'Consultar'], ['Precio anterior', d.precio_anterior ? eur.format(d.precio_anterior) : null], ['Fiscalidad', d.fiscalidad], ['Etiquetas', (d.etiquetas || []).join(', ')]];
     var internos = [['Precio colaborador', d.precio_colaborador ? eur.format(d.precio_colaborador) : null], ['Comisión', d.comision], ['Situación legal', d.situacion_legal], ['Notas', d.notas]].filter(function (x) { return x[1]; });
     $('md-body').innerHTML = '<button class="md-x" type="button" aria-label="Cerrar">×</button>' +
-      '<div class="cz-eyebrow" style="color:#1F6F8B">REF ' + esc(d.ref) + '</div><h2 id="md-t">' + esc(d.titulo) + '</h2>' +
+      '<button type="button" class="ref big" data-copiar="' + esc(d.ref) + '" title="Copiar referencia">REF: ' + esc(d.ref) + ' ⧉</button><h2 id="md-t">' + esc(d.titulo) + '</h2>' +
       '<div class="card-loc">' + esc([d.municipio, d.provincia].filter(Boolean).join(' · ')) + '</div>' +
       '<dl class="dl">' + filas.filter(function (x) { return x[1]; }).map(function (x) { return '<dt>' + x[0] + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join('') + '</dl>' +
       '<div class="md-int"><h4>Información para colaboradores</h4>' + (internos.length ? '<dl class="dl" style="margin:0">' + internos.map(function (x) { return '<dt>' + x[0] + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join('') + '</dl>' : 'Pendiente de cargar desde HipogesWorks (precio colaborador, comisión y situación legal).') + '</div>' +
@@ -485,6 +490,13 @@
   $('open-side').onclick = function () { $('side').classList.add('on'); };
   $('side-x').onclick = function () { $('side').classList.remove('on'); };
   $('cz-csv').onclick = csv;
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-copiar]'); if (!b) return;
+    e.stopPropagation(); e.preventDefault();
+    var v = b.getAttribute('data-copiar'), txt = b.textContent;
+    var hecho = function () { b.classList.add('ok'); b.textContent = 'Copiada ✓'; setTimeout(function () { b.classList.remove('ok'); b.textContent = txt; }, 1400); };
+    if (navigator.clipboard) navigator.clipboard.writeText(v).then(hecho, hecho); else hecho();
+  }, true);
   $('lista').addEventListener('click', function (e) {
     if (e.target.id === 'empty-reset') return limpiar();
     var el = e.target.closest('[data-i]'); if (el) abrirFicha(+el.getAttribute('data-i'));

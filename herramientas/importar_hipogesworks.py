@@ -5,8 +5,11 @@ Uso:  python herramientas/importar_hipogesworks.py "C:/ruta/HIPOGES SUSPENDIDOS"
 Lee todos los .html/.htm de esa carpeta (y subcarpetas), extrae cada activo y guarda
 colaboradores/_hipoges/<comunidad>.json. Luego ejecuta generar_listado_colaboradores.py.
 
-Privacidad: se elimina numero de portal, escalera, planta y puerta de la direccion.
+Direccion: la Zona Colaboradores es privada (usuario y contrasena), asi que por defecto se guarda
+la direccion completa tal y como aparece en HipogesWorks (numero, escalera, planta, puerta).
+Para ocultarla, poner DIRECCION_COMPLETA = False.
 """
+DIRECCION_COMPLETA = True
 import sys, os, re, json, glob, csv, unicodedata
 from bs4 import BeautifulSoup
 
@@ -123,13 +126,19 @@ def parsear(html):
         estado = next((b for b in badges if na(b) in ('suspendido', 'en comercializacion', 'reservado', 'preventa', 'oferta', 'oferta en negociacion', 'contrato privado', 'donacion')), 'Suspendido')
         fisc = (re.search(r'Fiscalidad en la venta:\s*([A-Z ]+?)(?=\s+REF|$)', txt) or [None, ''])[1].strip()
         calle_l = limpiar_calle(calle)
+        planta = (re.search(r'Planta:\s*([^|]+)', spec) or [None, ''])[1].strip()
+        puerta = (re.search(r'Puerta:?\s*([^|]+)', spec) or [None, ''])[1].strip()
+        esc = (re.search(r'Esc(?:alera)?:?\s*([^|]+)', spec) or [None, ''])[1].strip()
+        direccion = calle.strip() if DIRECCION_COMPLETA else calle_l
+        extra_dir = ', '.join(x for x in [('Esc. ' + esc) if esc else '', ('Planta ' + planta) if planta else '', ('Puerta ' + puerta) if puerta else ''] if x) if DIRECCION_COMPLETA else ''
         pnombre, ccaa = (PROV[pid][0], PROV[pid][1]) if pid else (prov_txt, '')
         out.append(dict(
             ref=ref, hw_id=hw_id, titulo=('%s en %s, %s' % (tipo, calle_l, municipio)).strip(', ') if tipo else titulo,
+            direccion=direccion, detalle_direccion=extra_dir,
             tipo=tipo, categoria=categoria(tipo), municipio=municipio, provincia=pnombre, comunidad=ccaa,
             precio=precios[0] if precios else None, precio_anterior=precios[1] if len(precios) > 1 else None,
             m2=int(float(((m2.group(1) or m2.group(2)) if m2 else '0').replace('.', '')) or 0) or None,
-            hab=hab.group(1) if hab else None, mapa=' '.join(x for x in [calle_l, municipio, pnombre] if x),
+            hab=hab.group(1) if hab else None, mapa=' '.join(x for x in [direccion if DIRECCION_COMPLETA else calle_l, municipio, pnombre] if x),
             img=img if img.startswith('http') else None, situacion=sit, estado=estado,
             etiquetas=[b for b in badges if na(b) != na(estado)], fiscalidad=fisc, lote=bool(re.match(r'^\d+\s', tipo) or 'lote' in na(tipo)),
             ficha=None, origen='HipogesWorks'))
