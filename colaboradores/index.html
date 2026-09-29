@@ -281,7 +281,8 @@
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
 
-  var SIT = [['', 'Todos'], ['NPL', 'NPL'], ['CDR', 'CDR · Cesión de remate'], ['REO', 'REO libre'], ['Ocupado', 'Ocupados'], ['_', 'Sin clasificar']];
+  var SIT = [['', 'Todos'], ['NPL', 'NPL · Venta de crédito'], ['CDR', 'CDR · Cesión de remate'], ['REO', 'REO libre'], ['Ocupado', 'Ocupados'], ['_', 'Sin clasificar']];
+  var SIT_TXT = { NPL: 'NPL · Venta de crédito', CDR: 'CDR · Cesión de remate', REO: 'REO', Ocupado: 'Ocupado' };
   var CAT = [['Residencial', 'Viviendas'], ['Comercial', 'Locales'], ['Industrial', 'Naves'], ['Terreno', 'Suelos y fincas'], ['Anejo', 'Garajes y trasteros'], ['Oficina', 'Oficinas'], ['Hotel', 'Hoteles'], ['Otro', 'Otros']];
   var TRAMOS = [['', 'Todos', null, null], ['a', 'Hasta 50.000 €', 0, 50000], ['b', '50.000 – 100.000 €', 50000, 100000], ['c', '100.000 – 200.000 €', 100000, 200000], ['d', 'Más de 200.000 €', 200000, null], ['n', 'Sin precio', null, null]];
   var ICONOS = {
@@ -386,7 +387,7 @@
   function tarjeta(d, i) {
     var ic = ICONOS[d.categoria] || ICONOS.Otro;
     var img = d.img ? '<img src="' + esc(imgUrl(d.img)) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' : '<div class="ph"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">' + ic + '</svg>' + esc(d.categoria) + '</div>';
-    var sit = d.situacion ? '<span class="sit ' + esc(d.situacion) + '">' + esc(d.situacion) + '</span>' : '';
+    var sit = d.situacion ? '<span class="sit ' + esc(d.situacion) + '">' + esc(SIT_TXT[d.situacion] || d.situacion) + '</span>' : '';
     var specs = [d.m2 ? num.format(d.m2) + ' m²' : null, d.hab ? d.hab + ' hab.' : null, d.tipo].filter(Boolean).map(esc).join('<span style="opacity:.4">|</span>');
     var e = d.estado || 'En comercialización', ec = /reserv|oferta|contrato/i.test(e) ? ' res' : /vend/i.test(e) ? ' ven' : /suspend/i.test(e) ? ' sus' : '';
     return '<article class="card">' +
@@ -431,7 +432,7 @@
     var d = F[i]; if (!d) return;
     var q = encodeURIComponent(d.mapa || [d.titulo, d.municipio, d.provincia].join(' '));
     $('md-map').innerHTML = (d.img ? '<img src="' + esc(imgUrl(d.img)) + '" alt="" referrerpolicy="no-referrer" onerror="this.remove()">' : '') + '<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=' + q + '&output=embed" title="Mapa"></iframe>';
-    var filas = [['Referencia', d.ref], ['Dirección', d.direccion ? d.direccion + (d.detalle_direccion ? ' · ' + d.detalle_direccion : '') : null], ['Tipo', d.tipo], ['Categoría', d.categoria], ['Situación', d.situacion || 'Sin clasificar'], ['Estado', d.estado], ['Superficie', d.m2 ? num.format(d.m2) + ' m²' : null], ['Habitaciones', d.hab], ['Población', d.municipio], ['Provincia', d.provincia], ['Comunidad', d.comunidad], ['Precio', d.precio ? eur.format(d.precio) : 'Consultar'], ['Precio anterior', d.precio_anterior ? eur.format(d.precio_anterior) : null], ['Fiscalidad', d.fiscalidad], ['Etiquetas', (d.etiquetas || []).join(', ')]];
+    var filas = [['Referencia', d.ref], ['Dirección', d.direccion ? d.direccion + (d.detalle_direccion ? ' · ' + d.detalle_direccion : '') : null], ['Tipo', d.tipo], ['Categoría', d.categoria], ['Situación', d.situacion ? (SIT_TXT[d.situacion] || d.situacion) : 'Sin clasificar'], ['Estado', d.estado], ['Superficie', d.m2 ? num.format(d.m2) + ' m²' : null], ['Habitaciones', d.hab], ['Población', d.municipio], ['Provincia', d.provincia], ['Comunidad', d.comunidad], ['Precio', d.precio ? eur.format(d.precio) : 'Consultar'], ['Precio anterior', d.precio_anterior ? eur.format(d.precio_anterior) : null], ['Fiscalidad', d.fiscalidad], ['Etiquetas', (d.etiquetas || []).join(', ')]];
     var internos = [['Precio colaborador', d.precio_colaborador ? eur.format(d.precio_colaborador) : null], ['Comisión', d.comision], ['Situación legal', d.situacion_legal], ['Notas', d.notas]].filter(function (x) { return x[1]; });
     $('md-body').innerHTML = '<button class="md-x" type="button" aria-label="Cerrar">×</button>' +
       '<button type="button" class="ref big" data-copiar="' + esc(d.ref) + '" title="Copiar referencia">REF: ' + esc(d.ref) + ' ⧉</button><h2 id="md-t">' + esc(d.titulo) + '</h2>' +
