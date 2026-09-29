@@ -11,64 +11,125 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
-  .cz-head { background: var(--navy); color: var(--white); padding: 36px 48px 30px; border-top: 1px solid rgba(255,255,255,.08); }
-  .cz-head-in { max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; justify-content: space-between; }
-  .cz-eyebrow { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-  .cz-head h1 { font-family: var(--font-serif); font-weight: 500; font-size: 38px; line-height: 1.1; }
+  .cz-head { background: var(--navy); color: var(--white); padding: 26px 48px 0; border-top: 1px solid rgba(255,255,255,.08); }
+  .cz-head-in { max-width: 1400px; margin: 0 auto; }
+  .cz-top { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 18px; }
+  .cz-eyebrow { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .cz-head h1 { font-family: var(--font-serif); font-weight: 500; font-size: 34px; line-height: 1.1; }
   .cz-user { display: flex; align-items: center; gap: 14px; font-size: 13px; color: rgba(255,255,255,.8); }
   .cz-user strong { color: var(--white); }
   .cz-out { border: 1px solid rgba(255,255,255,.35); color: var(--white); text-decoration: none; padding: 7px 14px; border-radius: 999px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
   .cz-out:hover { border-color: var(--gold); color: var(--gold); }
-  .cz-main { max-width: 1320px; margin: 0 auto; padding: 28px 48px 64px; }
-  .cz-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
-  .cz-stat { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 18px; }
-  .cz-stat .l { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gray-500); }
-  .cz-stat .v { font-family: var(--font-serif); font-size: 30px; color: var(--navy); line-height: 1.2; font-variant-numeric: tabular-nums; }
-  .cz-filters { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 18px; display: grid; grid-template-columns: 2fr repeat(3, 1fr) .8fr .8fr auto; gap: 12px; align-items: end; margin-bottom: 18px; }
-  .cz-f label { display: block; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--gray-700); font-weight: 600; margin-bottom: 5px; }
-  .cz-f input, .cz-f select { width: 100%; padding: 9px 10px; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit; font-size: 13.5px; background: var(--white); color: var(--text); }
-  .cz-f input:focus, .cz-f select:focus { outline: none; border-color: var(--navy); }
-  .cz-btn { background: var(--navy); color: var(--white); border: none; padding: 10px 14px; border-radius: var(--radius); font: inherit; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; white-space: nowrap; }
-  .cz-btn.sec { background: transparent; color: var(--navy); border: 1px solid var(--gray-300); }
-  .cz-btn:hover { opacity: .9; }
-  .cz-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; font-size: 13px; color: var(--gray-700); }
-  .cz-bar .acts { display: flex; gap: 8px; }
-  .cz-table-wrap { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow-x: auto; }
-  table.cz { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-  table.cz th { text-align: left; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--gray-500); font-weight: 600; padding: 12px 14px; border-bottom: 1px solid var(--border); background: var(--gray-50); cursor: pointer; user-select: none; white-space: nowrap; position: sticky; top: 0; }
-  table.cz th[data-k]:hover { color: var(--navy); }
-  table.cz th .ar { color: var(--gold); margin-left: 4px; }
-  table.cz td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
-  table.cz tr:hover td { background: #FBFAF7; }
-  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .cz-ref { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--navy); white-space: nowrap; }
-  .cz-tit { font-weight: 500; color: var(--text); }
-  .cz-sub { font-size: 12px; color: var(--gray-500); }
-  .cz-pill { display: inline-block; font-size: 11px; padding: 2px 9px; border-radius: 999px; background: #EEF6EE; color: #2D6A31; white-space: nowrap; }
-  .cz-pill.res { background: #FFF4DE; color: #8A5A00; }
-  .cz-pill.ven { background: #FDECEE; color: #9B1C2E; }
-  .cz-link { color: var(--navy); font-weight: 600; font-size: 12px; text-decoration: none; white-space: nowrap; }
-  .cz-link:hover { color: var(--gold); }
-  .cz-empty { padding: 48px 20px; text-align: center; color: var(--gray-500); }
-  .cz-pag { display: flex; gap: 6px; justify-content: center; align-items: center; margin-top: 18px; font-size: 13px; color: var(--gray-700); }
-  .cz-pag button { background: var(--white); border: 1px solid var(--gray-300); border-radius: var(--radius); padding: 7px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+  /* Pestañas de situación */
+  .cz-tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+  .cz-tabs::-webkit-scrollbar { display: none; }
+  .cz-tab { background: transparent; border: none; color: rgba(255,255,255,.7); font: inherit; font-size: 13px; font-weight: 600; padding: 12px 18px; cursor: pointer; border-radius: 6px 6px 0 0; white-space: nowrap; }
+  .cz-tab .n { font-weight: 500; opacity: .7; margin-left: 6px; font-variant-numeric: tabular-nums; }
+  .cz-tab:hover { color: var(--white); }
+  .cz-tab.on { background: var(--cream); color: var(--navy); }
+  .cz-wrap { max-width: 1400px; margin: 0 auto; padding: 22px 48px 64px; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 22px; align-items: start; }
+  /* Chips de tipo y comunidad */
+  .cz-chips { grid-column: 1 / -1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+  .cz-chiprow { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: thin; }
+  .cz-chiprow .lbl { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gray-500); font-weight: 600; align-self: center; min-width: 88px; }
+  .chip { flex-shrink: 0; border: 1px solid var(--gray-300); background: var(--white); color: var(--gray-700); border-radius: 999px; padding: 6px 13px; font: inherit; font-size: 12.5px; cursor: pointer; white-space: nowrap; }
+  .chip .n { color: var(--gray-500); margin-left: 5px; font-variant-numeric: tabular-nums; }
+  .chip:hover { border-color: var(--navy); }
+  .chip.on { background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .chip.on .n { color: var(--gold-light); }
+  /* Panel de búsqueda */
+  .cz-side { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); position: sticky; top: 80px; max-height: calc(100vh - 96px); display: flex; flex-direction: column; }
+  .cz-side-h { background: var(--navy); color: var(--white); padding: 12px 16px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; font-size: 15px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+  .cz-side-h button { background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; display: none; }
+  .cz-side-b { padding: 14px 16px; overflow-y: auto; display: grid; gap: 12px; }
+  .f label, .f .flbl { display: block; font-size: 12.5px; color: var(--gray-700); font-weight: 600; margin-bottom: 5px; }
+  .f input, .f select { width: 100%; padding: 8px 10px; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit; font-size: 13.5px; background: var(--white); color: var(--text); }
+  .f input:focus, .f select:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(26,45,79,.1); }
+  .f2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .seg { display: flex; flex-wrap: wrap; gap: 6px; }
+  .seg button { border: 1px solid var(--gray-300); background: var(--white); border-radius: var(--radius); padding: 6px 10px; font: inherit; font-size: 12.5px; cursor: pointer; color: var(--gray-700); }
+  .seg button.on { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .ck { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-700); cursor: pointer; }
+  .ck input { width: auto; }
+  .cz-side-f { padding: 12px 16px; border-top: 1px solid var(--border); display: flex; gap: 8px; }
+  .btn { background: var(--navy); color: var(--white); border: none; padding: 10px 14px; border-radius: var(--radius); font: inherit; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; flex: 1; }
+  .btn.sec { background: var(--gray-100); color: var(--gray-700); }
+  .btn.ghost { background: transparent; color: var(--navy); border: 1px solid var(--gray-300); flex: none; }
+  /* Resultados */
+  .cz-res { min-width: 0; }
+  .cz-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .cz-found { background: #EAF3F8; color: #1F4E6B; border-radius: var(--radius); padding: 9px 14px; font-size: 13.5px; flex: 1; min-width: 220px; }
+  .cz-found strong { font-variant-numeric: tabular-nums; }
+  .cz-bar select { padding: 9px 10px; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit; font-size: 13px; background: var(--white); }
+  .cz-filtros-m { display: none; }
+  .card { display: grid; grid-template-columns: 170px minmax(0, 1fr) 230px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 12px; transition: box-shadow .2s; }
+  .card:hover { box-shadow: 0 6px 24px rgba(26,45,79,.08); }
+  .card-img { position: relative; background: linear-gradient(135deg, #E9EEF5, #D7DEE9); display: flex; align-items: center; justify-content: center; min-height: 150px; color: var(--navy); cursor: pointer; }
+  .card-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .card-img .ph { text-align: center; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .7; }
+  .card-img .ph svg { display: block; margin: 0 auto 6px; }
+  .card-img .sit { position: absolute; top: 8px; left: 8px; background: var(--navy); color: var(--white); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 3px; letter-spacing: .04em; }
+  .sit.CDR { background: #7A3E9D; } .sit.NPL { background: #1F6F8B; } .sit.Ocupado { background: #B5452F; }
+  .card-mid { padding: 14px 18px; min-width: 0; overflow-wrap: anywhere; }
+  .card-mid h3 { font-size: 16.5px; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 4px; cursor: pointer; }
+  .card-mid h3:hover { text-decoration: underline; }
+  .card-loc { font-size: 13px; color: var(--gray-500); margin-bottom: 10px; }
+  .card-specs { display: inline-flex; flex-wrap: wrap; gap: 4px 14px; background: #EAF3F8; color: #1F4E6B; border-radius: var(--radius); padding: 6px 12px; font-size: 13px; }
+  .card-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 11.5px; padding: 2px 9px; border-radius: 999px; background: var(--gray-100); color: var(--gray-700); }
+  .tag.lote { background: #FFF4DE; color: #8A5A00; }
+  .card-right { padding: 14px 18px; border-left: 1px solid var(--border); display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 4px; }
+  .price { font-size: 20px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+  .price.consultar { font-size: 15px; color: var(--gray-500); font-weight: 600; }
+  .pcol { font-size: 12.5px; color: #2D6A31; font-weight: 600; }
+  .ref { font-size: 12px; color: #1F6F8B; font-weight: 600; font-family: ui-monospace, Menlo, monospace; margin-top: 2px; }
+  .estado { font-size: 12px; padding: 4px 10px; border-radius: 4px; background: #3BB39A; color: var(--white); font-weight: 600; margin-top: 4px; }
+  .estado.res { background: #E0A82E; } .estado.ven { background: #C0392B; } .estado.sus { background: var(--gray-500); }
+  .card-acts { margin-top: auto; display: flex; gap: 6px; padding-top: 10px; }
+  .card-acts button, .card-acts a { border: 1px solid var(--gray-300); background: var(--white); color: var(--navy); border-radius: var(--radius); padding: 6px 10px; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; text-decoration: none; }
+  .card-acts button:hover, .card-acts a:hover { border-color: var(--navy); }
+  .cz-empty { background: var(--white); border: 1px dashed var(--gray-300); border-radius: var(--radius-lg); padding: 48px 20px; text-align: center; color: var(--gray-500); }
+  .cz-pag { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; align-items: center; margin-top: 18px; font-size: 13px; color: var(--gray-700); }
+  .cz-pag button { background: var(--white); border: 1px solid var(--gray-300); border-radius: var(--radius); padding: 7px 12px; font: inherit; font-size: 13px; cursor: pointer; min-width: 38px; }
+  .cz-pag button.on { background: var(--navy); color: var(--white); border-color: var(--navy); }
   .cz-pag button:disabled { opacity: .4; cursor: default; }
+  .cz-pag select { padding: 6px; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit; font-size: 13px; }
+  /* Ficha (modal) */
+  .md { position: fixed; inset: 0; background: rgba(17,32,59,.55); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .md.on { display: flex; }
+  .md-box { background: var(--white); border-radius: var(--radius-lg); width: 100%; max-width: 960px; max-height: calc(100vh - 40px); overflow: auto; display: grid; grid-template-columns: 1.1fr 1fr; }
+  .md-map { min-height: 420px; background: #E9EEF5; position: relative; }
+  .md-map img { width: 100%; height: 240px; object-fit: cover; display: block; }
+  .md-map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; }
+  .md-body { padding: 24px 26px; position: relative; }
+  .md-x { position: absolute; top: 10px; right: 12px; background: none; border: none; font-size: 26px; cursor: pointer; color: var(--gray-500); }
+  .md-body h2 { font-family: var(--font-serif); font-size: 26px; font-weight: 500; color: var(--navy); line-height: 1.15; margin: 8px 30px 6px 0; }
+  .md-body .card-loc { margin-bottom: 14px; }
+  .dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; font-size: 13.5px; margin: 14px 0; }
+  .dl dt { color: var(--gray-500); }
+  .dl dd { color: var(--text); font-weight: 500; }
+  .md-int { background: #F3F8F1; border: 1px solid #D6E8D2; border-radius: var(--radius); padding: 12px 14px; font-size: 13px; }
+  .md-int h4 { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: #2D6A31; margin-bottom: 8px; }
+  .md-acts { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+  .md-acts a { text-decoration: none; }
   @media (max-width: 1100px) {
-    .cz-filters { grid-template-columns: 1fr 1fr 1fr; }
-    .cz-filters .cz-f.q { grid-column: 1 / -1; }
+    .cz-wrap { grid-template-columns: minmax(0, 1fr); padding: 16px 16px 48px; }
+    .cz-head { padding: 22px 16px 0; }
+    .cz-side { position: fixed; inset: 0; z-index: 1900; max-height: none; border-radius: 0; display: none; }
+    .cz-side.on { display: flex; }
+    .cz-side-h { border-radius: 0; }
+    .cz-side-h button { display: block; }
+    .cz-filtros-m { display: inline-block; }
   }
   @media (max-width: 760px) {
-    .cz-head { padding: 26px 16px 22px; }
-    .cz-head h1 { font-size: 30px; }
-    .cz-main { padding: 20px 16px 48px; }
-    .cz-stats { grid-template-columns: 1fr 1fr; }
-    .cz-filters { grid-template-columns: 1fr 1fr; }
-    table.cz thead { display: none; }
-    table.cz, table.cz tbody, table.cz tr, table.cz td { display: block; width: 100%; }
-    table.cz tr { padding: 12px 14px; border-bottom: 1px solid var(--border); }
-    table.cz td { border: none; padding: 2px 0; text-align: left !important; }
-    table.cz td[data-l]::before { content: attr(data-l) ': '; color: var(--gray-500); font-size: 12px; }
-    table.cz td.hide-m { display: none; }
+    .cz-head h1 { font-size: 28px; }
+    .card { grid-template-columns: 96px minmax(0, 1fr); }
+    .card-img { min-height: 120px; }
+    .card-right { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--border); flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; text-align: left; }
+    .card-acts { margin-top: 0; padding-top: 0; }
+    .md-box { grid-template-columns: 1fr; }
+    .md-map, .md-map iframe { min-height: 260px; }
+    .cz-chiprow .lbl { display: none; }
   }
 </style>
 </head>
@@ -94,169 +155,298 @@
 
 <header class="cz-head">
   <div class="cz-head-in">
-    <div>
-      <div class="cz-eyebrow">Zona Colaboradores</div>
-      <h1>Listado de activos</h1>
+    <div class="cz-top">
+      <div><div class="cz-eyebrow">Zona Colaboradores</div><h1>Catálogo de activos</h1></div>
+      <div class="cz-user"><span>Conectado como <strong id="cz-usuario">…</strong></span><a class="cz-out" href="/api/colaboradores/logout">Cerrar sesión</a></div>
     </div>
-    <div class="cz-user"><span>Conectado como <strong id="cz-usuario">…</strong></span><a class="cz-out" href="/api/colaboradores/logout">Cerrar sesión</a></div>
+    <div class="cz-tabs" id="tabs-sit" role="tablist" aria-label="Situación"></div>
   </div>
 </header>
 
-<main class="cz-main">
-  <div class="cz-stats">
-    <div class="cz-stat"><div class="l">Activos en cartera</div><div class="v" id="st-total">–</div></div>
-    <div class="cz-stat"><div class="l">Resultado de la búsqueda</div><div class="v" id="st-filtro">–</div></div>
-    <div class="cz-stat"><div class="l">Comunidades</div><div class="v" id="st-ccaa">–</div></div>
-    <div class="cz-stat"><div class="l">Precio medio (búsqueda)</div><div class="v" id="st-medio">–</div></div>
+<div class="cz-wrap">
+  <div class="cz-chips">
+    <div class="cz-chiprow" id="chips-cat"><span class="lbl">Tipo</span></div>
+    <div class="cz-chiprow" id="chips-ccaa"><span class="lbl">Comunidad</span></div>
+    <div class="cz-chiprow" id="chips-precio"><span class="lbl">Precio</span></div>
   </div>
 
-  <div class="cz-filters">
-    <div class="cz-f q"><label for="f-q">Buscar</label><input id="f-q" type="search" placeholder="Referencia, calle, municipio…"></div>
-    <div class="cz-f"><label for="f-ccaa">Comunidad</label><select id="f-ccaa"><option value="">Todas</option></select></div>
-    <div class="cz-f"><label for="f-prov">Provincia / isla</label><select id="f-prov"><option value="">Todas</option></select></div>
-    <div class="cz-f"><label for="f-tipo">Tipo</label><select id="f-tipo"><option value="">Todos</option></select></div>
-    <div class="cz-f"><label for="f-min">Precio mín.</label><input id="f-min" type="number" min="0" step="1000" placeholder="€"></div>
-    <div class="cz-f"><label for="f-max">Precio máx.</label><input id="f-max" type="number" min="0" step="1000" placeholder="€"></div>
-    <div class="cz-f"><button class="cz-btn sec" id="f-reset" type="button">Limpiar</button></div>
-  </div>
+  <aside class="cz-side" id="side">
+    <div class="cz-side-h"><span>🔍 Búsqueda</span><button type="button" id="side-x" aria-label="Cerrar filtros">×</button></div>
+    <div class="cz-side-b">
+      <div class="f"><label for="f-ref">Referencia inmueble</label><input id="f-ref" placeholder="Ej. ACRE-000260" autocomplete="off"></div>
+      <div class="f"><label for="f-sub">Subtipo</label><select id="f-sub"><option value="">Todos</option></select></div>
+      <div class="f"><label for="f-prov">Provincia</label><select id="f-prov"><option value="">Todas</option></select></div>
+      <div class="f"><label for="f-mun">Población</label><select id="f-mun"><option value="">Todas</option></select></div>
+      <div class="f"><label for="f-dir">Dirección / texto</label><input id="f-dir" placeholder="Calle, zona…" autocomplete="off"></div>
+      <div class="f"><label for="f-est">Estado inmueble</label><select id="f-est"><option value="">Todos</option></select></div>
+      <div class="f"><span class="flbl">Precio (€)</span><div class="f2"><input id="f-pmin" type="number" min="0" step="1000" placeholder="Desde"><input id="f-pmax" type="number" min="0" step="1000" placeholder="Hasta"></div></div>
+      <div class="f"><span class="flbl">Superficie (m²)</span><div class="f2"><input id="f-smin" type="number" min="0" placeholder="Desde"><input id="f-smax" type="number" min="0" placeholder="Hasta"></div></div>
+      <div class="f"><span class="flbl">Habitaciones</span><div class="seg" id="f-hab"><button type="button" data-v="1">1+</button><button type="button" data-v="2">2+</button><button type="button" data-v="3">3+</button><button type="button" data-v="4">4+</button></div></div>
+      <label class="ck"><input type="checkbox" id="f-precio"> Solo con precio publicado</label>
+      <label class="ck"><input type="checkbox" id="f-lote"> Solo lotes / carteras</label>
+      <label class="ck"><input type="checkbox" id="f-nolote"> Ocultar lotes</label>
+    </div>
+    <div class="cz-side-f"><button class="btn" type="button" id="f-ok">Ver resultados</button><button class="btn sec" type="button" id="f-reset">Limpiar</button></div>
+  </aside>
 
-  <div class="cz-bar">
-    <span id="cz-info">Cargando activos…</span>
-    <span class="acts"><button class="cz-btn sec" id="cz-csv" type="button">Descargar Excel (CSV)</button></span>
-  </div>
+  <main class="cz-res">
+    <div class="cz-bar">
+      <div class="cz-found">Se han encontrado <strong id="n-found">–</strong> activos <span id="n-sub"></span></div>
+      <button class="btn ghost cz-filtros-m" type="button" id="open-side">Filtros</button>
+      <select id="f-orden" aria-label="Ordenar por">
+        <option value="">Ordenar por</option>
+        <option value="precio:1">Baratos primero</option>
+        <option value="precio:-1">Caros primero</option>
+        <option value="m2:1">Pequeños primero</option>
+        <option value="m2:-1">Grandes primero</option>
+        <option value="ref:1">Referencia</option>
+        <option value="municipio:1">Población (A-Z)</option>
+      </select>
+      <button class="btn ghost" type="button" id="cz-csv">Excel (CSV)</button>
+    </div>
+    <div id="lista"></div>
+    <div class="cz-pag" id="pag"></div>
+  </main>
+</div>
 
-  <div class="cz-table-wrap">
-    <table class="cz">
-      <thead><tr id="cz-thead"></tr></thead>
-      <tbody id="cz-tbody"></tbody>
-    </table>
+<div class="md" id="md" role="dialog" aria-modal="true" aria-labelledby="md-t">
+  <div class="md-box">
+    <div class="md-map" id="md-map"></div>
+    <div class="md-body" id="md-body"></div>
   </div>
-  <div class="cz-pag" id="cz-pag"></div>
-</main>
+</div>
 
 <script src="/menu.js" defer></script>
 <script>
 (function () {
-  var POR_PAGINA = 50;
-  var DATA = [], FILTRADOS = [], pagina = 1, orden = { k: 'comunidad', dir: 1 };
   var $ = function (id) { return document.getElementById(id); };
   var eur = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
   var num = new Intl.NumberFormat('es-ES');
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+  function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
 
-  // Columnas. Las internas (precio colaborador, comisión, notas) solo aparecen si hay datos.
-  var COLS = [
-    { k: 'ref', t: 'Ref.', f: function (d) { return '<span class="cz-ref">' + esc(d.ref) + '</span>'; } },
-    { k: 'titulo', t: 'Activo', f: function (d) { return '<div class="cz-tit">' + esc(d.titulo) + '</div><div class="cz-sub">' + esc(d.tipo) + '</div>'; } },
-    { k: 'municipio', t: 'Ubicación', f: function (d) { var zona = [d.provincia, d.comunidad].filter(function (x, i, a) { return x && a.indexOf(x) === i; }).join(' · '); return esc(d.municipio) + '<div class="cz-sub">' + esc(zona) + '</div>'; } },
-    { k: 'm2', t: 'm²', num: true, l: 'm²', f: function (d) { return d.m2 ? num.format(d.m2) : '–'; } },
-    { k: 'hab', t: 'Hab.', num: true, l: 'Hab.', m: true, f: function (d) { return d.hab || '–'; } },
-    { k: 'precio', t: 'Precio', num: true, l: 'Precio', f: function (d) { return d.precio ? eur.format(d.precio) : '<span class="cz-sub">Consultar</span>'; } },
-    { k: 'precio_colaborador', t: 'Precio colab.', num: true, l: 'Precio colab.', interna: true, f: function (d) { return d.precio_colaborador ? eur.format(d.precio_colaborador) : '–'; } },
-    { k: 'comision', t: 'Comisión', num: true, l: 'Comisión', interna: true, f: function (d) { return d.comision != null && d.comision !== '' ? esc(d.comision) : '–'; } },
-    { k: 'estado', t: 'Estado', l: 'Estado', f: function (d) { var e = d.estado || 'Disponible', c = /reserv/i.test(e) ? ' res' : /vend/i.test(e) ? ' ven' : ''; return '<span class="cz-pill' + c + '">' + esc(e) + '</span>'; } },
-    { k: 'notas', t: 'Notas', interna: true, l: 'Notas', f: function (d) { return esc(d.notas); } },
-    { k: null, t: '', f: function (d) { return d.ficha ? '<a class="cz-link" href="/' + esc(d.ficha) + '" target="_blank" rel="noopener">Ver ficha →</a>' : ''; } }
-  ];
-  var cols = COLS;
+  var SIT = [['', 'Todos'], ['NPL', 'NPL'], ['CDR', 'CDR · Cesión de remate'], ['REO', 'REO libre'], ['Ocupado', 'Ocupados'], ['_', 'Sin clasificar']];
+  var CAT = [['Residencial', 'Viviendas'], ['Comercial', 'Locales'], ['Industrial', 'Naves'], ['Terreno', 'Suelos y fincas'], ['Anejo', 'Garajes y trasteros'], ['Oficina', 'Oficinas'], ['Hotel', 'Hoteles'], ['Otro', 'Otros']];
+  var TRAMOS = [['', 'Todos', null, null], ['a', 'Hasta 50.000 €', 0, 50000], ['b', '50.000 – 100.000 €', 50000, 100000], ['c', '100.000 – 200.000 €', 100000, 200000], ['d', 'Más de 200.000 €', 200000, null], ['n', 'Sin precio', null, null]];
+  var ICONOS = {
+    Residencial: '<path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/>',
+    Comercial: '<path d="M3 9l2-5h14l2 5M4 9v11h16V9M9 20v-6h6v6"/>',
+    Industrial: '<path d="M3 21V10l6 4V10l6 4V6l6 3v12z"/>',
+    Terreno: '<path d="M2 20l7-10 4 6 3-4 6 8z"/>',
+    Anejo: '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M10 16V8h3a2.5 2.5 0 010 5h-3"/>',
+    Oficina: '<rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/>',
+    Hotel: '<path d="M3 20V7M21 20v-6H3M7 11a2 2 0 100-4 2 2 0 000 4zM11 14V9h6a4 4 0 014 4v1"/>',
+    Otro: '<circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/>'
+  };
 
-  function opciones(sel, valores) {
-    var actual = sel.value, primera = sel.options[0].outerHTML;
-    sel.innerHTML = primera + valores.map(function (v) { return '<option>' + esc(v) + '</option>'; }).join('');
-    if (valores.indexOf(actual) >= 0) sel.value = actual;
-  }
+  var DATA = [], F = [], st = { sit: '', cat: '', ccaa: '', tramo: '', hab: 0, pagina: 1, porPag: 15, orden: '' };
+
+  function sitDe(d) { return d.situacion || '_'; }
   function unicos(arr, k) { return Array.from(new Set(arr.map(function (d) { return d[k]; }).filter(Boolean))).sort(function (a, b) { return a.localeCompare(b, 'es'); }); }
+  function opciones(sel, valores, todos) {
+    var actual = sel.value;
+    sel.innerHTML = '<option value="">' + todos + '</option>' + valores.map(function (v) { return '<option>' + esc(v) + '</option>'; }).join('');
+    sel.value = valores.indexOf(actual) >= 0 ? actual : '';
+  }
+  function enTramo(d, t) {
+    if (!t) return true;
+    var tr = TRAMOS.filter(function (x) { return x[0] === t; })[0];
+    if (t === 'n') return !d.precio;
+    if (!d.precio) return false;
+    return (tr[2] == null || d.precio >= tr[2]) && (tr[3] == null || d.precio < tr[3]);
+  }
 
-  function cabecera() {
-    $('cz-thead').innerHTML = cols.map(function (c) {
-      var ar = c.k && orden.k === c.k ? '<span class="ar">' + (orden.dir > 0 ? '▲' : '▼') + '</span>' : '';
-      return '<th' + (c.k ? ' data-k="' + c.k + '"' : '') + (c.num ? ' class="num"' : '') + '>' + c.t + ar + '</th>';
+  // Filtro con todo excepto "omitir" (para contar cada sección)
+  function pasa(d, omitir) {
+    if (omitir !== 'sit' && st.sit && sitDe(d) !== st.sit) return false;
+    if (omitir !== 'cat' && st.cat && d.categoria !== st.cat) return false;
+    if (omitir !== 'ccaa' && st.ccaa && d.comunidad !== st.ccaa) return false;
+    if (omitir !== 'tramo' && !enTramo(d, st.tramo)) return false;
+    var v;
+    if ((v = norm($('f-ref').value).trim()) && norm(d.ref).indexOf(v) < 0) return false;
+    if ((v = $('f-sub').value) && d.tipo !== v) return false;
+    if ((v = $('f-prov').value) && d.provincia !== v) return false;
+    if ((v = $('f-mun').value) && d.municipio !== v) return false;
+    if ((v = norm($('f-dir').value).trim()) && d._txt.indexOf(v) < 0) return false;
+    if ((v = $('f-est').value) && d.estado !== v) return false;
+    var pmin = parseFloat($('f-pmin').value), pmax = parseFloat($('f-pmax').value);
+    if (!isNaN(pmin) && !(d.precio >= pmin)) return false;
+    if (!isNaN(pmax) && !(d.precio && d.precio <= pmax)) return false;
+    var smin = parseFloat($('f-smin').value), smax = parseFloat($('f-smax').value);
+    if (!isNaN(smin) && !(d.m2 >= smin)) return false;
+    if (!isNaN(smax) && !(d.m2 && d.m2 <= smax)) return false;
+    if (st.hab && !(parseInt(d.hab, 10) >= st.hab)) return false;
+    if ($('f-precio').checked && !d.precio) return false;
+    if ($('f-lote').checked && !d.lote) return false;
+    if ($('f-nolote').checked && d.lote) return false;
+    return true;
+  }
+  function contar(omitir, clave) {
+    var c = {}; DATA.forEach(function (d) { if (pasa(d, omitir)) { var k = clave(d); c[k] = (c[k] || 0) + 1; } }); return c;
+  }
+
+  function pintarSecciones() {
+    var cs = contar('sit', sitDe), tot = 0; Object.keys(cs).forEach(function (k) { tot += cs[k]; });
+    $('tabs-sit').innerHTML = SIT.filter(function (s) { return !s[0] || cs[s[0]] || st.sit === s[0]; }).map(function (s) {
+      var n = s[0] ? (cs[s[0]] || 0) : tot;
+      return '<button class="cz-tab' + (st.sit === s[0] ? ' on' : '') + '" role="tab" aria-selected="' + (st.sit === s[0]) + '" data-sit="' + s[0] + '">' + s[1] + '<span class="n">' + num.format(n) + '</span></button>';
     }).join('');
+    var cc = contar('cat', function (d) { return d.categoria; }), totc = 0; Object.keys(cc).forEach(function (k) { totc += cc[k]; });
+    $('chips-cat').innerHTML = '<span class="lbl">Tipo</span><button class="chip' + (!st.cat ? ' on' : '') + '" data-cat="">Todos<span class="n">' + num.format(totc) + '</span></button>' +
+      CAT.filter(function (c) { return cc[c[0]] || st.cat === c[0]; }).map(function (c) { return '<button class="chip' + (st.cat === c[0] ? ' on' : '') + '" data-cat="' + c[0] + '">' + c[1] + '<span class="n">' + num.format(cc[c[0]] || 0) + '</span></button>'; }).join('');
+    var ca = contar('ccaa', function (d) { return d.comunidad; }), tota = 0; Object.keys(ca).forEach(function (k) { tota += ca[k]; });
+    $('chips-ccaa').innerHTML = '<span class="lbl">Comunidad</span><button class="chip' + (!st.ccaa ? ' on' : '') + '" data-ccaa="">Todas<span class="n">' + num.format(tota) + '</span></button>' +
+      Object.keys(ca).sort(function (a, b) { return ca[b] - ca[a]; }).map(function (k) { return '<button class="chip' + (st.ccaa === k ? ' on' : '') + '" data-ccaa="' + esc(k) + '">' + esc(k) + '<span class="n">' + num.format(ca[k]) + '</span></button>'; }).join('');
+    var tp = {}; DATA.forEach(function (d) { if (pasa(d, 'tramo')) TRAMOS.forEach(function (t) { if (t[0] && enTramo(d, t[0])) tp[t[0]] = (tp[t[0]] || 0) + 1; }); });
+    var tott = 0; DATA.forEach(function (d) { if (pasa(d, 'tramo')) tott++; });
+    $('chips-precio').innerHTML = '<span class="lbl">Precio</span>' + TRAMOS.map(function (t) { return '<button class="chip' + (st.tramo === t[0] ? ' on' : '') + '" data-tramo="' + t[0] + '">' + t[1] + '<span class="n">' + num.format(t[0] ? (tp[t[0]] || 0) : tott) + '</span></button>'; }).join('');
   }
 
-  function filtrar() {
-    var q = norm($('f-q').value).trim(), cc = $('f-ccaa').value, pv = $('f-prov').value, tp = $('f-tipo').value;
-    var mn = parseFloat($('f-min').value), mx = parseFloat($('f-max').value);
-    opciones($('f-prov'), unicos(cc ? DATA.filter(function (d) { return d.comunidad === cc; }) : DATA, 'provincia'));
-    pv = $('f-prov').value;
-    FILTRADOS = DATA.filter(function (d) {
-      if (cc && d.comunidad !== cc) return false;
-      if (pv && d.provincia !== pv) return false;
-      if (tp && d.tipo !== tp) return false;
-      if (!isNaN(mn) && !(d.precio >= mn)) return false;
-      if (!isNaN(mx) && !(d.precio && d.precio <= mx)) return false;
-      if (q && d._txt.indexOf(q) < 0) return false;
-      return true;
-    });
-    var k = orden.k, dir = orden.dir;
-    FILTRADOS.sort(function (a, b) {
-      var x = a[k], y = b[k];
-      if (x == null || x === '') return 1; if (y == null || y === '') return -1;
-      if (typeof x === 'number' && typeof y === 'number') return (x - y) * dir;
-      return String(x).localeCompare(String(y), 'es', { numeric: true }) * dir;
-    });
-    pagina = 1; pintar();
+  function actualizarDesplegables() {
+    var base = DATA.filter(function (d) { return (!st.ccaa || d.comunidad === st.ccaa) && (!st.cat || d.categoria === st.cat); });
+    opciones($('f-sub'), unicos(base, 'tipo'), 'Todos');
+    opciones($('f-prov'), unicos(base, 'provincia'), 'Todas');
+    var pv = $('f-prov').value;
+    opciones($('f-mun'), unicos(pv ? base.filter(function (d) { return d.provincia === pv; }) : base, 'municipio'), 'Todas');
   }
 
-  function pintar() {
-    var total = FILTRADOS.length, paginas = Math.max(1, Math.ceil(total / POR_PAGINA));
-    if (pagina > paginas) pagina = paginas;
-    var ini = (pagina - 1) * POR_PAGINA, trozo = FILTRADOS.slice(ini, ini + POR_PAGINA);
-    $('st-filtro').textContent = num.format(total);
-    var conPrecio = FILTRADOS.filter(function (d) { return d.precio; });
-    $('st-medio').textContent = conPrecio.length ? eur.format(conPrecio.reduce(function (s, d) { return s + d.precio; }, 0) / conPrecio.length) : '–';
-    $('cz-info').textContent = total ? 'Mostrando ' + num.format(ini + 1) + '–' + num.format(ini + trozo.length) + ' de ' + num.format(total) + ' activos' : 'Sin resultados';
-    cabecera();
-    $('cz-tbody').innerHTML = trozo.length ? trozo.map(function (d) {
-      return '<tr>' + cols.map(function (c) {
-        return '<td' + (c.num ? ' class="num' + (c.m ? ' hide-m' : '') + '"' : '') + (c.l ? ' data-l="' + c.l + '"' : '') + '>' + c.f(d) + '</td>';
-      }).join('') + '</tr>';
-    }).join('') : '<tr><td colspan="' + cols.length + '" class="cz-empty">No hay activos con esos filtros.</td></tr>';
-    $('cz-pag').innerHTML = paginas > 1 ? '<button id="pg-a"' + (pagina === 1 ? ' disabled' : '') + '>← Anterior</button><span>Página ' + pagina + ' de ' + paginas + '</span><button id="pg-s"' + (pagina === paginas ? ' disabled' : '') + '>Siguiente →</button>' : '';
-    if (paginas > 1) {
-      $('pg-a').onclick = function () { pagina--; pintar(); window.scrollTo({ top: $('cz-info').offsetTop - 90 }); };
-      $('pg-s').onclick = function () { pagina++; pintar(); window.scrollTo({ top: $('cz-info').offsetTop - 90 }); };
+  function aplicar(volverArriba) {
+    actualizarDesplegables();
+    F = DATA.filter(function (d) { return pasa(d); });
+    if (st.orden) {
+      var p = st.orden.split(':'), k = p[0], dir = +p[1];
+      F.sort(function (a, b) {
+        var x = a[k], y = b[k];
+        if (x == null || x === '') return 1; if (y == null || y === '') return -1;
+        if (typeof x === 'number' && typeof y === 'number') return (x - y) * dir;
+        return String(x).localeCompare(String(y), 'es', { numeric: true }) * dir;
+      });
     }
+    st.pagina = 1; pintarSecciones(); pintar(volverArriba);
   }
+
+  function tarjeta(d, i) {
+    var ic = ICONOS[d.categoria] || ICONOS.Otro;
+    var img = d.img ? '<img src="/' + esc(d.img) + '" alt="" loading="lazy">' : '<div class="ph"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">' + ic + '</svg>' + esc(d.categoria) + '</div>';
+    var sit = d.situacion ? '<span class="sit ' + esc(d.situacion) + '">' + esc(d.situacion) + '</span>' : '';
+    var specs = [d.m2 ? num.format(d.m2) + ' m²' : null, d.hab ? d.hab + ' hab.' : null, d.tipo].filter(Boolean).map(esc).join('<span style="opacity:.4">|</span>');
+    var e = d.estado || 'En comercialización', ec = /reserv|oferta|contrato/i.test(e) ? ' res' : /vend/i.test(e) ? ' ven' : /suspend/i.test(e) ? ' sus' : '';
+    return '<article class="card">' +
+      '<div class="card-img" data-i="' + i + '">' + img + sit + '</div>' +
+      '<div class="card-mid"><h3 data-i="' + i + '">' + esc(d.titulo) + '</h3>' +
+        '<div class="card-loc">' + esc([d.municipio, d.provincia, d.comunidad].filter(function (x, j, a) { return x && a.indexOf(x) === j; }).join(' · ')) + '</div>' +
+        '<div class="card-specs">' + specs + '</div>' +
+        '<div class="card-tags">' + (d.lote ? '<span class="tag lote">Lote / cartera</span>' : '') + (d.situacion_legal ? '<span class="tag">' + esc(d.situacion_legal) + '</span>' : '') + '</div></div>' +
+      '<div class="card-right">' +
+        (d.precio ? '<div class="price">' + eur.format(d.precio) + '</div>' : '<div class="price consultar">Consultar precio</div>') +
+        (d.precio_colaborador ? '<div class="pcol">Precio colaborador: ' + eur.format(d.precio_colaborador) + '</div>' : '') +
+        (d.comision ? '<div class="pcol">Comisión: ' + esc(d.comision) + '</div>' : '') +
+        '<div class="ref">REF: ' + esc(d.ref) + '</div><span class="estado' + ec + '">' + esc(e) + '</span>' +
+        '<div class="card-acts"><button type="button" data-i="' + i + '">Ficha y mapa</button>' + (d.ficha ? '<a href="/' + esc(d.ficha) + '" target="_blank" rel="noopener">Web ↗</a>' : '') + '</div>' +
+      '</div></article>';
+  }
+
+  function pintar(volverArriba) {
+    var total = F.length, paginas = Math.max(1, Math.ceil(total / st.porPag));
+    if (st.pagina > paginas) st.pagina = paginas;
+    var ini = (st.pagina - 1) * st.porPag, trozo = F.slice(ini, ini + st.porPag);
+    $('n-found').textContent = num.format(total);
+    $('n-sub').textContent = total ? '· mostrando ' + num.format(ini + 1) + '–' + num.format(ini + trozo.length) : '';
+    $('lista').innerHTML = trozo.length ? trozo.map(function (d, j) { return tarjeta(d, ini + j); }).join('') : '<div class="cz-empty">No hay activos con esos filtros.<br><br><button class="btn sec" type="button" id="empty-reset" style="flex:none">Limpiar filtros</button></div>';
+    var h = '';
+    if (paginas > 1) {
+      h += '<button data-p="' + (st.pagina - 1) + '"' + (st.pagina === 1 ? ' disabled' : '') + '>«</button>';
+      var desde = Math.max(1, st.pagina - 2), hasta = Math.min(paginas, desde + 4); desde = Math.max(1, hasta - 4);
+      if (desde > 1) h += '<button data-p="1">1</button>' + (desde > 2 ? '<span>…</span>' : '');
+      for (var p = desde; p <= hasta; p++) h += '<button data-p="' + p + '"' + (p === st.pagina ? ' class="on"' : '') + '>' + p + '</button>';
+      if (hasta < paginas) h += (hasta < paginas - 1 ? '<span>…</span>' : '') + '<button data-p="' + paginas + '">' + paginas + '</button>';
+      h += '<button data-p="' + (st.pagina + 1) + '"' + (st.pagina === paginas ? ' disabled' : '') + '>»</button>';
+    }
+    h += '<select id="porpag" aria-label="Activos por página">' + [15, 30, 45].map(function (n) { return '<option' + (n === st.porPag ? ' selected' : '') + '>' + n + '</option>'; }).join('') + '</select><span>por página</span>';
+    $('pag').innerHTML = h;
+    if (volverArriba) window.scrollTo({ top: $('lista').getBoundingClientRect().top + window.scrollY - 150, behavior: 'smooth' });
+  }
+
+  function abrirFicha(i) {
+    var d = F[i]; if (!d) return;
+    var q = encodeURIComponent(d.mapa || [d.titulo, d.municipio, d.provincia].join(' '));
+    $('md-map').innerHTML = (d.img ? '<img src="/' + esc(d.img) + '" alt="">' : '') + '<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=' + q + '&output=embed" title="Mapa"></iframe>';
+    var filas = [['Referencia', d.ref], ['Tipo', d.tipo], ['Categoría', d.categoria], ['Situación', d.situacion || 'Sin clasificar'], ['Estado', d.estado], ['Superficie', d.m2 ? num.format(d.m2) + ' m²' : null], ['Habitaciones', d.hab], ['Población', d.municipio], ['Provincia', d.provincia], ['Comunidad', d.comunidad], ['Precio', d.precio ? eur.format(d.precio) : 'Consultar']];
+    var internos = [['Precio colaborador', d.precio_colaborador ? eur.format(d.precio_colaborador) : null], ['Comisión', d.comision], ['Situación legal', d.situacion_legal], ['Notas', d.notas]].filter(function (x) { return x[1]; });
+    $('md-body').innerHTML = '<button class="md-x" type="button" aria-label="Cerrar">×</button>' +
+      '<div class="cz-eyebrow" style="color:#1F6F8B">REF ' + esc(d.ref) + '</div><h2 id="md-t">' + esc(d.titulo) + '</h2>' +
+      '<div class="card-loc">' + esc([d.municipio, d.provincia].filter(Boolean).join(' · ')) + '</div>' +
+      '<dl class="dl">' + filas.filter(function (x) { return x[1]; }).map(function (x) { return '<dt>' + x[0] + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join('') + '</dl>' +
+      '<div class="md-int"><h4>Información para colaboradores</h4>' + (internos.length ? '<dl class="dl" style="margin:0">' + internos.map(function (x) { return '<dt>' + x[0] + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join('') + '</dl>' : 'Pendiente de cargar desde HipogesWorks (precio colaborador, comisión y situación legal).') + '</div>' +
+      '<div class="md-acts">' + (d.ficha ? '<a class="btn" style="flex:none" href="/' + esc(d.ficha) + '" target="_blank" rel="noopener">Ver ficha pública</a>' : '') + '<a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=' + q + '" target="_blank" rel="noopener">Abrir en Google Maps</a></div>';
+    $('md').classList.add('on'); document.body.style.overflow = 'hidden';
+  }
+  function cerrarFicha() { $('md').classList.remove('on'); $('md-map').innerHTML = ''; document.body.style.overflow = ''; }
 
   function csv() {
-    var campos = ['ref', 'titulo', 'tipo', 'municipio', 'provincia', 'comunidad', 'm2', 'hab', 'precio', 'precio_colaborador', 'comision', 'estado', 'notas', 'ficha'];
-    var filas = [campos.join(';')].concat(FILTRADOS.map(function (d) {
+    var campos = ['ref', 'titulo', 'categoria', 'tipo', 'situacion', 'estado', 'municipio', 'provincia', 'comunidad', 'm2', 'hab', 'precio', 'precio_colaborador', 'comision', 'situacion_legal', 'notas', 'ficha'];
+    var filas = [campos.join(';')].concat(F.map(function (d) {
       return campos.map(function (k) {
         var v = k === 'ficha' && d.ficha ? location.origin + '/' + d.ficha : (d[k] == null ? '' : d[k]);
         v = String(v); return /[;"\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
       }).join(';');
     }));
-    var blob = new Blob(['\ufeff' + filas.join('\n')], { type: 'text/csv;charset=utf-8' });
-    var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob(['﻿' + filas.join('\n')], { type: 'text/csv;charset=utf-8' }));
     a.download = 'activos-dulas-' + new Date().toISOString().slice(0, 10) + '.csv';
     document.body.appendChild(a); a.click(); a.remove();
   }
 
+  function limpiar() {
+    ['f-ref', 'f-dir', 'f-pmin', 'f-pmax', 'f-smin', 'f-smax'].forEach(function (id) { $(id).value = ''; });
+    ['f-sub', 'f-prov', 'f-mun', 'f-est'].forEach(function (id) { $(id).value = ''; });
+    ['f-precio', 'f-lote', 'f-nolote'].forEach(function (id) { $(id).checked = false; });
+    st.sit = st.cat = st.ccaa = st.tramo = ''; st.hab = 0;
+    document.querySelectorAll('#f-hab button').forEach(function (b) { b.classList.remove('on'); });
+    aplicar();
+  }
+
+  // Eventos
   var t;
-  ['f-q', 'f-min', 'f-max'].forEach(function (id) { $(id).addEventListener('input', function () { clearTimeout(t); t = setTimeout(filtrar, 180); }); });
-  ['f-ccaa', 'f-prov', 'f-tipo'].forEach(function (id) { $(id).addEventListener('change', filtrar); });
-  $('f-reset').onclick = function () { ['f-q', 'f-min', 'f-max'].forEach(function (id) { $(id).value = ''; }); ['f-ccaa', 'f-prov', 'f-tipo'].forEach(function (id) { $(id).value = ''; }); filtrar(); };
-  $('cz-csv').onclick = csv;
-  $('cz-thead').addEventListener('click', function (e) {
-    var th = e.target.closest('th[data-k]'); if (!th) return;
-    var k = th.getAttribute('data-k');
-    orden = { k: k, dir: orden.k === k ? -orden.dir : 1 }; filtrar();
+  ['f-ref', 'f-dir', 'f-pmin', 'f-pmax', 'f-smin', 'f-smax'].forEach(function (id) { $(id).addEventListener('input', function () { clearTimeout(t); t = setTimeout(aplicar, 200); }); });
+  ['f-sub', 'f-mun', 'f-est', 'f-precio', 'f-lote', 'f-nolote'].forEach(function (id) { $(id).addEventListener('change', function () { aplicar(); }); });
+  $('f-prov').addEventListener('change', function () { $('f-mun').value = ''; aplicar(); });
+  $('f-hab').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    var v = +b.getAttribute('data-v'); st.hab = st.hab === v ? 0 : v;
+    this.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', +x.getAttribute('data-v') === st.hab); }); aplicar();
   });
+  $('tabs-sit').addEventListener('click', function (e) { var b = e.target.closest('[data-sit]'); if (b) { st.sit = b.getAttribute('data-sit'); aplicar(); } });
+  document.querySelector('.cz-chips').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    if (b.hasAttribute('data-cat')) { st.cat = b.getAttribute('data-cat'); $('f-sub').value = ''; }
+    if (b.hasAttribute('data-ccaa')) { st.ccaa = b.getAttribute('data-ccaa'); $('f-prov').value = ''; $('f-mun').value = ''; }
+    if (b.hasAttribute('data-tramo')) st.tramo = b.getAttribute('data-tramo');
+    aplicar();
+  });
+  $('f-orden').addEventListener('change', function () { st.orden = this.value; aplicar(); });
+  $('f-reset').onclick = limpiar;
+  $('f-ok').onclick = function () { $('side').classList.remove('on'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+  $('open-side').onclick = function () { $('side').classList.add('on'); };
+  $('side-x').onclick = function () { $('side').classList.remove('on'); };
+  $('cz-csv').onclick = csv;
+  $('lista').addEventListener('click', function (e) {
+    if (e.target.id === 'empty-reset') return limpiar();
+    var el = e.target.closest('[data-i]'); if (el) abrirFicha(+el.getAttribute('data-i'));
+  });
+  $('pag').addEventListener('click', function (e) { var b = e.target.closest('button[data-p]'); if (b && !b.disabled) { st.pagina = +b.getAttribute('data-p'); pintar(true); } });
+  $('pag').addEventListener('change', function (e) { if (e.target.id === 'porpag') { st.porPag = +e.target.value; st.pagina = 1; pintar(true); } });
+  $('md').addEventListener('click', function (e) { if (e.target === this || e.target.closest('.md-x')) cerrarFicha(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrarFicha(); });
 
   fetch('/api/colaboradores/me', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (j) { $('cz-usuario').textContent = j.usuario || '—'; }).catch(function () {});
-
+  $('lista').innerHTML = '<div class="cz-empty">Cargando catálogo…</div>';
   fetch('/colaboradores/activos.json', { credentials: 'same-origin', cache: 'no-store' })
     .then(function (r) { if (r.redirected || !r.ok) throw new Error('sesion'); return r.json(); })
     .then(function (data) {
-      DATA = data.map(function (d) { d._txt = norm([d.ref, d.titulo, d.tipo, d.municipio, d.provincia, d.comunidad, d.notas].join(' ')); return d; });
-      cols = COLS.filter(function (c) { return !c.interna || DATA.some(function (d) { return d[c.k] != null && d[c.k] !== ''; }); });
-      $('st-total').textContent = num.format(DATA.length);
-      $('st-ccaa').textContent = unicos(DATA, 'comunidad').length;
-      opciones($('f-ccaa'), unicos(DATA, 'comunidad'));
-      opciones($('f-tipo'), unicos(DATA, 'tipo'));
-      filtrar();
+      DATA = data.map(function (d) { d._txt = norm([d.ref, d.titulo, d.tipo, d.municipio, d.provincia, d.mapa, d.notas].join(' ')); return d; });
+      opciones($('f-est'), unicos(DATA, 'estado'), 'Todos');
+      aplicar();
     })
     .catch(function () { location.href = '/acceso-colaboradores?next=/colaboradores/'; });
 })();
