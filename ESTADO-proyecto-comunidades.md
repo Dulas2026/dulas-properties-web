@@ -2,6 +2,22 @@
 
 Última actualización: sesión del 9 de julio de 2026 (tramo 20 - 5 activos de "ocupados-singulares" añadidos a Baleares).
 
+
+## ZONA COLABORADORES (29 septiembre 2026) — PENDIENTE DE ACTIVAR
+- Nuevo botón "Colaboradores" en el menú (junto a Club Inversor). Se añade desde `menu.js`, así que
+  aparece en todas las páginas sin tocar los 4.000+ HTML. Estilos `.colab-link` en `styles.css`.
+- `/colaboradores/` es zona privada protegida en el servidor (Cloudflare Pages Functions):
+  `functions/colaboradores/_middleware.js` bloquea todo lo que haya dentro de `/colaboradores/`
+  si no hay sesión; `functions/api/colaboradores/login.js`, `logout.js`, `me.js`; lógica en `functions/_lib/auth.js`.
+- Pantalla de acceso: `acceso-colaboradores.html`. Listado: `colaboradores/index.html`, que lee
+  `colaboradores/activos.json` (4.281 activos, generado a partir de las fichas publicadas).
+- `colaboradores/activos.json` está en `.gitignore`: se publica con deploy.bat pero NO se sube a GitHub
+  (el repo es público). Campos internos opcionales: `precio_colaborador`, `comision`, `estado`, `notas`.
+- Usuarios: variable secreta `COLABORADORES` en Cloudflare (formato `usuario:contraseña`, uno por línea).
+  Firma de sesión: variable secreta `SESSION_SECRET`. Sesión de 12 h. Dar de baja a alguien = borrar su línea.
+- Detectado de paso: 173 fichas `activo-alre-*` de la Comunitat Valenciana tienen en la miga de pan
+  "Illes Balears" (enlace a activos-baleares.html). En el listado de colaboradores ya salen corregidas.
+
 ## BUG: botón "Buscar activos" y mapa de `activos.html` rotos por residuo de Cloudflare Rocket Loader (11 julio 2026) — RESUELTO
 - El usuario avisó de que el botón "Buscar activos →" de la portada no hacía nada.
 - Causa real: el `<script>` que define `heroSearch()` en `index.html` tenía el atributo

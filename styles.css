@@ -35,6 +35,9 @@ nav { background: var(--navy); padding: 0 48px; display: flex; align-items: cent
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 .nav-links a.club-link { background: var(--gold); color: var(--navy); font-weight: 800; padding: 7px 16px; border-radius: 999px; letter-spacing: 0.08em; box-shadow: 0 0 0 2px rgba(201,168,76,0.25); }
 .nav-links a.club-link:hover { background: var(--gold-light); color: var(--navy); }
+.nav-links a.colab-link { display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.35); color: var(--white); font-weight: 600; padding: 6px 14px; border-radius: 999px; letter-spacing: 0.08em; }
+.nav-links a.colab-link:hover, .nav-links a.colab-link.active { border-color: var(--gold); color: var(--gold); }
+@media (min-width: 1201px) and (max-width: 1480px) { .nav-links { gap: 18px; } .nav-links a { letter-spacing: 0.08em; } }
 .nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 20px; cursor: pointer; border-radius: var(--radius); text-decoration: none; transition: all 0.2s; }
 .nav-cta:hover { background: var(--gold); color: var(--navy); }
 .nav-toggle { display: none; background: none; border: none; color: var(--white); font-size: 28px; line-height: 1; cursor: pointer; padding: 4px 6px; z-index: 1002; }
@@ -292,6 +295,7 @@ footer { background: var(--navy); padding: 32px 48px; display: flex; justify-con
   .nav-links.nav-open { display: flex; }
   .nav-links a { display: block; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav-links a.club-link { display: inline-block; margin-top: 10px; text-align: center; border-bottom: none; }
+  .nav-links a.colab-link { display: inline-flex; margin-top: 10px; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.35); padding: 10px 16px; }
   .hero { padding: 32px 20px; }
   .hero-title { font-size: 28px; }
   .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0 20px; }

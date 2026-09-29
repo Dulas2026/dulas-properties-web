@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso Colaboradores — Dulas Properties</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  .acc-wrap { min-height: calc(100vh - 64px); display: grid; grid-template-columns: 1.1fr 1fr; }
+  .acc-side { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--white); padding: 72px 64px; display: flex; flex-direction: column; justify-content: center; }
+  .acc-eyebrow { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  .acc-side h1 { font-family: var(--font-serif); font-weight: 500; font-size: 44px; line-height: 1.1; margin-bottom: 20px; }
+  .acc-side p { color: rgba(255,255,255,.75); max-width: 440px; font-size: 15px; }
+  .acc-list { list-style: none; margin-top: 28px; display: grid; gap: 12px; }
+  .acc-list li { display: flex; gap: 10px; align-items: flex-start; color: rgba(255,255,255,.85); font-size: 14px; }
+  .acc-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-top: 8px; flex-shrink: 0; }
+  .acc-main { display: flex; align-items: center; justify-content: center; padding: 48px 24px; }
+  .acc-card { width: 100%; max-width: 400px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px 36px; box-shadow: 0 12px 40px rgba(26,45,79,.08); }
+  .acc-card h2 { font-family: var(--font-serif); font-size: 30px; font-weight: 500; color: var(--navy); margin-bottom: 6px; }
+  .acc-card .sub { color: var(--gray-500); font-size: 13px; margin-bottom: 28px; }
+  .acc-field { margin-bottom: 18px; }
+  .acc-field label { display: block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gray-700); font-weight: 600; margin-bottom: 7px; }
+  .acc-field input { width: 100%; padding: 12px 14px; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit; font-size: 15px; background: var(--white); color: var(--text); }
+  .acc-field input:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(26,45,79,.12); }
+  .acc-pass { position: relative; }
+  .acc-pass button { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--gray-500); font-size: 12px; cursor: pointer; padding: 6px; }
+  .acc-btn { width: 100%; background: var(--navy); color: var(--white); border: none; padding: 14px; font: inherit; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; border-radius: var(--radius); cursor: pointer; margin-top: 6px; transition: background .2s; }
+  .acc-btn:hover { background: var(--navy-mid); }
+  .acc-msg { display: none; padding: 11px 14px; border-radius: var(--radius); font-size: 13px; margin-bottom: 20px; }
+  .acc-msg.err { display: block; background: #FDECEE; color: #9B1C2E; border: 1px solid #F5C2CA; }
+  .acc-msg.ok { display: block; background: #EEF6EE; color: #2D6A31; border: 1px solid #C8E3C9; }
+  .acc-help { margin-top: 22px; font-size: 12.5px; color: var(--gray-500); text-align: center; }
+  .acc-help a { color: var(--navy); font-weight: 600; }
+  @media (max-width: 900px) {
+    .acc-wrap { grid-template-columns: 1fr; }
+    .acc-side { padding: 40px 20px; }
+    .acc-side h1 { font-size: 32px; }
+    .acc-list { display: none; }
+    .acc-main { padding: 32px 16px 56px; }
+    .acc-card { padding: 32px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/index.html" class="nav-logo">
+    <div class="logo-mark"><span class="logo-d">D</span><span class="logo-p">P</span></div>
+    <div class="logo-text"><span class="logo-name">Dulas Properties</span><span class="logo-sub">Real Estate</span></div>
+  </a>
+  <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+  <ul class="nav-links">
+    <li><a href="/index.html">Inicio</a></li>
+    <li><a href="/activos.html">Activos</a></li>
+    <li><a href="/servicios.html">Servicios</a></li>
+    <li><a href="/nosotros.html">Quiénes somos</a></li>
+    <li><a href="/blog.html">Blog</a></li><li><a href="/vender.html">Vende con nosotros</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+    <li><a href="/club-inversor.html" class="club-link">Club Inversor</a></li>
+  </ul>
+  <a href="tel:679916424" class="nav-cta">679 916 424</a><a href="tel:622587788" class="nav-cta" style="background:var(--gold);color:var(--navy);margin-left:6px;">622 587 788</a>
+</nav>
+
+<div class="acc-wrap">
+  <section class="acc-side">
+    <div class="acc-eyebrow">Zona privada</div>
+    <h1>Área de Colaboradores</h1>
+    <p>Acceso exclusivo para comerciales y colaboradores de Dulas Properties.</p>
+    <ul class="acc-list">
+      <li>Listado completo de activos de la cartera</li>
+      <li>Búsqueda por comunidad, provincia, tipo y precio</li>
+      <li>Acceso directo a la ficha de cada activo</li>
+    </ul>
+  </section>
+
+  <main class="acc-main">
+    <form class="acc-card" method="post" action="/api/colaboradores/login" autocomplete="on">
+      <h2>Iniciar sesión</h2>
+      <p class="sub">Introduce el usuario y la contraseña que te hemos facilitado.</p>
+      <div id="acc-msg" class="acc-msg" role="alert"></div>
+      <input type="hidden" name="next" id="acc-next" value="/colaboradores/">
+      <div class="acc-field">
+        <label for="usuario">Usuario</label>
+        <input id="usuario" name="usuario" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+      </div>
+      <div class="acc-field">
+        <label for="password">Contraseña</label>
+        <div class="acc-pass">
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <button type="button" id="acc-ver" aria-label="Mostrar contraseña">Mostrar</button>
+        </div>
+      </div>
+      <button class="acc-btn" type="submit">Entrar</button>
+      <p class="acc-help">¿No tienes acceso o has olvidado la contraseña?<br><a href="https://wa.me/34679916424?text=Hola,%20necesito%20acceso%20a%20la%20zona%20de%20colaboradores" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
+    </form>
+  </main>
+</div>
+
+<script src="/menu.js" defer></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var msg = document.getElementById('acc-msg');
+  var textos = {
+    credenciales: 'Usuario o contraseña incorrectos. Inténtalo de nuevo.',
+    config: 'El acceso de colaboradores aún no está activado. Contacta con Dulas Properties.'
+  };
+  if (q.get('error')) { msg.className = 'acc-msg err'; msg.textContent = textos[q.get('error')] || textos.credenciales; }
+  else if (q.get('salida')) { msg.className = 'acc-msg ok'; msg.textContent = 'Has cerrado sesión correctamente.'; }
+  var next = q.get('next');
+  if (next && /^\/colaboradores(\/|$)/.test(next)) document.getElementById('acc-next').value = next;
+  var ver = document.getElementById('acc-ver'), pw = document.getElementById('password');
+  ver.addEventListener('click', function () {
+    var oculto = pw.type === 'password';
+    pw.type = oculto ? 'text' : 'password';
+    ver.textContent = oculto ? 'Ocultar' : 'Mostrar';
+  });
+  document.getElementById('usuario').focus();
+})();
+</script>
+</body>
+</html>

@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /colaboradores/
+Disallow: /acceso-colaboradores
 Sitemap: https://dulasproperties.com/sitemap.xml

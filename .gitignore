@@ -6,3 +6,8 @@ DATOS_HIPOGES/
 
 # Imagenes marcadas explicitamente como privadas / no publicar
 imagenes/_privado_no_publicar/
+
+# Zona Colaboradores: el listado puede llevar datos internos (precio colaborador, comisiones).
+# Se publica en la web (protegido con usuario y contraseña) con deploy.bat, pero NUNCA se sube a GitHub,
+# porque el repositorio es público.
+colaboradores/activos.json
