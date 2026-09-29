@@ -74,6 +74,21 @@ for k, d in list(out.items()):
     else:
         por_ref[r] = k
 
+# Activos importados de HipogesWorks (paginas guardadas) -> tienen prioridad sobre los datos de la web publica
+hip = {}
+for f in glob.glob('colaboradores/_hipoges/*.json'):
+    for d in json.load(open(f, encoding='utf-8')):
+        hip[str(d['ref']).upper()] = d
+if hip:
+    existentes = {str(d['ref']).upper(): k for k, d in out.items()}
+    for r, d in hip.items():
+        if r in existentes:
+            viejo = out[existentes[r]]
+            d = dict(d); d['ficha'] = viejo.get('ficha') or d.get('ficha')
+            out[existentes[r]] = d
+        else:
+            out['hw:' + r] = dict(d)
+
 internos = {}
 if os.path.exists('colaboradores/datos_internos.json'):
     internos = {str(x['ref']).upper(): x for x in json.load(open('colaboradores/datos_internos.json', encoding='utf-8'))}
@@ -86,14 +101,37 @@ for d in out.values():
         n = re.sub(r'[^\d]', '', d['precio']); d['precio'] = int(n) if n else None
     if d['hab'] in ('N/D', '', '0'): d['hab'] = None
     if d['m2'] == 0: d['m2'] = None
-    d['categoria'] = categoria(d['tipo'])
-    d['lote'] = bool(re.match(r'^\d+\s', d['tipo']) or 'lote' in d['tipo'].lower())
-    d.update(estado='En comercialización', precio_colaborador=None, comision=None, situacion_legal='', notas='')
+    d['categoria'] = d.get('categoria') or categoria(d['tipo'])
+    d['lote'] = d.get('lote') or bool(re.match(r'^\d+\s', d['tipo']) or 'lote' in d['tipo'].lower())
+    for campo, defecto in (('estado', 'En comercialización'), ('precio_colaborador', None), ('comision', None), ('situacion_legal', ''), ('notas', ''), ('situacion', ''), ('img', None), ('mapa', '')):
+        d.setdefault(campo, defecto)
     extra = internos.get(str(d['ref']).upper())
     if extra: d.update({k: v for k, v in extra.items() if v not in (None, '')})
     L.append(d)
 
-json.dump(L, open('colaboradores/activos.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+# Un fichero por comunidad autonoma + un indice (la zona privada carga solo la comunidad elegida)
+import shutil
+def slug(x): return re.sub(r'[^a-z0-9]+', '-', sin_acentos(x)).strip('-') or 'sin-comunidad'
+os.makedirs('colaboradores/datos', exist_ok=True)
+for viejo in glob.glob('colaboradores/datos/*.json'): os.remove(viejo)
+if os.path.exists('colaboradores/activos.json'): os.remove('colaboradores/activos.json')
+grupos = {}
+for d in L: grupos.setdefault(d['comunidad'] or 'Sin comunidad', []).append(d)
+indice = []
+for ccaa, filas in sorted(grupos.items(), key=lambda kv: -len(kv[1])):
+    sl = slug(ccaa)
+    json.dump(filas, open('colaboradores/datos/%s.json' % sl, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    cats, sits, provs = {}, {}, {}
+    for d in filas:
+        cats[d['categoria']] = cats.get(d['categoria'], 0) + 1
+        k = d['situacion'] or '_'; sits[k] = sits.get(k, 0) + 1
+        if d['provincia']: provs[d['provincia']] = provs.get(d['provincia'], 0) + 1
+    precios = [d['precio'] for d in filas if d['precio'] and d['precio'] >= 1000]
+    indice.append(dict(comunidad=ccaa, slug=sl, total=len(filas), categorias=cats, situaciones=sits,
+                       provincias=sorted(provs, key=lambda k: -provs[k]),
+                       poblaciones=sorted({d['municipio'] for d in filas if d['municipio']}),
+                       precio_min=min(precios) if precios else None, precio_medio=round(sum(precios) / len(precios)) if precios else None))
+json.dump(indice, open('colaboradores/datos/indice.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 from collections import Counter
 print(len(L), 'activos'); print(Counter(d['categoria'] for d in L)); print(Counter(d['situacion'] or '-' for d in L))
-print('con foto', sum(1 for d in L if d['img']), '| con mapa', sum(1 for d in L if d['mapa']), '| con datos internos', sum(1 for d in L if str(d['ref']).upper() in internos))
+print('de HipogesWorks', len(hip), '|', 'con foto', sum(1 for d in L if d['img']), '| con mapa', sum(1 for d in L if d['mapa']), '| con datos internos', sum(1 for d in L if str(d['ref']).upper() in internos))

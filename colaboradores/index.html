@@ -78,6 +78,9 @@
   .card-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
   .tag { font-size: 11.5px; padding: 2px 9px; border-radius: 999px; background: var(--gray-100); color: var(--gray-700); }
   .tag.lote { background: #FFF4DE; color: #8A5A00; }
+  .tag.reb { background: var(--navy); color: var(--white); }
+  .pant { font-size: 12.5px; color: #C0392B; font-weight: 600; }
+  .pant s { color: var(--gray-500); font-weight: 400; margin-left: 4px; }
   .card-right { padding: 14px 18px; border-left: 1px solid var(--border); display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 4px; }
   .price { font-size: 20px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
   .price.consultar { font-size: 15px; color: var(--gray-500); font-weight: 600; }
@@ -112,6 +115,40 @@
   .md-int h4 { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: #2D6A31; margin-bottom: 8px; }
   .md-acts { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
   .md-acts a { text-decoration: none; }
+  /* Buscador por comunidad */
+  .cz-sel { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .cz-sel select { padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.35); background: rgba(255,255,255,.08); color: var(--white); font: inherit; font-size: 13.5px; font-weight: 600; }
+  .cz-sel select option { color: var(--text); }
+  .cz-back { color: var(--gold); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; cursor: pointer; background: none; border: none; font-family: inherit; font-weight: 600; }
+  .cz-back:hover { text-decoration: underline; }
+  .vc { max-width: 1400px; margin: 0 auto; padding: 26px 48px 64px; }
+  .vc-search { position: relative; max-width: 640px; margin-bottom: 22px; }
+  .vc-search input { width: 100%; padding: 14px 16px 14px 44px; border: 1px solid var(--gray-300); border-radius: var(--radius-lg); font: inherit; font-size: 15px; background: var(--white); box-shadow: 0 4px 18px rgba(26,45,79,.06); }
+  .vc-search input:focus { outline: none; border-color: var(--navy); }
+  .vc-search svg { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--gray-500); }
+  .vc-sug { position: absolute; left: 0; right: 0; top: calc(100% + 6px); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: 0 12px 32px rgba(26,45,79,.12); z-index: 50; max-height: 340px; overflow: auto; display: none; }
+  .vc-sug.on { display: block; }
+  .vc-sug button { display: flex; justify-content: space-between; gap: 12px; width: 100%; text-align: left; background: none; border: none; border-bottom: 1px solid var(--border); padding: 11px 16px; font: inherit; font-size: 14px; cursor: pointer; color: var(--text); }
+  .vc-sug button:hover, .vc-sug button.act { background: var(--gray-50); }
+  .vc-sug small { color: var(--gray-500); white-space: nowrap; }
+  .vc-h { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+  .vc-h h2 { font-family: var(--font-serif); font-weight: 500; font-size: 26px; color: var(--navy); }
+  .vc-h span { color: var(--gray-500); font-size: 13.5px; }
+  .vc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+  .vc-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px 18px 16px; text-align: left; cursor: pointer; font: inherit; color: var(--text); transition: border-color .2s, box-shadow .2s, transform .2s; display: flex; flex-direction: column; gap: 10px; }
+  .vc-card:hover { border-color: var(--navy); box-shadow: 0 8px 26px rgba(26,45,79,.10); transform: translateY(-2px); }
+  .vc-card h3 { font-size: 17px; font-weight: 600; color: var(--navy); }
+  .vc-n { font-family: var(--font-serif); font-size: 34px; line-height: 1; color: var(--navy); font-variant-numeric: tabular-nums; }
+  .vc-n small { font-family: var(--font-sans); font-size: 12px; color: var(--gray-500); margin-left: 6px; letter-spacing: .06em; text-transform: uppercase; }
+  .vc-bar { display: flex; height: 6px; border-radius: 999px; overflow: hidden; background: var(--gray-100); }
+  .vc-bar i { display: block; height: 100%; }
+  .vc-mini { font-size: 12.5px; color: var(--gray-500); line-height: 1.5; }
+  .vc-card.all { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .vc-card.all h3, .vc-card.all .vc-n { color: var(--white); }
+  .vc-card.all .vc-mini, .vc-card.all .vc-n small { color: rgba(255,255,255,.7); }
+  .vc-ley { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--gray-700); margin: 0 0 16px; }
+  .vc-ley i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+  [hidden] { display: none !important; }
   @media (max-width: 1100px) {
     .cz-wrap { grid-template-columns: minmax(0, 1fr); padding: 16px 16px 48px; }
     .cz-head { padding: 22px 16px 0; }
@@ -122,6 +159,10 @@
     .cz-filtros-m { display: inline-block; }
   }
   @media (max-width: 760px) {
+    .vc { padding: 20px 16px 48px; }
+    .vc-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .vc-card { padding: 14px; }
+    .vc-n { font-size: 26px; }
     .cz-head h1 { font-size: 28px; }
     .card { grid-template-columns: 96px minmax(0, 1fr); }
     .card-img { min-height: 120px; }
@@ -156,17 +197,28 @@
 <header class="cz-head">
   <div class="cz-head-in">
     <div class="cz-top">
-      <div><div class="cz-eyebrow">Zona Colaboradores</div><h1>Catálogo de activos</h1></div>
+      <div><div class="cz-eyebrow">Zona Colaboradores</div><h1 id="cz-titulo">Catálogo de activos</h1><div class="cz-sel" id="cz-sel" hidden><button class="cz-back" type="button" id="btn-volver">← Todas las comunidades</button><select id="sel-ccaa" aria-label="Cambiar de comunidad autónoma"></select></div></div>
       <div class="cz-user"><span>Conectado como <strong id="cz-usuario">…</strong></span><a class="cz-out" href="/api/colaboradores/logout">Cerrar sesión</a></div>
     </div>
     <div class="cz-tabs" id="tabs-sit" role="tablist" aria-label="Situación"></div>
   </div>
 </header>
 
-<div class="cz-wrap">
+<section class="vc" id="vista-ccaa">
+  <div class="vc-search">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="vc-q" type="search" placeholder="Busca una comunidad, provincia o población…" autocomplete="off" aria-label="Buscar comunidad, provincia o población">
+    <div class="vc-sug" id="vc-sug" role="listbox"></div>
+  </div>
+  <div class="vc-h"><h2>Elige una comunidad autónoma</h2><span id="vc-total"></span></div>
+  <div class="vc-ley" id="vc-ley"></div>
+  <div class="vc-grid" id="vc-grid"><div class="cz-empty">Cargando comunidades…</div></div>
+</section>
+
+<div class="cz-wrap" id="vista-cat" hidden>
   <div class="cz-chips">
     <div class="cz-chiprow" id="chips-cat"><span class="lbl">Tipo</span></div>
-    <div class="cz-chiprow" id="chips-ccaa"><span class="lbl">Comunidad</span></div>
+    <div class="cz-chiprow" id="chips-ccaa"><span class="lbl">Provincia</span></div>
     <div class="cz-chiprow" id="chips-precio"><span class="lbl">Precio</span></div>
   </div>
 
@@ -242,6 +294,7 @@
   var DATA = [], F = [], st = { sit: '', cat: '', ccaa: '', tramo: '', hab: 0, pagina: 1, porPag: 15, orden: '' };
 
   function sitDe(d) { return d.situacion || '_'; }
+  function imgUrl(u) { return /^https?:/.test(u) ? u : '/' + u; }
   function unicos(arr, k) { return Array.from(new Set(arr.map(function (d) { return d[k]; }).filter(Boolean))).sort(function (a, b) { return a.localeCompare(b, 'es'); }); }
   function opciones(sel, valores, todos) {
     var actual = sel.value;
@@ -260,12 +313,11 @@
   function pasa(d, omitir) {
     if (omitir !== 'sit' && st.sit && sitDe(d) !== st.sit) return false;
     if (omitir !== 'cat' && st.cat && d.categoria !== st.cat) return false;
-    if (omitir !== 'ccaa' && st.ccaa && d.comunidad !== st.ccaa) return false;
     if (omitir !== 'tramo' && !enTramo(d, st.tramo)) return false;
     var v;
     if ((v = norm($('f-ref').value).trim()) && norm(d.ref).indexOf(v) < 0) return false;
     if ((v = $('f-sub').value) && d.tipo !== v) return false;
-    if ((v = $('f-prov').value) && d.provincia !== v) return false;
+    if (omitir !== 'prov' && (v = $('f-prov').value) && d.provincia !== v) return false;
     if ((v = $('f-mun').value) && d.municipio !== v) return false;
     if ((v = norm($('f-dir').value).trim()) && d._txt.indexOf(v) < 0) return false;
     if ((v = $('f-est').value) && d.estado !== v) return false;
@@ -294,16 +346,18 @@
     var cc = contar('cat', function (d) { return d.categoria; }), totc = 0; Object.keys(cc).forEach(function (k) { totc += cc[k]; });
     $('chips-cat').innerHTML = '<span class="lbl">Tipo</span><button class="chip' + (!st.cat ? ' on' : '') + '" data-cat="">Todos<span class="n">' + num.format(totc) + '</span></button>' +
       CAT.filter(function (c) { return cc[c[0]] || st.cat === c[0]; }).map(function (c) { return '<button class="chip' + (st.cat === c[0] ? ' on' : '') + '" data-cat="' + c[0] + '">' + c[1] + '<span class="n">' + num.format(cc[c[0]] || 0) + '</span></button>'; }).join('');
-    var ca = contar('ccaa', function (d) { return d.comunidad; }), tota = 0; Object.keys(ca).forEach(function (k) { tota += ca[k]; });
-    $('chips-ccaa').innerHTML = '<span class="lbl">Comunidad</span><button class="chip' + (!st.ccaa ? ' on' : '') + '" data-ccaa="">Todas<span class="n">' + num.format(tota) + '</span></button>' +
-      Object.keys(ca).sort(function (a, b) { return ca[b] - ca[a]; }).map(function (k) { return '<button class="chip' + (st.ccaa === k ? ' on' : '') + '" data-ccaa="' + esc(k) + '">' + esc(k) + '<span class="n">' + num.format(ca[k]) + '</span></button>'; }).join('');
+    var ca = contar('prov', function (d) { return d.provincia || 'Sin provincia'; }), tota = 0; Object.keys(ca).forEach(function (k) { tota += ca[k]; });
+    var pv = $('f-prov').value, kprov = Object.keys(ca);
+    $('chips-ccaa').hidden = kprov.length < 2 && !pv;
+    $('chips-ccaa').innerHTML = '<span class="lbl">Provincia</span><button class="chip' + (!pv ? ' on' : '') + '" data-prov="">Todas<span class="n">' + num.format(tota) + '</span></button>' +
+      kprov.sort(function (a, b) { return ca[b] - ca[a]; }).map(function (k) { return '<button class="chip' + (pv === k ? ' on' : '') + '" data-prov="' + esc(k) + '">' + esc(k) + '<span class="n">' + num.format(ca[k]) + '</span></button>'; }).join('');
     var tp = {}; DATA.forEach(function (d) { if (pasa(d, 'tramo')) TRAMOS.forEach(function (t) { if (t[0] && enTramo(d, t[0])) tp[t[0]] = (tp[t[0]] || 0) + 1; }); });
     var tott = 0; DATA.forEach(function (d) { if (pasa(d, 'tramo')) tott++; });
     $('chips-precio').innerHTML = '<span class="lbl">Precio</span>' + TRAMOS.map(function (t) { return '<button class="chip' + (st.tramo === t[0] ? ' on' : '') + '" data-tramo="' + t[0] + '">' + t[1] + '<span class="n">' + num.format(t[0] ? (tp[t[0]] || 0) : tott) + '</span></button>'; }).join('');
   }
 
   function actualizarDesplegables() {
-    var base = DATA.filter(function (d) { return (!st.ccaa || d.comunidad === st.ccaa) && (!st.cat || d.categoria === st.cat); });
+    var base = DATA.filter(function (d) { return !st.cat || d.categoria === st.cat; });
     opciones($('f-sub'), unicos(base, 'tipo'), 'Todos');
     opciones($('f-prov'), unicos(base, 'provincia'), 'Todas');
     var pv = $('f-prov').value;
@@ -327,7 +381,7 @@
 
   function tarjeta(d, i) {
     var ic = ICONOS[d.categoria] || ICONOS.Otro;
-    var img = d.img ? '<img src="/' + esc(d.img) + '" alt="" loading="lazy">' : '<div class="ph"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">' + ic + '</svg>' + esc(d.categoria) + '</div>';
+    var img = d.img ? '<img src="' + esc(imgUrl(d.img)) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' : '<div class="ph"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">' + ic + '</svg>' + esc(d.categoria) + '</div>';
     var sit = d.situacion ? '<span class="sit ' + esc(d.situacion) + '">' + esc(d.situacion) + '</span>' : '';
     var specs = [d.m2 ? num.format(d.m2) + ' m²' : null, d.hab ? d.hab + ' hab.' : null, d.tipo].filter(Boolean).map(esc).join('<span style="opacity:.4">|</span>');
     var e = d.estado || 'En comercialización', ec = /reserv|oferta|contrato/i.test(e) ? ' res' : /vend/i.test(e) ? ' ven' : /suspend/i.test(e) ? ' sus' : '';
@@ -336,9 +390,10 @@
       '<div class="card-mid"><h3 data-i="' + i + '">' + esc(d.titulo) + '</h3>' +
         '<div class="card-loc">' + esc([d.municipio, d.provincia, d.comunidad].filter(function (x, j, a) { return x && a.indexOf(x) === j; }).join(' · ')) + '</div>' +
         '<div class="card-specs">' + specs + '</div>' +
-        '<div class="card-tags">' + (d.lote ? '<span class="tag lote">Lote / cartera</span>' : '') + (d.situacion_legal ? '<span class="tag">' + esc(d.situacion_legal) + '</span>' : '') + '</div></div>' +
+        '<div class="card-tags">' + (d.precio_anterior && d.precio && d.precio_anterior > d.precio ? '<span class="tag reb">Rebajado</span>' : '') + (d.etiquetas || []).map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('') + (d.lote ? '<span class="tag lote">Lote / cartera</span>' : '') + (d.situacion_legal ? '<span class="tag">' + esc(d.situacion_legal) + '</span>' : '') + '</div></div>' +
       '<div class="card-right">' +
         (d.precio ? '<div class="price">' + eur.format(d.precio) + '</div>' : '<div class="price consultar">Consultar precio</div>') +
+        (d.precio_anterior && d.precio && d.precio_anterior > d.precio ? '<div class="pant">↓ ' + Math.round(100 - 100 * d.precio / d.precio_anterior) + '% <s>' + eur.format(d.precio_anterior) + '</s></div>' : '') +
         (d.precio_colaborador ? '<div class="pcol">Precio colaborador: ' + eur.format(d.precio_colaborador) + '</div>' : '') +
         (d.comision ? '<div class="pcol">Comisión: ' + esc(d.comision) + '</div>' : '') +
         '<div class="ref">REF: ' + esc(d.ref) + '</div><span class="estado' + ec + '">' + esc(e) + '</span>' +
@@ -370,8 +425,8 @@
   function abrirFicha(i) {
     var d = F[i]; if (!d) return;
     var q = encodeURIComponent(d.mapa || [d.titulo, d.municipio, d.provincia].join(' '));
-    $('md-map').innerHTML = (d.img ? '<img src="/' + esc(d.img) + '" alt="">' : '') + '<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=' + q + '&output=embed" title="Mapa"></iframe>';
-    var filas = [['Referencia', d.ref], ['Tipo', d.tipo], ['Categoría', d.categoria], ['Situación', d.situacion || 'Sin clasificar'], ['Estado', d.estado], ['Superficie', d.m2 ? num.format(d.m2) + ' m²' : null], ['Habitaciones', d.hab], ['Población', d.municipio], ['Provincia', d.provincia], ['Comunidad', d.comunidad], ['Precio', d.precio ? eur.format(d.precio) : 'Consultar']];
+    $('md-map').innerHTML = (d.img ? '<img src="' + esc(imgUrl(d.img)) + '" alt="" referrerpolicy="no-referrer" onerror="this.remove()">' : '') + '<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=' + q + '&output=embed" title="Mapa"></iframe>';
+    var filas = [['Referencia', d.ref], ['Tipo', d.tipo], ['Categoría', d.categoria], ['Situación', d.situacion || 'Sin clasificar'], ['Estado', d.estado], ['Superficie', d.m2 ? num.format(d.m2) + ' m²' : null], ['Habitaciones', d.hab], ['Población', d.municipio], ['Provincia', d.provincia], ['Comunidad', d.comunidad], ['Precio', d.precio ? eur.format(d.precio) : 'Consultar'], ['Precio anterior', d.precio_anterior ? eur.format(d.precio_anterior) : null], ['Fiscalidad', d.fiscalidad], ['Etiquetas', (d.etiquetas || []).join(', ')]];
     var internos = [['Precio colaborador', d.precio_colaborador ? eur.format(d.precio_colaborador) : null], ['Comisión', d.comision], ['Situación legal', d.situacion_legal], ['Notas', d.notas]].filter(function (x) { return x[1]; });
     $('md-body').innerHTML = '<button class="md-x" type="button" aria-label="Cerrar">×</button>' +
       '<div class="cz-eyebrow" style="color:#1F6F8B">REF ' + esc(d.ref) + '</div><h2 id="md-t">' + esc(d.titulo) + '</h2>' +
@@ -401,7 +456,7 @@
     ['f-ref', 'f-dir', 'f-pmin', 'f-pmax', 'f-smin', 'f-smax'].forEach(function (id) { $(id).value = ''; });
     ['f-sub', 'f-prov', 'f-mun', 'f-est'].forEach(function (id) { $(id).value = ''; });
     ['f-precio', 'f-lote', 'f-nolote'].forEach(function (id) { $(id).checked = false; });
-    st.sit = st.cat = st.ccaa = st.tramo = ''; st.hab = 0;
+    st.sit = st.cat = st.tramo = ''; st.hab = 0;
     document.querySelectorAll('#f-hab button').forEach(function (b) { b.classList.remove('on'); });
     aplicar();
   }
@@ -420,7 +475,7 @@
   document.querySelector('.cz-chips').addEventListener('click', function (e) {
     var b = e.target.closest('.chip'); if (!b) return;
     if (b.hasAttribute('data-cat')) { st.cat = b.getAttribute('data-cat'); $('f-sub').value = ''; }
-    if (b.hasAttribute('data-ccaa')) { st.ccaa = b.getAttribute('data-ccaa'); $('f-prov').value = ''; $('f-mun').value = ''; }
+    if (b.hasAttribute('data-prov')) { $('f-prov').value = b.getAttribute('data-prov'); $('f-mun').value = ''; }
     if (b.hasAttribute('data-tramo')) st.tramo = b.getAttribute('data-tramo');
     aplicar();
   });
@@ -440,13 +495,109 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrarFicha(); });
 
   fetch('/api/colaboradores/me', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (j) { $('cz-usuario').textContent = j.usuario || '—'; }).catch(function () {});
-  $('lista').innerHTML = '<div class="cz-empty">Cargando catálogo…</div>';
-  fetch('/colaboradores/activos.json', { credentials: 'same-origin', cache: 'no-store' })
-    .then(function (r) { if (r.redirected || !r.ok) throw new Error('sesion'); return r.json(); })
-    .then(function (data) {
-      DATA = data.map(function (d) { d._txt = norm([d.ref, d.titulo, d.tipo, d.municipio, d.provincia, d.mapa, d.notas].join(' ')); return d; });
-      opciones($('f-est'), unicos(DATA, 'estado'), 'Todos');
+  // ---------- Buscador por comunidad autónoma ----------
+  var INDICE = [], CACHE = {}, actual = null;
+  var COLORES = { Residencial: '#1F4E79', Anejo: '#8C8880', Terreno: '#6B8E23', Comercial: '#C9A84C', Industrial: '#7A3E9D', Oficina: '#1F6F8B', Hotel: '#B5452F', Otro: '#C8C5BE' };
+  var NOMBRES = {}; CAT.forEach(function (c) { NOMBRES[c[0]] = c[1]; });
+
+  function tarjetaCcaa(c) {
+    var tot = c.total, orden = Object.keys(c.categorias).sort(function (a, b) { return c.categorias[b] - c.categorias[a]; });
+    var barra = orden.map(function (k) { return '<i style="width:' + (100 * c.categorias[k] / tot).toFixed(1) + '%;background:' + (COLORES[k] || '#ccc') + '" title="' + esc(NOMBRES[k] || k) + ': ' + c.categorias[k] + '"></i>'; }).join('');
+    var top = orden.slice(0, 2).map(function (k) { return num.format(c.categorias[k]) + ' ' + (NOMBRES[k] || k).toLowerCase(); }).join(' · ');
+    var prov = c.provincias.length ? c.provincias.slice(0, 3).join(', ') + (c.provincias.length > 3 ? '…' : '') : '';
+    return '<button class="vc-card" type="button" data-slug="' + c.slug + '"><h3>' + esc(c.comunidad) + '</h3>' +
+      '<div class="vc-n">' + num.format(tot) + '<small>activos</small></div><div class="vc-bar">' + barra + '</div>' +
+      '<div class="vc-mini">' + esc(top) + (prov ? '<br>' + esc(prov) : '') + (c.precio_min ? '<br>Desde ' + eur.format(c.precio_min) : '') + '</div></button>';
+  }
+  function pintarComunidades() {
+    var total = INDICE.reduce(function (a, c) { return a + c.total; }, 0);
+    $('vc-total').textContent = num.format(total) + ' activos en ' + INDICE.length + ' comunidades';
+    $('vc-ley').innerHTML = CAT.filter(function (c) { return INDICE.some(function (x) { return x.categorias[c[0]]; }); }).map(function (c) { return '<span><i style="background:' + COLORES[c[0]] + '"></i>' + c[1] + '</span>'; }).join('');
+    $('vc-grid').innerHTML = INDICE.map(tarjetaCcaa).join('') +
+      '<button class="vc-card all" type="button" data-slug="*"><h3>Toda España</h3><div class="vc-n">' + num.format(total) + '<small>activos</small></div><div class="vc-mini">Ver el catálogo completo de todas las comunidades</div></button>';
+    $('sel-ccaa').innerHTML = '<option value="*">Toda España</option>' + INDICE.map(function (c) { return '<option value="' + c.slug + '">' + esc(c.comunidad) + ' (' + num.format(c.total) + ')</option>'; }).join('');
+  }
+
+  function cargarSlug(sl) {
+    if (CACHE[sl]) return Promise.resolve(CACHE[sl]);
+    return fetch('/colaboradores/datos/' + sl + '.json', { credentials: 'same-origin', cache: 'no-store' })
+      .then(function (r) { if (r.redirected || !r.ok) throw new Error('sesion'); return r.json(); })
+      .then(function (d) { d.forEach(function (x) { x._txt = norm([x.ref, x.titulo, x.tipo, x.municipio, x.provincia, x.mapa, x.notas].join(' ')); }); CACHE[sl] = d; return d; });
+  }
+  function elegir(sl, opciones) {
+    opciones = opciones || {};
+    var c = INDICE.filter(function (x) { return x.slug === sl; })[0];
+    if (sl !== '*' && !c) return mostrarComunidades();
+    actual = sl;
+    $('vista-ccaa').hidden = true; $('vista-cat').hidden = false; $('cz-sel').hidden = false;
+    $('cz-titulo').textContent = c ? c.comunidad : 'Toda España';
+    $('sel-ccaa').value = sl;
+    $('lista').innerHTML = '<div class="cz-empty">Cargando activos de ' + esc(c ? c.comunidad : 'toda España') + '…</div>';
+    var slugs = sl === '*' ? INDICE.map(function (x) { return x.slug; }) : [sl];
+    Promise.all(slugs.map(cargarSlug)).then(function (listas) {
+      if (actual !== sl) return;
+      DATA = [].concat.apply([], listas);
+      opciones_estado();
+      ['f-ref', 'f-dir', 'f-pmin', 'f-pmax', 'f-smin', 'f-smax'].forEach(function (id) { $(id).value = ''; });
+      ['f-sub', 'f-prov', 'f-mun', 'f-est'].forEach(function (id) { $(id).value = ''; });
+      if (!opciones.mantener) { st.sit = st.cat = st.tramo = ''; st.hab = 0; document.querySelectorAll('#f-hab button').forEach(function (b) { b.classList.remove('on'); }); }
       aplicar();
+      if (opciones.provincia) { actualizarDesplegables(); $('f-prov').value = opciones.provincia; }
+      if (opciones.poblacion) { actualizarDesplegables(); $('f-mun').value = opciones.poblacion; }
+      if (opciones.provincia || opciones.poblacion) aplicar();
+    }).catch(function () { location.href = '/acceso-colaboradores?next=/colaboradores/'; });
+    if (location.hash !== '#' + sl) history.pushState(null, '', '#' + sl);
+    window.scrollTo(0, 0);
+  }
+  function mostrarComunidades() {
+    actual = null;
+    $('vista-ccaa').hidden = false; $('vista-cat').hidden = true; $('cz-sel').hidden = true;
+    $('cz-titulo').textContent = 'Catálogo de activos';
+    $('tabs-sit').innerHTML = '';
+    if (location.hash) history.pushState(null, '', location.pathname);
+    setTimeout(function () { $('vc-q').focus(); }, 50);
+  }
+  function opciones_estado() { opciones($('f-est'), unicos(DATA, 'estado'), 'Todos'); }
+
+  // Buscador con sugerencias (comunidad, provincia o población)
+  var sugs = [], activa = -1;
+  function buscarSug(q) {
+    q = norm(q).trim(); if (!q) return [];
+    var r = [];
+    INDICE.forEach(function (c) {
+      if (norm(c.comunidad).indexOf(q) >= 0) r.push({ t: c.comunidad, k: 'Comunidad · ' + num.format(c.total), sl: c.slug });
+      c.provincias.forEach(function (p) { if (norm(p).indexOf(q) >= 0) r.push({ t: p, k: 'Provincia · ' + c.comunidad, sl: c.slug, prov: p }); });
+      c.poblaciones.forEach(function (m) { if (norm(m).indexOf(q) >= 0) r.push({ t: m, k: 'Población · ' + c.comunidad, sl: c.slug, mun: m }); });
+    });
+    var peso = function (x) { var n = norm(x.t); return (n === q ? 0 : n.indexOf(q) === 0 ? 10 : 20) + (x.mun ? 2 : x.prov ? 1 : 0); };
+    r.sort(function (a, b) { return peso(a) - peso(b) || a.t.length - b.t.length || a.t.localeCompare(b.t, 'es'); });
+    return r.slice(0, 12);
+  }
+  function pintarSug() {
+    $('vc-sug').innerHTML = sugs.map(function (x, i) { return '<button type="button" role="option" data-i="' + i + '"' + (i === activa ? ' class="act"' : '') + '><span>' + esc(x.t) + '</span><small>' + esc(x.k) + '</small></button>'; }).join('') || (norm($('vc-q').value).trim() ? '<button type="button" disabled><span>Sin resultados</span></button>' : '');
+    $('vc-sug').classList.toggle('on', !!$('vc-q').value.trim());
+  }
+  function irSug(x) { $('vc-sug').classList.remove('on'); $('vc-q').value = ''; elegir(x.sl, { provincia: x.prov, poblacion: x.mun }); }
+  $('vc-q').addEventListener('input', function () { sugs = buscarSug(this.value); activa = -1; pintarSug(); });
+  $('vc-q').addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown') { activa = Math.min(sugs.length - 1, activa + 1); pintarSug(); e.preventDefault(); }
+    else if (e.key === 'ArrowUp') { activa = Math.max(0, activa - 1); pintarSug(); e.preventDefault(); }
+    else if (e.key === 'Enter' && sugs.length) { irSug(sugs[Math.max(0, activa)]); }
+    else if (e.key === 'Escape') { $('vc-sug').classList.remove('on'); }
+  });
+  $('vc-sug').addEventListener('click', function (e) { var b = e.target.closest('button[data-i]'); if (b) irSug(sugs[+b.getAttribute('data-i')]); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.vc-search')) $('vc-sug').classList.remove('on'); });
+  $('vc-grid').addEventListener('click', function (e) { var b = e.target.closest('[data-slug]'); if (b) elegir(b.getAttribute('data-slug')); });
+  $('sel-ccaa').addEventListener('change', function () { elegir(this.value, { mantener: true }); });
+  $('btn-volver').addEventListener('click', mostrarComunidades);
+  window.addEventListener('popstate', function () { var h = location.hash.slice(1); if (h) elegir(h); else mostrarComunidades(); });
+
+  fetch('/colaboradores/datos/indice.json', { credentials: 'same-origin', cache: 'no-store' })
+    .then(function (r) { if (r.redirected || !r.ok) throw new Error('sesion'); return r.json(); })
+    .then(function (idx) {
+      INDICE = idx; pintarComunidades();
+      var h = decodeURIComponent(location.hash.slice(1));
+      if (h) elegir(h); else mostrarComunidades();
     })
     .catch(function () { location.href = '/acceso-colaboradores?next=/colaboradores/'; });
 })();

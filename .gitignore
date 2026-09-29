@@ -11,3 +11,9 @@ imagenes/_privado_no_publicar/
 # Se publica en la web (protegido con usuario y contraseña) con deploy.bat, pero NUNCA se sube a GitHub,
 # porque el repositorio es público.
 colaboradores/activos.json
+
+# Datos del catalogo de colaboradores (uno por comunidad). Se publican protegidos, nunca a GitHub.
+colaboradores/datos/
+
+# Datos importados de HipogesWorks (con direcciones completas en origen). Nunca a GitHub.
+colaboradores/_hipoges/
