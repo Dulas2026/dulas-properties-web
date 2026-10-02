@@ -106,6 +106,34 @@
   <p class="hero-desc">Selecciona una comunidad autónoma para explorar su cartera completa de activos.</p>
 </div>
 
+
+<!-- BUSCADOR POR REFERENCIA -->
+<div id="ref-buscador" style="max-width:640px;margin:-10px auto 30px;padding:0 16px;position:relative">
+  <label for="ref-q" style="display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin-bottom:8px;text-align:center">¿Tienes una referencia? Encuentra el activo</label>
+  <input id="ref-q" type="search" autocomplete="off" placeholder="Ej. ALRE-02539, JARE-0099…" style="width:100%;box-sizing:border-box;padding:14px 16px;font-size:16px;border:1px solid #cfd6df;border-radius:8px;background:#fff;color:#111">
+  <div id="ref-res" style="position:absolute;left:16px;right:16px;z-index:20;background:#fff;border:1px solid #e3e7ec;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.08);display:none;max-height:360px;overflow:auto"></div>
+</div>
+<script>
+(function(){
+  var R=null,q=document.getElementById('ref-q'),box=document.getElementById('ref-res');
+  function n(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+  function e(s){return String(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function cargar(){ if(R) return Promise.resolve(R); return fetch('referencias-web.json').then(function(r){return r.json();}).then(function(j){R=j;return j;}); }
+  function buscar(){
+    var v=n(q.value); if(v.length<3){box.style.display='none';return;}
+    cargar().then(function(L){
+      var hits=[]; for(var i=0;i<L.length&&hits.length<10;i++){var x=L[i],refs=[x[0]].concat(x[5]||[]);for(var k=0;k<refs.length;k++){if(n(refs[k]).indexOf(v)>=0){hits.push(x);break;}}}
+      hits.sort(function(a,b){return (n(b[0])===v)-(n(a[0])===v);});
+      box.innerHTML=hits.length?hits.map(function(x){return '<a href="'+e(x[1])+'" style="display:block;padding:10px 14px;border-bottom:1px solid #f0f2f5;text-decoration:none;color:#111"><strong>REF: '+e(x[0])+'</strong><br><span style="font-size:13px;color:#6b7280">'+e([x[2],x[3],x[4]].filter(Boolean).join(' · '))+'</span></a>';}).join(''):'<div style="padding:12px 14px;color:#6b7280;font-size:14px">No hay ningún activo publicado con esa referencia. Escríbenos y lo buscamos.</div>';
+      box.style.display='block';
+    });
+  }
+  q.addEventListener('input',buscar);
+  q.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var a=box.querySelector('a');if(a)location.href=a.getAttribute('href');}});
+  document.addEventListener('click',function(ev){if(!ev.target.closest('#ref-buscador'))box.style.display='none';});
+  var p=new URLSearchParams(location.search).get('ref'); if(p){q.value=p;buscar();}
+})();
+</script>
 <!-- MAPA SVG DE ESPAÑA -->
 <div id="map-section">
   <div id="map-inner">

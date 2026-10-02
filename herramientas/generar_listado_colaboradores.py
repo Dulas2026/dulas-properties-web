@@ -62,13 +62,21 @@ for f in ['activos-baleares.html', 'activos-baleares-2.html']:
                        m2=d.get('m2'), ficha=d.get('ficha'), mapa=(d.get('calle', '') + ' ' + d.get('municipio', '')).strip(),
                        situacion=sit, img=img)
 
+# Fichas propias con nombre (alcudia, conforama...): usar la referencia real que aparece en la ficha
+REFS_FICHAS = json.load(open('herramientas/referencias_fichas.json', encoding='utf-8')) if os.path.exists('herramientas/referencias_fichas.json') else {}
+for d in out.values():
+    reales = REFS_FICHAS.get(str(d['ref']).lower())
+    if reales:
+        d['alias'] = [d['ref']] + reales[1:]
+        d['ref'] = reales[0]
+
 # Quitar duplicados por referencia (el mismo activo puede estar en una ficha y en el CV_DATA)
 por_ref = {}
 for k, d in list(out.items()):
     r = str(d['ref']).upper()
     if r in por_ref:
         a = out[por_ref[r]]
-        for campo in ('img', 'situacion', 'ficha', 'm2', 'hab', 'precio', 'mapa'):
+        for campo in ('img', 'situacion', 'ficha', 'm2', 'hab', 'precio', 'mapa', 'alias'):
             if not a.get(campo) and d.get(campo): a[campo] = d[campo]
         del out[k]
     else:
@@ -84,7 +92,7 @@ if hip:
     for r, d in hip.items():
         if r in existentes:
             viejo = out[existentes[r]]
-            d = dict(d); d['ficha'] = viejo.get('ficha') or d.get('ficha')
+            d = dict(d); d['ficha'] = viejo.get('ficha') or d.get('ficha'); d['alias'] = viejo.get('alias') or d.get('alias')
             out[existentes[r]] = d
         else:
             out['hw:' + r] = dict(d)
@@ -132,6 +140,9 @@ for ccaa, filas in sorted(grupos.items(), key=lambda kv: -len(kv[1])):
                        poblaciones=sorted({d['municipio'] for d in filas if d['municipio']}),
                        precio_min=min(precios) if precios else None, precio_medio=round(sum(precios) / len(precios)) if precios else None))
 json.dump(indice, open('colaboradores/datos/indice.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+# Indice de referencias para el buscador global de la Zona Colaboradores
+refs = [[d['ref'], slug(d['comunidad'] or 'Sin comunidad'), d.get('titulo') or d.get('tipo') or '', d.get('municipio') or '', d.get('alias') or []] for d in L]
+json.dump(refs, open('colaboradores/datos/referencias.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 from collections import Counter
 print(len(L), 'activos'); print(Counter(d['categoria'] for d in L)); print(Counter(d['situacion'] or '-' for d in L))
 print('de HipogesWorks', len(hip), '|', 'con foto', sum(1 for d in L if d['img']), '| con mapa', sum(1 for d in L if d['mapa']), '| con datos internos', sum(1 for d in L if str(d['ref']).upper() in internos))
