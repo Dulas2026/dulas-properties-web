@@ -798,13 +798,13 @@
     <div class="asset-card" data-isla="Mallorca" data-tipo="Local comercial" data-estado="Disponible" data-search="local calle aragó, palma palma de mallorca">
       <div class="card-img">
         <img src="imagenes/conforama/conforama-01.jpg" alt="Local Calle Aragó, Palma" loading="lazy">
-        <span class="card-badge">Disponible</span>
+        <span class="card-badge" style="background:#C0392B;color:#fff">Rebajado</span>
       </div>
       <div class="card-body">
-        <div class="card-price">559.000 €</div>
+        <div class="card-price"><span style="text-decoration:line-through;opacity:.55;font-size:.7em;margin-right:6px">559.000 €</span>535.000 €</div>
         <div class="card-title">Local Calle Aragó, Palma</div>
         <div class="card-specs"><span class="spec">📐 726 m²</span></div>
-                <div class="card-location">Calle Aragó · Palma de Mallorca · Mallorca · REF: conforama</div>
+                <div class="card-location">Calle Aragó · Palma de Mallorca · Mallorca · REF: EXRE-00423</div>
         <div class="card-actions"><a href="conforama.html" class="card-btn-primary">Ver ficha</a><a href="https://wa.me/34679916424?text=Hola,%20me%20interesa%20el%20local%20de%20Arag%C3%B3" class="card-btn-secondary" target="_blank">WhatsApp</a></div>
         
         <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
@@ -813,15 +813,15 @@
           <div class="mortgage-grid">
             <div class="mortgage-field">
               <label>Entrada (%)</label>
-              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '559000', 'res-conforama')">
+              <input type="number" class="m-down" value="20" oninput="calculateMortgage(this, '535000', 'res-conforama')">
             </div>
             <div class="mortgage-field">
               <label>Plazo (Años)</label>
-              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '559000', 'res-conforama')">
+              <input type="number" class="m-term" value="30" oninput="calculateMortgage(this, '535000', 'res-conforama')">
             </div>
             <div class="mortgage-field" style="grid-column: span 2">
               <label>Interés Anual (%)</label>
-              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '559000', 'res-conforama')">
+              <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(this, '535000', 'res-conforama')">
             </div>
           </div>
           <div class="mortgage-result">
