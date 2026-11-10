@@ -47,7 +47,7 @@ function calculateMortgage(price) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Local Calle Aragó, Palma — Dulas Properties</title>
-<meta name="description" content="Local comercial en venta en Calle Aragó, Palma de Mallorca. 726 m². 559.000€">
+<meta name="description" content="Local comercial en venta en Calle Aragó, Palma de Mallorca. 726 m². 535.000€ (antes 559.000€)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -119,7 +119,7 @@ function calculateMortgage(price) {
   "@context": "https://schema.org",
   "@type": "RealEstateListing",
   "name": "Local Calle Aragó, Palma",
-  "description": "Local comercial en venta en Calle Aragó, Palma de Mallorca. 726 m². 559.000€",
+  "description": "Local comercial en venta en Calle Aragó, Palma de Mallorca. 726 m². 535.000€",
   "url": "https://dulasproperties.com/conforama",
   "image": "https://dulasproperties.com/imagenes/conforama/conforama-01.jpg",
   "address": {
@@ -130,7 +130,7 @@ function calculateMortgage(price) {
   "offers": {
     "@type": "Offer",
     "priceCurrency": "EUR",
-    "price": 559000,
+    "price": 535000,
     "availability": "https://schema.org/InStock"
   },
   "floorSize": {
@@ -228,7 +228,7 @@ function calculateMortgage(price) {
         <span class="prop-spec-label">Situación</span>
       </div>
       <div class="prop-spec">
-        <span class="prop-spec-val">770 €/m²</span>
+        <span class="prop-spec-val">737 €/m²</span>
         <span class="prop-spec-label">Precio m²</span>
       </div>
     </div>
@@ -273,12 +273,13 @@ function calculateMortgage(price) {
   <div class="prop-sidebar">
     <div class="prop-price-card">
       <div class="prop-price-label">Precio de venta</div>
-      <div class="prop-price">559.000 €</div>
+      <div class="prop-price"><span style="display:block;font-size:.5em;font-weight:500;text-decoration:line-through;opacity:.6">559.000 €</span>535.000 €</div>
+                <div style="display:inline-block;background:#C0392B;color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin:6px 0">Precio rebajado · -24.000 €</div>
         <div class="prop-price-sub" style="font-weight:600">REF: EXRE-00423</div>
-      <div class="prop-price-sub">770 €/m² · Financiación disponible</div>
+      <div class="prop-price-sub">737 €/m² · Financiación disponible</div>
       <div class="prop-actions">
         <a href="contacto.html" class="prop-btn-primary">Solicitar información →</a>
-        <a href="https://wa.me/34622587788?text=Hola%2C%20me%20interesa%20el%20local%20de%20Calle%20Arag%C3%B3%20Palma%20(559.000%E2%82%AC)%20%28REF%3A%20EXRE-00423%29" target="_blank" class="prop-btn-wa">WhatsApp directo</a>
+        <a href="https://wa.me/34622587788?text=Hola%2C%20me%20interesa%20el%20local%20de%20Calle%20Arag%C3%B3%20Palma%20(535.000%E2%82%AC)%20%28REF%3A%20EXRE-00423%29" target="_blank" class="prop-btn-wa">WhatsApp directo</a>
       </div>
 
       <button class="btn-mortgage-toggle" onclick="toggleMortgage(this)">Simular Hipoteca</button>
@@ -287,15 +288,15 @@ function calculateMortgage(price) {
         <div class="mortgage-grid">
           <div class="mortgage-field">
             <label>Entrada (%)</label>
-            <input type="number" class="m-down" value="20" oninput="calculateMortgage(559000)">
+            <input type="number" class="m-down" value="20" oninput="calculateMortgage(535000)">
           </div>
           <div class="mortgage-field">
             <label>Plazo (Años)</label>
-            <input type="number" class="m-term" value="30" oninput="calculateMortgage(559000)">
+            <input type="number" class="m-term" value="30" oninput="calculateMortgage(535000)">
           </div>
           <div class="mortgage-field" style="grid-column: span 2">
             <label>Interés Anual (%)</label>
-            <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(559000)">
+            <input type="number" class="m-int" value="3.5" step="0.1" oninput="calculateMortgage(535000)">
           </div>
         </div>
         <div class="mortgage-result">
