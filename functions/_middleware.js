@@ -1,6 +1,6 @@
 // Oculta de la web publica todos los activos de la peninsula (se mantienen Baleares y Canarias).
 // Para volver a publicarlos basta con borrar este archivo.
-const ISLAS = ['baleares', 'canarias'];
+const ISLAS = ['baleares'];
 const esIsla = (r) => ISLAS.some((i) => r.startsWith(i));
 
 export async function onRequest(context) {
